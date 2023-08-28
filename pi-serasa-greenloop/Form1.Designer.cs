@@ -28,24 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.wilBitButton2 = new WiLBiT.WiLBiTButton();
             this.SuspendLayout();
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Location = new System.Drawing.Point(315, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1905, 87);
+            this.panel1.TabIndex = 0;
+            // 
+            // wilBitButton2
+            // 
+            this.wilBitButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.wilBitButton2.BorderColor = System.Drawing.Color.Silver;
+            this.wilBitButton2.BorderRadius = 75;
+            this.wilBitButton2.BorderSize = 0;
+            this.wilBitButton2.FlatAppearance.BorderSize = 0;
+            this.wilBitButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wilBitButton2.ForeColor = System.Drawing.Color.Black;
+            this.wilBitButton2.Location = new System.Drawing.Point(52, 12);
+            this.wilBitButton2.Name = "wilBitButton2";
+            this.wilBitButton2.Size = new System.Drawing.Size(137, 137);
+            this.wilBitButton2.TabIndex = 2;
+            this.wilBitButton2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.wilBitButton2);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -54,6 +71,8 @@
 
         #endregion
 
-        private Button button1;
+        private Panel panel1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private WiLBiT.WiLBiTButton wilBitButton2;
     }
 }
