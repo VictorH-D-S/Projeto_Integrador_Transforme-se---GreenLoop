@@ -9,4 +9,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.1.0" />
+    <PackageReference Include="WiLBiT" Version="1.1.4" />
+    <PackageReference Include="Wilbit.AppUpdate" Version="0.2.0" />
+  </ItemGroup>
+
 </Project>

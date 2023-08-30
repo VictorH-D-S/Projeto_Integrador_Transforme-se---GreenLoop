@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
-namespace pi-serasa-greenloop
+namespace pi_serasa_greenloop
 {
     internal class Conexao
     {
         const string host = "Localhost", banco = "08_listas_tarefas", usuario = "root", senha = "",
-                     dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
+             dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
 
         static MySqlConnection conexao = new MySqlConnection(dadosConexao);
 
