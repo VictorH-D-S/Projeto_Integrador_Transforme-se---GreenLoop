@@ -1,8 +1,8 @@
 namespace pi_serasa_greenloop
 {
-    public partial class Form1 : Form
+    public partial class Perfil : Form
     {
-        public Form1()
+        public Perfil()
         {
             InitializeComponent();
         }
