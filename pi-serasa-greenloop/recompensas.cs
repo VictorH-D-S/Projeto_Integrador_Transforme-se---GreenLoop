@@ -16,5 +16,10 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
+
+        private void recompensas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

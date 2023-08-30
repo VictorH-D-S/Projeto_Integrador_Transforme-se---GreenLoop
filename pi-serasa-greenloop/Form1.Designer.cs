@@ -34,10 +34,10 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.wilBitButton2 = new WiLBiT.WiLBiTButton();
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
-            this.wilBitButton21 = new WiLBiT.WiLBiTButton2();
-            this.wilBitButton22 = new WiLBiT.WiLBiTButton2();
-            this.wilBitButton23 = new WiLBiT.WiLBiTButton2();
-            this.wilBitButton24 = new WiLBiT.WiLBiTButton2();
+            this.btnPerfil = new WiLBiT.WiLBiTButton2();
+            this.btnRecompensas = new WiLBiT.WiLBiTButton2();
+            this.btnPontosColeta = new WiLBiT.WiLBiTButton2();
+            this.btnAprender = new WiLBiT.WiLBiTButton2();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -105,74 +105,77 @@
             this.iconMenuItem1.Size = new System.Drawing.Size(32, 19);
             this.iconMenuItem1.Text = "iconMenuItem1";
             // 
-            // wilBitButton21
+            // btnPerfil
             // 
-            this.wilBitButton21.BackColor = System.Drawing.Color.Red;
-            this.wilBitButton21.BackgroundColor = System.Drawing.Color.Red;
-            this.wilBitButton21.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.wilBitButton21.BorderRadius = 170;
-            this.wilBitButton21.BorderSize = 0;
-            this.wilBitButton21.FlatAppearance.BorderSize = 0;
-            this.wilBitButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wilBitButton21.ForeColor = System.Drawing.Color.White;
-            this.wilBitButton21.Location = new System.Drawing.Point(87, 177);
-            this.wilBitButton21.Name = "wilBitButton21";
-            this.wilBitButton21.Size = new System.Drawing.Size(336, 331);
-            this.wilBitButton21.TabIndex = 3;
-            this.wilBitButton21.TextColor = System.Drawing.Color.White;
-            this.wilBitButton21.UseVisualStyleBackColor = false;
-            this.wilBitButton21.Click += new System.EventHandler(this.wilBitButton21_Click);
+            this.btnPerfil.BackColor = System.Drawing.Color.Red;
+            this.btnPerfil.BackgroundColor = System.Drawing.Color.Red;
+            this.btnPerfil.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPerfil.BorderRadius = 170;
+            this.btnPerfil.BorderSize = 0;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.Location = new System.Drawing.Point(87, 177);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(336, 331);
+            this.btnPerfil.TabIndex = 3;
+            this.btnPerfil.TextColor = System.Drawing.Color.White;
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.wilBitButton21_Click);
             // 
-            // wilBitButton22
+            // btnRecompensas
             // 
-            this.wilBitButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.wilBitButton22.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.wilBitButton22.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.wilBitButton22.BorderRadius = 170;
-            this.wilBitButton22.BorderSize = 0;
-            this.wilBitButton22.FlatAppearance.BorderSize = 0;
-            this.wilBitButton22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wilBitButton22.ForeColor = System.Drawing.Color.White;
-            this.wilBitButton22.Location = new System.Drawing.Point(540, 474);
-            this.wilBitButton22.Name = "wilBitButton22";
-            this.wilBitButton22.Size = new System.Drawing.Size(336, 331);
-            this.wilBitButton22.TabIndex = 4;
-            this.wilBitButton22.TextColor = System.Drawing.Color.White;
-            this.wilBitButton22.UseVisualStyleBackColor = false;
+            this.btnRecompensas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnRecompensas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnRecompensas.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRecompensas.BorderRadius = 170;
+            this.btnRecompensas.BorderSize = 0;
+            this.btnRecompensas.FlatAppearance.BorderSize = 0;
+            this.btnRecompensas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecompensas.ForeColor = System.Drawing.Color.White;
+            this.btnRecompensas.Location = new System.Drawing.Point(540, 474);
+            this.btnRecompensas.Name = "btnRecompensas";
+            this.btnRecompensas.Size = new System.Drawing.Size(336, 331);
+            this.btnRecompensas.TabIndex = 4;
+            this.btnRecompensas.TextColor = System.Drawing.Color.White;
+            this.btnRecompensas.UseVisualStyleBackColor = false;
+            this.btnRecompensas.Click += new System.EventHandler(this.btnRecompensas_Click);
             // 
-            // wilBitButton23
+            // btnPontosColeta
             // 
-            this.wilBitButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.wilBitButton23.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.wilBitButton23.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.wilBitButton23.BorderRadius = 170;
-            this.wilBitButton23.BorderSize = 0;
-            this.wilBitButton23.FlatAppearance.BorderSize = 0;
-            this.wilBitButton23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wilBitButton23.ForeColor = System.Drawing.Color.White;
-            this.wilBitButton23.Location = new System.Drawing.Point(1012, 474);
-            this.wilBitButton23.Name = "wilBitButton23";
-            this.wilBitButton23.Size = new System.Drawing.Size(336, 331);
-            this.wilBitButton23.TabIndex = 5;
-            this.wilBitButton23.TextColor = System.Drawing.Color.White;
-            this.wilBitButton23.UseVisualStyleBackColor = false;
+            this.btnPontosColeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPontosColeta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPontosColeta.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPontosColeta.BorderRadius = 170;
+            this.btnPontosColeta.BorderSize = 0;
+            this.btnPontosColeta.FlatAppearance.BorderSize = 0;
+            this.btnPontosColeta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPontosColeta.ForeColor = System.Drawing.Color.White;
+            this.btnPontosColeta.Location = new System.Drawing.Point(1012, 474);
+            this.btnPontosColeta.Name = "btnPontosColeta";
+            this.btnPontosColeta.Size = new System.Drawing.Size(336, 331);
+            this.btnPontosColeta.TabIndex = 5;
+            this.btnPontosColeta.TextColor = System.Drawing.Color.White;
+            this.btnPontosColeta.UseVisualStyleBackColor = false;
+            this.btnPontosColeta.Click += new System.EventHandler(this.btnPontosColeta_Click);
             // 
-            // wilBitButton24
+            // btnAprender
             // 
-            this.wilBitButton24.BackColor = System.Drawing.Color.Gold;
-            this.wilBitButton24.BackgroundColor = System.Drawing.Color.Gold;
-            this.wilBitButton24.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.wilBitButton24.BorderRadius = 170;
-            this.wilBitButton24.BorderSize = 0;
-            this.wilBitButton24.FlatAppearance.BorderSize = 0;
-            this.wilBitButton24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wilBitButton24.ForeColor = System.Drawing.Color.White;
-            this.wilBitButton24.Location = new System.Drawing.Point(1440, 258);
-            this.wilBitButton24.Name = "wilBitButton24";
-            this.wilBitButton24.Size = new System.Drawing.Size(336, 331);
-            this.wilBitButton24.TabIndex = 6;
-            this.wilBitButton24.TextColor = System.Drawing.Color.White;
-            this.wilBitButton24.UseVisualStyleBackColor = false;
+            this.btnAprender.BackColor = System.Drawing.Color.Gold;
+            this.btnAprender.BackgroundColor = System.Drawing.Color.Gold;
+            this.btnAprender.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnAprender.BorderRadius = 170;
+            this.btnAprender.BorderSize = 0;
+            this.btnAprender.FlatAppearance.BorderSize = 0;
+            this.btnAprender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAprender.ForeColor = System.Drawing.Color.White;
+            this.btnAprender.Location = new System.Drawing.Point(1440, 258);
+            this.btnAprender.Name = "btnAprender";
+            this.btnAprender.Size = new System.Drawing.Size(336, 331);
+            this.btnAprender.TabIndex = 6;
+            this.btnAprender.TextColor = System.Drawing.Color.White;
+            this.btnAprender.UseVisualStyleBackColor = false;
+            this.btnAprender.Click += new System.EventHandler(this.btnAprender_Click);
             // 
             // label4
             // 
@@ -237,7 +240,7 @@
             // painel
             // 
             this.painel.Controls.Add(this.pictureBox1);
-            this.painel.Controls.Add(this.wilBitButton21);
+            this.painel.Controls.Add(this.btnPerfil);
             this.painel.Location = new System.Drawing.Point(-2, 81);
             this.painel.Name = "painel";
             this.painel.Size = new System.Drawing.Size(1911, 964);
@@ -245,14 +248,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Red;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::pi_serasa_greenloop.Properties.Resources.user;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(138, 220);
+            this.pictureBox1.Location = new System.Drawing.Point(155, 239);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 243);
+            this.pictureBox1.Size = new System.Drawing.Size(195, 201);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -270,9 +273,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.wilBitButton24);
-            this.Controls.Add(this.wilBitButton23);
-            this.Controls.Add(this.wilBitButton22);
+            this.Controls.Add(this.btnAprender);
+            this.Controls.Add(this.btnPontosColeta);
+            this.Controls.Add(this.btnRecompensas);
             this.Controls.Add(this.wilBitButton2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.painel);
@@ -295,10 +298,10 @@
         private Label lblPrincipal;
         private Splitter splitter1;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
-        private WiLBiT.WiLBiTButton2 wilBitButton21;
-        private WiLBiT.WiLBiTButton2 wilBitButton22;
-        private WiLBiT.WiLBiTButton2 wilBitButton23;
-        private WiLBiT.WiLBiTButton2 wilBitButton24;
+        private WiLBiT.WiLBiTButton2 btnPerfil;
+        private WiLBiT.WiLBiTButton2 btnRecompensas;
+        private WiLBiT.WiLBiTButton2 btnPontosColeta;
+        private WiLBiT.WiLBiTButton2 btnAprender;
         private Label label4;
         private Label label5;
         private Label label6;
