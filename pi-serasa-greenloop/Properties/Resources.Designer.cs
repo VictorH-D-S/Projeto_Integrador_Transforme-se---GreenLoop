@@ -63,6 +63,16 @@ namespace pi_serasa_greenloop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c5qd2v059di51 {
+            get {
+                object obj = ResourceManager.GetObject("c5qd2v059di51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circulo_preto {
             get {
                 object obj = ResourceManager.GetObject("circulo-preto", resourceCulture);
@@ -86,6 +96,16 @@ namespace pi_serasa_greenloop.Properties {
         internal static System.Drawing.Bitmap pngwing_com__1_ {
             get {
                 object obj = ResourceManager.GetObject("pngwing.com (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing1 {
+            get {
+                object obj = ResourceManager.GetObject("pngwing1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
