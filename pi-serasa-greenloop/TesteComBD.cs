@@ -12,9 +12,9 @@ namespace pi_serasa_greenloop
         int idade;
         string email;
         string senha;
-        int cpf;
+        string cpf;
 
-        public TesteComBD(string nome, int idade, string email, string senha, int cpf) 
+        public TesteComBD(string nome, int idade, string email, string senha, string cpf) 
         {
             this.nome = nome;
             this.idade = idade;
@@ -23,11 +23,15 @@ namespace pi_serasa_greenloop
             this.cpf = cpf; 
         }
 
+        public TesteComBD() 
+        {
+        
+        }
+
         public void adicionarUsuario()
         {
             string query = $"INSERT INTO pessoas(nome, idade, email, senha, cpf) VALUES ('{nome}', {idade}, '{email}', '{senha}', {cpf})";
             Conexao.executaQuery(query);
-            
         }
     }
 }

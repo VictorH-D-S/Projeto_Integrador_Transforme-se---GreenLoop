@@ -8,9 +8,11 @@ namespace pi_serasa_greenloop
             int idade = int.Parse(textIdade.Text);
             string email = textEmail.Text;
             string senha = textSenha.Text;
-            int cpf = int.Parse(textCPF.Text);
+            string cpf = textCPF.Text;
 
             TesteComBD teste = new TesteComBD(nome, idade, email, senha, cpf);
+
+            teste.adicionarUsuario();
         }
 
         public Form1()
