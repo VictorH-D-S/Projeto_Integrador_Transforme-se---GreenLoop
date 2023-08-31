@@ -18,7 +18,6 @@ namespace pi_serasa_greenloop
 
         private void wilBitButton21_Click(object sender, EventArgs e)
         {
-            lblPrincipal.Text = "|  PERFIL  |";
             
         }
 
