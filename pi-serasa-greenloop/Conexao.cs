@@ -11,7 +11,7 @@ namespace pi_serasa_greenloop
     internal class Conexao
     {
         const string host = "Localhost", banco = "db_greenloop", usuario = "root", senha = "abc123",
-             dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
+              dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
 
         static MySqlConnection conexao = new MySqlConnection(dadosConexao);
 
