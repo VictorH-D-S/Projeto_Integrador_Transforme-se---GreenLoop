@@ -1,6 +1,6 @@
 ﻿namespace pi_serasa_greenloop
 {
-    partial class recompensas
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // recompensas
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1274, 659);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "recompensas";
-            this.Text = "recompensas";
-            this.Load += new System.EventHandler(this.recompensas_Load);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Name = "Login";
+            this.Text = "Login";
             this.ResumeLayout(false);
 
         }
