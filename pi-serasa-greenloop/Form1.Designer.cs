@@ -28,28 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblLogin = new System.Windows.Forms.Label();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.painel = new System.Windows.Forms.Panel();
             this.btnVoltar = new WiLBiT.WiLBiTButton();
             this.wilBitGradientPanel1 = new WiLBiT.WiLBiTGradientPanel();
+            this.wilBitButton1 = new WiLBiT.WiLBiTButton();
             this.wilBitGradientPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogin.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(1622, 26);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(195, 29);
-            this.lblLogin.TabIndex = 3;
-            this.lblLogin.Text = "Login / Registro ";
-            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // lblPrincipal
             // 
@@ -105,15 +92,32 @@
             this.wilBitGradientPanel1.BorderColor = System.Drawing.Color.Lime;
             this.wilBitGradientPanel1.BorderRadius = 6;
             this.wilBitGradientPanel1.BorderSize = 0;
+            this.wilBitGradientPanel1.Controls.Add(this.wilBitButton1);
             this.wilBitGradientPanel1.Controls.Add(this.btnVoltar);
             this.wilBitGradientPanel1.Controls.Add(this.lblPrincipal);
-            this.wilBitGradientPanel1.Controls.Add(this.lblLogin);
             this.wilBitGradientPanel1.ForeColor = System.Drawing.Color.White;
             this.wilBitGradientPanel1.Location = new System.Drawing.Point(1, 2);
             this.wilBitGradientPanel1.Name = "wilBitGradientPanel1";
             this.wilBitGradientPanel1.Size = new System.Drawing.Size(1902, 84);
             this.wilBitGradientPanel1.TabIndex = 14;
             this.wilBitGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.wilBitGradientPanel1_Paint);
+            // 
+            // wilBitButton1
+            // 
+            this.wilBitButton1.BackColor = System.Drawing.Color.ForestGreen;
+            this.wilBitButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.wilBitButton1.BorderRadius = 6;
+            this.wilBitButton1.BorderSize = 0;
+            this.wilBitButton1.FlatAppearance.BorderSize = 0;
+            this.wilBitButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wilBitButton1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.wilBitButton1.ForeColor = System.Drawing.Color.White;
+            this.wilBitButton1.Location = new System.Drawing.Point(1648, 18);
+            this.wilBitButton1.Name = "wilBitButton1";
+            this.wilBitButton1.Size = new System.Drawing.Size(200, 49);
+            this.wilBitButton1.TabIndex = 40;
+            this.wilBitButton1.Text = "Login / Cadastro";
+            this.wilBitButton1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -137,8 +141,8 @@
         private Label lblPrincipal;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
         private Panel painel;
-        private Label lblLogin;
         private WiLBiT.WiLBiTGradientPanel wilBitGradientPanel1;
         private WiLBiT.WiLBiTButton btnVoltar;
+        private WiLBiT.WiLBiTButton wilBitButton1;
     }
 }

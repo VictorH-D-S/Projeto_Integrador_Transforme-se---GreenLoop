@@ -121,4 +121,10 @@
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="55125-2-rewards-picture-hd-image-free-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\55125-2-rewards-picture-hd-image-free-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="854929" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\854929.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
