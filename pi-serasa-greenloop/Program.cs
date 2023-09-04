@@ -13,6 +13,7 @@ namespace pi_serasa_greenloop
             ApplicationConfiguration.Initialize();
 
             Application.Run(new Form1());
+
         }
     }
 }
