@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.painel = new System.Windows.Forms.Panel();
+            this.wilBitRoundedPictureBox22 = new WiLBiT.WiLBiTRoundedPictureBox2();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.wilBitRoundedPictureBox21 = new WiLBiT.WiLBiTRoundedPictureBox2();
@@ -43,12 +44,11 @@
             this.btnRecompensas = new WiLBiT.WiLBiTButton2();
             this.btnPontos = new WiLBiT.WiLBiTButton2();
             this.btnReciclagem = new WiLBiT.WiLBiTButton2();
-            this.wilBitRoundedPictureBox22 = new WiLBiT.WiLBiTRoundedPictureBox2();
             this.painel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).BeginInit();
             this.SuspendLayout();
             // 
             // painel
@@ -70,8 +70,25 @@
             this.painel.Controls.Add(this.btnReciclagem);
             this.painel.Location = new System.Drawing.Point(-1, -1);
             this.painel.Name = "painel";
-            this.painel.Size = new System.Drawing.Size(1921, 1083);
+            this.painel.Size = new System.Drawing.Size(1926, 1083);
             this.painel.TabIndex = 14;
+            // 
+            // wilBitRoundedPictureBox22
+            // 
+            this.wilBitRoundedPictureBox22.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.wilBitRoundedPictureBox22.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.wilBitRoundedPictureBox22.BorderColor = System.Drawing.Color.DarkTurquoise;
+            this.wilBitRoundedPictureBox22.BorderColor2 = System.Drawing.Color.DarkTurquoise;
+            this.wilBitRoundedPictureBox22.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.wilBitRoundedPictureBox22.BorderSize = 2;
+            this.wilBitRoundedPictureBox22.GradientAngle = 50F;
+            this.wilBitRoundedPictureBox22.Image = global::pi_serasa_greenloop.Properties.Resources.user;
+            this.wilBitRoundedPictureBox22.Location = new System.Drawing.Point(92, 196);
+            this.wilBitRoundedPictureBox22.Name = "wilBitRoundedPictureBox22";
+            this.wilBitRoundedPictureBox22.Size = new System.Drawing.Size(310, 310);
+            this.wilBitRoundedPictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.wilBitRoundedPictureBox22.TabIndex = 42;
+            this.wilBitRoundedPictureBox22.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -254,23 +271,6 @@
             this.btnReciclagem.TextColor = System.Drawing.Color.White;
             this.btnReciclagem.UseVisualStyleBackColor = false;
             // 
-            // wilBitRoundedPictureBox22
-            // 
-            this.wilBitRoundedPictureBox22.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.wilBitRoundedPictureBox22.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.wilBitRoundedPictureBox22.BorderColor = System.Drawing.Color.DarkTurquoise;
-            this.wilBitRoundedPictureBox22.BorderColor2 = System.Drawing.Color.DarkTurquoise;
-            this.wilBitRoundedPictureBox22.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.wilBitRoundedPictureBox22.BorderSize = 2;
-            this.wilBitRoundedPictureBox22.GradientAngle = 50F;
-            this.wilBitRoundedPictureBox22.Image = global::pi_serasa_greenloop.Properties.Resources.user;
-            this.wilBitRoundedPictureBox22.Location = new System.Drawing.Point(92, 196);
-            this.wilBitRoundedPictureBox22.Name = "wilBitRoundedPictureBox22";
-            this.wilBitRoundedPictureBox22.Size = new System.Drawing.Size(310, 310);
-            this.wilBitRoundedPictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wilBitRoundedPictureBox22.TabIndex = 42;
-            this.wilBitRoundedPictureBox22.TabStop = false;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -284,10 +284,10 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             this.painel.ResumeLayout(false);
             this.painel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).EndInit();
             this.ResumeLayout(false);
 
         }
