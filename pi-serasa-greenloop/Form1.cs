@@ -10,7 +10,7 @@ namespace pi_serasa_greenloop
             string senha = textSenha.Text;
             string cpf = textCPF.Text;
 
-            TesteComBD teste = new TesteComBD(nome, idade, email, senha, cpf);
+            Pessoas teste = new Pessoas(nome, idade, email, senha, cpf);
 
             teste.adicionarUsuario();
         }
