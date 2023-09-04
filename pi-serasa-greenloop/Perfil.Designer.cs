@@ -72,8 +72,8 @@
             // 
             // wilBitElipse1
             // 
-            wilBitElipse1.BorderRadius = 6;
-            wilBitElipse1.TargetControl = null;
+            //wilBitElipse1.BorderRadius = 6;
+            //wilBitElipse1.TargetControl = null;
             // 
             // wilBitGradientPanel1
             // 
@@ -282,6 +282,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(1370, 749);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox9);
