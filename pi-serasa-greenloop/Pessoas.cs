@@ -9,12 +9,12 @@ namespace pi_serasa_greenloop
     internal class Pessoas
     {
         string nome;
-        int idade;
+        string idade;
         string email;
         string senha;
         string cpf;
 
-        public Pessoas(string nome, int idade, string email, string senha, string cpf) 
+        public Pessoas(string nome, string idade, string email, string senha, string cpf) 
         {
             this.nome = nome;
             this.idade = idade;
@@ -29,7 +29,7 @@ namespace pi_serasa_greenloop
 
         public void adicionarUsuario()
         {
-            string query = $"INSERT INTO pessoas(nome, idade, email, senha, cpf) VALUES ('{nome}', {idade}, '{email}', '{senha}', {cpf})";
+            string query = $"INSERT INTO pessoas(nome, idade, email, senha, cpf) VALUES ('{nome}', '{idade}', '{email}', '{senha}', {cpf})";
             Conexao.executaQuery(query);
         }
     }
