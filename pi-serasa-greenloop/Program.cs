@@ -12,7 +12,7 @@ namespace pi_serasa_greenloop
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Login());
+            Application.Run(new Deletar_usuario());
 
         }
     }
