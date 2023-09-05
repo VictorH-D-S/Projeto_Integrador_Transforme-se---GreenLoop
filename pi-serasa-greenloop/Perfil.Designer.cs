@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
-            wilBitRoundedPictureBox1 = new WiLBiT.WiLBiTRoundedPictureBox();
+            ptbPerfilAvatar = new WiLBiT.WiLBiTRoundedPictureBox();
             label6 = new Label();
-            label5 = new Label();
+            lblPontos = new Label();
             label4 = new Label();
             label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            lblTotal_Reciclado = new Label();
+            lblNome = new Label();
             pictureBox1 = new PictureBox();
             wilBitPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)wilBitRoundedPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -49,35 +49,35 @@
             wilBitPanel1.BorderColor = Color.OldLace;
             wilBitPanel1.BorderRadius = 11;
             wilBitPanel1.BorderSize = 0;
-            wilBitPanel1.Controls.Add(wilBitRoundedPictureBox1);
+            wilBitPanel1.Controls.Add(ptbPerfilAvatar);
             wilBitPanel1.Controls.Add(label6);
-            wilBitPanel1.Controls.Add(label5);
+            wilBitPanel1.Controls.Add(lblPontos);
             wilBitPanel1.Controls.Add(label4);
             wilBitPanel1.Controls.Add(label3);
-            wilBitPanel1.Controls.Add(label2);
-            wilBitPanel1.Controls.Add(label1);
+            wilBitPanel1.Controls.Add(lblTotal_Reciclado);
+            wilBitPanel1.Controls.Add(lblNome);
             wilBitPanel1.ForeColor = Color.SeaShell;
             wilBitPanel1.Location = new Point(366, 135);
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(1166, 750);
             wilBitPanel1.TabIndex = 0;
             // 
-            // wilBitRoundedPictureBox1
+            // ptbPerfilAvatar
             // 
-            wilBitRoundedPictureBox1.BackColor = Color.Transparent;
-            wilBitRoundedPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            wilBitRoundedPictureBox1.BorderColor = Color.Lime;
-            wilBitRoundedPictureBox1.BorderColor2 = Color.Lime;
-            wilBitRoundedPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            wilBitRoundedPictureBox1.BorderSize = 2;
-            wilBitRoundedPictureBox1.GradientAngle = 50F;
-            wilBitRoundedPictureBox1.Image = (Image)resources.GetObject("wilBitRoundedPictureBox1.Image");
-            wilBitRoundedPictureBox1.Location = new Point(453, 47);
-            wilBitRoundedPictureBox1.Name = "wilBitRoundedPictureBox1";
-            wilBitRoundedPictureBox1.Size = new Size(293, 293);
-            wilBitRoundedPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            wilBitRoundedPictureBox1.TabIndex = 8;
-            wilBitRoundedPictureBox1.TabStop = false;
+            ptbPerfilAvatar.BackColor = Color.Transparent;
+            ptbPerfilAvatar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            ptbPerfilAvatar.BorderColor = Color.Lime;
+            ptbPerfilAvatar.BorderColor2 = Color.Lime;
+            ptbPerfilAvatar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            ptbPerfilAvatar.BorderSize = 2;
+            ptbPerfilAvatar.GradientAngle = 50F;
+            ptbPerfilAvatar.Image = (Image)resources.GetObject("ptbPerfilAvatar.Image");
+            ptbPerfilAvatar.Location = new Point(453, 47);
+            ptbPerfilAvatar.Name = "ptbPerfilAvatar";
+            ptbPerfilAvatar.Size = new Size(293, 293);
+            ptbPerfilAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbPerfilAvatar.TabIndex = 8;
+            ptbPerfilAvatar.TabStop = false;
             // 
             // label6
             // 
@@ -90,16 +90,16 @@
             label6.TabIndex = 7;
             label6.Text = "Olá";
             // 
-            // label5
+            // lblPontos
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(664, 621);
-            label5.Name = "label5";
-            label5.Size = new Size(33, 38);
-            label5.TabIndex = 5;
-            label5.Text = "0";
+            lblPontos.AutoSize = true;
+            lblPontos.BackColor = Color.Transparent;
+            lblPontos.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPontos.Location = new Point(664, 621);
+            lblPontos.Name = "lblPontos";
+            lblPontos.Size = new Size(33, 38);
+            lblPontos.TabIndex = 5;
+            lblPontos.Text = "0";
             // 
             // label4
             // 
@@ -123,28 +123,28 @@
             label3.TabIndex = 3;
             label3.Text = "Total Reciclado -";
             // 
-            // label2
+            // lblTotal_Reciclado
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(727, 523);
-            label2.Name = "label2";
-            label2.Size = new Size(33, 38);
-            label2.TabIndex = 2;
-            label2.Text = "0";
-            label2.Click += label2_Click;
+            lblTotal_Reciclado.AutoSize = true;
+            lblTotal_Reciclado.BackColor = Color.Transparent;
+            lblTotal_Reciclado.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTotal_Reciclado.Location = new Point(727, 523);
+            lblTotal_Reciclado.Name = "lblTotal_Reciclado";
+            lblTotal_Reciclado.Size = new Size(33, 38);
+            lblTotal_Reciclado.TabIndex = 2;
+            lblTotal_Reciclado.Text = "0";
+            lblTotal_Reciclado.Click += label2_Click;
             // 
-            // label1
+            // lblNome
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(465, 432);
-            label1.Name = "label1";
-            label1.Size = new Size(281, 45);
-            label1.TabIndex = 1;
-            label1.Text = "Nome do Úsuario";
+            lblNome.AutoSize = true;
+            lblNome.BackColor = Color.Transparent;
+            lblNome.Font = new Font("Segoe UI", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblNome.Location = new Point(465, 432);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(281, 45);
+            lblNome.TabIndex = 1;
+            lblNome.Text = "Nome do Úsuario";
             // 
             // pictureBox1
             // 
@@ -169,7 +169,7 @@
             Text = "Perfil";
             wilBitPanel1.ResumeLayout(false);
             wilBitPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)wilBitRoundedPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -178,12 +178,12 @@
 
         private WiLBiT.WiLBiTPanel wilBitPanel1;
         private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label5;
+        private Label lblTotal_Reciclado;
+        private Label lblNome;
+        private Label lblPontos;
         private Label label4;
         private Label label6;
-        private WiLBiT.WiLBiTRoundedPictureBox wilBitRoundedPictureBox1;
+        private WiLBiT.WiLBiTRoundedPictureBox ptbPerfilAvatar;
         private PictureBox pictureBox1;
     }
 }
