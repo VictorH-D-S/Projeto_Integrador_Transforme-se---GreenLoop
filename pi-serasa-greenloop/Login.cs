@@ -16,5 +16,10 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
+
+        private void txtLoginEmail__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,6 +22,7 @@ namespace pi_serasa_greenloop
 
         public void carregaForm(Form form)
         {
+
             form.TopLevel = false;
             painel.Controls.Clear();
             painel.Controls.Add(form);
@@ -96,7 +97,7 @@ namespace pi_serasa_greenloop
 
         private void btnPerfil_Click_1(object sender, EventArgs e)
         {
-
+            carregaForm(new Perfil());
         }
 
         private void btnRecompensas_Click_1(object sender, EventArgs e)
@@ -110,6 +111,11 @@ namespace pi_serasa_greenloop
                     }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReciclagem_Click(object sender, EventArgs e)
         {
 
         }

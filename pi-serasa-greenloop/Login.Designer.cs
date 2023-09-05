@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.wilBitPanel1 = new WiLBiT.WiLBiTPanel();
-            this.wilBitPanel2 = new WiLBiT.WiLBiTPanel();
-            this.txtLoginEmail = new WiLBiT.WiLBiTTextBox();
-            this.txtLoginSenha = new WiLBiT.WiLBiTTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new WiLBiT.WiLBiTButton();
-            this.wilBitButton1 = new WiLBiT.WiLBiTButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCadastroSenha = new WiLBiT.WiLBiTTextBox();
-            this.txtCadastroNome = new WiLBiT.WiLBiTTextBox();
-            this.txtCadastroCPF = new WiLBiT.WiLBiTTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLoginSenha = new WiLBiT.WiLBiTTextBox();
+            this.txtLoginEmail = new WiLBiT.WiLBiTTextBox();
+            this.wilBitPanel2 = new WiLBiT.WiLBiTPanel();
             this.txtCadastroEmail = new WiLBiT.WiLBiTTextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtCadastroCPF = new WiLBiT.WiLBiTTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.wilBitButton1 = new WiLBiT.WiLBiTButton();
+            this.txtCadastroNome = new WiLBiT.WiLBiTTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCadastroSenha = new WiLBiT.WiLBiTTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.wilBitPanel1.SuspendLayout();
             this.wilBitPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,48 +65,43 @@
             this.wilBitPanel1.Size = new System.Drawing.Size(533, 568);
             this.wilBitPanel1.TabIndex = 0;
             // 
-            // wilBitPanel2
+            // btnLogin
             // 
-            this.wilBitPanel2.BackColor = System.Drawing.Color.Silver;
-            this.wilBitPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.wilBitPanel2.BorderRadius = 6;
-            this.wilBitPanel2.BorderSize = 0;
-            this.wilBitPanel2.Controls.Add(this.txtCadastroEmail);
-            this.wilBitPanel2.Controls.Add(this.label6);
-            this.wilBitPanel2.Controls.Add(this.txtCadastroCPF);
-            this.wilBitPanel2.Controls.Add(this.label5);
-            this.wilBitPanel2.Controls.Add(this.wilBitButton1);
-            this.wilBitPanel2.Controls.Add(this.txtCadastroNome);
-            this.wilBitPanel2.Controls.Add(this.label3);
-            this.wilBitPanel2.Controls.Add(this.txtCadastroSenha);
-            this.wilBitPanel2.Controls.Add(this.label4);
-            this.wilBitPanel2.ForeColor = System.Drawing.Color.White;
-            this.wilBitPanel2.Location = new System.Drawing.Point(1193, 179);
-            this.wilBitPanel2.Name = "wilBitPanel2";
-            this.wilBitPanel2.Size = new System.Drawing.Size(533, 568);
-            this.wilBitPanel2.TabIndex = 1;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnLogin.BorderRadius = 6;
+            this.btnLogin.BorderSize = 0;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(169, 408);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(185, 53);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // txtLoginEmail
+            // label2
             // 
-            this.txtLoginEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLoginEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.txtLoginEmail.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtLoginEmail.BorderRadius = 4;
-            this.txtLoginEmail.BorderSize = 2;
-            this.txtLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtLoginEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtLoginEmail.Location = new System.Drawing.Point(84, 137);
-            this.txtLoginEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLoginEmail.Multiline = false;
-            this.txtLoginEmail.Name = "txtLoginEmail";
-            this.txtLoginEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtLoginEmail.PasswordChar = false;
-            this.txtLoginEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtLoginEmail.PlaceholderText = "";
-            this.txtLoginEmail.Size = new System.Drawing.Size(348, 29);
-            this.txtLoginEmail.TabIndex = 0;
-            this.txtLoginEmail.Texts = "";
-            this.txtLoginEmail.UnderlinedStyle = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(91, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Email";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(84, 305);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Senha";
             // 
             // txtLoginSenha
             // 
@@ -130,125 +125,82 @@
             this.txtLoginSenha.Texts = "";
             this.txtLoginSenha.UnderlinedStyle = false;
             // 
-            // label1
+            // txtLoginEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(84, 305);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Senha";
+            this.txtLoginEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLoginEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.txtLoginEmail.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtLoginEmail.BorderRadius = 4;
+            this.txtLoginEmail.BorderSize = 2;
+            this.txtLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLoginEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLoginEmail.Location = new System.Drawing.Point(84, 137);
+            this.txtLoginEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginEmail.Multiline = false;
+            this.txtLoginEmail.Name = "txtLoginEmail";
+            this.txtLoginEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtLoginEmail.PasswordChar = false;
+            this.txtLoginEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLoginEmail.PlaceholderText = "";
+            this.txtLoginEmail.Size = new System.Drawing.Size(348, 29);
+            this.txtLoginEmail.TabIndex = 0;
+            this.txtLoginEmail.Texts = "";
+            this.txtLoginEmail.UnderlinedStyle = false;
+            this.txtLoginEmail._TextChanged += new System.EventHandler(this.txtLoginEmail__TextChanged);
             // 
-            // label2
+            // wilBitPanel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(91, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Email";
+            this.wilBitPanel2.BackColor = System.Drawing.Color.Silver;
+            this.wilBitPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.wilBitPanel2.BorderRadius = 6;
+            this.wilBitPanel2.BorderSize = 0;
+            this.wilBitPanel2.Controls.Add(this.txtCadastroEmail);
+            this.wilBitPanel2.Controls.Add(this.label6);
+            this.wilBitPanel2.Controls.Add(this.txtCadastroCPF);
+            this.wilBitPanel2.Controls.Add(this.label5);
+            this.wilBitPanel2.Controls.Add(this.wilBitButton1);
+            this.wilBitPanel2.Controls.Add(this.txtCadastroNome);
+            this.wilBitPanel2.Controls.Add(this.label3);
+            this.wilBitPanel2.Controls.Add(this.txtCadastroSenha);
+            this.wilBitPanel2.Controls.Add(this.label4);
+            this.wilBitPanel2.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel2.Location = new System.Drawing.Point(1193, 179);
+            this.wilBitPanel2.Name = "wilBitPanel2";
+            this.wilBitPanel2.Size = new System.Drawing.Size(533, 568);
+            this.wilBitPanel2.TabIndex = 1;
             // 
-            // btnLogin
+            // txtCadastroEmail
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.btnLogin.BorderRadius = 6;
-            this.btnLogin.BorderSize = 0;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(169, 408);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(185, 53);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.txtCadastroEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCadastroEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.txtCadastroEmail.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCadastroEmail.BorderRadius = 4;
+            this.txtCadastroEmail.BorderSize = 2;
+            this.txtCadastroEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCadastroEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCadastroEmail.Location = new System.Drawing.Point(94, 280);
+            this.txtCadastroEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastroEmail.Multiline = false;
+            this.txtCadastroEmail.Name = "txtCadastroEmail";
+            this.txtCadastroEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCadastroEmail.PasswordChar = false;
+            this.txtCadastroEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCadastroEmail.PlaceholderText = "";
+            this.txtCadastroEmail.Size = new System.Drawing.Size(348, 29);
+            this.txtCadastroEmail.TabIndex = 8;
+            this.txtCadastroEmail.Texts = "";
+            this.txtCadastroEmail.UnderlinedStyle = false;
             // 
-            // wilBitButton1
+            // label6
             // 
-            this.wilBitButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.wilBitButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.wilBitButton1.BorderRadius = 6;
-            this.wilBitButton1.BorderSize = 0;
-            this.wilBitButton1.FlatAppearance.BorderSize = 0;
-            this.wilBitButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wilBitButton1.ForeColor = System.Drawing.Color.White;
-            this.wilBitButton1.Location = new System.Drawing.Point(163, 389);
-            this.wilBitButton1.Name = "wilBitButton1";
-            this.wilBitButton1.Size = new System.Drawing.Size(185, 53);
-            this.wilBitButton1.TabIndex = 9;
-            this.wilBitButton1.Text = "Cadastrar";
-            this.wilBitButton1.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(101, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Nome";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(94, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 18);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Senha";
-            // 
-            // txtCadastroSenha
-            // 
-            this.txtCadastroSenha.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCadastroSenha.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.txtCadastroSenha.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCadastroSenha.BorderRadius = 4;
-            this.txtCadastroSenha.BorderSize = 2;
-            this.txtCadastroSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCadastroSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCadastroSenha.Location = new System.Drawing.Point(94, 147);
-            this.txtCadastroSenha.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCadastroSenha.Multiline = false;
-            this.txtCadastroSenha.Name = "txtCadastroSenha";
-            this.txtCadastroSenha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCadastroSenha.PasswordChar = false;
-            this.txtCadastroSenha.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCadastroSenha.PlaceholderText = "";
-            this.txtCadastroSenha.Size = new System.Drawing.Size(348, 29);
-            this.txtCadastroSenha.TabIndex = 6;
-            this.txtCadastroSenha.Texts = "";
-            this.txtCadastroSenha.UnderlinedStyle = false;
-            // 
-            // txtCadastroNome
-            // 
-            this.txtCadastroNome.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCadastroNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.txtCadastroNome.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCadastroNome.BorderRadius = 4;
-            this.txtCadastroNome.BorderSize = 2;
-            this.txtCadastroNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCadastroNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCadastroNome.Location = new System.Drawing.Point(94, 80);
-            this.txtCadastroNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCadastroNome.Multiline = false;
-            this.txtCadastroNome.Name = "txtCadastroNome";
-            this.txtCadastroNome.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCadastroNome.PasswordChar = false;
-            this.txtCadastroNome.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCadastroNome.PlaceholderText = "";
-            this.txtCadastroNome.Size = new System.Drawing.Size(348, 29);
-            this.txtCadastroNome.TabIndex = 5;
-            this.txtCadastroNome.Texts = "";
-            this.txtCadastroNome.UnderlinedStyle = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(94, 258);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Email";
             // 
             // txtCadastroCPF
             // 
@@ -283,38 +235,87 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "CPF";
             // 
-            // txtCadastroEmail
+            // wilBitButton1
             // 
-            this.txtCadastroEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCadastroEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.txtCadastroEmail.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCadastroEmail.BorderRadius = 4;
-            this.txtCadastroEmail.BorderSize = 2;
-            this.txtCadastroEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCadastroEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCadastroEmail.Location = new System.Drawing.Point(94, 280);
-            this.txtCadastroEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCadastroEmail.Multiline = false;
-            this.txtCadastroEmail.Name = "txtCadastroEmail";
-            this.txtCadastroEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtCadastroEmail.PasswordChar = false;
-            this.txtCadastroEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCadastroEmail.PlaceholderText = "";
-            this.txtCadastroEmail.Size = new System.Drawing.Size(348, 29);
-            this.txtCadastroEmail.TabIndex = 8;
-            this.txtCadastroEmail.Texts = "";
-            this.txtCadastroEmail.UnderlinedStyle = false;
+            this.wilBitButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.wilBitButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.wilBitButton1.BorderRadius = 6;
+            this.wilBitButton1.BorderSize = 0;
+            this.wilBitButton1.FlatAppearance.BorderSize = 0;
+            this.wilBitButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wilBitButton1.ForeColor = System.Drawing.Color.White;
+            this.wilBitButton1.Location = new System.Drawing.Point(163, 389);
+            this.wilBitButton1.Name = "wilBitButton1";
+            this.wilBitButton1.Size = new System.Drawing.Size(185, 53);
+            this.wilBitButton1.TabIndex = 9;
+            this.wilBitButton1.Text = "Cadastrar";
+            this.wilBitButton1.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // txtCadastroNome
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(94, 258);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 18);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Email";
+            this.txtCadastroNome.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCadastroNome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.txtCadastroNome.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCadastroNome.BorderRadius = 4;
+            this.txtCadastroNome.BorderSize = 2;
+            this.txtCadastroNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCadastroNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCadastroNome.Location = new System.Drawing.Point(94, 80);
+            this.txtCadastroNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastroNome.Multiline = false;
+            this.txtCadastroNome.Name = "txtCadastroNome";
+            this.txtCadastroNome.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCadastroNome.PasswordChar = false;
+            this.txtCadastroNome.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCadastroNome.PlaceholderText = "";
+            this.txtCadastroNome.Size = new System.Drawing.Size(348, 29);
+            this.txtCadastroNome.TabIndex = 5;
+            this.txtCadastroNome.Texts = "";
+            this.txtCadastroNome.UnderlinedStyle = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(101, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Nome";
+            // 
+            // txtCadastroSenha
+            // 
+            this.txtCadastroSenha.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCadastroSenha.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.txtCadastroSenha.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCadastroSenha.BorderRadius = 4;
+            this.txtCadastroSenha.BorderSize = 2;
+            this.txtCadastroSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCadastroSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCadastroSenha.Location = new System.Drawing.Point(94, 147);
+            this.txtCadastroSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastroSenha.Multiline = false;
+            this.txtCadastroSenha.Name = "txtCadastroSenha";
+            this.txtCadastroSenha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCadastroSenha.PasswordChar = false;
+            this.txtCadastroSenha.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCadastroSenha.PlaceholderText = "";
+            this.txtCadastroSenha.Size = new System.Drawing.Size(348, 29);
+            this.txtCadastroSenha.TabIndex = 6;
+            this.txtCadastroSenha.Texts = "";
+            this.txtCadastroSenha.UnderlinedStyle = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(94, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 18);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Senha";
             // 
             // Login
             // 
