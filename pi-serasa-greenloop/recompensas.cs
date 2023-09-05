@@ -21,5 +21,10 @@ namespace pi_serasa_greenloop
         {
 
         }
+
+        private void wilBitProgressBar21_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

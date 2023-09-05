@@ -101,9 +101,7 @@ namespace pi_serasa_greenloop
 
         private void btnRecompensas_Click_1(object sender, EventArgs e)
         {
-            Button btnVoltar = new Button();
-            btnVoltar.Visible = true;
-            lblPrincipal.Text = "|  RECOMPENSAS  |";
+            
             carregaForm(new recompensas());
         }
 
