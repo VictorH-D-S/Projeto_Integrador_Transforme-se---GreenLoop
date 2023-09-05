@@ -54,5 +54,10 @@ namespace pi_serasa_greenloop
             wilBitPanel1.Location = new Point(centerX, centerY);
             wilBitPanel2.Location = new Point(centerX + wilBitPanel1.Width, centerY);
         }
+
+        private void txtCadastroNome__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

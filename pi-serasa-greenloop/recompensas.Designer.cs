@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.painelConteudo = new System.Windows.Forms.Panel();
+            this.btnResgatar = new WiLBiT.WiLBiTButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnResgatar = new WiLBiT.WiLBiTButton();
             this.painelConteudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -57,6 +57,22 @@
             this.painelConteudo.Name = "painelConteudo";
             this.painelConteudo.Size = new System.Drawing.Size(1569, 440);
             this.painelConteudo.TabIndex = 0;
+            // 
+            // btnResgatar
+            // 
+            this.btnResgatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnResgatar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnResgatar.BorderRadius = 6;
+            this.btnResgatar.BorderSize = 0;
+            this.btnResgatar.FlatAppearance.BorderSize = 0;
+            this.btnResgatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResgatar.ForeColor = System.Drawing.Color.White;
+            this.btnResgatar.Location = new System.Drawing.Point(145, 284);
+            this.btnResgatar.Name = "btnResgatar";
+            this.btnResgatar.Size = new System.Drawing.Size(203, 53);
+            this.btnResgatar.TabIndex = 5;
+            this.btnResgatar.Text = "Resgatar";
+            this.btnResgatar.UseVisualStyleBackColor = false;
             // 
             // pictureBox5
             // 
@@ -97,22 +113,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(394, 339);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnResgatar
-            // 
-            this.btnResgatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.btnResgatar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.btnResgatar.BorderRadius = 6;
-            this.btnResgatar.BorderSize = 0;
-            this.btnResgatar.FlatAppearance.BorderSize = 0;
-            this.btnResgatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResgatar.ForeColor = System.Drawing.Color.White;
-            this.btnResgatar.Location = new System.Drawing.Point(158, 288);
-            this.btnResgatar.Name = "btnResgatar";
-            this.btnResgatar.Size = new System.Drawing.Size(203, 53);
-            this.btnResgatar.TabIndex = 5;
-            this.btnResgatar.Text = "Resgatar";
-            this.btnResgatar.UseVisualStyleBackColor = false;
             // 
             // recompensas
             // 

@@ -28,337 +28,365 @@
         /// </summary>
         private void InitializeComponent()
         {
-            wilBitPanel1 = new WiLBiT.WiLBiTPanel();
-            btnLogin = new WiLBiT.WiLBiTButton();
-            label2 = new Label();
-            label1 = new Label();
-            txtLoginSenha = new WiLBiT.WiLBiTTextBox();
-            txtLoginEmail = new WiLBiT.WiLBiTTextBox();
-            wilBitPanel2 = new WiLBiT.WiLBiTPanel();
-            txtIdade = new WiLBiT.WiLBiTTextBox();
-            txtCadastroEmail = new WiLBiT.WiLBiTTextBox();
-            label6 = new Label();
-            txtCadastroCPF = new WiLBiT.WiLBiTTextBox();
-            label5 = new Label();
-            wilBitButton1 = new WiLBiT.WiLBiTButton();
-            txtCadastroNome = new WiLBiT.WiLBiTTextBox();
-            label3 = new Label();
-            txtCadastroSenha = new WiLBiT.WiLBiTTextBox();
-            label4 = new Label();
-            wilBitPanel1.SuspendLayout();
-            wilBitPanel2.SuspendLayout();
-            SuspendLayout();
+            this.wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            this.btnLogin = new WiLBiT.WiLBiTButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLoginSenha = new WiLBiT.WiLBiTTextBox();
+            this.txtLoginEmail = new WiLBiT.WiLBiTTextBox();
+            this.wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtIdade = new WiLBiT.WiLBiTTextBox();
+            this.txtCadastroEmail = new WiLBiT.WiLBiTTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCadastroCPF = new WiLBiT.WiLBiTTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.wilBitButton1 = new WiLBiT.WiLBiTButton();
+            this.txtCadastroNome = new WiLBiT.WiLBiTTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCadastroSenha = new WiLBiT.WiLBiTTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.wilBitPanel1.SuspendLayout();
+            this.wilBitPanel2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // wilBitPanel1
             // 
-            wilBitPanel1.BackColor = Color.Silver;
-            wilBitPanel1.BorderColor = Color.PaleVioletRed;
-            wilBitPanel1.BorderRadius = 6;
-            wilBitPanel1.BorderSize = 0;
-            wilBitPanel1.Controls.Add(btnLogin);
-            wilBitPanel1.Controls.Add(label2);
-            wilBitPanel1.Controls.Add(label1);
-            wilBitPanel1.Controls.Add(txtLoginSenha);
-            wilBitPanel1.Controls.Add(txtLoginEmail);
-            wilBitPanel1.ForeColor = Color.White;
-            wilBitPanel1.Location = new Point(196, 179);
-            wilBitPanel1.Name = "wilBitPanel1";
-            wilBitPanel1.Size = new Size(533, 568);
-            wilBitPanel1.TabIndex = 0;
-            wilBitPanel1.Paint += wilBitPanel1_Paint;
+            this.wilBitPanel1.BackColor = System.Drawing.Color.LimeGreen;
+            this.wilBitPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.wilBitPanel1.BorderRadius = 20;
+            this.wilBitPanel1.BorderSize = 0;
+            this.wilBitPanel1.Controls.Add(this.checkBox1);
+            this.wilBitPanel1.Controls.Add(this.btnLogin);
+            this.wilBitPanel1.Controls.Add(this.label2);
+            this.wilBitPanel1.Controls.Add(this.label1);
+            this.wilBitPanel1.Controls.Add(this.txtLoginSenha);
+            this.wilBitPanel1.Controls.Add(this.txtLoginEmail);
+            this.wilBitPanel1.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel1.Location = new System.Drawing.Point(196, 179);
+            this.wilBitPanel1.Name = "wilBitPanel1";
+            this.wilBitPanel1.Size = new System.Drawing.Size(533, 568);
+            this.wilBitPanel1.TabIndex = 0;
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.FromArgb(72, 116, 245);
-            btnLogin.BorderColor = Color.FromArgb(72, 116, 245);
-            btnLogin.BorderRadius = 6;
-            btnLogin.BorderSize = 0;
-            btnLogin.FlatAppearance.BorderSize = 0;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(169, 408);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(185, 53);
-            btnLogin.TabIndex = 4;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.Black;
+            this.btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnLogin.BorderRadius = 6;
+            this.btnLogin.BorderSize = 0;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(169, 408);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(185, 53);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(91, 115);
-            label2.Name = "label2";
-            label2.Size = new Size(41, 18);
-            label2.TabIndex = 3;
-            label2.Text = "Email";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(84, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 22);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Email";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(84, 305);
-            label1.Name = "label1";
-            label1.Size = new Size(45, 18);
-            label1.TabIndex = 2;
-            label1.Text = "Senha";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(84, 298);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Senha";
             // 
             // txtLoginSenha
             // 
-            txtLoginSenha.BackColor = SystemColors.Window;
-            txtLoginSenha.BorderColor = Color.FromArgb(72, 116, 245);
-            txtLoginSenha.BorderFocusColor = Color.DeepSkyBlue;
-            txtLoginSenha.BorderRadius = 4;
-            txtLoginSenha.BorderSize = 2;
-            txtLoginSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLoginSenha.ForeColor = Color.FromArgb(64, 64, 64);
-            txtLoginSenha.Location = new Point(84, 324);
-            txtLoginSenha.Margin = new Padding(4);
-            txtLoginSenha.Multiline = false;
-            txtLoginSenha.Name = "txtLoginSenha";
-            txtLoginSenha.Padding = new Padding(10, 7, 10, 7);
-            txtLoginSenha.PasswordChar = false;
-            txtLoginSenha.PlaceholderColor = Color.DarkGray;
-            txtLoginSenha.PlaceholderText = "";
-            txtLoginSenha.Size = new Size(348, 29);
-            txtLoginSenha.TabIndex = 1;
-            txtLoginSenha.Texts = "";
-            txtLoginSenha.UnderlinedStyle = false;
+            this.txtLoginSenha.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLoginSenha.BorderColor = System.Drawing.Color.Black;
+            this.txtLoginSenha.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtLoginSenha.BorderRadius = 4;
+            this.txtLoginSenha.BorderSize = 2;
+            this.txtLoginSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLoginSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLoginSenha.Location = new System.Drawing.Point(84, 324);
+            this.txtLoginSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginSenha.Multiline = false;
+            this.txtLoginSenha.Name = "txtLoginSenha";
+            this.txtLoginSenha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtLoginSenha.PasswordChar = false;
+            this.txtLoginSenha.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLoginSenha.PlaceholderText = "";
+            this.txtLoginSenha.Size = new System.Drawing.Size(348, 29);
+            this.txtLoginSenha.TabIndex = 1;
+            this.txtLoginSenha.Texts = "";
+            this.txtLoginSenha.UnderlinedStyle = false;
             // 
             // txtLoginEmail
             // 
-            txtLoginEmail.BackColor = SystemColors.Window;
-            txtLoginEmail.BorderColor = Color.FromArgb(72, 116, 245);
-            txtLoginEmail.BorderFocusColor = Color.DeepSkyBlue;
-            txtLoginEmail.BorderRadius = 4;
-            txtLoginEmail.BorderSize = 2;
-            txtLoginEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLoginEmail.ForeColor = Color.FromArgb(64, 64, 64);
-            txtLoginEmail.Location = new Point(84, 137);
-            txtLoginEmail.Margin = new Padding(4);
-            txtLoginEmail.Multiline = false;
-            txtLoginEmail.Name = "txtLoginEmail";
-            txtLoginEmail.Padding = new Padding(10, 7, 10, 7);
-            txtLoginEmail.PasswordChar = false;
-            txtLoginEmail.PlaceholderColor = Color.DarkGray;
-            txtLoginEmail.PlaceholderText = "";
-            txtLoginEmail.Size = new Size(348, 29);
-            txtLoginEmail.TabIndex = 0;
-            txtLoginEmail.Texts = "";
-            txtLoginEmail.UnderlinedStyle = false;
+            this.txtLoginEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLoginEmail.BorderColor = System.Drawing.Color.Black;
+            this.txtLoginEmail.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtLoginEmail.BorderRadius = 4;
+            this.txtLoginEmail.BorderSize = 2;
+            this.txtLoginEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLoginEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLoginEmail.Location = new System.Drawing.Point(84, 137);
+            this.txtLoginEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginEmail.Multiline = false;
+            this.txtLoginEmail.Name = "txtLoginEmail";
+            this.txtLoginEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtLoginEmail.PasswordChar = false;
+            this.txtLoginEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLoginEmail.PlaceholderText = "";
+            this.txtLoginEmail.Size = new System.Drawing.Size(348, 29);
+            this.txtLoginEmail.TabIndex = 0;
+            this.txtLoginEmail.Texts = "";
+            this.txtLoginEmail.UnderlinedStyle = false;
             // 
             // wilBitPanel2
             // 
-            wilBitPanel2.BackColor = Color.Silver;
-            wilBitPanel2.BorderColor = Color.PaleVioletRed;
-            wilBitPanel2.BorderRadius = 6;
-            wilBitPanel2.BorderSize = 0;
-            wilBitPanel2.Controls.Add(txtIdade);
-            wilBitPanel2.Controls.Add(txtCadastroEmail);
-            wilBitPanel2.Controls.Add(label6);
-            wilBitPanel2.Controls.Add(txtCadastroCPF);
-            wilBitPanel2.Controls.Add(label5);
-            wilBitPanel2.Controls.Add(wilBitButton1);
-            wilBitPanel2.Controls.Add(txtCadastroNome);
-            wilBitPanel2.Controls.Add(label3);
-            wilBitPanel2.Controls.Add(txtCadastroSenha);
-            wilBitPanel2.Controls.Add(label4);
-            wilBitPanel2.ForeColor = Color.White;
-            wilBitPanel2.Location = new Point(825, 179);
-            wilBitPanel2.Name = "wilBitPanel2";
-            wilBitPanel2.Size = new Size(533, 568);
-            wilBitPanel2.TabIndex = 1;
-            wilBitPanel2.Paint += wilBitPanel2_Paint;
+            this.wilBitPanel2.BackColor = System.Drawing.Color.LimeGreen;
+            this.wilBitPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.wilBitPanel2.BorderRadius = 20;
+            this.wilBitPanel2.BorderSize = 0;
+            this.wilBitPanel2.Controls.Add(this.label7);
+            this.wilBitPanel2.Controls.Add(this.txtIdade);
+            this.wilBitPanel2.Controls.Add(this.txtCadastroEmail);
+            this.wilBitPanel2.Controls.Add(this.label6);
+            this.wilBitPanel2.Controls.Add(this.txtCadastroCPF);
+            this.wilBitPanel2.Controls.Add(this.label5);
+            this.wilBitPanel2.Controls.Add(this.wilBitButton1);
+            this.wilBitPanel2.Controls.Add(this.txtCadastroNome);
+            this.wilBitPanel2.Controls.Add(this.label3);
+            this.wilBitPanel2.Controls.Add(this.txtCadastroSenha);
+            this.wilBitPanel2.Controls.Add(this.label4);
+            this.wilBitPanel2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.wilBitPanel2.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel2.Location = new System.Drawing.Point(825, 179);
+            this.wilBitPanel2.Name = "wilBitPanel2";
+            this.wilBitPanel2.Size = new System.Drawing.Size(533, 568);
+            this.wilBitPanel2.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(98, 324);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 20);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Idade";
             // 
             // txtIdade
             // 
-            txtIdade.BackColor = SystemColors.Window;
-            txtIdade.BorderColor = Color.FromArgb(72, 116, 245);
-            txtIdade.BorderFocusColor = Color.DeepSkyBlue;
-            txtIdade.BorderRadius = 4;
-            txtIdade.BorderSize = 2;
-            txtIdade.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtIdade.ForeColor = Color.FromArgb(64, 64, 64);
-            txtIdade.Location = new Point(94, 342);
-            txtIdade.Margin = new Padding(4);
-            txtIdade.Multiline = false;
-            txtIdade.Name = "txtIdade";
-            txtIdade.Padding = new Padding(10, 7, 10, 7);
-            txtIdade.PasswordChar = false;
-            txtIdade.PlaceholderColor = Color.DarkGray;
-            txtIdade.PlaceholderText = "";
-            txtIdade.Size = new Size(348, 29);
-            txtIdade.TabIndex = 12;
-            txtIdade.Texts = "";
-            txtIdade.UnderlinedStyle = false;
+            this.txtIdade.BackColor = System.Drawing.SystemColors.Window;
+            this.txtIdade.BorderColor = System.Drawing.Color.Black;
+            this.txtIdade.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtIdade.BorderRadius = 4;
+            this.txtIdade.BorderSize = 2;
+            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtIdade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtIdade.Location = new System.Drawing.Point(94, 342);
+            this.txtIdade.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdade.Multiline = false;
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtIdade.PasswordChar = false;
+            this.txtIdade.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtIdade.PlaceholderText = "";
+            this.txtIdade.Size = new System.Drawing.Size(348, 29);
+            this.txtIdade.TabIndex = 12;
+            this.txtIdade.Texts = "";
+            this.txtIdade.UnderlinedStyle = false;
             // 
             // txtCadastroEmail
             // 
-            txtCadastroEmail.BackColor = SystemColors.Window;
-            txtCadastroEmail.BorderColor = Color.FromArgb(72, 116, 245);
-            txtCadastroEmail.BorderFocusColor = Color.DeepSkyBlue;
-            txtCadastroEmail.BorderRadius = 4;
-            txtCadastroEmail.BorderSize = 2;
-            txtCadastroEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCadastroEmail.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroEmail.Location = new Point(94, 280);
-            txtCadastroEmail.Margin = new Padding(4);
-            txtCadastroEmail.Multiline = false;
-            txtCadastroEmail.Name = "txtCadastroEmail";
-            txtCadastroEmail.Padding = new Padding(10, 7, 10, 7);
-            txtCadastroEmail.PasswordChar = false;
-            txtCadastroEmail.PlaceholderColor = Color.DarkGray;
-            txtCadastroEmail.PlaceholderText = "";
-            txtCadastroEmail.Size = new Size(348, 29);
-            txtCadastroEmail.TabIndex = 8;
-            txtCadastroEmail.Texts = "";
-            txtCadastroEmail.UnderlinedStyle = false;
+            this.txtCadastroEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCadastroEmail.BorderColor = System.Drawing.Color.Black;
+            this.txtCadastroEmail.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCadastroEmail.BorderRadius = 4;
+            this.txtCadastroEmail.BorderSize = 2;
+            this.txtCadastroEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCadastroEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCadastroEmail.Location = new System.Drawing.Point(94, 280);
+            this.txtCadastroEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastroEmail.Multiline = false;
+            this.txtCadastroEmail.Name = "txtCadastroEmail";
+            this.txtCadastroEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCadastroEmail.PasswordChar = false;
+            this.txtCadastroEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCadastroEmail.PlaceholderText = "";
+            this.txtCadastroEmail.Size = new System.Drawing.Size(348, 29);
+            this.txtCadastroEmail.TabIndex = 8;
+            this.txtCadastroEmail.Texts = "";
+            this.txtCadastroEmail.UnderlinedStyle = false;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(94, 258);
-            label6.Name = "label6";
-            label6.Size = new Size(41, 18);
-            label6.TabIndex = 9;
-            label6.Text = "Email";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(94, 258);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Email";
             // 
             // txtCadastroCPF
             // 
-            txtCadastroCPF.BackColor = SystemColors.Window;
-            txtCadastroCPF.BorderColor = Color.FromArgb(72, 116, 245);
-            txtCadastroCPF.BorderFocusColor = Color.DeepSkyBlue;
-            txtCadastroCPF.BorderRadius = 4;
-            txtCadastroCPF.BorderSize = 2;
-            txtCadastroCPF.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCadastroCPF.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroCPF.Location = new Point(94, 210);
-            txtCadastroCPF.Margin = new Padding(4);
-            txtCadastroCPF.Multiline = false;
-            txtCadastroCPF.Name = "txtCadastroCPF";
-            txtCadastroCPF.Padding = new Padding(10, 7, 10, 7);
-            txtCadastroCPF.PasswordChar = false;
-            txtCadastroCPF.PlaceholderColor = Color.DarkGray;
-            txtCadastroCPF.PlaceholderText = "";
-            txtCadastroCPF.Size = new Size(348, 29);
-            txtCadastroCPF.TabIndex = 10;
-            txtCadastroCPF.Texts = "";
-            txtCadastroCPF.UnderlinedStyle = false;
+            this.txtCadastroCPF.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCadastroCPF.BorderColor = System.Drawing.Color.Black;
+            this.txtCadastroCPF.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCadastroCPF.BorderRadius = 4;
+            this.txtCadastroCPF.BorderSize = 2;
+            this.txtCadastroCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCadastroCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCadastroCPF.Location = new System.Drawing.Point(94, 210);
+            this.txtCadastroCPF.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastroCPF.Multiline = false;
+            this.txtCadastroCPF.Name = "txtCadastroCPF";
+            this.txtCadastroCPF.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCadastroCPF.PasswordChar = false;
+            this.txtCadastroCPF.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCadastroCPF.PlaceholderText = "";
+            this.txtCadastroCPF.Size = new System.Drawing.Size(348, 29);
+            this.txtCadastroCPF.TabIndex = 10;
+            this.txtCadastroCPF.Texts = "";
+            this.txtCadastroCPF.UnderlinedStyle = false;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(94, 188);
-            label5.Name = "label5";
-            label5.Size = new Size(32, 18);
-            label5.TabIndex = 11;
-            label5.Text = "CPF";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(94, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "CPF";
             // 
             // wilBitButton1
             // 
-            wilBitButton1.BackColor = Color.FromArgb(72, 116, 245);
-            wilBitButton1.BorderColor = Color.FromArgb(72, 116, 245);
-            wilBitButton1.BorderRadius = 6;
-            wilBitButton1.BorderSize = 0;
-            wilBitButton1.FlatAppearance.BorderSize = 0;
-            wilBitButton1.FlatStyle = FlatStyle.Flat;
-            wilBitButton1.ForeColor = Color.White;
-            wilBitButton1.Location = new Point(163, 389);
-            wilBitButton1.Name = "wilBitButton1";
-            wilBitButton1.Size = new Size(185, 53);
-            wilBitButton1.TabIndex = 9;
-            wilBitButton1.Text = "Cadastrar";
-            wilBitButton1.UseVisualStyleBackColor = false;
-            wilBitButton1.Click += wilBitButton1_Click;
+            this.wilBitButton1.BackColor = System.Drawing.Color.Black;
+            this.wilBitButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.wilBitButton1.BorderRadius = 6;
+            this.wilBitButton1.BorderSize = 0;
+            this.wilBitButton1.FlatAppearance.BorderSize = 0;
+            this.wilBitButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wilBitButton1.ForeColor = System.Drawing.Color.White;
+            this.wilBitButton1.Location = new System.Drawing.Point(160, 407);
+            this.wilBitButton1.Name = "wilBitButton1";
+            this.wilBitButton1.Size = new System.Drawing.Size(185, 53);
+            this.wilBitButton1.TabIndex = 9;
+            this.wilBitButton1.Text = "Cadastrar";
+            this.wilBitButton1.UseVisualStyleBackColor = false;
             // 
             // txtCadastroNome
             // 
-            txtCadastroNome.BackColor = SystemColors.Window;
-            txtCadastroNome.BorderColor = Color.FromArgb(72, 116, 245);
-            txtCadastroNome.BorderFocusColor = Color.DeepSkyBlue;
-            txtCadastroNome.BorderRadius = 4;
-            txtCadastroNome.BorderSize = 2;
-            txtCadastroNome.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCadastroNome.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroNome.Location = new Point(94, 80);
-            txtCadastroNome.Margin = new Padding(4);
-            txtCadastroNome.Multiline = false;
-            txtCadastroNome.Name = "txtCadastroNome";
-            txtCadastroNome.Padding = new Padding(10, 7, 10, 7);
-            txtCadastroNome.PasswordChar = false;
-            txtCadastroNome.PlaceholderColor = Color.DarkGray;
-            txtCadastroNome.PlaceholderText = "";
-            txtCadastroNome.Size = new Size(348, 29);
-            txtCadastroNome.TabIndex = 5;
-            txtCadastroNome.Texts = "";
-            txtCadastroNome.UnderlinedStyle = false;
+            this.txtCadastroNome.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCadastroNome.BorderColor = System.Drawing.Color.Black;
+            this.txtCadastroNome.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCadastroNome.BorderRadius = 4;
+            this.txtCadastroNome.BorderSize = 2;
+            this.txtCadastroNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCadastroNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCadastroNome.Location = new System.Drawing.Point(94, 80);
+            this.txtCadastroNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastroNome.Multiline = false;
+            this.txtCadastroNome.Name = "txtCadastroNome";
+            this.txtCadastroNome.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCadastroNome.PasswordChar = false;
+            this.txtCadastroNome.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCadastroNome.PlaceholderText = "";
+            this.txtCadastroNome.Size = new System.Drawing.Size(348, 29);
+            this.txtCadastroNome.TabIndex = 5;
+            this.txtCadastroNome.Texts = "";
+            this.txtCadastroNome.UnderlinedStyle = false;
+            this.txtCadastroNome._TextChanged += new System.EventHandler(this.txtCadastroNome__TextChanged);
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(101, 58);
-            label3.Name = "label3";
-            label3.Size = new Size(42, 18);
-            label3.TabIndex = 8;
-            label3.Text = "Nome";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(97, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Nome";
             // 
             // txtCadastroSenha
             // 
-            txtCadastroSenha.BackColor = SystemColors.Window;
-            txtCadastroSenha.BorderColor = Color.FromArgb(72, 116, 245);
-            txtCadastroSenha.BorderFocusColor = Color.DeepSkyBlue;
-            txtCadastroSenha.BorderRadius = 4;
-            txtCadastroSenha.BorderSize = 2;
-            txtCadastroSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCadastroSenha.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroSenha.Location = new Point(94, 147);
-            txtCadastroSenha.Margin = new Padding(4);
-            txtCadastroSenha.Multiline = false;
-            txtCadastroSenha.Name = "txtCadastroSenha";
-            txtCadastroSenha.Padding = new Padding(10, 7, 10, 7);
-            txtCadastroSenha.PasswordChar = false;
-            txtCadastroSenha.PlaceholderColor = Color.DarkGray;
-            txtCadastroSenha.PlaceholderText = "";
-            txtCadastroSenha.Size = new Size(348, 29);
-            txtCadastroSenha.TabIndex = 6;
-            txtCadastroSenha.Texts = "";
-            txtCadastroSenha.UnderlinedStyle = false;
+            this.txtCadastroSenha.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCadastroSenha.BorderColor = System.Drawing.Color.Black;
+            this.txtCadastroSenha.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCadastroSenha.BorderRadius = 4;
+            this.txtCadastroSenha.BorderSize = 2;
+            this.txtCadastroSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCadastroSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCadastroSenha.Location = new System.Drawing.Point(94, 147);
+            this.txtCadastroSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCadastroSenha.Multiline = false;
+            this.txtCadastroSenha.Name = "txtCadastroSenha";
+            this.txtCadastroSenha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCadastroSenha.PasswordChar = false;
+            this.txtCadastroSenha.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCadastroSenha.PlaceholderText = "";
+            this.txtCadastroSenha.Size = new System.Drawing.Size(348, 29);
+            this.txtCadastroSenha.TabIndex = 6;
+            this.txtCadastroSenha.Texts = "";
+            this.txtCadastroSenha.UnderlinedStyle = false;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(94, 125);
-            label4.Name = "label4";
-            label4.Size = new Size(45, 18);
-            label4.TabIndex = 7;
-            label4.Text = "Senha";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(94, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Senha";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.Location = new System.Drawing.Point(140, 378);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(253, 24);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "Entrar como polo de reciclagem";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 749);
-            Controls.Add(wilBitPanel2);
-            Controls.Add(wilBitPanel1);
-            Name = "Login";
-            Text = "Login";
-            WindowState = FormWindowState.Maximized;
-            Load += Login_Load;
-            wilBitPanel1.ResumeLayout(false);
-            wilBitPanel1.PerformLayout();
-            wilBitPanel2.ResumeLayout(false);
-            wilBitPanel2.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.wilBitPanel2);
+            this.Controls.Add(this.wilBitPanel1);
+            this.Name = "Login";
+            this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.wilBitPanel1.ResumeLayout(false);
+            this.wilBitPanel1.PerformLayout();
+            this.wilBitPanel2.ResumeLayout(false);
+            this.wilBitPanel2.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -380,5 +408,7 @@
         private WiLBiT.WiLBiTTextBox txtCadastroSenha;
         private Label label4;
         private WiLBiT.WiLBiTTextBox txtIdade;
+        private Label label7;
+        private CheckBox checkBox1;
     }
 }
