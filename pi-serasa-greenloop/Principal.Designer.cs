@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.painel = new System.Windows.Forms.Panel();
+            this.wilBitRoundedPictureBox22 = new WiLBiT.WiLBiTRoundedPictureBox2();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.wilBitRoundedPictureBox21 = new WiLBiT.WiLBiTRoundedPictureBox2();
@@ -43,12 +44,11 @@
             this.btnRecompensas = new WiLBiT.WiLBiTButton2();
             this.btnPontos = new WiLBiT.WiLBiTButton2();
             this.btnReciclagem = new WiLBiT.WiLBiTButton2();
-            this.wilBitRoundedPictureBox22 = new WiLBiT.WiLBiTRoundedPictureBox2();
             this.painel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).BeginInit();
             this.SuspendLayout();
             // 
             // painel
@@ -73,11 +73,28 @@
             this.painel.Size = new System.Drawing.Size(1921, 1083);
             this.painel.TabIndex = 14;
             // 
+            // wilBitRoundedPictureBox22
+            // 
+            this.wilBitRoundedPictureBox22.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.wilBitRoundedPictureBox22.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.wilBitRoundedPictureBox22.BorderColor = System.Drawing.Color.DarkTurquoise;
+            this.wilBitRoundedPictureBox22.BorderColor2 = System.Drawing.Color.DarkTurquoise;
+            this.wilBitRoundedPictureBox22.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.wilBitRoundedPictureBox22.BorderSize = 2;
+            this.wilBitRoundedPictureBox22.GradientAngle = 50F;
+            this.wilBitRoundedPictureBox22.Image = global::pi_serasa_greenloop.Properties.Resources.user;
+            this.wilBitRoundedPictureBox22.Location = new System.Drawing.Point(225, 153);
+            this.wilBitRoundedPictureBox22.Name = "wilBitRoundedPictureBox22";
+            this.wilBitRoundedPictureBox22.Size = new System.Drawing.Size(284, 284);
+            this.wilBitRoundedPictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.wilBitRoundedPictureBox22.TabIndex = 42;
+            this.wilBitRoundedPictureBox22.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.BlueViolet;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1567, 652);
+            this.pictureBox3.Location = new System.Drawing.Point(1485, 321);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(226, 224);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,9 +105,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gold;
             this.pictureBox2.Image = global::pi_serasa_greenloop.Properties.Resources._854929;
-            this.pictureBox2.Location = new System.Drawing.Point(1053, 451);
+            this.pictureBox2.Location = new System.Drawing.Point(619, 592);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(286, 281);
+            this.pictureBox2.Size = new System.Drawing.Size(214, 198);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
@@ -105,9 +122,9 @@
             this.wilBitRoundedPictureBox21.BorderSize = 2;
             this.wilBitRoundedPictureBox21.GradientAngle = 50F;
             this.wilBitRoundedPictureBox21.Image = global::pi_serasa_greenloop.Properties.Resources._55125_2_rewards_picture_hd_image_free_png;
-            this.wilBitRoundedPictureBox21.Location = new System.Drawing.Point(577, 289);
+            this.wilBitRoundedPictureBox21.Location = new System.Drawing.Point(843, 153);
             this.wilBitRoundedPictureBox21.Name = "wilBitRoundedPictureBox21";
-            this.wilBitRoundedPictureBox21.Size = new System.Drawing.Size(317, 317);
+            this.wilBitRoundedPictureBox21.Size = new System.Drawing.Size(281, 281);
             this.wilBitRoundedPictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.wilBitRoundedPictureBox21.TabIndex = 39;
             this.wilBitRoundedPictureBox21.TabStop = false;
@@ -118,7 +135,7 @@
             this.label7.BackColor = System.Drawing.Color.Gold;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(1119, 361);
+            this.label7.Location = new System.Drawing.Point(765, 529);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(179, 46);
             this.label7.TabIndex = 32;
@@ -130,7 +147,7 @@
             this.label6.BackColor = System.Drawing.Color.Gold;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(1053, 315);
+            this.label6.Location = new System.Drawing.Point(471, 529);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(306, 46);
             this.label6.TabIndex = 31;
@@ -142,7 +159,7 @@
             this.label9.BackColor = System.Drawing.Color.BlueViolet;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(1573, 597);
+            this.label9.Location = new System.Drawing.Point(1485, 196);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(209, 46);
             this.label9.TabIndex = 34;
@@ -154,7 +171,7 @@
             this.label8.BackColor = System.Drawing.Color.BlueViolet;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(1531, 548);
+            this.label8.Location = new System.Drawing.Point(1444, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(289, 46);
             this.label8.TabIndex = 33;
@@ -166,7 +183,7 @@
             this.label5.BackColor = System.Drawing.Color.MediumVioletRed;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(602, 217);
+            this.label5.Location = new System.Drawing.Point(854, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(253, 46);
             this.label5.TabIndex = 30;
@@ -178,7 +195,7 @@
             this.label4.BackColor = System.Drawing.Color.DarkTurquoise;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(118, 115);
+            this.label4.Location = new System.Drawing.Point(238, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(255, 46);
             this.label4.TabIndex = 29;
@@ -194,9 +211,9 @@
             this.btnPerfil.FlatAppearance.BorderSize = 0;
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.Location = new System.Drawing.Point(38, 32);
+            this.btnPerfil.Location = new System.Drawing.Point(145, 68);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(425, 562);
+            this.btnPerfil.Size = new System.Drawing.Size(436, 390);
             this.btnPerfil.TabIndex = 36;
             this.btnPerfil.TextColor = System.Drawing.Color.White;
             this.btnPerfil.UseVisualStyleBackColor = false;
@@ -212,9 +229,9 @@
             this.btnRecompensas.FlatAppearance.BorderSize = 0;
             this.btnRecompensas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecompensas.ForeColor = System.Drawing.Color.White;
-            this.btnRecompensas.Location = new System.Drawing.Point(518, 155);
+            this.btnRecompensas.Location = new System.Drawing.Point(636, 68);
             this.btnRecompensas.Name = "btnRecompensas";
-            this.btnRecompensas.Size = new System.Drawing.Size(420, 577);
+            this.btnRecompensas.Size = new System.Drawing.Size(722, 390);
             this.btnRecompensas.TabIndex = 25;
             this.btnRecompensas.TextColor = System.Drawing.Color.White;
             this.btnRecompensas.UseVisualStyleBackColor = false;
@@ -230,9 +247,9 @@
             this.btnPontos.FlatAppearance.BorderSize = 0;
             this.btnPontos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPontos.ForeColor = System.Drawing.Color.White;
-            this.btnPontos.Location = new System.Drawing.Point(981, 266);
+            this.btnPontos.Location = new System.Drawing.Point(145, 504);
             this.btnPontos.Name = "btnPontos";
-            this.btnPontos.Size = new System.Drawing.Size(444, 549);
+            this.btnPontos.Size = new System.Drawing.Size(1213, 309);
             this.btnPontos.TabIndex = 35;
             this.btnPontos.TextColor = System.Drawing.Color.White;
             this.btnPontos.UseVisualStyleBackColor = false;
@@ -247,29 +264,13 @@
             this.btnReciclagem.FlatAppearance.BorderSize = 0;
             this.btnReciclagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReciclagem.ForeColor = System.Drawing.Color.White;
-            this.btnReciclagem.Location = new System.Drawing.Point(1484, 520);
+            this.btnReciclagem.Location = new System.Drawing.Point(1397, 68);
             this.btnReciclagem.Name = "btnReciclagem";
-            this.btnReciclagem.Size = new System.Drawing.Size(380, 374);
+            this.btnReciclagem.Size = new System.Drawing.Size(386, 745);
             this.btnReciclagem.TabIndex = 37;
             this.btnReciclagem.TextColor = System.Drawing.Color.White;
             this.btnReciclagem.UseVisualStyleBackColor = false;
-            // 
-            // wilBitRoundedPictureBox22
-            // 
-            this.wilBitRoundedPictureBox22.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.wilBitRoundedPictureBox22.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.wilBitRoundedPictureBox22.BorderColor = System.Drawing.Color.DarkTurquoise;
-            this.wilBitRoundedPictureBox22.BorderColor2 = System.Drawing.Color.DarkTurquoise;
-            this.wilBitRoundedPictureBox22.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.wilBitRoundedPictureBox22.BorderSize = 2;
-            this.wilBitRoundedPictureBox22.GradientAngle = 50F;
-            this.wilBitRoundedPictureBox22.Image = global::pi_serasa_greenloop.Properties.Resources.user;
-            this.wilBitRoundedPictureBox22.Location = new System.Drawing.Point(92, 196);
-            this.wilBitRoundedPictureBox22.Name = "wilBitRoundedPictureBox22";
-            this.wilBitRoundedPictureBox22.Size = new System.Drawing.Size(310, 310);
-            this.wilBitRoundedPictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wilBitRoundedPictureBox22.TabIndex = 42;
-            this.wilBitRoundedPictureBox22.TabStop = false;
+            this.btnReciclagem.Click += new System.EventHandler(this.btnReciclagem_Click);
             // 
             // Principal
             // 
@@ -284,10 +285,10 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             this.painel.ResumeLayout(false);
             this.painel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wilBitRoundedPictureBox22)).EndInit();
             this.ResumeLayout(false);
 
         }

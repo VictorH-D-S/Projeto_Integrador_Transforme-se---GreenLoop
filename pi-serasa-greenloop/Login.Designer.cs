@@ -35,6 +35,7 @@
             txtLoginSenha = new WiLBiT.WiLBiTTextBox();
             txtLoginEmail = new WiLBiT.WiLBiTTextBox();
             wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            txtIdade = new WiLBiT.WiLBiTTextBox();
             txtCadastroEmail = new WiLBiT.WiLBiTTextBox();
             label6 = new Label();
             txtCadastroCPF = new WiLBiT.WiLBiTTextBox();
@@ -44,7 +45,6 @@
             label3 = new Label();
             txtCadastroSenha = new WiLBiT.WiLBiTTextBox();
             label4 = new Label();
-            txtIdade = new WiLBiT.WiLBiTTextBox();
             wilBitPanel1.SuspendLayout();
             wilBitPanel2.SuspendLayout();
             SuspendLayout();
@@ -65,6 +65,7 @@
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(533, 568);
             wilBitPanel1.TabIndex = 0;
+            wilBitPanel1.Paint += wilBitPanel1_Paint;
             // 
             // btnLogin
             // 
@@ -170,6 +171,28 @@
             wilBitPanel2.Size = new Size(533, 568);
             wilBitPanel2.TabIndex = 1;
             wilBitPanel2.Paint += wilBitPanel2_Paint;
+            // 
+            // txtIdade
+            // 
+            txtIdade.BackColor = SystemColors.Window;
+            txtIdade.BorderColor = Color.FromArgb(72, 116, 245);
+            txtIdade.BorderFocusColor = Color.DeepSkyBlue;
+            txtIdade.BorderRadius = 4;
+            txtIdade.BorderSize = 2;
+            txtIdade.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdade.ForeColor = Color.FromArgb(64, 64, 64);
+            txtIdade.Location = new Point(94, 342);
+            txtIdade.Margin = new Padding(4);
+            txtIdade.Multiline = false;
+            txtIdade.Name = "txtIdade";
+            txtIdade.Padding = new Padding(10, 7, 10, 7);
+            txtIdade.PasswordChar = false;
+            txtIdade.PlaceholderColor = Color.DarkGray;
+            txtIdade.PlaceholderText = "";
+            txtIdade.Size = new Size(348, 29);
+            txtIdade.TabIndex = 12;
+            txtIdade.Texts = "";
+            txtIdade.UnderlinedStyle = false;
             // 
             // txtCadastroEmail
             // 
@@ -320,28 +343,6 @@
             label4.TabIndex = 7;
             label4.Text = "Senha";
             // 
-            // txtIdade
-            // 
-            txtIdade.BackColor = SystemColors.Window;
-            txtIdade.BorderColor = Color.FromArgb(72, 116, 245);
-            txtIdade.BorderFocusColor = Color.DeepSkyBlue;
-            txtIdade.BorderRadius = 4;
-            txtIdade.BorderSize = 2;
-            txtIdade.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtIdade.ForeColor = Color.FromArgb(64, 64, 64);
-            txtIdade.Location = new Point(94, 342);
-            txtIdade.Margin = new Padding(4);
-            txtIdade.Multiline = false;
-            txtIdade.Name = "txtIdade";
-            txtIdade.Padding = new Padding(10, 7, 10, 7);
-            txtIdade.PasswordChar = false;
-            txtIdade.PlaceholderColor = Color.DarkGray;
-            txtIdade.PlaceholderText = "";
-            txtIdade.Size = new Size(348, 29);
-            txtIdade.TabIndex = 12;
-            txtIdade.Texts = "";
-            txtIdade.UnderlinedStyle = false;
-            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -351,6 +352,8 @@
             Controls.Add(wilBitPanel1);
             Name = "Login";
             Text = "Login";
+            WindowState = FormWindowState.Maximized;
+            Load += Login_Load;
             wilBitPanel1.ResumeLayout(false);
             wilBitPanel1.PerformLayout();
             wilBitPanel2.ResumeLayout(false);
