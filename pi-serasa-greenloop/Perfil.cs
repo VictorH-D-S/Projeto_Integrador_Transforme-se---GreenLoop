@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace pi_serasa_greenloop
 {
-    public partial class Form1 : Form
+    public partial class Perfil : Form
     {
-        public Form1()
+        public Perfil()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

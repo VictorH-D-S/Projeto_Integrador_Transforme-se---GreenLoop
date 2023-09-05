@@ -32,12 +32,18 @@
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
             label2 = new Label();
             label1 = new Label();
-            wilBitTextBox2 = new WiLBiT.WiLBiTTextBox();
-            wilBitTextBox1 = new WiLBiT.WiLBiTTextBox();
-            wilBitButton2 = new WiLBiT.WiLBiTButton();
-            wilBitButton1 = new WiLBiT.WiLBiTButton();
-            wilBitButton4 = new WiLBiT.WiLBiTButton();
+            txt_ponto_de_coleta = new WiLBiT.WiLBiTTextBox();
+            txtSenha = new WiLBiT.WiLBiTTextBox();
+            btnRemover = new WiLBiT.WiLBiTButton();
+            btnAdicionar = new WiLBiT.WiLBiTButton();
             label3 = new Label();
+            btnConfirmar = new WiLBiT.WiLBiTButton();
+            wilBitTextBox1 = new WiLBiT.WiLBiTTextBox();
+            wilBitTextBox2 = new WiLBiT.WiLBiTTextBox();
+            wilBitTextBox3 = new WiLBiT.WiLBiTTextBox();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             wilBitPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,12 +71,18 @@
             wilBitPanel1.BorderColor = Color.PaleVioletRed;
             wilBitPanel1.BorderRadius = 11;
             wilBitPanel1.BorderSize = 0;
-            wilBitPanel1.Controls.Add(label2);
-            wilBitPanel1.Controls.Add(label1);
+            wilBitPanel1.Controls.Add(label7);
+            wilBitPanel1.Controls.Add(label6);
+            wilBitPanel1.Controls.Add(label5);
+            wilBitPanel1.Controls.Add(wilBitTextBox3);
             wilBitPanel1.Controls.Add(wilBitTextBox2);
             wilBitPanel1.Controls.Add(wilBitTextBox1);
-            wilBitPanel1.Controls.Add(wilBitButton2);
-            wilBitPanel1.Controls.Add(wilBitButton1);
+            wilBitPanel1.Controls.Add(label2);
+            wilBitPanel1.Controls.Add(label1);
+            wilBitPanel1.Controls.Add(txt_ponto_de_coleta);
+            wilBitPanel1.Controls.Add(txtSenha);
+            wilBitPanel1.Controls.Add(btnRemover);
+            wilBitPanel1.Controls.Add(btnAdicionar);
             wilBitPanel1.ForeColor = Color.White;
             wilBitPanel1.Location = new Point(65, 134);
             wilBitPanel1.Margin = new Padding(4, 5, 4, 5);
@@ -84,7 +96,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(826, 402);
+            label2.Location = new Point(826, 429);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(97, 38);
@@ -97,7 +109,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(729, 140);
+            label1.Location = new Point(713, 11);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(303, 38);
@@ -105,99 +117,85 @@
             label1.Text = "ID do ponto de coleta";
             label1.Click += label1_Click;
             // 
-            // wilBitTextBox2
+            // txt_ponto_de_coleta
             // 
-            wilBitTextBox2.BackColor = SystemColors.Window;
-            wilBitTextBox2.BorderColor = Color.Black;
-            wilBitTextBox2.BorderFocusColor = Color.DeepSkyBlue;
-            wilBitTextBox2.BorderRadius = 15;
-            wilBitTextBox2.BorderSize = 2;
-            wilBitTextBox2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            wilBitTextBox2.ForeColor = Color.FromArgb(64, 64, 64);
-            wilBitTextBox2.Location = new Point(587, 198);
-            wilBitTextBox2.Margin = new Padding(6, 7, 6, 7);
-            wilBitTextBox2.Multiline = false;
-            wilBitTextBox2.Name = "wilBitTextBox2";
-            wilBitTextBox2.Padding = new Padding(14, 12, 14, 12);
-            wilBitTextBox2.PasswordChar = false;
-            wilBitTextBox2.PlaceholderColor = Color.DarkGray;
-            wilBitTextBox2.PlaceholderText = "";
-            wilBitTextBox2.Size = new Size(559, 46);
-            wilBitTextBox2.TabIndex = 6;
-            wilBitTextBox2.Texts = "";
-            wilBitTextBox2.UnderlinedStyle = false;
+            txt_ponto_de_coleta.BackColor = SystemColors.Window;
+            txt_ponto_de_coleta.BorderColor = Color.Black;
+            txt_ponto_de_coleta.BorderFocusColor = Color.DeepSkyBlue;
+            txt_ponto_de_coleta.BorderRadius = 15;
+            txt_ponto_de_coleta.BorderSize = 2;
+            txt_ponto_de_coleta.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_ponto_de_coleta.ForeColor = Color.FromArgb(64, 64, 64);
+            txt_ponto_de_coleta.Location = new Point(587, 69);
+            txt_ponto_de_coleta.Margin = new Padding(6, 7, 6, 7);
+            txt_ponto_de_coleta.Multiline = false;
+            txt_ponto_de_coleta.Name = "txt_ponto_de_coleta";
+            txt_ponto_de_coleta.Padding = new Padding(14, 12, 14, 12);
+            txt_ponto_de_coleta.PasswordChar = false;
+            txt_ponto_de_coleta.PlaceholderColor = Color.DarkGray;
+            txt_ponto_de_coleta.PlaceholderText = "";
+            txt_ponto_de_coleta.Size = new Size(559, 46);
+            txt_ponto_de_coleta.TabIndex = 6;
+            txt_ponto_de_coleta.Texts = "";
+            txt_ponto_de_coleta.UnderlinedStyle = false;
             // 
-            // wilBitTextBox1
+            // txtSenha
             // 
-            wilBitTextBox1.BackColor = SystemColors.Window;
-            wilBitTextBox1.BorderColor = Color.Black;
-            wilBitTextBox1.BorderFocusColor = Color.DeepSkyBlue;
-            wilBitTextBox1.BorderRadius = 15;
-            wilBitTextBox1.BorderSize = 2;
-            wilBitTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            wilBitTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
-            wilBitTextBox1.Location = new Point(587, 447);
-            wilBitTextBox1.Margin = new Padding(6, 7, 6, 7);
-            wilBitTextBox1.Multiline = false;
-            wilBitTextBox1.Name = "wilBitTextBox1";
-            wilBitTextBox1.Padding = new Padding(14, 12, 14, 12);
-            wilBitTextBox1.PasswordChar = false;
-            wilBitTextBox1.PlaceholderColor = Color.DarkGray;
-            wilBitTextBox1.PlaceholderText = "";
-            wilBitTextBox1.Size = new Size(559, 46);
-            wilBitTextBox1.TabIndex = 5;
-            wilBitTextBox1.Texts = "";
-            wilBitTextBox1.UnderlinedStyle = false;
+            txtSenha.BackColor = SystemColors.Window;
+            txtSenha.BorderColor = Color.Black;
+            txtSenha.BorderFocusColor = Color.DeepSkyBlue;
+            txtSenha.BorderRadius = 15;
+            txtSenha.BorderSize = 2;
+            txtSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenha.ForeColor = Color.FromArgb(64, 64, 64);
+            txtSenha.Location = new Point(587, 474);
+            txtSenha.Margin = new Padding(6, 7, 6, 7);
+            txtSenha.Multiline = false;
+            txtSenha.Name = "txtSenha";
+            txtSenha.Padding = new Padding(14, 12, 14, 12);
+            txtSenha.PasswordChar = false;
+            txtSenha.PlaceholderColor = Color.DarkGray;
+            txtSenha.PlaceholderText = "";
+            txtSenha.Size = new Size(559, 46);
+            txtSenha.TabIndex = 5;
+            txtSenha.Texts = "";
+            txtSenha.UnderlinedStyle = false;
             // 
-            // wilBitButton2
+            // btnRemover
             // 
-            wilBitButton2.BackColor = Color.FromArgb(128, 255, 255);
-            wilBitButton2.BorderColor = Color.FromArgb(72, 116, 245);
-            wilBitButton2.BorderRadius = 20;
-            wilBitButton2.BorderSize = 0;
-            wilBitButton2.FlatAppearance.BorderSize = 0;
-            wilBitButton2.FlatStyle = FlatStyle.Flat;
-            wilBitButton2.ForeColor = Color.White;
-            wilBitButton2.Location = new Point(1028, 566);
-            wilBitButton2.Margin = new Padding(4, 5, 4, 5);
-            wilBitButton2.Name = "wilBitButton2";
-            wilBitButton2.Size = new Size(397, 95);
-            wilBitButton2.TabIndex = 4;
-            wilBitButton2.Text = "wilBitButton2";
-            wilBitButton2.UseVisualStyleBackColor = false;
+            btnRemover.BackColor = Color.FromArgb(128, 255, 255);
+            btnRemover.BorderColor = Color.FromArgb(72, 116, 245);
+            btnRemover.BorderRadius = 20;
+            btnRemover.BorderSize = 0;
+            btnRemover.FlatAppearance.BorderSize = 0;
+            btnRemover.FlatStyle = FlatStyle.Flat;
+            btnRemover.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRemover.ForeColor = Color.Black;
+            btnRemover.Location = new Point(1028, 566);
+            btnRemover.Margin = new Padding(4, 5, 4, 5);
+            btnRemover.Name = "btnRemover";
+            btnRemover.Size = new Size(397, 95);
+            btnRemover.TabIndex = 4;
+            btnRemover.Text = "REMOVER";
+            btnRemover.UseVisualStyleBackColor = false;
             // 
-            // wilBitButton1
+            // btnAdicionar
             // 
-            wilBitButton1.BackColor = Color.FromArgb(128, 255, 255);
-            wilBitButton1.BorderColor = Color.FromArgb(72, 116, 245);
-            wilBitButton1.BorderRadius = 20;
-            wilBitButton1.BorderSize = 0;
-            wilBitButton1.FlatAppearance.BorderSize = 0;
-            wilBitButton1.FlatStyle = FlatStyle.Flat;
-            wilBitButton1.ForeColor = Color.Black;
-            wilBitButton1.Location = new Point(324, 566);
-            wilBitButton1.Margin = new Padding(4, 5, 4, 5);
-            wilBitButton1.Name = "wilBitButton1";
-            wilBitButton1.Size = new Size(373, 95);
-            wilBitButton1.TabIndex = 3;
-            wilBitButton1.Text = "wilBitButton1";
-            wilBitButton1.UseVisualStyleBackColor = false;
-            // 
-            // wilBitButton4
-            // 
-            wilBitButton4.BackColor = Color.FromArgb(128, 255, 255);
-            wilBitButton4.BorderColor = Color.FromArgb(72, 116, 245);
-            wilBitButton4.BorderRadius = 6;
-            wilBitButton4.BorderSize = 0;
-            wilBitButton4.FlatAppearance.BorderSize = 0;
-            wilBitButton4.FlatStyle = FlatStyle.Flat;
-            wilBitButton4.ForeColor = Color.White;
-            wilBitButton4.Location = new Point(794, 842);
-            wilBitButton4.Name = "wilBitButton4";
-            wilBitButton4.Size = new Size(297, 91);
-            wilBitButton4.TabIndex = 3;
-            wilBitButton4.Text = "wilBitButton4";
-            wilBitButton4.UseVisualStyleBackColor = false;
+            btnAdicionar.BackColor = Color.FromArgb(128, 255, 255);
+            btnAdicionar.BorderColor = Color.FromArgb(72, 116, 245);
+            btnAdicionar.BorderRadius = 20;
+            btnAdicionar.BorderSize = 0;
+            btnAdicionar.FlatAppearance.BorderSize = 0;
+            btnAdicionar.FlatStyle = FlatStyle.Flat;
+            btnAdicionar.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdicionar.ForeColor = Color.Black;
+            btnAdicionar.Location = new Point(324, 566);
+            btnAdicionar.Margin = new Padding(4, 5, 4, 5);
+            btnAdicionar.Name = "btnAdicionar";
+            btnAdicionar.Size = new Size(373, 95);
+            btnAdicionar.TabIndex = 3;
+            btnAdicionar.Text = "ADICIONAR";
+            btnAdicionar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -212,14 +210,130 @@
             label3.TabIndex = 4;
             label3.Text = "Administrar Pontos de Coleta";
             // 
+            // btnConfirmar
+            // 
+            btnConfirmar.BackColor = Color.FromArgb(128, 255, 255);
+            btnConfirmar.BorderColor = Color.FromArgb(72, 116, 245);
+            btnConfirmar.BorderRadius = 11;
+            btnConfirmar.BorderSize = 0;
+            btnConfirmar.FlatAppearance.BorderSize = 0;
+            btnConfirmar.FlatStyle = FlatStyle.Flat;
+            btnConfirmar.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfirmar.ForeColor = Color.Black;
+            btnConfirmar.Location = new Point(778, 847);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(319, 79);
+            btnConfirmar.TabIndex = 5;
+            btnConfirmar.Text = "CONFIRMAR";
+            btnConfirmar.UseVisualStyleBackColor = false;
+            // 
+            // wilBitTextBox1
+            // 
+            wilBitTextBox1.BackColor = SystemColors.Window;
+            wilBitTextBox1.BorderColor = Color.Black;
+            wilBitTextBox1.BorderFocusColor = Color.Black;
+            wilBitTextBox1.BorderRadius = 15;
+            wilBitTextBox1.BorderSize = 2;
+            wilBitTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            wilBitTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
+            wilBitTextBox1.Location = new Point(587, 363);
+            wilBitTextBox1.Margin = new Padding(4);
+            wilBitTextBox1.Multiline = false;
+            wilBitTextBox1.Name = "wilBitTextBox1";
+            wilBitTextBox1.Padding = new Padding(10, 7, 10, 7);
+            wilBitTextBox1.PasswordChar = false;
+            wilBitTextBox1.PlaceholderColor = Color.DarkGray;
+            wilBitTextBox1.PlaceholderText = "";
+            wilBitTextBox1.Size = new Size(559, 36);
+            wilBitTextBox1.TabIndex = 9;
+            wilBitTextBox1.Texts = "";
+            wilBitTextBox1.UnderlinedStyle = false;
+            // 
+            // wilBitTextBox2
+            // 
+            wilBitTextBox2.BackColor = SystemColors.Window;
+            wilBitTextBox2.BorderColor = Color.Black;
+            wilBitTextBox2.BorderFocusColor = Color.Black;
+            wilBitTextBox2.BorderRadius = 15;
+            wilBitTextBox2.BorderSize = 2;
+            wilBitTextBox2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            wilBitTextBox2.ForeColor = Color.FromArgb(64, 64, 64);
+            wilBitTextBox2.Location = new Point(587, 178);
+            wilBitTextBox2.Margin = new Padding(4);
+            wilBitTextBox2.Multiline = false;
+            wilBitTextBox2.Name = "wilBitTextBox2";
+            wilBitTextBox2.Padding = new Padding(10, 7, 10, 7);
+            wilBitTextBox2.PasswordChar = false;
+            wilBitTextBox2.PlaceholderColor = Color.DarkGray;
+            wilBitTextBox2.PlaceholderText = "";
+            wilBitTextBox2.Size = new Size(559, 36);
+            wilBitTextBox2.TabIndex = 11;
+            wilBitTextBox2.Texts = "";
+            wilBitTextBox2.UnderlinedStyle = false;
+            // 
+            // wilBitTextBox3
+            // 
+            wilBitTextBox3.BackColor = SystemColors.Window;
+            wilBitTextBox3.BorderColor = Color.Black;
+            wilBitTextBox3.BorderFocusColor = Color.Black;
+            wilBitTextBox3.BorderRadius = 15;
+            wilBitTextBox3.BorderSize = 2;
+            wilBitTextBox3.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            wilBitTextBox3.ForeColor = Color.FromArgb(64, 64, 64);
+            wilBitTextBox3.Location = new Point(587, 266);
+            wilBitTextBox3.Margin = new Padding(4);
+            wilBitTextBox3.Multiline = false;
+            wilBitTextBox3.Name = "wilBitTextBox3";
+            wilBitTextBox3.Padding = new Padding(10, 7, 10, 7);
+            wilBitTextBox3.PasswordChar = false;
+            wilBitTextBox3.PlaceholderColor = Color.DarkGray;
+            wilBitTextBox3.PlaceholderText = "";
+            wilBitTextBox3.Size = new Size(559, 36);
+            wilBitTextBox3.TabIndex = 12;
+            wilBitTextBox3.Texts = "";
+            wilBitTextBox3.UnderlinedStyle = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(832, 321);
+            label5.Name = "label5";
+            label5.Size = new Size(100, 38);
+            label5.TabIndex = 13;
+            label5.Text = "E-mail";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(826, 224);
+            label6.Name = "label6";
+            label6.Size = new Size(137, 38);
+            label6.TabIndex = 13;
+            label6.Text = "Endereço";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(832, 136);
+            label7.Name = "label7";
+            label7.Size = new Size(97, 38);
+            label7.TabIndex = 14;
+            label7.Text = "Nome";
+            // 
             // Tela_cadastro_de_polos
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(24, 2, 51);
             ClientSize = new Size(1898, 1024);
+            Controls.Add(btnConfirmar);
             Controls.Add(label3);
-            Controls.Add(wilBitButton4);
             Controls.Add(wilBitPanel1);
             Controls.Add(wilBitButton3);
             Margin = new Padding(4, 5, 4, 5);
@@ -236,13 +350,19 @@
 
         private WiLBiT.WiLBiTButton wilBitButton3;
         private WiLBiT.WiLBiTPanel wilBitPanel1;
-        private WiLBiT.WiLBiTButton wilBitButton2;
-        private WiLBiT.WiLBiTButton wilBitButton1;
+        private WiLBiT.WiLBiTButton btnRemover;
+        private WiLBiT.WiLBiTButton btnAdicionar;
         private Label label2;
         private Label label1;
+        private WiLBiT.WiLBiTTextBox txt_ponto_de_coleta;
+        private WiLBiT.WiLBiTTextBox txtSenha;
+        private Label label3;
+        private WiLBiT.WiLBiTButton btnConfirmar;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private WiLBiT.WiLBiTTextBox wilBitTextBox3;
         private WiLBiT.WiLBiTTextBox wilBitTextBox2;
         private WiLBiT.WiLBiTTextBox wilBitTextBox1;
-        private WiLBiT.WiLBiTButton wilBitButton4;
-        private Label label3;
     }
 }

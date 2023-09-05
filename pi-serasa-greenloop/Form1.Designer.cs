@@ -70,13 +70,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.painel);
             this.Controls.Add(this.wilBitGradientPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.wilBitGradientPanel1.ResumeLayout(false);
             this.wilBitGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -88,5 +88,7 @@
         private WiLBiT.WiLBiTGradientPanel wilBitGradientPanel1;
         private Label label1;
         private Panel painel;
+
+
     }
 }
