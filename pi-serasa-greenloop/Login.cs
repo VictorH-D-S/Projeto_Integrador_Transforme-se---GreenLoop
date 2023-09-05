@@ -41,5 +41,18 @@ namespace pi_serasa_greenloop
             adicionarUsuario();
             MessageBox.Show("Usuario Cadastrado!!!!");
         }
+
+        private void wilBitPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            int centerX = (this.ClientSize.Width - wilBitPanel1.Width - wilBitPanel2.Width) / 2;
+            int centerY = (this.ClientSize.Height - wilBitPanel1.Height) / 2;
+            wilBitPanel1.Location = new Point(centerX, centerY);
+            wilBitPanel2.Location = new Point(centerX + wilBitPanel1.Width, centerY);
+        }
     }
 }
