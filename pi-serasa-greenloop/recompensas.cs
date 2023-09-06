@@ -19,7 +19,7 @@ namespace pi_serasa_greenloop
 
         private void recompensas_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void wilBitProgressBar21_Load(object sender, EventArgs e)
