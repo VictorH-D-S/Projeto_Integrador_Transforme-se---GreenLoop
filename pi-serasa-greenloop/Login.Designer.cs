@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnLogin = new WiLBiT.WiLBiTButton();
@@ -41,6 +42,7 @@
             this.wilBitPanel4 = new WiLBiT.WiLBiTPanel();
             this.wilBitPanel10 = new WiLBiT.WiLBiTPanel();
             this.wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdade = new WiLBiT.WiLBiTTextBox();
@@ -61,8 +63,6 @@
             this.wilBitPanel11 = new WiLBiT.WiLBiTPanel();
             this.btnLoginn = new WiLBiT.WiLBiTButton();
             this.btnCadastroo = new WiLBiT.WiLBiTButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.wilBitPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +92,16 @@
             this.wilBitPanel1.Name = "wilBitPanel1";
             this.wilBitPanel1.Size = new System.Drawing.Size(533, 568);
             this.wilBitPanel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(24, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 30);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "LOGIN";
             // 
             // pictureBox1
             // 
@@ -266,6 +276,17 @@
             this.wilBitPanel2.Size = new System.Drawing.Size(533, 568);
             this.wilBitPanel2.TabIndex = 1;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(28, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 27);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "CADASTRO";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -281,7 +302,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(97, 164);
+            this.label7.Location = new System.Drawing.Point(103, 175);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 13;
@@ -296,7 +317,7 @@
             this.txtIdade.BorderSize = 2;
             this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtIdade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIdade.Location = new System.Drawing.Point(97, 188);
+            this.txtIdade.Location = new System.Drawing.Point(97, 199);
             this.txtIdade.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdade.Multiline = false;
             this.txtIdade.Name = "txtIdade";
@@ -318,7 +339,7 @@
             this.txtCadastroEmail.BorderSize = 2;
             this.txtCadastroEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCadastroEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCadastroEmail.Location = new System.Drawing.Point(97, 261);
+            this.txtCadastroEmail.Location = new System.Drawing.Point(97, 273);
             this.txtCadastroEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtCadastroEmail.Multiline = false;
             this.txtCadastroEmail.Name = "txtCadastroEmail";
@@ -336,7 +357,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(105, 238);
+            this.label6.Location = new System.Drawing.Point(103, 247);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 20);
             this.label6.TabIndex = 9;
@@ -369,7 +390,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(100, 310);
+            this.label5.Location = new System.Drawing.Point(103, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 20);
             this.label5.TabIndex = 11;
@@ -401,7 +422,7 @@
             this.txtCadastroNome.BorderSize = 2;
             this.txtCadastroNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCadastroNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCadastroNome.Location = new System.Drawing.Point(97, 123);
+            this.txtCadastroNome.Location = new System.Drawing.Point(97, 133);
             this.txtCadastroNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtCadastroNome.Multiline = false;
             this.txtCadastroNome.Name = "txtCadastroNome";
@@ -419,7 +440,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(103, 99);
+            this.label3.Location = new System.Drawing.Point(103, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 8;
@@ -453,7 +474,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(97, 388);
+            this.label4.Location = new System.Drawing.Point(103, 390);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 7;
@@ -466,7 +487,7 @@
             this.wilBitPanel5.BorderRadius = 11;
             this.wilBitPanel5.BorderSize = 0;
             this.wilBitPanel5.ForeColor = System.Drawing.Color.White;
-            this.wilBitPanel5.Location = new System.Drawing.Point(103, 133);
+            this.wilBitPanel5.Location = new System.Drawing.Point(103, 143);
             this.wilBitPanel5.Name = "wilBitPanel5";
             this.wilBitPanel5.Size = new System.Drawing.Size(348, 28);
             this.wilBitPanel5.TabIndex = 8;
@@ -478,7 +499,7 @@
             this.wilBitPanel6.BorderRadius = 11;
             this.wilBitPanel6.BorderSize = 0;
             this.wilBitPanel6.ForeColor = System.Drawing.Color.White;
-            this.wilBitPanel6.Location = new System.Drawing.Point(103, 200);
+            this.wilBitPanel6.Location = new System.Drawing.Point(103, 211);
             this.wilBitPanel6.Name = "wilBitPanel6";
             this.wilBitPanel6.Size = new System.Drawing.Size(348, 28);
             this.wilBitPanel6.TabIndex = 9;
@@ -490,7 +511,7 @@
             this.wilBitPanel7.BorderRadius = 11;
             this.wilBitPanel7.BorderSize = 0;
             this.wilBitPanel7.ForeColor = System.Drawing.Color.White;
-            this.wilBitPanel7.Location = new System.Drawing.Point(103, 272);
+            this.wilBitPanel7.Location = new System.Drawing.Point(103, 284);
             this.wilBitPanel7.Name = "wilBitPanel7";
             this.wilBitPanel7.Size = new System.Drawing.Size(348, 28);
             this.wilBitPanel7.TabIndex = 10;
@@ -540,7 +561,7 @@
             this.btnLoginn.FlatAppearance.BorderSize = 0;
             this.btnLoginn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoginn.ForeColor = System.Drawing.Color.White;
+            this.btnLoginn.ForeColor = System.Drawing.Color.Black;
             this.btnLoginn.Location = new System.Drawing.Point(321, 98);
             this.btnLoginn.Name = "btnLoginn";
             this.btnLoginn.Size = new System.Drawing.Size(185, 53);
@@ -564,27 +585,6 @@
             this.btnCadastroo.TabIndex = 7;
             this.btnCadastroo.Text = "Cadastro";
             this.btnCadastroo.UseVisualStyleBackColor = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(24, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 30);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "LOGIN";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(28, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 27);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "CADASTRO";
             // 
             // label10
             // 
