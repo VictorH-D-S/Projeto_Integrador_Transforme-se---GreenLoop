@@ -28,44 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.wilBitGradientPanel1 = new WiLBiT.WiLBiTGradientPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.wilBitPanel1 = new WiLBiT.WiLBiTPanel();
             this.txtCPF = new WiLBiT.WiLBiTTextBox();
             this.txtPontuacao = new WiLBiT.WiLBiTTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDepositar = new WiLBiT.WiLBiTButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.wilBitGradientPanel1.SuspendLayout();
+            this.wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            this.wilBitPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // wilBitGradientPanel1
+            // label3
             // 
-            this.wilBitGradientPanel1.BackColor = System.Drawing.Color.LimeGreen;
-            this.wilBitGradientPanel1.BackColor2 = System.Drawing.Color.Green;
-            this.wilBitGradientPanel1.BorderColor = System.Drawing.Color.Orchid;
-            this.wilBitGradientPanel1.BorderRadius = 40;
-            this.wilBitGradientPanel1.BorderSize = 0;
-            this.wilBitGradientPanel1.Controls.Add(this.btnDepositar);
-            this.wilBitGradientPanel1.Controls.Add(this.label2);
-            this.wilBitGradientPanel1.Controls.Add(this.label1);
-            this.wilBitGradientPanel1.Controls.Add(this.txtPontuacao);
-            this.wilBitGradientPanel1.Controls.Add(this.txtCPF);
-            this.wilBitGradientPanel1.ForeColor = System.Drawing.Color.White;
-            this.wilBitGradientPanel1.Location = new System.Drawing.Point(658, 178);
-            this.wilBitGradientPanel1.Name = "wilBitGradientPanel1";
-            this.wilBitGradientPanel1.Size = new System.Drawing.Size(635, 604);
-            this.wilBitGradientPanel1.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(812, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(331, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Bem-Vindo, Ponto de Coleta";
+            // 
+            // wilBitPanel1
+            // 
+            this.wilBitPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.wilBitPanel1.BorderColor = System.Drawing.Color.White;
+            this.wilBitPanel1.BorderRadius = 40;
+            this.wilBitPanel1.BorderSize = 0;
+            this.wilBitPanel1.Controls.Add(this.btnDepositar);
+            this.wilBitPanel1.Controls.Add(this.label2);
+            this.wilBitPanel1.Controls.Add(this.txtCPF);
+            this.wilBitPanel1.Controls.Add(this.txtPontuacao);
+            this.wilBitPanel1.Controls.Add(this.label1);
+            this.wilBitPanel1.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel1.Location = new System.Drawing.Point(664, 178);
+            this.wilBitPanel1.Name = "wilBitPanel1";
+            this.wilBitPanel1.Size = new System.Drawing.Size(569, 457);
+            this.wilBitPanel1.TabIndex = 6;
             // 
             // txtCPF
             // 
             this.txtCPF.BackColor = System.Drawing.SystemColors.Window;
             this.txtCPF.BorderColor = System.Drawing.Color.Black;
             this.txtCPF.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCPF.BorderRadius = 4;
+            this.txtCPF.BorderRadius = 11;
             this.txtCPF.BorderSize = 2;
             this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCPF.Location = new System.Drawing.Point(81, 140);
+            this.txtCPF.Location = new System.Drawing.Point(50, 83);
             this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPF.Multiline = false;
             this.txtCPF.Name = "txtCPF";
@@ -83,11 +95,11 @@
             this.txtPontuacao.BackColor = System.Drawing.SystemColors.Window;
             this.txtPontuacao.BorderColor = System.Drawing.Color.Black;
             this.txtPontuacao.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtPontuacao.BorderRadius = 4;
+            this.txtPontuacao.BorderRadius = 11;
             this.txtPontuacao.BorderSize = 2;
             this.txtPontuacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPontuacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPontuacao.Location = new System.Drawing.Point(81, 358);
+            this.txtPontuacao.Location = new System.Drawing.Point(50, 177);
             this.txtPontuacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtPontuacao.Multiline = false;
             this.txtPontuacao.Name = "txtPontuacao";
@@ -105,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(210, 107);
+            this.label1.Location = new System.Drawing.Point(185, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 29);
             this.label1.TabIndex = 2;
@@ -116,7 +128,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(231, 325);
+            this.label2.Location = new System.Drawing.Point(185, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 29);
             this.label2.TabIndex = 3;
@@ -132,24 +144,24 @@
             this.btnDepositar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDepositar.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDepositar.ForeColor = System.Drawing.Color.White;
-            this.btnDepositar.Location = new System.Drawing.Point(186, 453);
+            this.btnDepositar.Location = new System.Drawing.Point(173, 354);
             this.btnDepositar.Name = "btnDepositar";
             this.btnDepositar.Size = new System.Drawing.Size(229, 74);
             this.btnDepositar.TabIndex = 4;
             this.btnDepositar.Text = "Depositar";
             this.btnDepositar.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // wilBitPanel2
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(812, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(331, 29);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Bem-Vindo, Ponto de Coleta";
+            this.wilBitPanel2.BackColor = System.Drawing.Color.White;
+            this.wilBitPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.wilBitPanel2.BorderRadius = 40;
+            this.wilBitPanel2.BorderSize = 0;
+            this.wilBitPanel2.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel2.Location = new System.Drawing.Point(661, 178);
+            this.wilBitPanel2.Name = "wilBitPanel2";
+            this.wilBitPanel2.Size = new System.Drawing.Size(629, 601);
+            this.wilBitPanel2.TabIndex = 7;
             // 
             // DarPontos
             // 
@@ -157,25 +169,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.wilBitPanel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.wilBitGradientPanel1);
+            this.Controls.Add(this.wilBitPanel2);
             this.Name = "DarPontos";
             this.Text = "DarPontos";
-            this.wilBitGradientPanel1.ResumeLayout(false);
-            this.wilBitGradientPanel1.PerformLayout();
+            this.wilBitPanel1.ResumeLayout(false);
+            this.wilBitPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private WiLBiT.WiLBiTGradientPanel wilBitGradientPanel1;
-        private Label label1;
-        private WiLBiT.WiLBiTTextBox txtPontuacao;
-        private WiLBiT.WiLBiTTextBox txtCPF;
+        private Label label3;
+        private WiLBiT.WiLBiTPanel wilBitPanel1;
         private WiLBiT.WiLBiTButton btnDepositar;
         private Label label2;
-        private Label label3;
+        private WiLBiT.WiLBiTTextBox txtCPF;
+        private WiLBiT.WiLBiTTextBox txtPontuacao;
+        private Label label1;
+        private WiLBiT.WiLBiTPanel wilBitPanel2;
     }
 }

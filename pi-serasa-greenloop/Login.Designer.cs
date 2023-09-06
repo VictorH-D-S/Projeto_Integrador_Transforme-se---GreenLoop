@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.wilBitPanel1 = new WiLBiT.WiLBiTPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnLogin = new WiLBiT.WiLBiTButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,10 +63,11 @@
             this.btnLoginn = new WiLBiT.WiLBiTButton();
             this.btnCadastroo = new WiLBiT.WiLBiTButton();
             this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.wilBitPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.wilBitPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // wilBitPanel1
@@ -77,7 +77,6 @@
             this.wilBitPanel1.BorderRadius = 20;
             this.wilBitPanel1.BorderSize = 0;
             this.wilBitPanel1.Controls.Add(this.label8);
-            this.wilBitPanel1.Controls.Add(this.pictureBox1);
             this.wilBitPanel1.Controls.Add(this.checkBox1);
             this.wilBitPanel1.Controls.Add(this.btnLogin);
             this.wilBitPanel1.Controls.Add(this.label2);
@@ -87,6 +86,7 @@
             this.wilBitPanel1.Controls.Add(this.wilBitPanel3);
             this.wilBitPanel1.Controls.Add(this.wilBitPanel4);
             this.wilBitPanel1.Controls.Add(this.wilBitPanel10);
+            this.wilBitPanel1.Controls.Add(this.pictureBox3);
             this.wilBitPanel1.ForeColor = System.Drawing.Color.White;
             this.wilBitPanel1.Location = new System.Drawing.Point(196, 179);
             this.wilBitPanel1.Name = "wilBitPanel1";
@@ -102,16 +102,6 @@
             this.label8.Size = new System.Drawing.Size(76, 30);
             this.label8.TabIndex = 9;
             this.label8.Text = "LOGIN";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::pi_serasa_greenloop.Properties.Resources.local_na_rede_internet;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // checkBox1
             // 
@@ -595,6 +585,16 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "label10";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(160, 41);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(220, 135);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -611,10 +611,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.wilBitPanel1.ResumeLayout(false);
             this.wilBitPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.wilBitPanel2.ResumeLayout(false);
             this.wilBitPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -643,7 +643,6 @@
         private CheckBox checkBox1;
         private WiLBiT.WiLBiTButton btnLoginn;
         private WiLBiT.WiLBiTButton btnCadastroo;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private WiLBiT.WiLBiTPanel wilBitPanel3;
         private WiLBiT.WiLBiTPanel wilBitPanel4;
@@ -657,5 +656,6 @@
         private Label label8;
         private Label label9;
         private Label label10;
+        private PictureBox pictureBox3;
     }
 }
