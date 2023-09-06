@@ -112,5 +112,10 @@ namespace pi_serasa_greenloop
         {
             cadastro();
         }
+
+        private void txtCadastroSenha__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
