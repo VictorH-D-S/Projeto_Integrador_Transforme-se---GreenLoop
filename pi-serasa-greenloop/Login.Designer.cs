@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnLogin = new WiLBiT.WiLBiTButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCadastroSenha = new WiLBiT.WiLBiTTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.wilBitPanel1.SuspendLayout();
             this.wilBitPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,18 @@
             this.wilBitPanel1.Name = "wilBitPanel1";
             this.wilBitPanel1.Size = new System.Drawing.Size(533, 568);
             this.wilBitPanel1.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.Location = new System.Drawing.Point(140, 378);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(253, 24);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "Entrar como polo de reciclagem";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
@@ -192,7 +204,7 @@
             this.txtIdade.BackColor = System.Drawing.SystemColors.Window;
             this.txtIdade.BorderColor = System.Drawing.Color.Black;
             this.txtIdade.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtIdade.BorderRadius = 4;
+            this.txtIdade.BorderRadius = 11;
             this.txtIdade.BorderSize = 2;
             this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtIdade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -214,7 +226,7 @@
             this.txtCadastroEmail.BackColor = System.Drawing.SystemColors.Window;
             this.txtCadastroEmail.BorderColor = System.Drawing.Color.Black;
             this.txtCadastroEmail.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCadastroEmail.BorderRadius = 4;
+            this.txtCadastroEmail.BorderRadius = 11;
             this.txtCadastroEmail.BorderSize = 2;
             this.txtCadastroEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCadastroEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -247,7 +259,7 @@
             this.txtCadastroCPF.BackColor = System.Drawing.SystemColors.Window;
             this.txtCadastroCPF.BorderColor = System.Drawing.Color.Black;
             this.txtCadastroCPF.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCadastroCPF.BorderRadius = 4;
+            this.txtCadastroCPF.BorderRadius = 11;
             this.txtCadastroCPF.BorderSize = 2;
             this.txtCadastroCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCadastroCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -296,7 +308,7 @@
             this.txtCadastroNome.BackColor = System.Drawing.SystemColors.Window;
             this.txtCadastroNome.BorderColor = System.Drawing.Color.Black;
             this.txtCadastroNome.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCadastroNome.BorderRadius = 4;
+            this.txtCadastroNome.BorderRadius = 11;
             this.txtCadastroNome.BorderSize = 2;
             this.txtCadastroNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCadastroNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -330,7 +342,7 @@
             this.txtCadastroSenha.BackColor = System.Drawing.SystemColors.Window;
             this.txtCadastroSenha.BorderColor = System.Drawing.Color.Black;
             this.txtCadastroSenha.BorderFocusColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtCadastroSenha.BorderRadius = 4;
+            this.txtCadastroSenha.BorderRadius = 11;
             this.txtCadastroSenha.BorderSize = 2;
             this.txtCadastroSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCadastroSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -358,24 +370,12 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Senha";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(140, 378);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(253, 24);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Entrar como polo de reciclagem";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.wilBitPanel2);
             this.Controls.Add(this.wilBitPanel1);
             this.Name = "Login";
