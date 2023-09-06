@@ -30,6 +30,60 @@ namespace pi_serasa_greenloop
 
         }
 
+        void verificaCampoCadastro()
+        {
+            bool camposVazios = false;
+
+            switch (txtCadastroNome.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtCadastroSenha.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtCadastroCPF.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtCadastroEmail.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtIdade.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+
+            if (camposVazios)
+            {
+                MessageBox.Show("Preencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            else
+            {
+                adicionarUsuario();
+                MessageBox.Show("Usuario Cadastrado!");
+            }
+
+        }
+
         void login()
         {
             btnLoginn.BackColor = Color.Black;
@@ -98,9 +152,8 @@ namespace pi_serasa_greenloop
         }
 
         private void wilBitButton1_Click_1(object sender, EventArgs e)
-        {
-            adicionarUsuario();
-            MessageBox.Show("Usuario Cadastrado!");
+        {   
+            verificaCampoCadastro();
         }
 
         private void btnLoginn_Click(object sender, EventArgs e)
@@ -110,6 +163,7 @@ namespace pi_serasa_greenloop
 
         private void btnCadastroo_Click(object sender, EventArgs e)
         {
+ 
             cadastro();
         }
     }

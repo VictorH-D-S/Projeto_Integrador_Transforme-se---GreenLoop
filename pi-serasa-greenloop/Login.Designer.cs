@@ -197,9 +197,9 @@
             label7.ForeColor = Color.Black;
             label7.Location = new Point(98, 324);
             label7.Name = "label7";
-            label7.Size = new Size(48, 20);
+            label7.Size = new Size(150, 20);
             label7.TabIndex = 13;
-            label7.Text = "Idade";
+            label7.Text = "Data de Nascimento";
             // 
             // txtIdade
             // 
