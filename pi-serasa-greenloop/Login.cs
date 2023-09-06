@@ -27,7 +27,6 @@ namespace pi_serasa_greenloop
             Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf);
 
             pessoas.adicionarUsuario();
-
         }
 
         void verificaCampoCadastro()
@@ -81,7 +80,6 @@ namespace pi_serasa_greenloop
                 adicionarUsuario();
                 MessageBox.Show("Usuario Cadastrado!");
             }
-
         }
 
         void login()
@@ -163,7 +161,6 @@ namespace pi_serasa_greenloop
 
         private void btnCadastroo_Click(object sender, EventArgs e)
         {
- 
             cadastro();
         }
 
