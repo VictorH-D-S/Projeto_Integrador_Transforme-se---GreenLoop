@@ -20,9 +20,15 @@ namespace pi_serasa_greenloop
             
         }
 
-        void inserePolo()
+        public void inserePolo()
         {
-            string query = $"INSERT INTO polos(nome, email, senha, endereco) VALUES ('{nome}', {email}, '{senha}', '{endereco}';)";
+            string query = $"INSERT INTO polos(nome, email, senha, endereco) VALUES ('{nome}', '{email}', '{senha}', '{endereco}');";
+            Conexao.executaQuery(query);
+        }
+
+        public void removePolo()
+        {
+            string query = $"DELETE FROM polos WHERE email = '{email}';";
             Conexao.executaQuery(query);
         }
 
