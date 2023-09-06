@@ -31,7 +31,15 @@ namespace pi_serasa_greenloop
         private void Form1_Load(object sender, EventArgs e)
         {
             carregaForm(new Principal());
-            
+           
+            if (painel.Contains(new recompensas()))
+            {
+                btnVoltar.Visible= true;
+            }
+            else
+            {
+                btnVoltar.Visible= false;
+            }
             
         }
 

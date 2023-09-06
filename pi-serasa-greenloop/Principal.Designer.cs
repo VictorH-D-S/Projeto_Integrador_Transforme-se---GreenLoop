@@ -135,7 +135,7 @@
             this.label7.BackColor = System.Drawing.Color.Gold;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(765, 529);
+            this.label7.Location = new System.Drawing.Point(793, 529);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(179, 46);
             this.label7.TabIndex = 32;
@@ -147,7 +147,7 @@
             this.label6.BackColor = System.Drawing.Color.Gold;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(471, 529);
+            this.label6.Location = new System.Drawing.Point(499, 529);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(306, 46);
             this.label6.TabIndex = 31;
