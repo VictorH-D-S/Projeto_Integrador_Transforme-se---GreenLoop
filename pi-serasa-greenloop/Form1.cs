@@ -29,7 +29,7 @@ namespace pi_serasa_greenloop
             painel.Dock = DockStyle.Fill;
 
 
-           // wilBitGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            // wilBitGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             //painel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         }
 
@@ -47,15 +47,20 @@ namespace pi_serasa_greenloop
         private void Form1_Load(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new Login());  
-            
+            carregaForm(new Login());
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             painel.Controls.Clear();
-            
+
             carregaForm(new Principal());
+        }
+
+        private void painel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

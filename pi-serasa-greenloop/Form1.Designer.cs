@@ -28,88 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.wilBitGradientPanel1 = new WiLBiT.WiLBiTGradientPanel();
+            wilBitGradientPanel1 = new WiLBiT.WiLBiTGradientPanel();
             btnVoltar = new WiLBiT.WiLBiTButton();
-            this.label1 = new System.Windows.Forms.Label();
-            painel = new System.Windows.Forms.Panel();
-            this.wilBitGradientPanel1.SuspendLayout();
-            this.SuspendLayout();
+            label1 = new Label();
+            painel = new Panel();
+            wilBitGradientPanel1.SuspendLayout();
+            SuspendLayout();
             // 
             // wilBitGradientPanel1
             // 
-            this.wilBitGradientPanel1.BackColor = System.Drawing.Color.Green;
-            this.wilBitGradientPanel1.BackColor2 = System.Drawing.Color.LimeGreen;
-            this.wilBitGradientPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.wilBitGradientPanel1.BorderRadius = 6;
-            this.wilBitGradientPanel1.BorderSize = 0;
+            wilBitGradientPanel1.Anchor = AnchorStyles.None;
+            wilBitGradientPanel1.BackColor = SystemColors.Highlight;
+            wilBitGradientPanel1.BackColor2 = Color.Transparent;
+            wilBitGradientPanel1.BorderColor = Color.PaleVioletRed;
+            wilBitGradientPanel1.BorderRadius = 6;
+            wilBitGradientPanel1.BorderSize = 0;
             wilBitGradientPanel1.Controls.Add(btnVoltar);
-            this.wilBitGradientPanel1.Controls.Add(this.label1);
-            this.wilBitGradientPanel1.ForeColor = System.Drawing.Color.White;
-            this.wilBitGradientPanel1.Location = new System.Drawing.Point(-4, -4);
-            this.wilBitGradientPanel1.Name = "wilBitGradientPanel1";
-            this.wilBitGradientPanel1.Size = new System.Drawing.Size(1919, 77);
-            this.wilBitGradientPanel1.TabIndex = 0;
+            wilBitGradientPanel1.Controls.Add(label1);
+            wilBitGradientPanel1.ForeColor = Color.Transparent;
+            wilBitGradientPanel1.Location = new Point(-4, -4);
+            wilBitGradientPanel1.Name = "wilBitGradientPanel1";
+            wilBitGradientPanel1.Size = new Size(1919, 77);
+            wilBitGradientPanel1.TabIndex = 0;
             // 
             // btnVoltar
             // 
-            btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            btnVoltar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            btnVoltar.BackColor = Color.FromArgb(0, 192, 0);
+            btnVoltar.BorderColor = Color.FromArgb(72, 116, 245);
             btnVoltar.BorderRadius = 6;
             btnVoltar.BorderSize = 0;
             btnVoltar.FlatAppearance.BorderSize = 0;
-            btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnVoltar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnVoltar.ForeColor = System.Drawing.Color.White;
-            btnVoltar.Location = new System.Drawing.Point(51, 24);
+            btnVoltar.FlatStyle = FlatStyle.Flat;
+            btnVoltar.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVoltar.ForeColor = Color.White;
+            btnVoltar.Location = new Point(51, 24);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new System.Drawing.Size(105, 30);
+            btnVoltar.Size = new Size(105, 30);
             btnVoltar.TabIndex = 1;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = false;
-            btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(825, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GreenLoop";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Trebuchet MS", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(825, 13);
+            label1.Name = "label1";
+            label1.Size = new Size(180, 40);
+            label1.TabIndex = 0;
+            label1.Text = "GreenLoop";
             // 
             // painel
             // 
-            painel.Location = new System.Drawing.Point(0, 70);
+            painel.Anchor = AnchorStyles.None;
+            painel.Location = new Point(0, 70);
             painel.Name = "painel";
-            painel.Size = new System.Drawing.Size(1918, 973);
+            painel.Size = new Size(1918, 973);
             painel.TabIndex = 1;
+            painel.Paint += painel_Paint;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(painel);
-            this.Controls.Add(this.wilBitGradientPanel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.wilBitGradientPanel1.ResumeLayout(false);
-            this.wilBitGradientPanel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 3, 21);
+            ClientSize = new Size(1904, 1041);
+            Controls.Add(painel);
+            Controls.Add(wilBitGradientPanel1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            wilBitGradientPanel1.ResumeLayout(false);
+            wilBitGradientPanel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        
+
 
         private WiLBiT.WiLBiTGradientPanel wilBitGradientPanel1;
         private Label label1;
-        public static Panel painel;
-        public static WiLBiT.WiLBiTButton btnVoltar;
+        public Panel painel;
+        public WiLBiT.WiLBiTButton btnVoltar;
     }
 }
