@@ -16,6 +16,8 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
+
+
         void adicionarUsuario()
         {
             string nome = txtCadastroNome.Texts;
@@ -84,26 +86,41 @@ namespace pi_serasa_greenloop
 
         void login()
         {
-            btnLoginn.BackColor = Color.Black;
-            btnCadastroo.BackColor = Color.White;
+            btnLoginn.BackColor = Color.Lime;
+            btnCadastroo.BackColor = Color.Gray;
 
-            btnLoginn.ForeColor = Color.White;
-            btnCadastroo.ForeColor = Color.Black;
+            btnLoginn.ForeColor = Color.Black;
+            btnCadastroo.ForeColor = Color.White;
 
             wilBitPanel2.Visible = false;
             wilBitPanel1.Visible = true;
+
+            int centerX = (this.ClientSize.Width - wilBitPanel1.Width - wilBitPanel2.Width) / 2;
+            int centerY = (this.ClientSize.Height - wilBitPanel1.Height - 115) / 2;
+            btnLoginn.Location = new Point(centerX, centerY);
+
+            int centerXx = (this.ClientSize.Width + 666 + 30) / 2;
+            int centerYy = (this.ClientSize.Height - wilBitPanel2.Height - 115) / 2;
+            btnCadastroo.Location = new Point(centerXx, centerYy);
         }
 
         void cadastro()
         {
-            btnCadastroo.BackColor = Color.Black;
-            btnLoginn.BackColor = Color.White;
+            btnCadastroo.BackColor = Color.Lime;
+            btnLoginn.BackColor = Color.Gray;
 
-            btnCadastroo.ForeColor = Color.White;
-            btnLoginn.ForeColor = Color.Black;
+            btnCadastroo.ForeColor = Color.Black;
+            btnLoginn.ForeColor = Color.White;
 
             wilBitPanel1.Visible = false;
             wilBitPanel2.Visible = true;
+
+        }
+
+        void carregarHome()
+        {
+            Form1 form1 = new Form1();
+            form1.carregaForm(new Principal());
         }
 
         private void wilBitPanel2_Paint(object sender, PaintEventArgs e)
@@ -150,7 +167,7 @@ namespace pi_serasa_greenloop
         }
 
         private void wilBitButton1_Click_1(object sender, EventArgs e)
-        {   
+        {
             verificaCampoCadastro();
         }
 
@@ -167,6 +184,33 @@ namespace pi_serasa_greenloop
         private void txtCadastroSenha__TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLoginn_Click_1(object sender, EventArgs e)
+        {
+            login();
+        }
+
+        private void btnCadastroo_Click_1(object sender, EventArgs e)
+        {
+            cadastro();
+        }
+
+        private void Login_Load_2(object sender, EventArgs e)
+        {
+            int centerX = (this.ClientSize.Width - wilBitPanel1.Width - wilBitPanel2.Width) / 2;
+            int centerY = (this.ClientSize.Height - wilBitPanel1.Height) / 2;
+            wilBitPanel1.Location = new Point(centerX, centerY);
+            wilBitPanel2.Location = new Point(centerX + wilBitPanel1.Width, centerY);
+
+            login();
+        }
+
+        private void wilBitButton1_Click(object sender, EventArgs e)
+        {
+            verificaCampoCadastro();
+            adicionarUsuario();
+            carregarHome();
         }
     }
 }

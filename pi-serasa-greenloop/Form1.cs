@@ -17,6 +17,22 @@ namespace pi_serasa_greenloop
             InitializeComponent();
         }
 
+        void responsivo()
+        {
+            WindowState = FormWindowState.Maximized;
+            wilBitGradientPanel1.Dock = DockStyle.Top;
+            btnVoltar.Anchor = AnchorStyles.Left;
+            label1.Anchor = AnchorStyles.None;
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            btnVoltar.Visible = false;
+
+            painel.Dock = DockStyle.Fill;
+
+
+           // wilBitGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            //painel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+        }
+
         public void carregaForm(Form form)
         {
             form.TopLevel = false;
@@ -30,8 +46,8 @@ namespace pi_serasa_greenloop
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            carregaForm(new Principal());  
+            responsivo();
+            carregaForm(new Login());  
             
         }
 
