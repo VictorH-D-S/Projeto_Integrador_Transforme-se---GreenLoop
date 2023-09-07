@@ -146,11 +146,9 @@ namespace pi_serasa_greenloop
 
             int centerX = (this.ClientSize.Width - wilBitPanel1.Width - wilBitPanel2.Width) / 2;
             int centerY = (this.ClientSize.Height - wilBitPanel1.Height - 115) / 2;
-            btnLoginn.Location = new Point(centerX, centerY);
 
             int centerXx = (this.ClientSize.Width + 666 + 30) / 2;
             int centerYy = (this.ClientSize.Height - wilBitPanel2.Height - 115) / 2;
-            btnCadastroo.Location = new Point(centerXx, centerYy);
         }
 
         void cadastro()
@@ -182,16 +180,6 @@ namespace pi_serasa_greenloop
         {
 
         }
-
-        //CADASTRO
-
-        /*
-        private void wilBitButton1_Click(object sender, EventArgs e)
-        {
-            adicionarUsuario();
-            MessageBox.Show("Usuario Cadastrado!!!!");
-        }
-        */
 
         private void wilBitPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -278,6 +266,16 @@ namespace pi_serasa_greenloop
         private void wilBitPanel2_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnLogin_Cadastro_Click(object sender, EventArgs e)
+        {
+            login();
+        }
+
+        private void btnCadastro_Login_Click(object sender, EventArgs e)
+        {
+            cadastro();
         }
     }
 }

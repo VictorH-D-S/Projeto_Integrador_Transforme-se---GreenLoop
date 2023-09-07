@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            btnLoginn = new WiLBiT.WiLBiTButton();
+            btnCadastroo = new WiLBiT.WiLBiTButton();
             label8 = new Label();
             checkBox1 = new CheckBox();
             btnLogin = new WiLBiT.WiLBiTButton();
@@ -42,6 +44,8 @@
             wilBitPanel10 = new WiLBiT.WiLBiTPanel();
             pictureBox3 = new PictureBox();
             wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            btnCadastro_Login = new WiLBiT.WiLBiTButton();
+            btnLogin_Cadastro = new WiLBiT.WiLBiTButton();
             label9 = new Label();
             pictureBox2 = new PictureBox();
             label7 = new Label();
@@ -61,8 +65,6 @@
             wilBitPanel8 = new WiLBiT.WiLBiTPanel();
             wilBitPanel9 = new WiLBiT.WiLBiTPanel();
             wilBitPanel11 = new WiLBiT.WiLBiTPanel();
-            btnLoginn = new WiLBiT.WiLBiTButton();
-            btnCadastroo = new WiLBiT.WiLBiTButton();
             wilBitPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             wilBitPanel2.SuspendLayout();
@@ -72,10 +74,12 @@
             // wilBitPanel1
             // 
             wilBitPanel1.Anchor = AnchorStyles.None;
-            wilBitPanel1.BackColor = Color.Gray;
+            wilBitPanel1.BackColor = Color.FromArgb(192, 64, 0);
             wilBitPanel1.BorderColor = Color.PaleVioletRed;
             wilBitPanel1.BorderRadius = 20;
             wilBitPanel1.BorderSize = 0;
+            wilBitPanel1.Controls.Add(btnLoginn);
+            wilBitPanel1.Controls.Add(btnCadastroo);
             wilBitPanel1.Controls.Add(label8);
             wilBitPanel1.Controls.Add(checkBox1);
             wilBitPanel1.Controls.Add(btnLogin);
@@ -92,6 +96,44 @@
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(533, 568);
             wilBitPanel1.TabIndex = 0;
+            // 
+            // btnLoginn
+            // 
+            btnLoginn.Anchor = AnchorStyles.Left;
+            btnLoginn.BackColor = Color.Lime;
+            btnLoginn.BorderColor = Color.FromArgb(72, 116, 245);
+            btnLoginn.BorderRadius = 6;
+            btnLoginn.BorderSize = 0;
+            btnLoginn.FlatAppearance.BorderSize = 0;
+            btnLoginn.FlatStyle = FlatStyle.Flat;
+            btnLoginn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLoginn.ForeColor = Color.Black;
+            btnLoginn.Location = new Point(9, 13);
+            btnLoginn.Name = "btnLoginn";
+            btnLoginn.Size = new Size(145, 54);
+            btnLoginn.TabIndex = 6;
+            btnLoginn.Text = "Login";
+            btnLoginn.UseVisualStyleBackColor = false;
+            btnLoginn.Click += btnLoginn_Click_1;
+            // 
+            // btnCadastroo
+            // 
+            btnCadastroo.Anchor = AnchorStyles.Right;
+            btnCadastroo.BackColor = Color.Gray;
+            btnCadastroo.BorderColor = Color.FromArgb(72, 116, 245);
+            btnCadastroo.BorderRadius = 6;
+            btnCadastroo.BorderSize = 0;
+            btnCadastroo.FlatAppearance.BorderSize = 0;
+            btnCadastroo.FlatStyle = FlatStyle.Flat;
+            btnCadastroo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCadastroo.ForeColor = Color.White;
+            btnCadastroo.Location = new Point(385, 13);
+            btnCadastroo.Name = "btnCadastroo";
+            btnCadastroo.Size = new Size(145, 54);
+            btnCadastroo.TabIndex = 7;
+            btnCadastroo.Text = "Cadastro";
+            btnCadastroo.UseVisualStyleBackColor = false;
+            btnCadastroo.Click += btnCadastroo_Click_1;
             // 
             // label8
             // 
@@ -158,7 +200,7 @@
             // txtLoginSenha
             // 
             txtLoginSenha.BackColor = SystemColors.Window;
-            txtLoginSenha.BorderColor = Color.FromArgb(0, 192, 0);
+            txtLoginSenha.BorderColor = Color.Teal;
             txtLoginSenha.BorderFocusColor = Color.DeepSkyBlue;
             txtLoginSenha.BorderRadius = 11;
             txtLoginSenha.BorderSize = 2;
@@ -180,7 +222,7 @@
             // txtLoginEmail
             // 
             txtLoginEmail.BackColor = SystemColors.Window;
-            txtLoginEmail.BorderColor = Color.FromArgb(0, 192, 0);
+            txtLoginEmail.BorderColor = Color.DodgerBlue;
             txtLoginEmail.BorderFocusColor = Color.FromArgb(0, 192, 0);
             txtLoginEmail.BorderRadius = 11;
             txtLoginEmail.BorderSize = 2;
@@ -248,10 +290,12 @@
             // wilBitPanel2
             // 
             wilBitPanel2.Anchor = AnchorStyles.None;
-            wilBitPanel2.BackColor = Color.Lime;
+            wilBitPanel2.BackColor = Color.FromArgb(192, 64, 0);
             wilBitPanel2.BorderColor = Color.PaleVioletRed;
             wilBitPanel2.BorderRadius = 20;
             wilBitPanel2.BorderSize = 0;
+            wilBitPanel2.Controls.Add(btnCadastro_Login);
+            wilBitPanel2.Controls.Add(btnLogin_Cadastro);
             wilBitPanel2.Controls.Add(label9);
             wilBitPanel2.Controls.Add(pictureBox2);
             wilBitPanel2.Controls.Add(label7);
@@ -279,12 +323,50 @@
             wilBitPanel2.TabIndex = 1;
             wilBitPanel2.Paint += wilBitPanel2_Paint_1;
             // 
+            // btnCadastro_Login
+            // 
+            btnCadastro_Login.Anchor = AnchorStyles.Right;
+            btnCadastro_Login.BackColor = Color.Lime;
+            btnCadastro_Login.BorderColor = Color.FromArgb(72, 116, 245);
+            btnCadastro_Login.BorderRadius = 6;
+            btnCadastro_Login.BorderSize = 0;
+            btnCadastro_Login.FlatAppearance.BorderSize = 0;
+            btnCadastro_Login.FlatStyle = FlatStyle.Flat;
+            btnCadastro_Login.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCadastro_Login.ForeColor = Color.Black;
+            btnCadastro_Login.Location = new Point(376, 13);
+            btnCadastro_Login.Name = "btnCadastro_Login";
+            btnCadastro_Login.Size = new Size(145, 54);
+            btnCadastro_Login.TabIndex = 16;
+            btnCadastro_Login.Text = "Cadastro";
+            btnCadastro_Login.UseVisualStyleBackColor = false;
+            btnCadastro_Login.Click += btnCadastro_Login_Click;
+            // 
+            // btnLogin_Cadastro
+            // 
+            btnLogin_Cadastro.Anchor = AnchorStyles.Left;
+            btnLogin_Cadastro.BackColor = Color.Gray;
+            btnLogin_Cadastro.BorderColor = Color.FromArgb(72, 116, 245);
+            btnLogin_Cadastro.BorderRadius = 6;
+            btnLogin_Cadastro.BorderSize = 0;
+            btnLogin_Cadastro.FlatAppearance.BorderSize = 0;
+            btnLogin_Cadastro.FlatStyle = FlatStyle.Flat;
+            btnLogin_Cadastro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin_Cadastro.ForeColor = Color.White;
+            btnLogin_Cadastro.Location = new Point(10, 12);
+            btnLogin_Cadastro.Name = "btnLogin_Cadastro";
+            btnLogin_Cadastro.Size = new Size(145, 54);
+            btnLogin_Cadastro.TabIndex = 16;
+            btnLogin_Cadastro.Text = "Login";
+            btnLogin_Cadastro.UseVisualStyleBackColor = false;
+            btnLogin_Cadastro.Click += btnLogin_Cadastro_Click;
+            // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(28, 26);
+            label9.Location = new Point(394, 26);
             label9.Name = "label9";
             label9.Size = new Size(117, 27);
             label9.TabIndex = 10;
@@ -401,14 +483,14 @@
             // 
             // wilBitButton1
             // 
-            wilBitButton1.BackColor = Color.Gray;
+            wilBitButton1.BackColor = Color.Lime;
             wilBitButton1.BorderColor = Color.FromArgb(72, 116, 245);
             wilBitButton1.BorderRadius = 6;
             wilBitButton1.BorderSize = 0;
             wilBitButton1.FlatAppearance.BorderSize = 0;
             wilBitButton1.FlatStyle = FlatStyle.Flat;
             wilBitButton1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            wilBitButton1.ForeColor = Color.White;
+            wilBitButton1.ForeColor = Color.Black;
             wilBitButton1.Location = new Point(172, 474);
             wilBitButton1.Name = "wilBitButton1";
             wilBitButton1.Size = new Size(185, 53);
@@ -556,54 +638,12 @@
             wilBitPanel11.Size = new Size(185, 53);
             wilBitPanel11.TabIndex = 9;
             // 
-            // btnLoginn
-            // 
-            btnLoginn.Anchor = AnchorStyles.Left;
-            btnLoginn.BackColor = Color.Lime;
-            btnLoginn.BorderColor = Color.FromArgb(72, 116, 245);
-            btnLoginn.BorderRadius = 6;
-            btnLoginn.BorderSize = 0;
-            btnLoginn.FlatAppearance.BorderSize = 0;
-            btnLoginn.FlatStyle = FlatStyle.Flat;
-            btnLoginn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLoginn.ForeColor = Color.Black;
-            btnLoginn.Location = new Point(321, 98);
-            btnLoginn.Name = "btnLoginn";
-            btnLoginn.Size = new Size(185, 53);
-            btnLoginn.TabIndex = 6;
-            btnLoginn.Text = "Login";
-            btnLoginn.UseVisualStyleBackColor = false;
-            btnLoginn.Click += btnLoginn_Click_1;
-            // 
-            // btnCadastroo
-            // 
-            btnCadastroo.Anchor = AnchorStyles.Right;
-            btnCadastroo.BackColor = Color.Gray;
-            btnCadastroo.BorderColor = Color.FromArgb(72, 116, 245);
-            btnCadastroo.BorderRadius = 6;
-            btnCadastroo.BorderSize = 0;
-            btnCadastroo.FlatAppearance.BorderSize = 0;
-            btnCadastroo.FlatStyle = FlatStyle.Flat;
-            btnCadastroo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCadastroo.ForeColor = Color.White;
-            btnCadastroo.Location = new Point(1002, 98);
-            btnCadastroo.Name = "btnCadastroo";
-            btnCadastroo.Size = new Size(185, 53);
-            btnCadastroo.TabIndex = 7;
-            btnCadastroo.Text = "Cadastro";
-            btnCadastroo.UseVisualStyleBackColor = false;
-            btnCadastroo.Click += btnCadastroo_Click_1;
-
-            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 3, 21);
             ClientSize = new Size(1370, 749);
-            Controls.Add(label10);
-            Controls.Add(btnCadastroo);
-            Controls.Add(btnLoginn);
             Controls.Add(wilBitPanel2);
             Controls.Add(wilBitPanel1);
             Name = "Login";
@@ -617,7 +657,6 @@
             wilBitPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -657,5 +696,7 @@
         private Label label9;
         private Label label10;
         private PictureBox pictureBox3;
+        private WiLBiT.WiLBiTButton btnCadastro_Login;
+        private WiLBiT.WiLBiTButton btnLogin_Cadastro;
     }
 }
