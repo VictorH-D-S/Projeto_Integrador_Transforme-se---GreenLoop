@@ -117,13 +117,18 @@ namespace pi_serasa_greenloop
 
         }
 
-        void carregarHome()
-        {
-            Form1 form1 = new Form1();
-            form1.carregaForm(new Principal());
-        }
+		public void carregaForm(Form form)
+		{
+			form.TopLevel = false;
+			Form1.painel.Controls.Clear();
+			Form1.painel.Controls.Add(form);
+			form.Size = Form1.painel.Size;
+			form.Location = new Point(Form1.painel.Width - form.Width, Form1.painel.Height - form.Height);
+			form.Show();
 
-        private void wilBitPanel2_Paint(object sender, PaintEventArgs e)
+		}
+
+		private void wilBitPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -210,7 +215,8 @@ namespace pi_serasa_greenloop
         {
             verificaCampoCadastro();
             adicionarUsuario();
-            carregarHome();
+            carregaForm(new Principal());
+            Form1.btnVoltar.Visible = true;
         }
     }
 }
