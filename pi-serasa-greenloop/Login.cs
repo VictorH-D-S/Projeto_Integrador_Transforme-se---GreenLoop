@@ -81,7 +81,9 @@ namespace pi_serasa_greenloop
 			{
 				adicionarUsuario();
 				MessageBox.Show("Usuario Cadastrado!");
-			}
+                carregaForm(new Principal());
+                Form1.btnVoltar.Visible = true;
+            }
 		}
 
 		void login()
@@ -214,9 +216,6 @@ namespace pi_serasa_greenloop
 		private void wilBitButton1_Click(object sender, EventArgs e)
 		{
 			verificaCampoCadastro();
-			adicionarUsuario();
-			carregaForm(new Principal());
-			Form1.btnVoltar.Visible = true;
 		}
 
 		private void btnLogin_Click(object sender, EventArgs e)
