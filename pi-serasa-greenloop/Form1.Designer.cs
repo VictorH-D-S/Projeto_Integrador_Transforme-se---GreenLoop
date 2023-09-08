@@ -33,7 +33,9 @@
 			label1 = new Label();
 			painel = new Panel();
 			panel1 = new Panel();
+			label2 = new Label();
 			wilBitGradientPanel1.SuspendLayout();
+			panel1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// wilBitGradientPanel1
@@ -84,18 +86,34 @@
 			// painel
 			// 
 			painel.Anchor = AnchorStyles.None;
-			painel.Location = new Point(0, 80);
+			painel.Location = new Point(0, 85);
 			painel.Name = "painel";
-			painel.Size = new Size(1443, 802);
+			painel.Size = new Size(1443, 797);
 			painel.TabIndex = 1;
 			painel.Paint += painel_Paint;
 			// 
 			// panel1
 			// 
-			panel1.Location = new Point(0, 1);
+			panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+			panel1.BackColor = Color.LimeGreen;
+			panel1.Controls.Add(label2);
+			panel1.ForeColor = Color.LimeGreen;
+			panel1.Location = new Point(0, -4);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(1443, 83);
+			panel1.Size = new Size(1450, 89);
 			panel1.TabIndex = 2;
+			// 
+			// label2
+			// 
+			label2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+			label2.AutoSize = true;
+			label2.Font = new Font("Trebuchet MS", 24F, FontStyle.Bold, GraphicsUnit.Point);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(566, 23);
+			label2.Name = "label2";
+			label2.Size = new Size(180, 40);
+			label2.TabIndex = 0;
+			label2.Text = "GreenLoop";
 			// 
 			// Form1
 			// 
@@ -111,6 +129,8 @@
 			Load += Form1_Load;
 			wilBitGradientPanel1.ResumeLayout(false);
 			wilBitGradientPanel1.PerformLayout();
+			panel1.ResumeLayout(false);
+			panel1.PerformLayout();
 			ResumeLayout(false);
 		}
 
@@ -120,8 +140,9 @@
 
 		private WiLBiT.WiLBiTGradientPanel wilBitGradientPanel1;
 		private Label label1;
-		public static Panel painel;
 		public WiLBiT.WiLBiTButton btnVoltar;
 		private Panel panel1;
+		private Label label2;
+		public static Panel painel;
 	}
 }
