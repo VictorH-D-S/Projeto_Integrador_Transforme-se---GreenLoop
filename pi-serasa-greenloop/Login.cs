@@ -166,15 +166,14 @@ namespace pi_serasa_greenloop
 
         public void carregaForm(Form form)
         {
-            Form1 form1 = new Form1();
-            form1.TopLevel = false;
-            form1.painel.Controls.Clear();
-            form1.painel.Controls.Add(form);
-            form.Size = form1.painel.Size;
-            form.Location = new Point(form1.painel.Width - form.Width, form1.painel.Height - form1.Height);
-            form.Show();
+			form.TopLevel = false;
+			Form1.painel.Controls.Clear();
+			Form1.painel.Controls.Add(form);
+			form.Size = Form1.painel.Size;
+			form.Location = new Point(Form1.painel.Width - form.Width, Form1.painel.Height - form.Height);
+			form.Show();
 
-        }
+		}
 
         private void wilBitPanel2_Paint(object sender, PaintEventArgs e)
         {
@@ -212,6 +211,7 @@ namespace pi_serasa_greenloop
         private void wilBitButton1_Click_1(object sender, EventArgs e)
         {
             verificaCampoCadastro();
+            carregaForm(new Principal());
         }
 
         private void btnLoginn_Click(object sender, EventArgs e)
