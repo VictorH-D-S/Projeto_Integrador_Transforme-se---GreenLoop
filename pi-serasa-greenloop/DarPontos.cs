@@ -16,10 +16,5 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
-
-        private void painelResponsivo_Pontos_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

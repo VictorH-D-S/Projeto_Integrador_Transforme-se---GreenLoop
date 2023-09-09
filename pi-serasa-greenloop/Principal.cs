@@ -19,14 +19,9 @@ namespace pi_serasa_greenloop
 
 		Label lblPrincipal = new Label();
 
-<<<<<<< Updated upstream
 
 		public void carregaForm(Form form)
 		{
-=======
-        public void carregaForm(Form form)
-        {
->>>>>>> Stashed changes
 
 			form.TopLevel = false;
 			painel.Controls.Clear();
