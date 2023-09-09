@@ -16,5 +16,15 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
+
+        private void PainelResponsivo_DarPontos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DarPontos_Load(object sender, EventArgs e)
+        {
+            PainelResponsivo_DarPontos.Location = new Point((this.Width - PainelResponsivo_DarPontos.Width) / 2, (this.Height - PainelResponsivo_DarPontos.Height) / 2);
+        }
     }
 }

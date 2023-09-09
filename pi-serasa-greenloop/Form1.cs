@@ -65,7 +65,7 @@ namespace pi_serasa_greenloop
         private void Form1_Load(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new Login());
+            carregaForm(new DarPontos());
             //painel_SizeChanged(null, null);
         }
 
