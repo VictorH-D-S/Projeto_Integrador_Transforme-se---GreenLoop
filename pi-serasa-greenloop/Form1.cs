@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace pi_serasa_greenloop
 {
+<<<<<<< Updated upstream
 	public partial class Form1 : Form
 	{
 		public Form1()
@@ -17,6 +18,16 @@ namespace pi_serasa_greenloop
 			InitializeComponent();
 		}
 		/*private void painel_SizeChanged(object sender, EventArgs e)
+=======
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        /*
+        private void painel_SizeChanged(object sender, EventArgs e)
+>>>>>>> Stashed changes
         {
             // Centraliza o formulário dentro do painel
             int formX = (painel.Width - this.Width) / 2;
