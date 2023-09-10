@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +20,31 @@ namespace pi_serasa_greenloop
         public Polos() 
         {
             
+        }
+
+        private Polos carregaDados(DataRow row)
+        {
+            string nome = row["id"].ToString();
+            string email = row["email"].ToString();
+            string senha = row["senha"].ToString();
+            string endereco = row["endereco"].ToString();
+
+            Polos polos = new Polos(nome, email, senha, endereco);
+            return polos;
+        }
+
+        public Polos logarPolos(string email, string senha)
+        {
+            string query = $"SELECT * FROM polos WHERE email = '{email}' AND senha = '{senha}'";
+
+            DataTable resultados = Conexao.executaQuery(query);
+            if (resultados.Rows.Count == 0)
+            {
+                return null;
+            }
+
+            Polos polos = carregaDados(resultados.Rows[0]);
+            return polos;
         }
 
         public void inserePolo()

@@ -110,7 +110,7 @@ namespace pi_serasa_greenloop
 				return;
 			}
 
-			else
+			if(camposVazios == false && checkBox1.Checked == false)
 			{
 				string email = txtLoginEmail.Texts;
 				string senha = txtLoginSenha.Texts;
@@ -129,6 +129,26 @@ namespace pi_serasa_greenloop
 				carregaForm(new Principal());
 
 			}
+
+			if(camposVazios == false && checkBox1.Checked == true)
+			{
+                string email = txtLoginEmail.Texts;
+                string senha = txtLoginSenha.Texts;
+
+                Polos polos = new Polos();
+                polos = polos.logarPolos(email, senha);
+				if (polos == null)
+				{
+                    MessageBox.Show("Usuário ou senha incorreto");
+					return;
+                }
+                else
+                {
+                    MessageBox.Show("Usuário encontrado");
+                }
+
+                carregaForm(new DarPontos());
+            }
 
 		}
 
@@ -150,6 +170,7 @@ namespace pi_serasa_greenloop
 			int centerXx = (this.ClientSize.Width + 666 + 30) / 2;
 			int centerYy = (this.ClientSize.Height - wilBitPanel2.Height - 115) / 2;
 		}
+
 
 		void cadastro()
 		{
