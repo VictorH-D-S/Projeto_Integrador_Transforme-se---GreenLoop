@@ -17,6 +17,12 @@ namespace pi_serasa_greenloop
             InitializeComponent();
         }
 
+        void iniciar()
+        {
+            btnAdicionar.BackColor = Color.Blue;
+            btnRemover.BackColor = Color.Red;
+        }
+
         public void operacaoPolos()
         {
             string nome = txtNome.Texts;
@@ -53,7 +59,7 @@ namespace pi_serasa_greenloop
 
         private void Tela_cadastro_de_polos_Load_1(object sender, EventArgs e)
         {
-
+            iniciar();
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
