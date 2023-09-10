@@ -17,9 +17,10 @@ namespace pi_serasa_greenloop
             InitializeComponent();
         }
 
-        void atualizaInterface ()
+        void atualizaInterface()
         {
-           // wilBitPanel1.Location = new Point(wilBitPanel1.Width / 2 - ClientSize.Width/2, wilBitPanel1.Height / 2 - ClientSize.Height/2);
+            pnlResponsivo_Perfil.Location = new Point((this.ClientSize.Width - pnlResponsivo_Perfil.Width) / 2, (this.ClientSize.Height - pnlResponsivo_Perfil.Height - 100) / 2);
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -27,14 +28,19 @@ namespace pi_serasa_greenloop
 
         }
 
-        private void wilBitPanel1_Paint(object sender, PaintEventArgs e)
+        private void Perfil_Load(object sender, EventArgs e)
+        {
+            atualizaInterface();
+        }
+
+        private void pnlResponsivo_Perfil_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Perfil_Load(object sender, EventArgs e)
+        private void btnExcluirConta_Usuário_Click(object sender, EventArgs e)
         {
-            atualizaInterface();
+            MessageBox.Show("Troquem de sexo. Pênis Pênis.");
         }
     }
 }

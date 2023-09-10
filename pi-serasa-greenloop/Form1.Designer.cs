@@ -55,23 +55,23 @@
             // 
             // painel
             // 
-            painel.Anchor = AnchorStyles.None;
-            painel.Location = new Point(0, 78);
+            painel.Dock = DockStyle.Bottom;
+            painel.Location = new Point(0, 89);
             painel.Name = "painel";
-            painel.Size = new Size(1451, 786);
+            painel.Size = new Size(1904, 952);
             painel.TabIndex = 1;
             painel.Paint += painel_Paint;
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.LimeGreen;
             panel1.Controls.Add(btnVoltar);
             panel1.Controls.Add(label2);
+            panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.LimeGreen;
-            panel1.Location = new Point(-6, -11);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1456, 89);
+            panel1.Size = new Size(1904, 89);
             panel1.TabIndex = 2;
             // 
             // label2
@@ -80,7 +80,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Trebuchet MS", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(1101, 30);
+            label2.Location = new Point(1325, 30);
             label2.Name = "label2";
             label2.Size = new Size(180, 40);
             label2.TabIndex = 0;
@@ -93,7 +93,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 3, 21);
-            ClientSize = new Size(1444, 866);
+            ClientSize = new Size(1904, 1041);
             Controls.Add(panel1);
             Controls.Add(painel);
             Name = "Form1";
