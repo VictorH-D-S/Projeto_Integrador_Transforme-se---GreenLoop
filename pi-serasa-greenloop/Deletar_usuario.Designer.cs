@@ -119,6 +119,7 @@
             btnDeletar_usuario.TabIndex = 1;
             btnDeletar_usuario.Text = "Deletar";
             btnDeletar_usuario.UseVisualStyleBackColor = false;
+            btnDeletar_usuario.Click += btnDeletar_usuario_Click;
             // 
             // label1
             // 

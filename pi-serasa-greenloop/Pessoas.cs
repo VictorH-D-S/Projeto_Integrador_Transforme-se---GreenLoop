@@ -36,6 +36,12 @@ namespace pi_serasa_greenloop
             Conexao.executaQuery(query);
         }
 
+        public void admDeletarUsuario(string cpf)
+        {
+            string query = $"DELETE FROM pessoas WHERE cpf = '{cpf}';";
+            Conexao.executaQuery(query);
+        }
+
         public Pessoas login(string email, string senha)
         {
 			string query = $"SELECT * FROM pessoas WHERE email = '{email}' AND senha = '{senha}'";

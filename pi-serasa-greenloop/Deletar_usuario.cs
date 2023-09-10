@@ -21,5 +21,18 @@ namespace pi_serasa_greenloop
         {
             PainelResponsivo_DeletarUsuário.Location = new Point((this.Width - PainelResponsivo_DeletarUsuário.Width) / 2, (this.Height - PainelResponsivo_DeletarUsuário.Height) / 2);
         }
+
+        void removeUsuario()
+        {
+            string cpf = txtCPF_Ademir.Texts;
+            Pessoas pessoas = new Pessoas();
+            pessoas.admDeletarUsuario(cpf);
+            MessageBox.Show("Usuario deletado com sucesso!!!");
+        }
+
+        private void btnDeletar_usuario_Click(object sender, EventArgs e)
+        {
+            removeUsuario();
+        }
     }
 }
