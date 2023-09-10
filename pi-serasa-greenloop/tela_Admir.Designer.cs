@@ -48,11 +48,13 @@
             btnPolos.FlatAppearance.BorderSize = 0;
             btnPolos.FlatStyle = FlatStyle.Flat;
             btnPolos.ForeColor = Color.White;
-            btnPolos.Location = new Point(270, 308);
+            btnPolos.Location = new Point(189, 185);
+            btnPolos.Margin = new Padding(2, 2, 2, 2);
             btnPolos.Name = "btnPolos";
-            btnPolos.Size = new Size(424, 438);
+            btnPolos.Size = new Size(297, 263);
             btnPolos.TabIndex = 0;
             btnPolos.UseVisualStyleBackColor = false;
+            btnPolos.Click += btnPolos_Click;
             // 
             // btnUsuarios
             // 
@@ -63,9 +65,10 @@
             btnUsuarios.FlatAppearance.BorderSize = 0;
             btnUsuarios.FlatStyle = FlatStyle.Flat;
             btnUsuarios.ForeColor = Color.White;
-            btnUsuarios.Location = new Point(1163, 308);
+            btnUsuarios.Location = new Point(814, 185);
+            btnUsuarios.Margin = new Padding(2, 2, 2, 2);
             btnUsuarios.Name = "btnUsuarios";
-            btnUsuarios.Size = new Size(424, 438);
+            btnUsuarios.Size = new Size(297, 263);
             btnUsuarios.TabIndex = 2;
             btnUsuarios.UseVisualStyleBackColor = false;
             // 
@@ -75,9 +78,10 @@
             label1.BackColor = Color.FromArgb(21, 191, 81);
             label1.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(401, 402);
+            label1.Location = new Point(281, 241);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(162, 70);
+            label1.Size = new Size(108, 47);
             label1.TabIndex = 3;
             label1.Text = "Polos";
             label1.Click += label1_Click;
@@ -88,9 +92,10 @@
             label2.BackColor = Color.Gray;
             label2.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(1251, 402);
+            label2.Location = new Point(876, 241);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(241, 70);
+            label2.Size = new Size(160, 47);
             label2.TabIndex = 4;
             label2.Text = "Usuários";
             // 
@@ -98,9 +103,10 @@
             // 
             pictureBox1.BackColor = Color.Gray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1240, 475);
+            pictureBox1.Location = new Point(868, 285);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(268, 241);
+            pictureBox1.Size = new Size(188, 145);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -109,25 +115,27 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(21, 191, 81);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(345, 475);
+            pictureBox2.Location = new Point(242, 285);
+            pictureBox2.Margin = new Padding(2, 2, 2, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(268, 241);
+            pictureBox2.Size = new Size(188, 145);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
             // 
             // tela_Admir
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 3, 21);
-            ClientSize = new Size(1898, 1024);
+            ClientSize = new Size(959, 449);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(btnUsuarios);
             Controls.Add(btnPolos);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "tela_Admir";
             Text = "tela_Admir";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

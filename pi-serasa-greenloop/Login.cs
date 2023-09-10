@@ -124,9 +124,9 @@ namespace pi_serasa_greenloop
 				else
 				{
 					MessageBox.Show("Usuário encontrado");
+				    carregaForm(new Principal());
 				}
 
-				carregaForm(new Principal());
 
 			}
 
@@ -139,15 +139,15 @@ namespace pi_serasa_greenloop
                 polos = polos.logarPolos(email, senha);
 				if (polos == null)
 				{
-                    MessageBox.Show("Usuário ou senha incorreto");
+                    MessageBox.Show("Email ou senha incorreto");
 					return;
                 }
                 else
                 {
-                    MessageBox.Show("Usuário encontrado");
+                    MessageBox.Show("Polo encontrado");
+                    carregaForm(new DarPontos());
                 }
 
-                carregaForm(new DarPontos());
             }
 
 		}
