@@ -22,7 +22,7 @@ namespace pi_serasa_greenloop
             btnAdicionar.BackColor = Color.Blue;
             btnRemover.BackColor = Color.Red;
             pnlResponsivo_CadastroPollos.Location = new Point((this.ClientSize.Width - pnlResponsivo_CadastroPollos.Width) / 2, (this.ClientSize.Height - pnlResponsivo_CadastroPollos.Height - 100) / 2);
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         public void operacaoPolos()

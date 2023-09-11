@@ -12,7 +12,7 @@ namespace pi_serasa_greenloop
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Tela_cadastro_de_polos());
+            Application.Run(new recompensas());
 
         }
     }
