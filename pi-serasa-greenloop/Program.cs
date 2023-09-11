@@ -12,7 +12,7 @@ namespace pi_serasa_greenloop
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new recompensas());
+            Application.Run(new Form1());
 
         }
     }

@@ -55,7 +55,7 @@
             // 
             // painel
             // 
-            painel.Dock = DockStyle.Bottom;
+            painel.Anchor = AnchorStyles.None;
             painel.Location = new Point(0, 89);
             painel.Name = "painel";
             painel.Size = new Size(1904, 952);

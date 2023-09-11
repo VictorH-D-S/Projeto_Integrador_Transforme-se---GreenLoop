@@ -21,7 +21,7 @@ namespace pi_serasa_greenloop
         {
             painelConteudo.Location = new Point((this.ClientSize.Width - painelConteudo.Width) / 2, (this.ClientSize.Height - painelConteudo.Height + 140) / 2);
             this.WindowState = FormWindowState.Maximized;
-            pnlMenuCima.Location = new Point(290, 0);
+            pnlMenuCima.Location = new Point(290, 90);
 
         }
 

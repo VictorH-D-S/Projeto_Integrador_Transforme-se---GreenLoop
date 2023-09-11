@@ -107,7 +107,7 @@
             painelConteudo.Controls.Add(wilBitPanel1);
             painelConteudo.Location = new Point(314, 144);
             painelConteudo.Name = "painelConteudo";
-            painelConteudo.Size = new Size(1333, 596);
+            painelConteudo.Size = new Size(1333, 485);
             painelConteudo.TabIndex = 0;
             // 
             // wilBitPanel7
@@ -759,6 +759,7 @@
             ClientSize = new Size(1920, 1061);
             Controls.Add(pnlMenuCima);
             Controls.Add(painelConteudo);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "recompensas";
             Text = "recompensas";
             Load += recompensas_Load;
