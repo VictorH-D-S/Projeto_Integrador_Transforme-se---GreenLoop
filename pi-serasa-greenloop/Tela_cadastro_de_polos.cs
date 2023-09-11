@@ -21,6 +21,8 @@ namespace pi_serasa_greenloop
         {
             btnAdicionar.BackColor = Color.Blue;
             btnRemover.BackColor = Color.Red;
+            pnlResponsivo_CadastroPollos.Location = new Point((this.ClientSize.Width - pnlResponsivo_CadastroPollos.Width) / 2, (this.ClientSize.Height - pnlResponsivo_CadastroPollos.Height - 100) / 2);
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public void operacaoPolos()
@@ -41,6 +43,59 @@ namespace pi_serasa_greenloop
                 polos.removePolo();
             }
         }
+
+        void verificaCampo()
+        {
+            bool camposVazios = false;
+
+            switch (txtNome.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtEndereco.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtEmail.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtEmail.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            switch (txtSenha.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
+
+            if (camposVazios)
+            {
+                MessageBox.Show("Preencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            else
+            {
+                operacaoPolos();
+                MessageBox.Show("Operação realizada com sucesso!");
+            }
+        }
+
 
         private void Tela_cadastro_de_polos_Load(object sender, EventArgs e)
         {
@@ -76,8 +131,12 @@ namespace pi_serasa_greenloop
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            operacaoPolos();
-            MessageBox.Show("Operação realizada com sucesso!!");
+            verificaCampo();
+        }
+
+        private void txt_ponto_de_coleta__TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
