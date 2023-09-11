@@ -26,5 +26,16 @@ namespace pi_serasa_greenloop
         {
 
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tela_Admir_Load(object sender, EventArgs e)
+        {
+            pnlResponsivo_TelaAdemir.Location = new Point((this.ClientSize.Width - pnlResponsivo_TelaAdemir.Width) / 2, (this.ClientSize.Height - pnlResponsivo_TelaAdemir.Height - 100) / 2);
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }
