@@ -104,6 +104,7 @@
             btnDepositar.TabIndex = 4;
             btnDepositar.Text = "Depositar";
             btnDepositar.UseVisualStyleBackColor = false;
+            btnDepositar.Click += btnDepositar_Click;
             // 
             // label2
             // 
@@ -203,7 +204,7 @@
             PainelResponsivo_DarPontos.Controls.Add(lblPontodeColeta);
             PainelResponsivo_DarPontos.Controls.Add(label3);
             PainelResponsivo_DarPontos.Controls.Add(wilBitPanel1);
-            PainelResponsivo_DarPontos.Location = new Point(552, 102);
+            PainelResponsivo_DarPontos.Location = new Point(293, -24);
             PainelResponsivo_DarPontos.Name = "PainelResponsivo_DarPontos";
             PainelResponsivo_DarPontos.Size = new Size(710, 701);
             PainelResponsivo_DarPontos.TabIndex = 7;
@@ -225,7 +226,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(0, 3, 21);
-            ClientSize = new Size(1904, 1041);
+            ClientSize = new Size(1386, 788);
             Controls.Add(PainelResponsivo_DarPontos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DarPontos";
