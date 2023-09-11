@@ -20,6 +20,7 @@ namespace pi_serasa_greenloop
         void darPontos()
         {
             string cpf = txtCPF.Texts;
+
             int pontuacao = int.Parse(txtPontuacao.Texts);
 
             Polos polos = new Polos();

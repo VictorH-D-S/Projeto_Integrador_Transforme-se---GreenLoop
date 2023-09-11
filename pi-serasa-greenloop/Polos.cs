@@ -59,9 +59,16 @@ namespace pi_serasa_greenloop
             Conexao.executaQuery(query);
         }
 
+        public void chamarPontos(string cpf)
+        {
+            string query = $"SELECT pontos FROM pessoas WHERE cpf = '{cpf}';";
+            Conexao.executaQuery(query);
+        }
+
         public void darPontos(string cpf, int pontos)
         {
             string query = $"SET pontos = {pontos} WHERE cpf = '{cpf}';";
+            Conexao.executaQuery(query);
         }
 
     }
