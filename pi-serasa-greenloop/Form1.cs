@@ -65,7 +65,7 @@ namespace pi_serasa_greenloop
         private void Form1_Load(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new Tela_cadastro_de_polos());
+            carregaForm(new Perfil());
             //painel_SizeChanged(null, null);
         }
 

@@ -118,7 +118,7 @@ namespace pi_serasa_greenloop
                 }
             }
 
-            MessageBox.Show("Ocorreu um erro :(.", "Falha na operação");
+            MessageBox.Show("Ocorreu um erro :(", "Falha na operação");
             limpaCampo();
             return;
         }

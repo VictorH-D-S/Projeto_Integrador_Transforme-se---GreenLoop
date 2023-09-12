@@ -52,7 +52,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(183, 30);
+            label3.Location = new Point(182, -46);
             label3.Name = "label3";
             label3.Size = new Size(157, 29);
             label3.TabIndex = 5;
@@ -73,9 +73,9 @@
             wilBitPanel1.Controls.Add(wilBitPanel2);
             wilBitPanel1.Controls.Add(wilBitPanel3);
             wilBitPanel1.ForeColor = Color.White;
-            wilBitPanel1.Location = new Point(47, 90);
+            wilBitPanel1.Location = new Point(51, 38);
             wilBitPanel1.Name = "wilBitPanel1";
-            wilBitPanel1.Size = new Size(626, 598);
+            wilBitPanel1.Size = new Size(626, 482);
             wilBitPanel1.TabIndex = 6;
             // 
             // pictureBox1
@@ -98,7 +98,7 @@
             btnDepositar.FlatStyle = FlatStyle.Flat;
             btnDepositar.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnDepositar.ForeColor = Color.White;
-            btnDepositar.Location = new Point(192, 469);
+            btnDepositar.Location = new Point(192, 374);
             btnDepositar.Name = "btnDepositar";
             btnDepositar.Size = new Size(229, 74);
             btnDepositar.TabIndex = 4;
@@ -112,7 +112,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(12, 92, 64);
-            label2.Location = new Point(240, 331);
+            label2.Location = new Point(236, 284);
             label2.Name = "label2";
             label2.Size = new Size(130, 29);
             label2.TabIndex = 3;
@@ -149,7 +149,7 @@
             txtPontuacao.BorderSize = 2;
             txtPontuacao.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtPontuacao.ForeColor = Color.FromArgb(64, 64, 64);
-            txtPontuacao.Location = new Point(81, 364);
+            txtPontuacao.Location = new Point(81, 317);
             txtPontuacao.Margin = new Padding(4);
             txtPontuacao.Multiline = false;
             txtPontuacao.Name = "txtPontuacao";
@@ -193,7 +193,7 @@
             wilBitPanel3.BorderRadius = 11;
             wilBitPanel3.BorderSize = 0;
             wilBitPanel3.ForeColor = Color.White;
-            wilBitPanel3.Location = new Point(92, 374);
+            wilBitPanel3.Location = new Point(92, 327);
             wilBitPanel3.Name = "wilBitPanel3";
             wilBitPanel3.Size = new Size(462, 30);
             wilBitPanel3.TabIndex = 6;
@@ -204,9 +204,9 @@
             PainelResponsivo_DarPontos.Controls.Add(lblPontodeColeta);
             PainelResponsivo_DarPontos.Controls.Add(label3);
             PainelResponsivo_DarPontos.Controls.Add(wilBitPanel1);
-            PainelResponsivo_DarPontos.Location = new Point(293, -24);
+            PainelResponsivo_DarPontos.Location = new Point(0, 31);
             PainelResponsivo_DarPontos.Name = "PainelResponsivo_DarPontos";
-            PainelResponsivo_DarPontos.Size = new Size(710, 701);
+            PainelResponsivo_DarPontos.Size = new Size(708, 548);
             PainelResponsivo_DarPontos.TabIndex = 7;
             PainelResponsivo_DarPontos.Paint += PainelResponsivo_DarPontos_Paint;
             // 
@@ -216,7 +216,7 @@
             lblPontodeColeta.BackColor = Color.Transparent;
             lblPontodeColeta.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             lblPontodeColeta.ForeColor = Color.White;
-            lblPontodeColeta.Location = new Point(322, 30);
+            lblPontodeColeta.Location = new Point(321, -46);
             lblPontodeColeta.Name = "lblPontodeColeta";
             lblPontodeColeta.Size = new Size(216, 29);
             lblPontodeColeta.TabIndex = 8;
@@ -226,7 +226,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(0, 3, 21);
-            ClientSize = new Size(1386, 788);
+            ClientSize = new Size(758, 788);
             Controls.Add(PainelResponsivo_DarPontos);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DarPontos";
