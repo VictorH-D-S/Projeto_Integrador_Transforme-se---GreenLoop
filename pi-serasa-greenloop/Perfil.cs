@@ -27,42 +27,10 @@ namespace pi_serasa_greenloop
 
         void atualizaPerfil()
         {
-            /*const string host = "Localhost", banco = "bd_greenloop", usuario = "root", senha = "",
-			  dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
-
-		    MySqlConnection conexao = new MySqlConnection(dadosConexao);
-
-			Pessoas pessoa = new Pessoas();
-
-			string query = $"SELECT nome FROM pessoas WHERE cpf = '{pessoa.cpf}';";
-			Conexao.executaQuery(query);
-			MySqlCommand cmd = new MySqlCommand(query, pessoa.conexao());
-			MySqlDataReader reader;
-
-			conexao.Open(); */
-
-
-            Pessoas pessoa = new Pessoas();
-
-            const string host = "Localhost", banco = "bd_greenloop", usuario = "root", senha = "",
-            dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
-
-            MySqlConnection conexao = new MySqlConnection(dadosConexao);
-            conexao.Open();
-            MySqlCommand command = new MySqlCommand();
-            command.Connection = conexao;
-            command.CommandText = $"SELECT nome FROM pessoas WHERE cpf = '{pessoa.cpf}';";
-            string valor = (string)command.ExecuteScalar();
-            lblNome.Text = valor;
-
-            /*string nome = "Socorroo Coringa";
-			string cpf = "777777";
-			string email = "PumpedUpKicks@gmail.com";
-
-			lblNome.Text = nome;
-			lblEmail.Text = email;
-			lblCpf.Text = cpf;
-			*/
+            lblEmail.Text = Program.pessoa.email;
+            lblCpf.Text = Program.pessoa.cpf;
+            lblNasciemnto.Text = Program.pessoa.idade.ToString();
+            lblNome.Text = Program.pessoa.nome;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -73,7 +41,6 @@ namespace pi_serasa_greenloop
         private void Perfil_Load(object sender, EventArgs e)
         {
             atualizaPerfil();
-
             atualizaInterface();
         }
 
@@ -92,6 +59,17 @@ namespace pi_serasa_greenloop
         private void lblNome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pnlResponsivo_Perfil_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Perfil_Load_1(object sender, EventArgs e)
+        {
+            atualizaPerfil();
+            atualizaInterface();
         }
     }
 }

@@ -2,6 +2,9 @@ namespace pi_serasa_greenloop
 {
     internal static class Program
     {
+
+        public static Pessoas pessoa;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
