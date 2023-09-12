@@ -70,7 +70,7 @@ namespace pi_serasa_greenloop
 
         public void deletarPerfil()
         {
-            string query = $"DELETE FROM pessoas WHERE email = {email};";
+            string query = $"DELETE FROM pessoas WHERE email = '{email}';";
             Conexao.executaQuery(query);
         }
     }
