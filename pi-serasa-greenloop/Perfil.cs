@@ -83,7 +83,9 @@ namespace pi_serasa_greenloop
 
         private void btnExcluirConta_Usuário_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Troquem de sexo. Pênis Pênis.");
+            Pessoas pessoas = new Pessoas();
+            pessoas.deletarPerfil();
+            MessageBox.Show("Conta deletada com sucesso!");
         }
     }
 }

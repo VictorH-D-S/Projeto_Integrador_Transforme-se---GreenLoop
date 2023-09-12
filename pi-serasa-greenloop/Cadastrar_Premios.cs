@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pi_serasa_greenloop
 {
-    public partial class Form2 : Form
+    public partial class Cadastrar_Premios : Form
     {
-        public Form2()
+        public Cadastrar_Premios()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace pi_serasa_greenloop
 {
-    partial class Form2
+    partial class Cadastrar_Premios
     {
         /// <summary>
         /// Required designer variable.
