@@ -87,5 +87,29 @@ namespace pi_serasa_greenloop
             finally { conexao.Close(); }
         }
 
+        public static bool EmailExisteNaTabelaPolos(string email)
+        {
+            try
+            {
+                conexao.Open();
+
+                string query = "SELECT COUNT(*) FROM polos WHERE email = @email";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@email", email);
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return count > 0;
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine("BAH PIÁ DEU ERRO TCHÊ");
+                Console.WriteLine(erro.Message);
+                return false;
+            }
+            finally { conexao.Close(); }
+        }
     }
 }

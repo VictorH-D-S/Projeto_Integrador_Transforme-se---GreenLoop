@@ -89,11 +89,20 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            else
+            if (Conexao.EmailExisteNaTabelaPolos(txtEmail.Texts))
             {
-                operacaoPolos();
-                MessageBox.Show("Operação realizada com sucesso!");
+                if (btnAdicionar.BackColor == Color.Blue)
+                {
+                    MessageBox.Show("O email já está em uso. Escolha outro email.", "Email Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                return;
             }
+
+            MessageBox.Show("Operação realizada com sucesso!");
+            operacaoPolos();
+
+            //MessageBox.Show("O email não foi encontrado.", "Email não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //return;
         }
 
 
