@@ -11,13 +11,12 @@ namespace pi_serasa_greenloop
     internal class Conexao
     {
         const string host = "Localhost", banco = "bd_greenloop", usuario = "root", senha = "",
-              dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
+                     dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
 
         static MySqlConnection conexao = new MySqlConnection(dadosConexao);
 
         public static DataTable executaQuery(string query)
         {
-
             try
             {
                 conexao.Open();
@@ -37,5 +36,31 @@ namespace pi_serasa_greenloop
             }
             finally { conexao.Close(); }
         }
+
+        public static bool EmailExisteNaTabela(string email)
+        {
+            try
+            {
+                conexao.Open();
+
+                string query = "SELECT COUNT(*) FROM SuaTabela WHERE CampoEmail = @Email";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return count > 0;
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine("BAH PIÁ DEU ERRO TCHÊ");
+                Console.WriteLine(erro.Message);
+                return false;
+            }
+            finally { conexao.Close(); }
+        }
+
     }
 }
