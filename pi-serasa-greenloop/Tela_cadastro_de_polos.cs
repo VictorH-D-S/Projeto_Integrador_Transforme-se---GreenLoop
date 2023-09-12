@@ -17,12 +17,22 @@ namespace pi_serasa_greenloop
             InitializeComponent();
         }
 
+        void limpaCampo()
+        {
+            txtEmail.Texts = "";
+            txtEndereco.Texts = "";
+            txtNome.Texts = "";
+            txtSenha.Texts = "";
+            txt_ponto_de_coleta.Texts = "";
+            txt_ponto_de_coleta.Focus();
+        }
+
         void iniciar()
         {
             btnAdicionar.BackColor = Color.Blue;
             btnRemover.BackColor = Color.Red;
             pnlResponsivo_CadastroPollos.Location = new Point((this.ClientSize.Width - pnlResponsivo_CadastroPollos.Width) / 2, (this.ClientSize.Height - pnlResponsivo_CadastroPollos.Height - 100) / 2);
-            //this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public void operacaoPolos()
@@ -48,39 +58,24 @@ namespace pi_serasa_greenloop
         {
             bool camposVazios = false;
 
-            switch (txtNome.Texts)
+            if (string.IsNullOrEmpty(txtNome.Texts))
             {
-                case "":
-                    camposVazios = true;
-                    break;
+                camposVazios = true;
             }
 
-            switch (txtEndereco.Texts)
+            if (string.IsNullOrEmpty(txtEndereco.Texts))
             {
-                case "":
-                    camposVazios = true;
-                    break;
+                camposVazios = true;
             }
 
-            switch (txtEmail.Texts)
+            if (string.IsNullOrEmpty(txtEmail.Texts))
             {
-                case "":
-                    camposVazios = true;
-                    break;
+                camposVazios = true;
             }
 
-            switch (txtEmail.Texts)
+            if (string.IsNullOrEmpty(txtSenha.Texts))
             {
-                case "":
-                    camposVazios = true;
-                    break;
-            }
-
-            switch (txtSenha.Texts)
-            {
-                case "":
-                    camposVazios = true;
-                    break;
+                camposVazios = true;
             }
 
             if (camposVazios)
@@ -94,15 +89,38 @@ namespace pi_serasa_greenloop
                 if (btnAdicionar.BackColor == Color.Blue)
                 {
                     MessageBox.Show("O email já está em uso. Escolha outro email.", "Email Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEmail.Texts = "";
+                    txtEmail.Focus();
+                    return;
+
                 }
-                return;
             }
 
-            MessageBox.Show("Operação realizada com sucesso!");
-            operacaoPolos();
+            if (Conexao.EmailExisteNaTabelaPolos(txtEmail.Texts))
+            {
+                if (btnRemover.BackColor == Color.Blue)
+                {
+                    MessageBox.Show("Polo de Reciclagem Removido.");
+                    operacaoPolos();
+                    limpaCampo();
+                    return;
+                }
+            }
 
-            //MessageBox.Show("O email não foi encontrado.", "Email não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //return;
+            if (Conexao.EmailExisteNaTabela(txtEmail.Texts) == false)
+            {
+                if (btnAdicionar.BackColor == Color.Blue)
+                {
+                    MessageBox.Show("Polo de Reciclagem Adicionado.");
+                    operacaoPolos();
+                    limpaCampo();
+                    return;
+                }
+            }
+
+            MessageBox.Show("Ocorreu um erro :(.", "Falha na operação");
+            limpaCampo();
+            return;
         }
 
 

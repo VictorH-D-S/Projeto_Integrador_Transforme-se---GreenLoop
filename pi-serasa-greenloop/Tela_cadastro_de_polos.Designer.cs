@@ -318,7 +318,7 @@
             pnlResponsivo_CadastroPollos.Anchor = AnchorStyles.None;
             pnlResponsivo_CadastroPollos.Controls.Add(label3);
             pnlResponsivo_CadastroPollos.Controls.Add(wilBitPanel1);
-            pnlResponsivo_CadastroPollos.Location = new Point(251, 134);
+            pnlResponsivo_CadastroPollos.Location = new Point(212, 134);
             pnlResponsivo_CadastroPollos.Name = "pnlResponsivo_CadastroPollos";
             pnlResponsivo_CadastroPollos.Size = new Size(1007, 483);
             pnlResponsivo_CadastroPollos.TabIndex = 5;
@@ -328,8 +328,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(24, 2, 51);
-            ClientSize = new Size(1448, 717);
+            ClientSize = new Size(1370, 717);
             Controls.Add(pnlResponsivo_CadastroPollos);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Tela_cadastro_de_polos";
             Text = "Form1";
             Load += Tela_cadastro_de_polos_Load_1;
