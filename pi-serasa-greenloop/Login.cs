@@ -31,67 +31,80 @@ namespace pi_serasa_greenloop
 			pessoas.adicionarUsuario();
 		}
 
-		void verificaCampoCadastro()
-		{
-			bool camposVazios = false;
+        private void txtCadastroCPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite apenas números e a tecla Backspace (para apagar)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
-			switch (txtCadastroNome.Texts)
-			{
-				case "":
-					camposVazios = true;
-					break;
-			}
+        void verificaCampoCadastro()
+        {
+            bool camposVazios = false;
 
-			switch (txtCadastroSenha.Texts)
-			{
-				case "":
-					camposVazios = true;
-					break;
-			}
+            switch (txtCadastroNome.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
 
-			switch (txtCadastroCPF.Texts)
-			{
-				case "":
-					camposVazios = true;
-					break;
-			}
+            switch (txtCadastroSenha.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
 
-			switch (txtCadastroEmail.Texts)
-			{
-				case "":
-					camposVazios = true;
-					break;
-			}
+            switch (txtCadastroCPF.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
 
-			switch (txtIdade.Texts)
-			{
-				case "":
-					camposVazios = true;
-					break;
-			}
+            switch (txtCadastroEmail.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
 
-			if (camposVazios)
-			{
-				MessageBox.Show("Preencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				return;
-			}
+            switch (txtIdade.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+            }
 
+            if (camposVazios)
+            {
+                MessageBox.Show("Preencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            // Verifica se o email já existe no banco de dados
             if (Conexao.EmailExisteNaTabela(txtCadastroEmail.Texts))
             {
                 MessageBox.Show("O email já está em uso. Escolha outro email.", "Email Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Verifica se o CPF já existe no banco de dados
-            if (Conexao.CPFExisteNaTabela(txtCadastroCPF.Texts))
+            // Verifica se o CPF é válido (11 dígitos) antes de verificar a existência no banco de dados
+            string cpf = txtCadastroCPF.Texts;
+            if (cpf.Length != 11)
+            {
+                MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Conexao.CPFExisteNaTabela(cpf))
             {
                 MessageBox.Show("O CPF já está em uso. Escolha outro CPF.", "CPF Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Se o email e o CPF não existirem, adiciona o usuário ao banco de dados
             adicionarUsuario();
             MessageBox.Show("Usuário Cadastrado!");
             carregaForm(new Principal());
@@ -139,8 +152,6 @@ namespace pi_serasa_greenloop
 					MessageBox.Show("Usuário encontrado");
 				    carregaForm(new Principal());
 				}
-
-
 			}
 
 			if(camposVazios == false && checkBox1.Checked == true)
@@ -164,7 +175,6 @@ namespace pi_serasa_greenloop
             }
 
 		}
-
 
 		void login()
 		{
