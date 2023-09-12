@@ -172,5 +172,20 @@ namespace pi_serasa_greenloop
         private void label7_Click_1(object sender, EventArgs e)
         {
         }
+
+        private void btnPontos_Click_1(object sender, EventArgs e)
+        {
+            carregaForm(new Local());
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            carregaForm(new Local());
+        }
+
+        private void btnRecompensas_Click_2(object sender, EventArgs e)
+        {
+            carregaForm(new recompensas());
+        }
     }
 }

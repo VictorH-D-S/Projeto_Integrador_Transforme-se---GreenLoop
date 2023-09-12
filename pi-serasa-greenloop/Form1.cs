@@ -44,10 +44,10 @@ namespace pi_serasa_greenloop
 
             WindowState = FormWindowState.Maximized;
             panel1.Dock = DockStyle.Top;
-            btnVoltar.Anchor = AnchorStyles.Left;
+            Voltar.Anchor = AnchorStyles.Left;
             label2.Anchor = AnchorStyles.None;
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            btnVoltar.Visible = false;
+            Voltar.Visible = true;
 
         }
 
@@ -65,7 +65,7 @@ namespace pi_serasa_greenloop
         private void Form1_Load(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new Principal());
+            carregaForm(new tela_Admir());
             //painel_SizeChanged(null, null);
         }
 
@@ -89,7 +89,12 @@ namespace pi_serasa_greenloop
         private void Form1_Load_1(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new Local());
+            carregaForm(new tela_Admir());
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            carregaForm(new Principal());
         }
     }
 }

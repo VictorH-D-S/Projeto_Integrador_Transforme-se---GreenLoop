@@ -28,29 +28,13 @@
         /// </summary>
         public void InitializeComponent()
         {
-            this.btnVoltar = new WiLBiT.WiLBiTButton();
             painel = new System.Windows.Forms.Panel();
             panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            Voltar = new WiLBiT.WiLBiTRoundedPictureBox2();
             panel1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnVoltar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
-            this.btnVoltar.BorderRadius = 6;
-            this.btnVoltar.BorderSize = 0;
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(61, 23);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(125, 47);
-            this.btnVoltar.TabIndex = 1;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = false;
+            ((System.ComponentModel.ISupportInitialize)(Voltar)).BeginInit();
+            SuspendLayout();
             // 
             // painel
             // 
@@ -63,8 +47,8 @@
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.LimeGreen;
-            panel1.Controls.Add(this.btnVoltar);
-            panel1.Controls.Add(this.label2);
+            panel1.Controls.Add(Voltar);
+            panel1.Controls.Add(label2);
             panel1.Dock = System.Windows.Forms.DockStyle.Top;
             panel1.ForeColor = System.Drawing.Color.LimeGreen;
             panel1.Location = new System.Drawing.Point(0, 0);
@@ -85,6 +69,22 @@
             this.label2.Text = "GreenLoop";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Voltar
+            // 
+            Voltar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            Voltar.BorderColor = System.Drawing.Color.Lime;
+            Voltar.BorderColor2 = System.Drawing.Color.SpringGreen;
+            Voltar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            Voltar.BorderSize = 2;
+            Voltar.GradientAngle = 50F;
+            Voltar.Location = new System.Drawing.Point(71, 3);
+            Voltar.Name = "Voltar";
+            Voltar.Size = new System.Drawing.Size(88, 88);
+            Voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            Voltar.TabIndex = 1;
+            Voltar.TabStop = false;
+            Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -98,15 +98,15 @@
             this.Load += new System.EventHandler(this.Form1_Load_1);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(Voltar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        public WiLBiT.WiLBiTButton btnVoltar;
-
         #endregion
 
         public Label label2;
+        public static WiLBiT.WiLBiTRoundedPictureBox2 Voltar;
         public static Panel painel;
         public static Panel panel1;
     }

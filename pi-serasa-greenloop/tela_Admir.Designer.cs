@@ -29,132 +29,134 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tela_Admir));
-            btnPolos = new WiLBiT.WiLBiTButton();
-            btnUsuarios = new WiLBiT.WiLBiTButton();
-            label1 = new Label();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pnlResponsivo_TelaAdemir = new Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            pnlResponsivo_TelaAdemir.SuspendLayout();
-            SuspendLayout();
+            this.btnPolos = new WiLBiT.WiLBiTButton();
+            this.btnUsuarios = new WiLBiT.WiLBiTButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlResponsivo_TelaAdemir = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlResponsivo_TelaAdemir.SuspendLayout();
+            this.SuspendLayout();
             // 
             // btnPolos
             // 
-            btnPolos.BackColor = Color.FromArgb(21, 191, 81);
-            btnPolos.BorderColor = Color.FromArgb(72, 116, 245);
-            btnPolos.BorderRadius = 15;
-            btnPolos.BorderSize = 0;
-            btnPolos.FlatAppearance.BorderSize = 0;
-            btnPolos.FlatStyle = FlatStyle.Flat;
-            btnPolos.ForeColor = Color.White;
-            btnPolos.Location = new Point(31, 20);
-            btnPolos.Margin = new Padding(2);
-            btnPolos.Name = "btnPolos";
-            btnPolos.Size = new Size(297, 263);
-            btnPolos.TabIndex = 0;
-            btnPolos.UseVisualStyleBackColor = false;
-            btnPolos.Click += btnPolos_Click;
+            this.btnPolos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(191)))), ((int)(((byte)(81)))));
+            this.btnPolos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnPolos.BorderRadius = 15;
+            this.btnPolos.BorderSize = 0;
+            this.btnPolos.FlatAppearance.BorderSize = 0;
+            this.btnPolos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPolos.ForeColor = System.Drawing.Color.White;
+            this.btnPolos.Location = new System.Drawing.Point(31, 20);
+            this.btnPolos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPolos.Name = "btnPolos";
+            this.btnPolos.Size = new System.Drawing.Size(297, 263);
+            this.btnPolos.TabIndex = 0;
+            this.btnPolos.UseVisualStyleBackColor = false;
+            this.btnPolos.Click += new System.EventHandler(this.btnPolos_Click_1);
             // 
             // btnUsuarios
             // 
-            btnUsuarios.BackColor = Color.Gray;
-            btnUsuarios.BorderColor = Color.FromArgb(72, 116, 245);
-            btnUsuarios.BorderRadius = 15;
-            btnUsuarios.BorderSize = 0;
-            btnUsuarios.FlatAppearance.BorderSize = 0;
-            btnUsuarios.FlatStyle = FlatStyle.Flat;
-            btnUsuarios.ForeColor = Color.White;
-            btnUsuarios.Location = new Point(404, 20);
-            btnUsuarios.Margin = new Padding(2);
-            btnUsuarios.Name = "btnUsuarios";
-            btnUsuarios.Size = new Size(297, 263);
-            btnUsuarios.TabIndex = 2;
-            btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.BackColor = System.Drawing.Color.Gray;
+            this.btnUsuarios.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnUsuarios.BorderRadius = 15;
+            this.btnUsuarios.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Location = new System.Drawing.Point(404, 20);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(297, 263);
+            this.btnUsuarios.TabIndex = 2;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(21, 191, 81);
-            label1.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(123, 71);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(108, 47);
-            label1.TabIndex = 3;
-            label1.Text = "Polos";
-            label1.Click += label1_Click;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(191)))), ((int)(((byte)(81)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(123, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 47);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Polos";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Gray;
-            label2.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(475, 71);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(160, 47);
-            label2.TabIndex = 4;
-            label2.Text = "Usuários";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Gray;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(475, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 47);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Usuários";
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Gray;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(458, 120);
-            pictureBox1.Margin = new Padding(2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(188, 145);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(458, 120);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.FromArgb(21, 191, 81);
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(84, 120);
-            pictureBox2.Margin = new Padding(2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(188, 145);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(191)))), ((int)(((byte)(81)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(84, 120);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(188, 145);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pnlResponsivo_TelaAdemir
             // 
-            pnlResponsivo_TelaAdemir.Anchor = AnchorStyles.None;
-            pnlResponsivo_TelaAdemir.Controls.Add(label1);
-            pnlResponsivo_TelaAdemir.Controls.Add(pictureBox2);
-            pnlResponsivo_TelaAdemir.Controls.Add(btnPolos);
-            pnlResponsivo_TelaAdemir.Controls.Add(label2);
-            pnlResponsivo_TelaAdemir.Controls.Add(pictureBox1);
-            pnlResponsivo_TelaAdemir.Controls.Add(btnUsuarios);
-            pnlResponsivo_TelaAdemir.Location = new Point(415, 168);
-            pnlResponsivo_TelaAdemir.Name = "pnlResponsivo_TelaAdemir";
-            pnlResponsivo_TelaAdemir.Size = new Size(726, 305);
-            pnlResponsivo_TelaAdemir.TabIndex = 7;
+            this.pnlResponsivo_TelaAdemir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlResponsivo_TelaAdemir.Controls.Add(this.label1);
+            this.pnlResponsivo_TelaAdemir.Controls.Add(this.pictureBox2);
+            this.pnlResponsivo_TelaAdemir.Controls.Add(this.btnPolos);
+            this.pnlResponsivo_TelaAdemir.Controls.Add(this.label2);
+            this.pnlResponsivo_TelaAdemir.Controls.Add(this.pictureBox1);
+            this.pnlResponsivo_TelaAdemir.Controls.Add(this.btnUsuarios);
+            this.pnlResponsivo_TelaAdemir.Location = new System.Drawing.Point(415, 168);
+            this.pnlResponsivo_TelaAdemir.Name = "pnlResponsivo_TelaAdemir";
+            this.pnlResponsivo_TelaAdemir.Size = new System.Drawing.Size(726, 305);
+            this.pnlResponsivo_TelaAdemir.TabIndex = 7;
             // 
             // tela_Admir
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 3, 21);
-            ClientSize = new Size(1431, 687);
-            Controls.Add(pnlResponsivo_TelaAdemir);
-            Margin = new Padding(2);
-            Name = "tela_Admir";
-            Text = "tela_Admir";
-            Load += tela_Admir_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            pnlResponsivo_TelaAdemir.ResumeLayout(false);
-            pnlResponsivo_TelaAdemir.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
+            this.ClientSize = new System.Drawing.Size(1431, 687);
+            this.Controls.Add(this.pnlResponsivo_TelaAdemir);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "tela_Admir";
+            this.Text = "tela_Admir";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlResponsivo_TelaAdemir.ResumeLayout(false);
+            this.pnlResponsivo_TelaAdemir.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

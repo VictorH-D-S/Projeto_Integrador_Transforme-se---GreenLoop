@@ -101,7 +101,7 @@ namespace pi_serasa_greenloop
             login();
             carregaForm(new Principal());
             Form1 form1 = new Form1();
-            form1.btnVoltar.Visible = true;
+            
         }
         void verificaCampoLogin()
         {
