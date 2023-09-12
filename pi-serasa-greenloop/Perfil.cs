@@ -72,6 +72,7 @@ namespace pi_serasa_greenloop
 
         private void Perfil_Load(object sender, EventArgs e)
         {
+            atualizaPerfil();
 
             atualizaInterface();
         }
@@ -86,6 +87,11 @@ namespace pi_serasa_greenloop
             Pessoas pessoas = new Pessoas();
             pessoas.deletarPerfil();
             MessageBox.Show("Conta deletada com sucesso!");
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
