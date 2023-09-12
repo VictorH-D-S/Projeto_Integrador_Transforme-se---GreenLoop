@@ -31,15 +31,6 @@ namespace pi_serasa_greenloop
 			pessoas.adicionarUsuario();
 		}
 
-        private void txtCadastroCPF_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Permite apenas números e a tecla Backspace (para apagar)
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         void verificaCampoCadastro()
         {
             bool camposVazios = false;
@@ -63,6 +54,20 @@ namespace pi_serasa_greenloop
                 case "":
                     camposVazios = true;
                     break;
+                default:
+                    // Verifica se o CPF contém apenas números
+                    if (!txtCadastroCPF.Texts.All(char.IsDigit))
+                    {
+                        MessageBox.Show("O CPF deve conter apenas números.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    // Verifica se o CPF tem exatamente 11 dígitos
+                    if (txtCadastroCPF.Texts.Length != 11)
+                    {
+                        MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    break;
             }
 
             switch (txtCadastroEmail.Texts)
@@ -76,6 +81,14 @@ namespace pi_serasa_greenloop
             {
                 case "":
                     camposVazios = true;
+                    break;
+                default:
+                    // Verifica se a idade é um número válido e tem até 3 dígitos
+                    if (!int.TryParse(txtIdade.Texts, out int idade) || idade < 0 || idade > 999)
+                    {
+                        MessageBox.Show("A idade deve ser um número válido com até 3 dígitos.", "Idade Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     break;
             }
 
@@ -91,14 +104,7 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            // Verifica se o CPF é válido (11 dígitos) antes de verificar a existência no banco de dados
             string cpf = txtCadastroCPF.Texts;
-            if (cpf.Length != 11)
-            {
-                MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (Conexao.CPFExisteNaTabela(cpf))
             {
                 MessageBox.Show("O CPF já está em uso. Escolha outro CPF.", "CPF Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -111,7 +117,6 @@ namespace pi_serasa_greenloop
             Form1 form1 = new Form1();
             form1.btnVoltar.Visible = true;
         }
-
         void verificaCampoLogin()
 		{
 			bool camposVazios = false;
