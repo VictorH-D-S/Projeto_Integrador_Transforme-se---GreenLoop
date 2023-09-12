@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,19 +27,33 @@ namespace pi_serasa_greenloop
 
 		void atualizaPerfil()
 		{
+			/*const string host = "Localhost", banco = "bd_greenloop", usuario = "root", senha = "",
+			  dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
+
+		    MySqlConnection conexao = new MySqlConnection(dadosConexao);
+
 			Pessoas pessoa = new Pessoas();
 
 			string query = $"SELECT nome FROM pessoas WHERE cpf = '{pessoa.cpf}';";
 			Conexao.executaQuery(query);
+			MySqlCommand cmd = new MySqlCommand(query, pessoa.conexao());
+			MySqlDataReader reader;
 
-			/*MySqlConnection conexao = new MySqlConnection();
-			conexao.ConnectionString = ("server=localhost; user id=root; pwd=root ;database=semi");
+			conexao.Open(); */
+
+			
+			Pessoas pessoa = new Pessoas();
+
+			const string host = "Localhost", banco = "bd_greenloop", usuario = "root", senha = "",
+			dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
+
+			MySqlConnection conexao = new MySqlConnection(dadosConexao);
 			conexao.Open();
 			MySqlCommand command = new MySqlCommand();
 			command.Connection = conexao;
-			command.CommandText = $"SELECT nome FROM pessoas WHERE cpf = '{cpf}';";
+			command.CommandText = $"SELECT nome FROM pessoas WHERE cpf = '{pessoa.cpf}';";
 			string valor = (string)command.ExecuteScalar();
-			lblNome.Text = valor; */
+			lblNome.Text = valor; 
 
 			/*string nome = "Socorroo Coringa";
 			string cpf = "777777";
