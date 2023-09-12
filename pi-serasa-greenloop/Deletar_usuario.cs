@@ -24,10 +24,50 @@ namespace pi_serasa_greenloop
 
         void removeUsuario()
         {
+            bool camposVazios = false;
+
+            switch (txtCPF_Ademir.Texts)
+            {
+                case "":
+                    camposVazios = true;
+                    break;
+                default:
+                    // Verifica se o CPF contém apenas números
+                    if (!txtCPF_Ademir.Texts.All(char.IsDigit))
+                    {
+                        MessageBox.Show("O CPF deve conter apenas números.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    // Verifica se o CPF tem exatamente 11 dígitos
+                    if (txtCPF_Ademir.Texts.Length != 11)
+                    {
+                        MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    break;
+            }
+
+            if (camposVazios)
+            {
+                MessageBox.Show("Preencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string cpf = txtCPF_Ademir.Texts;
-            Pessoas pessoas = new Pessoas();
-            pessoas.admDeletarUsuario(cpf);
-            MessageBox.Show("Usuario deletado com sucesso!!!");
+            if (Conexao.CPFExisteNaTabela(cpf))
+            {
+                MessageBox.Show("O usuário foi removido.", "Usuário Removido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Pessoas pessoas = new Pessoas();
+                pessoas.admDeletarUsuario(cpf);
+                txtCPF_Ademir.Texts = "";
+                txtCPF_Ademir.Focus();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("O CPF não foi encontrado.", "CPF Não Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         private void btnDeletar_usuario_Click(object sender, EventArgs e)

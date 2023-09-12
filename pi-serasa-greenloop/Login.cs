@@ -150,7 +150,7 @@ namespace pi_serasa_greenloop
 				pessoas = pessoas.login(email, senha);
 				if (pessoas == null)
 				{
-					MessageBox.Show("Usuário ou senha incorreto");
+					MessageBox.Show("Verifique a sua senha e o nome de usuário e tente novamente.");
 				}
 				else
 				{
@@ -168,7 +168,7 @@ namespace pi_serasa_greenloop
                 polos = polos.logarPolos(email, senha);
 				if (polos == null)
 				{
-                    MessageBox.Show("Email ou senha incorreto");
+                    MessageBox.Show("Verifique a sua senha e o nome de usuário e tente novamente.");
 					return;
                 }
                 else
