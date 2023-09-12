@@ -64,9 +64,8 @@ namespace pi_serasa_greenloop
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            responsivo();
-            carregaForm(new tela_Admir());
-            //painel_SizeChanged(null, null);
+            //responsivo();
+            //carregaForm(new Login());
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -89,7 +88,7 @@ namespace pi_serasa_greenloop
         private void Form1_Load_1(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new tela_Admir());
+            carregaForm(new Login());
         }
 
         private void Voltar_Click(object sender, EventArgs e)

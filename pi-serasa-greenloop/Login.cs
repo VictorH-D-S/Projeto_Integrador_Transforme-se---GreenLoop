@@ -99,8 +99,9 @@ namespace pi_serasa_greenloop
             adicionarUsuario();
             MessageBox.Show("Usuário Cadastrado!");
             login();
-            carregaForm(new Principal());
+            carregaForm(new Login());
             Form1 form1 = new Form1();
+            Login login1 = new Login();
             
         }
         void verificaCampoLogin()
@@ -142,7 +143,7 @@ namespace pi_serasa_greenloop
                 {
                     MessageBox.Show("Login realizado com sucesso");
                     Program.pessoa = pessoas;
-                    carregaForm(new Perfil());
+                    carregaForm(new Principal());
                 }
             }
 
