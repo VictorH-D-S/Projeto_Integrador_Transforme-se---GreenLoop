@@ -21,7 +21,9 @@ namespace pi_serasa_greenloop
         {
             painelConteudo.Location = new Point((this.ClientSize.Width - painelConteudo.Width) / 2, (this.ClientSize.Height - painelConteudo.Height + 140) / 2);
             this.WindowState = FormWindowState.Maximized;
-            pnlMenuCima.Location = new Point(290, 90);
+            
+            
+            pnlMenuCima.Location = new Point(0, 0);
 
         }
 
@@ -38,6 +40,17 @@ namespace pi_serasa_greenloop
         private void pnlMenuCima_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void recompensas_Load_1(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            painelConteudo.Location = new Point((this.ClientSize.Width - painelConteudo.Width) / 2, (this.ClientSize.Height - painelConteudo.Height + 140) / 2);
+            this.WindowState = FormWindowState.Maximized;
+
+
+            pnlMenuCima.Location = new Point(0, 0);
+            form.responsivo();
         }
     }
 }

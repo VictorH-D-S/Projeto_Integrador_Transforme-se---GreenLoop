@@ -25,7 +25,7 @@ namespace pi_serasa_greenloop
             this.Location = new System.Drawing.Point(formX, formY);
         }
         */
-        void responsivo()
+        public void responsivo()
         {
             //Centraliazdor de painel do governo do amor
             int formLARGURA = this.Width, formALTURA = this.Height, panelLARGURA = panel1.Width, panelALTURA = panel1.Height;
@@ -65,7 +65,7 @@ namespace pi_serasa_greenloop
         private void Form1_Load(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new Perfil());
+            carregaForm(new Principal());
             //painel_SizeChanged(null, null);
         }
 
@@ -84,6 +84,12 @@ namespace pi_serasa_greenloop
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            responsivo();
+            carregaForm(new Local());
         }
     }
 }
