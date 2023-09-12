@@ -16,5 +16,19 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
+
+        void cadastrarPremios()
+        {
+            string premio = textBoxPremios.Texts;
+
+            Premios premios = new Premios(premio);
+            premios.adicionarPremios();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            cadastrarPremios();
+            MessageBox.Show("Premio cadastrado com sucesso!!");
+        }
     }
 }

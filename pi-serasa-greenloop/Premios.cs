@@ -9,13 +9,11 @@ namespace pi_serasa_greenloop
     internal class Premios
     {
 
-        string premios;
-        bool resgatado = false;
+        string premio;
 
-        public Premios(string premios, bool resgatado)
+        public Premios(string premio)
         {
-            this.premios = premios;
-            this.resgatado = resgatado;
+            this.premio = premio;
         }   
 
         public Premios()
@@ -23,6 +21,11 @@ namespace pi_serasa_greenloop
 
         }
 
+        public void adicionarPremios()
+        {
+            string query = $"INSERT INTO premios(premios) VALUES ('{premio}');";
+            Conexao.executaQuery(query);
+        }
 
     }
 }
