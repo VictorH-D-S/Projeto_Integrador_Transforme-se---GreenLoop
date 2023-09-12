@@ -76,17 +76,30 @@ namespace pi_serasa_greenloop
 				return;
 			}
 
-			else
-			{
-				adicionarUsuario();
-				MessageBox.Show("Usuario Cadastrado!");
-				carregaForm(new Principal());
-				Form1 form1 = new Form1();
-				form1.btnVoltar.Visible = true;
-			}
-		}
 
-		void verificaCampoLogin()
+            // Verifica se o email já existe no banco de dados
+            if (Conexao.EmailExisteNaTabela(txtCadastroEmail.Texts))
+            {
+                MessageBox.Show("O email já está em uso. Escolha outro email.", "Email Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verifica se o CPF já existe no banco de dados
+            if (Conexao.CPFExisteNaTabela(txtCadastroCPF.Texts))
+            {
+                MessageBox.Show("O CPF já está em uso. Escolha outro CPF.", "CPF Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Se o email e o CPF não existirem, adiciona o usuário ao banco de dados
+            adicionarUsuario();
+            MessageBox.Show("Usuário Cadastrado!");
+            carregaForm(new Principal());
+            Form1 form1 = new Form1();
+            form1.btnVoltar.Visible = true;
+        }
+
+        void verificaCampoLogin()
 		{
 			bool camposVazios = false;
 

@@ -17,7 +17,6 @@ namespace pi_serasa_greenloop
 
         public static DataTable executaQuery(string query)
         {
-
             try
             {
                 conexao.Open();
@@ -37,5 +36,56 @@ namespace pi_serasa_greenloop
             }
             finally { conexao.Close(); }
         }
+
+        public static bool CPFExisteNaTabela(string cpf)
+        {
+            try
+            {
+                conexao.Open();
+
+                string query = "SELECT COUNT(*) FROM pessoas WHERE cpf = @cpf";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@cpf", cpf);
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return count > 0;
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine("BAH PIÁ DEU ERRO TCHÊ");
+                Console.WriteLine(erro.Message);
+                return false;
+            }
+            finally { conexao.Close(); }
+        }
+
+        public static bool EmailExisteNaTabela(string email)
+        {
+            try
+            {
+                conexao.Open();
+
+                string query = "SELECT COUNT(*) FROM pessoas WHERE cpf = @cpf";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@cpf", email);
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return count > 0;
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine("BAH PIÁ DEU ERRO TCHÊ");
+                Console.WriteLine(erro.Message);
+                return false;
+            }
+            finally { conexao.Close(); }
+        }
+
     }
 }
