@@ -68,10 +68,10 @@ namespace pi_serasa_greenloop
             {
                 conexao.Open();
 
-                string query = "SELECT COUNT(*) FROM pessoas WHERE cpf = @cpf";
+                string query = "SELECT COUNT(*) FROM pessoas WHERE email = @email";
                 using (MySqlCommand cmd = new MySqlCommand(query, conexao))
                 {
-                    cmd.Parameters.AddWithValue("@cpf", email);
+                    cmd.Parameters.AddWithValue("@email", email);
 
                     int count = Convert.ToInt32(cmd.ExecuteScalar());
 
