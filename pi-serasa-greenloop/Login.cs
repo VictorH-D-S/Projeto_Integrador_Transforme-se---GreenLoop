@@ -31,55 +31,35 @@ namespace pi_serasa_greenloop
             pessoas.adicionarUsuario();
         }
 
-        void verificaCampoCadastro()
+        void VerificaCamposCadastro()
         {
             bool camposVazios = false;
 
-            switch (txtCadastroNome.Texts)
+            if (string.IsNullOrWhiteSpace(txtCadastroNome.Texts) ||
+                string.IsNullOrWhiteSpace(txtCadastroSenha.Texts) ||
+                string.IsNullOrWhiteSpace(txtCadastroCPF.Texts) ||
+                string.IsNullOrWhiteSpace(txtCadastroEmail.Texts))
             {
-                case "":
-                    camposVazios = true;
-                    break;
-            }
-
-            switch (txtCadastroSenha.Texts)
-            {
-                case "":
-                    camposVazios = true;
-                    break;
-            }
-
-            switch (txtCadastroCPF.Texts)
-            {
-                case "":
-                    camposVazios = true;
-                    break;
-                default:
-                    // Verifica se o CPF contém apenas números
-                    if (!txtCadastroCPF.Texts.All(char.IsDigit))
-                    {
-                        MessageBox.Show("O CPF deve conter apenas números.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    // Verifica se o CPF tem exatamente 11 dígitos
-                    if (txtCadastroCPF.Texts.Length != 11)
-                    {
-                        MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    break;
-            }
-
-            switch (txtCadastroEmail.Texts)
-            {
-                case "":
-                    camposVazios = true;
-                    break;
+                camposVazios = true;
             }
 
             if (camposVazios)
             {
                 MessageBox.Show("Preencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verifica se o CPF contém apenas números
+            if (!txtCadastroCPF.Texts.All(char.IsDigit))
+            {
+                MessageBox.Show("O CPF deve conter apenas números.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verifica se o CPF tem exatamente 11 dígitos
+            if (txtCadastroCPF.Texts.Length != 11)
+            {
+                MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -100,9 +80,6 @@ namespace pi_serasa_greenloop
             MessageBox.Show("Usuário Cadastrado!");
             login();
             carregaForm(new Login());
-            Form1 form1 = new Form1();
-            Login login1 = new Login();
-            
         }
         void verificaCampoLogin()
         {
@@ -247,7 +224,7 @@ namespace pi_serasa_greenloop
 
         private void wilBitButton1_Click_1(object sender, EventArgs e)
         {
-            verificaCampoCadastro();
+            VerificaCamposCadastro();
             carregaForm(new Principal());
         }
 
@@ -292,7 +269,7 @@ namespace pi_serasa_greenloop
 
         private void wilBitButton1_Click(object sender, EventArgs e)
         {
-            verificaCampoCadastro();
+            VerificaCamposCadastro();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
