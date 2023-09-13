@@ -187,5 +187,15 @@ namespace pi_serasa_greenloop
         {
             carregaForm(new recompensas());
         }
+
+        private void label4_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPerfil_Click_2(object sender, EventArgs e)
+        {
+            carregaForm(new Perfil());
+        }
     }
 }

@@ -58,7 +58,7 @@ namespace pi_serasa_greenloop
 
         private Pessoas carregaDados(DataRow row)
         {
-			string nome = row["id"].ToString();
+			string nome = row["nome"].ToString();
             string idade = row["idade"].ToString();
             string email = row["email"].ToString();
 			string senha = row["senha"].ToString();

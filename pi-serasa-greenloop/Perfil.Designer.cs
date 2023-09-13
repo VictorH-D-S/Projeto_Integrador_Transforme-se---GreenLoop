@@ -63,6 +63,7 @@
             pnlPerfil.Controls.Add(label8);
             pnlPerfil.Controls.Add(lblNasciemnto);
             pnlPerfil.Controls.Add(label5);
+            pnlPerfil.Controls.Add(lblNome);
             pnlPerfil.Controls.Add(lblEmail);
             pnlPerfil.Controls.Add(label1);
             pnlPerfil.Controls.Add(panel1);
@@ -169,7 +170,6 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(lblPontos);
             panel1.Controls.Add(lblTotal_Reciclado);
-            panel1.Controls.Add(lblNome);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(476, 260);
@@ -246,7 +246,7 @@
             lblNome.AutoSize = true;
             lblNome.BackColor = Color.Transparent;
             lblNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNome.Location = new Point(193, 42);
+            lblNome.Location = new Point(58, 263);
             lblNome.Margin = new Padding(2, 0, 2, 0);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(184, 25);
