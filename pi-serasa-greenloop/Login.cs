@@ -101,7 +101,7 @@ namespace pi_serasa_greenloop
 
             if (camposVazios)
             {
-                MessageBox.Show("Preencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblMensagemErro.Visible = true;
                 return;
             }
 
@@ -114,13 +114,14 @@ namespace pi_serasa_greenloop
                 pessoas = pessoas.login(email, senha);
                 if (pessoas == null)
                 {
-                    MessageBox.Show("Verifique a sua senha e o nome de usuário e tente novamente.");
+                    lblMensagemErro.Visible = true;
                 }
                 else
                 {
                     MessageBox.Show("Login realizado com sucesso");
                     Program.pessoa = pessoas;
                     carregaForm(new Principal());
+                    Form1.Voltar.Enabled = true;
                 }
             }
 
@@ -133,7 +134,7 @@ namespace pi_serasa_greenloop
                 polos = polos.logarPolos(email, senha);
                 if (polos == null)
                 {
-                    MessageBox.Show("Verifique a sua senha e o nome de usuário e tente novamente.");
+                    lblMensagemErro.Visible = true;
                     return;
                 }
                 else
@@ -264,6 +265,7 @@ namespace pi_serasa_greenloop
             wilBitPanel2.Location = new Point((ClientSize.Width - wilBitPanel2.Width) / 2, (ClientSize.Height - wilBitPanel2.Height) / 2);
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            Form1.Voltar.Enabled = false;
             login();
         }
 
@@ -299,6 +301,29 @@ namespace pi_serasa_greenloop
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLoginEmail__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLoginSenha__TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void wilBitPanel4_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void wilBitPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

@@ -265,6 +265,7 @@
             wilBitRoundedPictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
             wilBitRoundedPictureBox22.TabIndex = 42;
             wilBitRoundedPictureBox22.TabStop = false;
+            wilBitRoundedPictureBox22.Click += wilBitRoundedPictureBox22_Click_1;
             // 
             // painel
             // 

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            lblMensagemErro = new Label();
             btnLoginn = new WiLBiT.WiLBiTButton();
             btnCadastroo = new WiLBiT.WiLBiTButton();
             label8 = new Label();
@@ -77,6 +78,7 @@
             wilBitPanel1.BorderColor = Color.PaleVioletRed;
             wilBitPanel1.BorderRadius = 20;
             wilBitPanel1.BorderSize = 0;
+            wilBitPanel1.Controls.Add(lblMensagemErro);
             wilBitPanel1.Controls.Add(btnLoginn);
             wilBitPanel1.Controls.Add(btnCadastroo);
             wilBitPanel1.Controls.Add(label8);
@@ -95,6 +97,19 @@
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(533, 568);
             wilBitPanel1.TabIndex = 0;
+            wilBitPanel1.Paint += wilBitPanel1_Paint_1;
+            // 
+            // lblMensagemErro
+            // 
+            lblMensagemErro.AutoSize = true;
+            lblMensagemErro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMensagemErro.ForeColor = Color.Navy;
+            lblMensagemErro.Location = new Point(88, 370);
+            lblMensagemErro.Name = "lblMensagemErro";
+            lblMensagemErro.Size = new Size(355, 42);
+            lblMensagemErro.TabIndex = 16;
+            lblMensagemErro.Text = "Verifique a sua Senha e o Nome de Usuário e \r\ntente novamente.";
+            lblMensagemErro.Visible = false;
             // 
             // btnLoginn
             // 
@@ -190,11 +205,12 @@
             label1.AutoSize = true;
             label1.Font = new Font("Trebuchet MS", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(215, 319);
+            label1.Location = new Point(215, 284);
             label1.Name = "label1";
             label1.Size = new Size(106, 40);
             label1.TabIndex = 2;
             label1.Text = "Senha";
+            label1.Click += label1_Click;
             // 
             // txtLoginSenha
             // 
@@ -205,7 +221,7 @@
             txtLoginSenha.BorderSize = 2;
             txtLoginSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtLoginSenha.ForeColor = Color.FromArgb(64, 64, 64);
-            txtLoginSenha.Location = new Point(84, 363);
+            txtLoginSenha.Location = new Point(84, 328);
             txtLoginSenha.Margin = new Padding(4);
             txtLoginSenha.Multiline = false;
             txtLoginSenha.Name = "txtLoginSenha";
@@ -217,6 +233,7 @@
             txtLoginSenha.TabIndex = 1;
             txtLoginSenha.Texts = "";
             txtLoginSenha.UnderlinedStyle = false;
+            txtLoginSenha._TextChanged += txtLoginSenha__TextChanged;
             // 
             // txtLoginEmail
             // 
@@ -239,6 +256,7 @@
             txtLoginEmail.TabIndex = 0;
             txtLoginEmail.Texts = "";
             txtLoginEmail.UnderlinedStyle = false;
+            txtLoginEmail._TextChanged += txtLoginEmail__TextChanged;
             // 
             // wilBitPanel3
             // 
@@ -259,10 +277,11 @@
             wilBitPanel4.BorderRadius = 11;
             wilBitPanel4.BorderSize = 0;
             wilBitPanel4.ForeColor = Color.White;
-            wilBitPanel4.Location = new Point(95, 374);
+            wilBitPanel4.Location = new Point(95, 339);
             wilBitPanel4.Name = "wilBitPanel4";
             wilBitPanel4.Size = new Size(348, 28);
             wilBitPanel4.TabIndex = 8;
+            wilBitPanel4.Paint += wilBitPanel4_Paint;
             // 
             // wilBitPanel10
             // 
@@ -666,7 +685,7 @@
         private WiLBiT.WiLBiTPanel wilBitPanel11;
         private Label label8;
         private Label label9;
-        private Label label10;
+        private Label lblMensagemErro;
         private PictureBox pictureBox3;
         private WiLBiT.WiLBiTButton btnCadastro_Login;
         private WiLBiT.WiLBiTButton btnLogin_Cadastro;

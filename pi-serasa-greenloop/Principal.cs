@@ -197,5 +197,11 @@ namespace pi_serasa_greenloop
         {
             carregaForm(new Perfil());
         }
+
+        private void wilBitRoundedPictureBox22_Click_1(object sender, EventArgs e)
+        {
+            carregaForm(new Perfil());
+
+        }
     }
 }
