@@ -35,7 +35,6 @@
             label8 = new Label();
             lblNasciemnto = new Label();
             label5 = new Label();
-            lblNome = new Label();
             lblEmail = new Label();
             label1 = new Label();
             panel1 = new Panel();
@@ -44,6 +43,7 @@
             label4 = new Label();
             lblPontos = new Label();
             lblTotal_Reciclado = new Label();
+            lblNome = new Label();
             pnlPerfil.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).BeginInit();
@@ -98,6 +98,7 @@
             lblCpf.Size = new Size(193, 30);
             lblCpf.TabIndex = 14;
             lblCpf.Text = "\"CPF do Usuário\"";
+            lblCpf.Click += lblCpf_Click;
             // 
             // label8
             // 
@@ -134,19 +135,6 @@
             label5.Size = new Size(151, 20);
             label5.TabIndex = 11;
             label5.Text = "Data de Nascimento";
-            // 
-            // lblNome
-            // 
-            lblNome.AutoSize = true;
-            lblNome.BackColor = Color.Transparent;
-            lblNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNome.Location = new Point(220, 59);
-            lblNome.Margin = new Padding(2, 0, 2, 0);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(184, 25);
-            lblNome.TabIndex = 1;
-            lblNome.Text = "\"Nome de Usuário\"";
-            lblNome.Click += lblNome_Click;
             // 
             // lblEmail
             // 
@@ -251,6 +239,19 @@
             lblTotal_Reciclado.Size = new Size(23, 25);
             lblTotal_Reciclado.TabIndex = 2;
             lblTotal_Reciclado.Text = "0";
+            // 
+            // lblNome
+            // 
+            lblNome.AutoSize = true;
+            lblNome.BackColor = Color.Transparent;
+            lblNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNome.Location = new Point(220, 59);
+            lblNome.Margin = new Padding(2, 0, 2, 0);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(184, 25);
+            lblNome.TabIndex = 1;
+            lblNome.Text = "\"Nome de Usuário\"";
+            lblNome.Click += lblNome_Click;
             // 
             // Perfil
             // 

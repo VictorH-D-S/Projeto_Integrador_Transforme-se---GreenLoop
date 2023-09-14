@@ -30,14 +30,27 @@ namespace pi_serasa_greenloop
             // Define o estado da janela como maximizado (opcional)
             this.WindowState = FormWindowState.Maximized;
         }
-
         void atualizaPerfil()
         {
             lblEmail.Text = Program.pessoa.email;
-            lblCpf.Text = Program.pessoa.cpf;
-            lblNasciemnto.Text = Program.pessoa.idade.ToString();
             lblNome.Text = Program.pessoa.nome;
+            lblNasciemnto.Text = Program.pessoa.idade.ToString();
+            lblCpf.Text = FormatarCpf(Program.pessoa.cpf);
         }
+
+        string FormatarCpf(string cpf)
+        {
+            if (string.IsNullOrEmpty(cpf) || cpf.Length != 11)
+            {
+                return "CPF inválido";
+            }
+
+            string parte1 = cpf.Substring(0, 9);
+            string parte2 = cpf.Substring(9, 2);
+
+            return $"{parte1.Substring(0, 3)}.{parte1.Substring(3, 3)}.{parte1.Substring(6, 3)}-{parte2}";
+        }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -76,6 +89,11 @@ namespace pi_serasa_greenloop
         {
             atualizaPerfil();
             atualizaInterface();
+        }
+
+        private void lblCpf_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
