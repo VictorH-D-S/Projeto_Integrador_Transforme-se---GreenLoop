@@ -1,113 +1,113 @@
 ﻿namespace pi_serasa_greenloop
 {
-    partial class Form1
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class Form1
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        public void InitializeComponent()
-        {
-            painel = new System.Windows.Forms.Panel();
-            panel1 = new System.Windows.Forms.Panel();
-            label2 = new System.Windows.Forms.Label();
-            Voltar = new WiLBiT.WiLBiTRoundedPictureBox2();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(Voltar)).BeginInit();
-            SuspendLayout();
-            // 
-            // painel
-            // 
-            painel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            painel.Location = new System.Drawing.Point(0, 89);
-            painel.Name = "painel";
-            painel.Size = new System.Drawing.Size(1904, 952);
-            painel.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = System.Drawing.Color.LimeGreen;
-            panel1.Controls.Add(Voltar);
-            panel1.Controls.Add(label2);
-            panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            panel1.ForeColor = System.Drawing.Color.LimeGreen;
-            panel1.Location = new System.Drawing.Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(1904, 89);
-            panel1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1325, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 40);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "GreenLoop";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Voltar
-            // 
-            Voltar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            Voltar.BorderColor = System.Drawing.Color.Lime;
-            Voltar.BorderColor2 = System.Drawing.Color.SpringGreen;
-            Voltar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            Voltar.BorderSize = 2;
-            Voltar.GradientAngle = 50F;
-            Voltar.Location = new System.Drawing.Point(71, 3);
-            Voltar.Name = "Voltar";
-            Voltar.Size = new System.Drawing.Size(88, 88);
-            Voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            Voltar.TabIndex = 1;
-            Voltar.TabStop = false;
-            Voltar.Click += new System.EventHandler(this.Voltar_Click);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(panel1);
-            this.Controls.Add(painel);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(Voltar)).EndInit();
-            this.ResumeLayout(false);
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		public void InitializeComponent()
+		{
+			painel = new Panel();
+			panel1 = new Panel();
+			Voltar = new WiLBiT.WiLBiTRoundedPictureBox2();
+			label2 = new Label();
+			panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)Voltar).BeginInit();
+			SuspendLayout();
+			// 
+			// painel
+			// 
+			painel.Anchor = AnchorStyles.None;
+			painel.Location = new Point(0, 84);
+			painel.Name = "painel";
+			painel.Size = new Size(1444, 796);
+			painel.TabIndex = 1;
+			// 
+			// panel1
+			// 
+			panel1.BackColor = Color.LimeGreen;
+			panel1.Controls.Add(Voltar);
+			panel1.Controls.Add(label2);
+			panel1.Dock = DockStyle.Top;
+			panel1.ForeColor = Color.LimeGreen;
+			panel1.Location = new Point(0, 0);
+			panel1.Name = "panel1";
+			panel1.Size = new Size(1444, 89);
+			panel1.TabIndex = 2;
+			// 
+			// Voltar
+			// 
+			Voltar.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+			Voltar.BorderColor = Color.Lime;
+			Voltar.BorderColor2 = Color.SpringGreen;
+			Voltar.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+			Voltar.BorderSize = 2;
+			Voltar.GradientAngle = 50F;
+			Voltar.Image = Properties.Resources.logo_greenloop;
+			Voltar.Location = new Point(71, 3);
+			Voltar.Name = "Voltar";
+			Voltar.Size = new Size(88, 88);
+			Voltar.SizeMode = PictureBoxSizeMode.StretchImage;
+			Voltar.TabIndex = 1;
+			Voltar.TabStop = false;
+			Voltar.Click += Voltar_Click;
+			// 
+			// label2
+			// 
+			label2.Anchor = AnchorStyles.None;
+			label2.AutoSize = true;
+			label2.Font = new Font("Trebuchet MS", 24F, FontStyle.Bold, GraphicsUnit.Point);
+			label2.ForeColor = Color.White;
+			label2.Location = new Point(1095, 30);
+			label2.Name = "label2";
+			label2.Size = new Size(180, 40);
+			label2.TabIndex = 0;
+			label2.Text = "GreenLoop";
+			label2.TextAlign = ContentAlignment.TopCenter;
+			// 
+			// Form1
+			// 
+			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = Color.FromArgb(0, 3, 21);
+			ClientSize = new Size(1444, 881);
+			Controls.Add(panel1);
+			Controls.Add(painel);
+			Name = "Form1";
+			Text = "Form1";
+			Load += Form1_Load_1;
+			panel1.ResumeLayout(false);
+			panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)Voltar).EndInit();
+			ResumeLayout(false);
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        public Label label2;
-        public static WiLBiT.WiLBiTRoundedPictureBox2 Voltar;
-        public static Panel painel;
-        public static Panel panel1;
-    }
+		public Label label2;
+		public static WiLBiT.WiLBiTRoundedPictureBox2 Voltar;
+		public static Panel painel;
+		public static Panel panel1;
+	}
 }
