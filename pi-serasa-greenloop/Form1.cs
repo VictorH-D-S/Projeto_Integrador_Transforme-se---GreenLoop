@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Web.WebView2.Core;
 
 namespace pi_serasa_greenloop
 {
@@ -88,7 +89,7 @@ namespace pi_serasa_greenloop
 		private void Form1_Load_1(object sender, EventArgs e)
 		{
 			responsivo();
-			carregaForm(new Login());
+			carregaForm(new Principal());
 		}
 
 		private void Voltar_Click(object sender, EventArgs e)

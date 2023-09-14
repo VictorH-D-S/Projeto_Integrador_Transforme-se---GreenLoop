@@ -233,5 +233,10 @@ namespace pi_serasa_greenloop
 			//painel.Location = new Point(0, ClientSize.Height - Form1.panel1.Height); 
 			painelCentralizar();
 		}
+
+		private void btnReciclagem_Click_1(object sender, EventArgs e)
+		{
+			carregaForm(new Site());
+		}
 	}
 }

@@ -68,6 +68,7 @@
 			btnReciclagem.TabIndex = 37;
 			btnReciclagem.TextColor = Color.White;
 			btnReciclagem.UseVisualStyleBackColor = false;
+			btnReciclagem.Click += btnReciclagem_Click_1;
 			// 
 			// btnPontos
 			// 

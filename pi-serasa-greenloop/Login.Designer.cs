@@ -30,6 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
 			wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+			label10 = new Label();
 			btnLogin = new WiLBiT.WiLBiTButton();
 			lblMensagemErro = new Label();
 			btnLoginn = new WiLBiT.WiLBiTButton();
@@ -65,7 +66,6 @@
 			wilBitPanel8 = new WiLBiT.WiLBiTPanel();
 			wilBitPanel9 = new WiLBiT.WiLBiTPanel();
 			wilBitPanel11 = new WiLBiT.WiLBiTPanel();
-			label10 = new Label();
 			wilBitPanel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
 			wilBitPanel2.SuspendLayout();
@@ -100,6 +100,15 @@
 			wilBitPanel1.Size = new Size(533, 568);
 			wilBitPanel1.TabIndex = 0;
 			wilBitPanel1.Paint += wilBitPanel1_Paint_1;
+			// 
+			// label10
+			// 
+			label10.AutoSize = true;
+			label10.Location = new Point(439, 188);
+			label10.Name = "label10";
+			label10.Size = new Size(40, 15);
+			label10.TabIndex = 17;
+			label10.Text = "LABEL";
 			// 
 			// btnLogin
 			// 
@@ -632,15 +641,6 @@
 			wilBitPanel11.Name = "wilBitPanel11";
 			wilBitPanel11.Size = new Size(185, 53);
 			wilBitPanel11.TabIndex = 9;
-			// 
-			// label10
-			// 
-			label10.AutoSize = true;
-			label10.Location = new Point(448, 192);
-			label10.Name = "label10";
-			label10.Size = new Size(40, 15);
-			label10.TabIndex = 17;
-			label10.Text = "LABEL";
 			// 
 			// Login
 			// 

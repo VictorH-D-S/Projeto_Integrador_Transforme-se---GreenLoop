@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="Microsoft.Toolkit.Win32.UI.Controls" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1938.49" />
     <PackageReference Include="MySql.Data" Version="8.1.0" />
     <PackageReference Include="WiLBiT" Version="1.1.4" />
     <PackageReference Include="Wilbit.AppUpdate" Version="0.2.0" />
