@@ -10,7 +10,7 @@ namespace pi_serasa_greenloop
 {
     internal class Conexao
     {
-        const string host = "Localhost", banco = "bd_greenloop", usuario = "root", senha = "",
+        const string host = "srv793.hstgr.io", banco = "u647084545_serasa_greenlp", usuario = "u647084545_serasa_greenlp", senha = "Serasa2023",
                      dadosConexao = $"Server={host};Database={banco};Uid={usuario};PwD={senha};";
 
         static MySqlConnection conexao = new MySqlConnection(dadosConexao);
