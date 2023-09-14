@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,10 +36,16 @@ namespace pi_serasa_greenloop
         {
             bool camposVazios = false;
 
-            if (string.IsNullOrWhiteSpace(txtCadastroNome.Texts) ||
-                string.IsNullOrWhiteSpace(txtCadastroSenha.Texts) ||
-                string.IsNullOrWhiteSpace(txtCadastroCPF.Texts) ||
-                string.IsNullOrWhiteSpace(txtCadastroEmail.Texts))
+            string nome = txtCadastroNome.Texts.Trim();
+            string senha = txtCadastroSenha.Texts;
+            string cpf = txtCadastroCPF.Texts;
+            string email = txtCadastroEmail.Texts.Trim();
+
+            // Verifica se há campos vazios
+            if (string.IsNullOrWhiteSpace(nome) ||
+                string.IsNullOrWhiteSpace(senha) ||
+                string.IsNullOrWhiteSpace(cpf) ||
+                string.IsNullOrWhiteSpace(email))
             {
                 camposVazios = true;
             }
@@ -50,29 +57,67 @@ namespace pi_serasa_greenloop
             }
 
             // Verifica se o CPF contém apenas números
-            if (!txtCadastroCPF.Texts.All(char.IsDigit))
+            if (!cpf.All(char.IsDigit))
             {
                 MessageBox.Show("O CPF deve conter apenas números.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Verifica se o CPF tem exatamente 11 dígitos
-            if (txtCadastroCPF.Texts.Length != 11)
+            if (cpf.Length != 11)
             {
                 MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (Conexao.EmailExisteNaTabela(txtCadastroEmail.Texts))
+            // Verifica se o email possui no máximo 32 caracteres
+            if (email.Length > 32)
             {
-                MessageBox.Show("O email já está em uso. Escolha outro email.", "Email Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O email deve conter no máximo 32 caracteres.", "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string cpf = txtCadastroCPF.Texts;
-            if (Conexao.CPFExisteNaTabela(cpf))
+            // Verifica se o email possui caracteres especiais (exceto na senha)
+            if (!string.Equals(email, senha) && !Regex.IsMatch(email, @"^[a-zA-Z0-9._\-+@]+$"))
             {
-                MessageBox.Show("O CPF já está em uso. Escolha outro CPF.", "CPF Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O email não é válido. Certifique-se de que ele contenha apenas caracteres permitidos.", "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verifica se o nome contém apenas letras, dígitos e espaços em branco
+            if (!Regex.IsMatch(nome, @"^[a-zA-Z0-9\s]+$"))
+            {
+                MessageBox.Show("O nome não pode conter caracteres especiais.", "Nome Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verifica se o nome tem no máximo 32 caracteres
+            if (nome.Length > 32)
+            {
+                MessageBox.Show("O nome deve conter no máximo 32 caracteres.", "Nome Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DateTime dataNascimento;
+            if (DateTime.TryParse(dateTimePicker1.Text, out dataNascimento))
+            {
+                DateTime dataMinima = DateTime.Now.AddYears(-16); // 16 anos atrás a partir da data atual
+                DateTime dataMaxima = DateTime.Now.AddYears(-99); // 99 anos atrás a partir da data atual
+
+                if (dataNascimento > dataMinima)
+                {
+                    MessageBox.Show("Você deve ter pelo menos 16 anos para se cadastrar.", "Idade Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (dataNascimento < dataMaxima)
+                {
+                    MessageBox.Show("Você deve ter no máximo 99 anos para se cadastrar.", "Idade Excedida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Data de nascimento inválida.", "Data de Nascimento Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -81,6 +126,7 @@ namespace pi_serasa_greenloop
             login();
             carregaForm(new Login());
         }
+
         void verificaCampoLogin()
         {
             bool camposVazios = false;
@@ -324,6 +370,11 @@ namespace pi_serasa_greenloop
         }
 
         private void wilBitPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtCadastroNome__TextChanged_1(object sender, EventArgs e)
         {
 
         }
