@@ -69,10 +69,5 @@ namespace pi_serasa_greenloop
         {
             carregaForm(new Deletar_usuario());
         }
-
-        private void wilBitButton1_Click(object sender, EventArgs e)
-        {
-            carregaForm(new Cadastrar_Premios());
-        }
     }
 }

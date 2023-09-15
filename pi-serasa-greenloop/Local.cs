@@ -21,15 +21,5 @@ namespace pi_serasa_greenloop
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Local_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -63,16 +63,6 @@ namespace pi_serasa_greenloop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3846890_200 {
-            get {
-                object obj = ResourceManager.GetObject("3846890-200", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _535137 {
             get {
                 object obj = ResourceManager.GetObject("535137", resourceCulture);
@@ -86,16 +76,6 @@ namespace pi_serasa_greenloop.Properties {
         internal static System.Drawing.Bitmap _55125_2_rewards_picture_hd_image_free_png {
             get {
                 object obj = ResourceManager.GetObject("55125-2-rewards-picture-hd-image-free-png", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _5957125 {
-            get {
-                object obj = ResourceManager.GetObject("5957125", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,16 +106,6 @@ namespace pi_serasa_greenloop.Properties {
         internal static System.Drawing.Bitmap logo_greenloop {
             get {
                 object obj = ResourceManager.GetObject("logo greenloop", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rw_icon_1 {
-            get {
-                object obj = ResourceManager.GetObject("rw icon 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

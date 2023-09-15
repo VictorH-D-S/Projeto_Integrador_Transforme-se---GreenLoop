@@ -107,10 +107,5 @@ namespace pi_serasa_greenloop
         {
 
         }
-
-        private void ptbPerfilAvatar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
