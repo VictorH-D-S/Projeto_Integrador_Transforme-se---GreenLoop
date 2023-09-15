@@ -18,21 +18,20 @@ namespace pi_serasa_greenloop
             InitializeComponent();
         }
 
+
         void adicionarUsuario()
         {
-            string nome = txtCadastroNome.Text;
-            string senha = txtCadastroSenha.Text;
-            string cpf = txtCadastroCPF.Text;
-            string email = txtCadastroEmail.Text;
+            string nome = txtCadastroNome.Texts;
+            string senha = txtCadastroSenha.Texts;
+            string cpf = txtCadastroCPF.Texts;
+            string email = txtCadastroEmail.Texts;
             string idade = dateTimePicker1.Text.ToString();
 
-            // Recupere o valor de pontos da fonte de dados
-            int pontos = Conexao.RecuperarPontuacaoAtual(cpf);
-
-            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, pontos);
+            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf);
 
             pessoas.adicionarUsuario();
         }
+
         void VerificaCamposCadastro()
         {
             bool camposVazios = false;
@@ -71,7 +70,8 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            if (email.Length > 45)
+            // Verifica se o email possui no máximo 32 caracteres
+            if (email.Length > 32)
             {
                 MessageBox.Show("O email deve conter no máximo 32 caracteres.", "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -91,7 +91,8 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            if (nome.Length > 45)
+            // Verifica se o nome tem no máximo 32 caracteres
+            if (nome.Length > 32)
             {
                 MessageBox.Show("O nome deve conter no máximo 32 caracteres.", "Nome Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -119,20 +120,6 @@ namespace pi_serasa_greenloop
                 MessageBox.Show("Data de nascimento inválida.", "Data de Nascimento Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-
-            if (Conexao.EmailExisteNaTabela(txtCadastroEmail.Texts))
-            {
-                    MessageBox.Show("E-mail em uso.");
-                    return;
-            }
-
-            if (Conexao.CPFExisteNaTabela(cpf))
-            {
-                MessageBox.Show("CPF em uso.");
-                return;
-            }
-
 
             adicionarUsuario();
             MessageBox.Show("Usuário Cadastrado!");

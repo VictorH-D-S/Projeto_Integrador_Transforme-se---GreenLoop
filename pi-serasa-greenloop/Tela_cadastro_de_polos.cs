@@ -23,8 +23,7 @@ namespace pi_serasa_greenloop
             txtEndereco.Texts = "";
             txtNome.Texts = "";
             txtSenha.Texts = "";
-            txt_ponto_de_coleta.Texts = "";
-            txt_ponto_de_coleta.Focus();
+            txtNome.Focus();
         }
 
         void iniciar()
@@ -164,6 +163,17 @@ namespace pi_serasa_greenloop
         private void txt_ponto_de_coleta__TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdicionar_Click_1(object sender, EventArgs e)
+        {
+            btnAdicionar.BackColor = Color.Blue;
+            btnRemover.BackColor = Color.Red;
+        }
+
+        private void btnConfirmar_Click_1(object sender, EventArgs e)
+        {
+            verificaCampo();
         }
     }
 }
