@@ -165,5 +165,16 @@ namespace pi_serasa_greenloop
         {
 
         }
+
+        private void btnAdicionar_Click_1(object sender, EventArgs e)
+        {
+            btnAdicionar.BackColor = Color.Blue;
+            btnRemover.BackColor = Color.Red;
+        }
+
+        private void btnConfirmar_Click_1(object sender, EventArgs e)
+        {
+            verificaCampo();
+        }
     }
 }

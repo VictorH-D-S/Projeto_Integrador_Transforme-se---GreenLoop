@@ -39,6 +39,10 @@ namespace pi_serasa_greenloop
 			}
 		}
 
-	}
+        private void webView_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 
 }

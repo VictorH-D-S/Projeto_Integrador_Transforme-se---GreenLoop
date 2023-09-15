@@ -29,265 +29,262 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DarPontos));
-            label3 = new Label();
-            wilBitPanel1 = new WiLBiT.WiLBiTPanel();
-            lblTudoCerto = new Label();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            lblErro = new Label();
-            pictureBox1 = new PictureBox();
-            btnDepositar = new WiLBiT.WiLBiTButton();
-            label2 = new Label();
-            txtCPF = new WiLBiT.WiLBiTTextBox();
-            txtPontuacao = new WiLBiT.WiLBiTTextBox();
-            label1 = new Label();
-            wilBitPanel2 = new WiLBiT.WiLBiTPanel();
-            wilBitPanel3 = new WiLBiT.WiLBiTPanel();
-            PainelResponsivo_DarPontos = new Panel();
-            lblPontodeColeta = new Label();
-            wilBitPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            PainelResponsivo_DarPontos.SuspendLayout();
-            SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            this.lblTudoCerto = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.lblErro = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDepositar = new WiLBiT.WiLBiTButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCPF = new WiLBiT.WiLBiTTextBox();
+            this.txtPontuacao = new WiLBiT.WiLBiTTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            this.wilBitPanel3 = new WiLBiT.WiLBiTPanel();
+            this.PainelResponsivo_DarPontos = new System.Windows.Forms.Panel();
+            this.lblPontodeColeta = new System.Windows.Forms.Label();
+            this.wilBitPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PainelResponsivo_DarPontos.SuspendLayout();
+            this.SuspendLayout();
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(182, -46);
-            label3.Name = "label3";
-            label3.Size = new Size(157, 29);
-            label3.TabIndex = 5;
-            label3.Text = "Bem-Vindo, Ponto de Coleta";
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(182, -46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Bem-Vindo, Ponto de Coleta";
             // 
             // wilBitPanel1
             // 
-            wilBitPanel1.BackColor = Color.FromArgb(128, 255, 128);
-            wilBitPanel1.BorderColor = Color.White;
-            wilBitPanel1.BorderRadius = 40;
-            wilBitPanel1.BorderSize = 0;
-            wilBitPanel1.Controls.Add(lblTudoCerto);
-            wilBitPanel1.Controls.Add(iconPictureBox1);
-            wilBitPanel1.Controls.Add(lblErro);
-            wilBitPanel1.Controls.Add(pictureBox1);
-            wilBitPanel1.Controls.Add(btnDepositar);
-            wilBitPanel1.Controls.Add(label2);
-            wilBitPanel1.Controls.Add(txtCPF);
-            wilBitPanel1.Controls.Add(txtPontuacao);
-            wilBitPanel1.Controls.Add(label1);
-            wilBitPanel1.Controls.Add(wilBitPanel2);
-            wilBitPanel1.Controls.Add(wilBitPanel3);
-            wilBitPanel1.ForeColor = Color.White;
-            wilBitPanel1.Location = new Point(51, 38);
-            wilBitPanel1.Name = "wilBitPanel1";
-            wilBitPanel1.Size = new Size(626, 482);
-            wilBitPanel1.TabIndex = 6;
+            this.wilBitPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.wilBitPanel1.BorderColor = System.Drawing.Color.White;
+            this.wilBitPanel1.BorderRadius = 40;
+            this.wilBitPanel1.BorderSize = 0;
+            this.wilBitPanel1.Controls.Add(this.lblTudoCerto);
+            this.wilBitPanel1.Controls.Add(this.iconPictureBox1);
+            this.wilBitPanel1.Controls.Add(this.lblErro);
+            this.wilBitPanel1.Controls.Add(this.pictureBox1);
+            this.wilBitPanel1.Controls.Add(this.btnDepositar);
+            this.wilBitPanel1.Controls.Add(this.label2);
+            this.wilBitPanel1.Controls.Add(this.txtCPF);
+            this.wilBitPanel1.Controls.Add(this.txtPontuacao);
+            this.wilBitPanel1.Controls.Add(this.label1);
+            this.wilBitPanel1.Controls.Add(this.wilBitPanel2);
+            this.wilBitPanel1.Controls.Add(this.wilBitPanel3);
+            this.wilBitPanel1.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel1.Location = new System.Drawing.Point(51, 38);
+            this.wilBitPanel1.Name = "wilBitPanel1";
+            this.wilBitPanel1.Size = new System.Drawing.Size(626, 482);
+            this.wilBitPanel1.TabIndex = 6;
             // 
             // lblTudoCerto
             // 
-            lblTudoCerto.AutoSize = true;
-            lblTudoCerto.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTudoCerto.ForeColor = Color.Green;
-            lblTudoCerto.Location = new Point(32, 395);
-            lblTudoCerto.Name = "lblTudoCerto";
-            lblTudoCerto.Size = new Size(561, 64);
-            lblTudoCerto.TabIndex = 9;
-            lblTudoCerto.Text = "Tudo Certo!\r\nClique na Tela Para Fazer Uma Nova Operação ;)";
-            lblTudoCerto.Visible = false;
-            lblTudoCerto.Click += lblTudoCerto_Click;
+            this.lblTudoCerto.AutoSize = true;
+            this.lblTudoCerto.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTudoCerto.ForeColor = System.Drawing.Color.Green;
+            this.lblTudoCerto.Location = new System.Drawing.Point(32, 395);
+            this.lblTudoCerto.Name = "lblTudoCerto";
+            this.lblTudoCerto.Size = new System.Drawing.Size(561, 64);
+            this.lblTudoCerto.TabIndex = 9;
+            this.lblTudoCerto.Text = "Tudo Certo!\r\nClique na Tela Para Fazer Uma Nova Operação ;)";
+            this.lblTudoCerto.Visible = false;
             // 
             // iconPictureBox1
             // 
-            iconPictureBox1.BackColor = Color.FromArgb(128, 255, 128);
-            iconPictureBox1.Enabled = false;
-            iconPictureBox1.ForeColor = Color.ForestGreen;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            iconPictureBox1.IconColor = Color.ForestGreen;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 476;
-            iconPictureBox1.Location = new Point(91, 3);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(563, 476);
-            iconPictureBox1.TabIndex = 9;
-            iconPictureBox1.TabStop = false;
-            iconPictureBox1.Visible = false;
-            iconPictureBox1.WaitOnLoad = true;
-            iconPictureBox1.Click += iconPictureBox1_Click;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.iconPictureBox1.Enabled = false;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.ForestGreen;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 476;
+            this.iconPictureBox1.Location = new System.Drawing.Point(91, 3);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(563, 476);
+            this.iconPictureBox1.TabIndex = 9;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Visible = false;
+            this.iconPictureBox1.WaitOnLoad = true;
             // 
             // lblErro
             // 
-            lblErro.AutoSize = true;
-            lblErro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblErro.ForeColor = Color.Red;
-            lblErro.Location = new Point(102, 292);
-            lblErro.Name = "lblErro";
-            lblErro.Size = new Size(505, 42);
-            lblErro.TabIndex = 8;
-            lblErro.Text = "*Verifique o CPF e a Pontuação e tente novamente.\r\n*Lembre-se que só se pode adicionar até 10 pontos por operação.\r\n";
-            lblErro.Visible = false;
+            this.lblErro.AutoSize = true;
+            this.lblErro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblErro.ForeColor = System.Drawing.Color.Red;
+            this.lblErro.Location = new System.Drawing.Point(102, 292);
+            this.lblErro.Name = "lblErro";
+            this.lblErro.Size = new System.Drawing.Size(505, 42);
+            this.lblErro.TabIndex = 8;
+            this.lblErro.Text = "*Verifique o CPF e a Pontuação e tente novamente.\r\n*Lembre-se que só se pode adic" +
+    "ionar até 10 pontos por operação.\r\n";
+            this.lblErro.Visible = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(203, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(209, 117);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(203, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(209, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // btnDepositar
             // 
-            btnDepositar.BackColor = Color.FromArgb(12, 92, 64);
-            btnDepositar.BorderColor = Color.FromArgb(72, 116, 245);
-            btnDepositar.BorderRadius = 20;
-            btnDepositar.BorderSize = 0;
-            btnDepositar.FlatAppearance.BorderSize = 0;
-            btnDepositar.FlatStyle = FlatStyle.Flat;
-            btnDepositar.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDepositar.ForeColor = Color.White;
-            btnDepositar.Location = new Point(210, 385);
-            btnDepositar.Name = "btnDepositar";
-            btnDepositar.Size = new Size(229, 74);
-            btnDepositar.TabIndex = 4;
-            btnDepositar.Text = "Depositar";
-            btnDepositar.UseVisualStyleBackColor = false;
-            btnDepositar.Click += btnDepositar_Click;
+            this.btnDepositar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(64)))));
+            this.btnDepositar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(116)))), ((int)(((byte)(245)))));
+            this.btnDepositar.BorderRadius = 20;
+            this.btnDepositar.BorderSize = 0;
+            this.btnDepositar.FlatAppearance.BorderSize = 0;
+            this.btnDepositar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepositar.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDepositar.ForeColor = System.Drawing.Color.White;
+            this.btnDepositar.Location = new System.Drawing.Point(210, 385);
+            this.btnDepositar.Name = "btnDepositar";
+            this.btnDepositar.Size = new System.Drawing.Size(229, 74);
+            this.btnDepositar.TabIndex = 4;
+            this.btnDepositar.Text = "Depositar";
+            this.btnDepositar.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(12, 92, 64);
-            label2.Location = new Point(246, 216);
-            label2.Name = "label2";
-            label2.Size = new Size(130, 29);
-            label2.TabIndex = 3;
-            label2.Text = "Pontuação";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(246, 216);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Pontuação";
             // 
             // txtCPF
             // 
-            txtCPF.BackColor = SystemColors.Window;
-            txtCPF.BorderColor = Color.Black;
-            txtCPF.BorderFocusColor = Color.Black;
-            txtCPF.BorderRadius = 11;
-            txtCPF.BorderSize = 2;
-            txtCPF.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCPF.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCPF.Location = new Point(91, 156);
-            txtCPF.Margin = new Padding(4);
-            txtCPF.Multiline = false;
-            txtCPF.Name = "txtCPF";
-            txtCPF.Padding = new Padding(10, 7, 10, 7);
-            txtCPF.PasswordChar = false;
-            txtCPF.PlaceholderColor = Color.DimGray;
-            txtCPF.PlaceholderText = "Exemplo: 12312312312";
-            txtCPF.Size = new Size(462, 29);
-            txtCPF.TabIndex = 0;
-            txtCPF.Texts = "";
-            txtCPF.UnderlinedStyle = false;
+            this.txtCPF.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCPF.BorderColor = System.Drawing.Color.Black;
+            this.txtCPF.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtCPF.BorderRadius = 11;
+            this.txtCPF.BorderSize = 2;
+            this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCPF.Location = new System.Drawing.Point(91, 156);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCPF.Multiline = false;
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtCPF.PasswordChar = false;
+            this.txtCPF.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtCPF.PlaceholderText = "Exemplo: 12312312312";
+            this.txtCPF.Size = new System.Drawing.Size(462, 29);
+            this.txtCPF.TabIndex = 0;
+            this.txtCPF.Texts = "";
+            this.txtCPF.UnderlinedStyle = false;
             // 
             // txtPontuacao
             // 
-            txtPontuacao.BackColor = SystemColors.Window;
-            txtPontuacao.BorderColor = Color.Black;
-            txtPontuacao.BorderFocusColor = Color.Black;
-            txtPontuacao.BorderRadius = 11;
-            txtPontuacao.BorderSize = 2;
-            txtPontuacao.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPontuacao.ForeColor = Color.FromArgb(64, 64, 64);
-            txtPontuacao.Location = new Point(91, 249);
-            txtPontuacao.Margin = new Padding(4);
-            txtPontuacao.Multiline = false;
-            txtPontuacao.Name = "txtPontuacao";
-            txtPontuacao.Padding = new Padding(10, 7, 10, 7);
-            txtPontuacao.PasswordChar = false;
-            txtPontuacao.PlaceholderColor = Color.DarkGray;
-            txtPontuacao.PlaceholderText = "";
-            txtPontuacao.Size = new Size(462, 29);
-            txtPontuacao.TabIndex = 1;
-            txtPontuacao.Texts = "";
-            txtPontuacao.UnderlinedStyle = false;
+            this.txtPontuacao.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPontuacao.BorderColor = System.Drawing.Color.Black;
+            this.txtPontuacao.BorderFocusColor = System.Drawing.Color.Black;
+            this.txtPontuacao.BorderRadius = 11;
+            this.txtPontuacao.BorderSize = 2;
+            this.txtPontuacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPontuacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPontuacao.Location = new System.Drawing.Point(91, 249);
+            this.txtPontuacao.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPontuacao.Multiline = false;
+            this.txtPontuacao.Name = "txtPontuacao";
+            this.txtPontuacao.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPontuacao.PasswordChar = false;
+            this.txtPontuacao.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPontuacao.PlaceholderText = "";
+            this.txtPontuacao.Size = new System.Drawing.Size(462, 29);
+            this.txtPontuacao.TabIndex = 1;
+            this.txtPontuacao.Texts = "";
+            this.txtPontuacao.UnderlinedStyle = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(12, 92, 64);
-            label1.Location = new Point(230, 123);
-            label1.Name = "label1";
-            label1.Size = new Size(182, 29);
-            label1.TabIndex = 2;
-            label1.Text = "CPF do Usuário";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(92)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(230, 123);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "CPF do Usuário";
             // 
             // wilBitPanel2
             // 
-            wilBitPanel2.BackColor = Color.Black;
-            wilBitPanel2.BorderColor = Color.PaleVioletRed;
-            wilBitPanel2.BorderRadius = 11;
-            wilBitPanel2.BorderSize = 0;
-            wilBitPanel2.ForeColor = Color.White;
-            wilBitPanel2.Location = new Point(102, 165);
-            wilBitPanel2.Name = "wilBitPanel2";
-            wilBitPanel2.Size = new Size(462, 30);
-            wilBitPanel2.TabIndex = 5;
+            this.wilBitPanel2.BackColor = System.Drawing.Color.Black;
+            this.wilBitPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.wilBitPanel2.BorderRadius = 11;
+            this.wilBitPanel2.BorderSize = 0;
+            this.wilBitPanel2.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel2.Location = new System.Drawing.Point(102, 165);
+            this.wilBitPanel2.Name = "wilBitPanel2";
+            this.wilBitPanel2.Size = new System.Drawing.Size(462, 30);
+            this.wilBitPanel2.TabIndex = 5;
             // 
             // wilBitPanel3
             // 
-            wilBitPanel3.BackColor = Color.Black;
-            wilBitPanel3.BorderColor = Color.PaleVioletRed;
-            wilBitPanel3.BorderRadius = 11;
-            wilBitPanel3.BorderSize = 0;
-            wilBitPanel3.ForeColor = Color.White;
-            wilBitPanel3.Location = new Point(102, 259);
-            wilBitPanel3.Name = "wilBitPanel3";
-            wilBitPanel3.Size = new Size(462, 30);
-            wilBitPanel3.TabIndex = 6;
+            this.wilBitPanel3.BackColor = System.Drawing.Color.Black;
+            this.wilBitPanel3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.wilBitPanel3.BorderRadius = 11;
+            this.wilBitPanel3.BorderSize = 0;
+            this.wilBitPanel3.ForeColor = System.Drawing.Color.White;
+            this.wilBitPanel3.Location = new System.Drawing.Point(102, 259);
+            this.wilBitPanel3.Name = "wilBitPanel3";
+            this.wilBitPanel3.Size = new System.Drawing.Size(462, 30);
+            this.wilBitPanel3.TabIndex = 6;
             // 
             // PainelResponsivo_DarPontos
             // 
-            PainelResponsivo_DarPontos.Anchor = AnchorStyles.None;
-            PainelResponsivo_DarPontos.Controls.Add(lblPontodeColeta);
-            PainelResponsivo_DarPontos.Controls.Add(label3);
-            PainelResponsivo_DarPontos.Controls.Add(wilBitPanel1);
-            PainelResponsivo_DarPontos.Location = new Point(0, 31);
-            PainelResponsivo_DarPontos.Name = "PainelResponsivo_DarPontos";
-            PainelResponsivo_DarPontos.Size = new Size(708, 548);
-            PainelResponsivo_DarPontos.TabIndex = 7;
-            PainelResponsivo_DarPontos.Paint += PainelResponsivo_DarPontos_Paint;
+            this.PainelResponsivo_DarPontos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PainelResponsivo_DarPontos.Controls.Add(this.lblPontodeColeta);
+            this.PainelResponsivo_DarPontos.Controls.Add(this.label3);
+            this.PainelResponsivo_DarPontos.Controls.Add(this.wilBitPanel1);
+            this.PainelResponsivo_DarPontos.Location = new System.Drawing.Point(0, 31);
+            this.PainelResponsivo_DarPontos.Name = "PainelResponsivo_DarPontos";
+            this.PainelResponsivo_DarPontos.Size = new System.Drawing.Size(708, 548);
+            this.PainelResponsivo_DarPontos.TabIndex = 7;
             // 
             // lblPontodeColeta
             // 
-            lblPontodeColeta.Anchor = AnchorStyles.None;
-            lblPontodeColeta.BackColor = Color.Transparent;
-            lblPontodeColeta.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lblPontodeColeta.ForeColor = Color.White;
-            lblPontodeColeta.Location = new Point(321, -46);
-            lblPontodeColeta.Name = "lblPontodeColeta";
-            lblPontodeColeta.Size = new Size(216, 29);
-            lblPontodeColeta.TabIndex = 8;
-            lblPontodeColeta.Text = "\"Ponto de Coleta\"";
+            this.lblPontodeColeta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPontodeColeta.BackColor = System.Drawing.Color.Transparent;
+            this.lblPontodeColeta.Font = new System.Drawing.Font("Trebuchet MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblPontodeColeta.ForeColor = System.Drawing.Color.White;
+            this.lblPontodeColeta.Location = new System.Drawing.Point(321, -46);
+            this.lblPontodeColeta.Name = "lblPontodeColeta";
+            this.lblPontodeColeta.Size = new System.Drawing.Size(216, 29);
+            this.lblPontodeColeta.TabIndex = 8;
+            this.lblPontodeColeta.Text = "\"Ponto de Coleta\"";
             // 
             // DarPontos
             // 
-            AutoScaleMode = AutoScaleMode.None;
-            BackColor = Color.FromArgb(0, 3, 21);
-            ClientSize = new Size(758, 788);
-            Controls.Add(PainelResponsivo_DarPontos);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "DarPontos";
-            Text = "DarPontos";
-            Load += DarPontos_Load;
-            wilBitPanel1.ResumeLayout(false);
-            wilBitPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            PainelResponsivo_DarPontos.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(21)))));
+            this.ClientSize = new System.Drawing.Size(758, 788);
+            this.Controls.Add(this.PainelResponsivo_DarPontos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "DarPontos";
+            this.Text = "DarPontos";
+            this.wilBitPanel1.ResumeLayout(false);
+            this.wilBitPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PainelResponsivo_DarPontos.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

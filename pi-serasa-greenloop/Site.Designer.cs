@@ -28,34 +28,35 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			webView = new Microsoft.Web.WebView2.WinForms.WebView2();
-			((System.ComponentModel.ISupportInitialize)webView).BeginInit();
-			SuspendLayout();
-			// 
-			// webView
-			// 
-			webView.AllowExternalDrop = true;
-			webView.CreationProperties = null;
-			webView.DefaultBackgroundColor = Color.White;
-			webView.Location = new Point(-3, 2);
-			webView.Name = "webView";
-			webView.Size = new Size(1356, 731);
-			webView.TabIndex = 0;
-			webView.ZoomFactor = 1D;
-			// 
-			// Site
-			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
-			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.Black;
-			ClientSize = new Size(1350, 729);
-			Controls.Add(webView);
-			FormBorderStyle = FormBorderStyle.None;
-			Name = "Site";
-			Text = "Form2";
-			Load += Site_LoadAsync;
-			((System.ComponentModel.ISupportInitialize)webView).EndInit();
-			ResumeLayout(false);
+            this.webView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.webView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // webView
+            // 
+            this.webView.AllowExternalDrop = true;
+            this.webView.CreationProperties = null;
+            this.webView.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView.Location = new System.Drawing.Point(-3, 2);
+            this.webView.Name = "webView";
+            this.webView.Size = new System.Drawing.Size(1356, 731);
+            this.webView.TabIndex = 0;
+            this.webView.ZoomFactor = 1D;
+            this.webView.Click += new System.EventHandler(this.webView_Click);
+            // 
+            // Site
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.webView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Site";
+            this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.webView)).EndInit();
+            this.ResumeLayout(false);
+
 		}
 
 		#endregion
