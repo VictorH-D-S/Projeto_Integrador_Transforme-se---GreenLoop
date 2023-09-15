@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DarPontos));
             label3 = new Label();
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            lblTudoCerto = new Label();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            lblErro = new Label();
             pictureBox1 = new PictureBox();
             btnDepositar = new WiLBiT.WiLBiTButton();
             label2 = new Label();
@@ -42,6 +45,7 @@
             PainelResponsivo_DarPontos = new Panel();
             lblPontodeColeta = new Label();
             wilBitPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             PainelResponsivo_DarPontos.SuspendLayout();
             SuspendLayout();
@@ -60,10 +64,13 @@
             // 
             // wilBitPanel1
             // 
-            wilBitPanel1.BackColor = Color.FromArgb(217, 253, 206);
+            wilBitPanel1.BackColor = Color.FromArgb(128, 255, 128);
             wilBitPanel1.BorderColor = Color.White;
             wilBitPanel1.BorderRadius = 40;
             wilBitPanel1.BorderSize = 0;
+            wilBitPanel1.Controls.Add(lblTudoCerto);
+            wilBitPanel1.Controls.Add(iconPictureBox1);
+            wilBitPanel1.Controls.Add(lblErro);
             wilBitPanel1.Controls.Add(pictureBox1);
             wilBitPanel1.Controls.Add(btnDepositar);
             wilBitPanel1.Controls.Add(label2);
@@ -78,12 +85,55 @@
             wilBitPanel1.Size = new Size(626, 482);
             wilBitPanel1.TabIndex = 6;
             // 
+            // lblTudoCerto
+            // 
+            lblTudoCerto.AutoSize = true;
+            lblTudoCerto.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTudoCerto.ForeColor = Color.Green;
+            lblTudoCerto.Location = new Point(33, 395);
+            lblTudoCerto.Name = "lblTudoCerto";
+            lblTudoCerto.Size = new Size(561, 64);
+            lblTudoCerto.TabIndex = 9;
+            lblTudoCerto.Text = "Tudo Certo!\r\nClique na Tela Para Fazer Uma Nova Operação ;)";
+            lblTudoCerto.Visible = false;
+            lblTudoCerto.Click += lblTudoCerto_Click;
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.FromArgb(128, 255, 128);
+            iconPictureBox1.Enabled = false;
+            iconPictureBox1.ForeColor = Color.ForestGreen;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            iconPictureBox1.IconColor = Color.ForestGreen;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 482;
+            iconPictureBox1.Location = new Point(91, -3);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(563, 482);
+            iconPictureBox1.TabIndex = 9;
+            iconPictureBox1.TabStop = false;
+            iconPictureBox1.Visible = false;
+            iconPictureBox1.WaitOnLoad = true;
+            iconPictureBox1.Click += iconPictureBox1_Click;
+            // 
+            // lblErro
+            // 
+            lblErro.AutoSize = true;
+            lblErro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblErro.ForeColor = Color.Red;
+            lblErro.Location = new Point(102, 292);
+            lblErro.Name = "lblErro";
+            lblErro.Size = new Size(505, 42);
+            lblErro.TabIndex = 8;
+            lblErro.Text = "*Verifique o CPF e a Pontuação e tente novamente.\r\n*Lembre-se que só se pode adicionar até 10 pontos por operação.\r\n";
+            lblErro.Visible = false;
+            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(192, 21);
+            pictureBox1.Location = new Point(230, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(229, 153);
+            pictureBox1.Size = new Size(209, 117);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -98,7 +148,7 @@
             btnDepositar.FlatStyle = FlatStyle.Flat;
             btnDepositar.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
             btnDepositar.ForeColor = Color.White;
-            btnDepositar.Location = new Point(192, 374);
+            btnDepositar.Location = new Point(210, 385);
             btnDepositar.Name = "btnDepositar";
             btnDepositar.Size = new Size(229, 74);
             btnDepositar.TabIndex = 4;
@@ -112,7 +162,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(12, 92, 64);
-            label2.Location = new Point(236, 284);
+            label2.Location = new Point(246, 216);
             label2.Name = "label2";
             label2.Size = new Size(130, 29);
             label2.TabIndex = 3;
@@ -127,7 +177,7 @@
             txtCPF.BorderSize = 2;
             txtCPF.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtCPF.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCPF.Location = new Point(81, 224);
+            txtCPF.Location = new Point(91, 156);
             txtCPF.Margin = new Padding(4);
             txtCPF.Multiline = false;
             txtCPF.Name = "txtCPF";
@@ -149,7 +199,7 @@
             txtPontuacao.BorderSize = 2;
             txtPontuacao.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtPontuacao.ForeColor = Color.FromArgb(64, 64, 64);
-            txtPontuacao.Location = new Point(81, 317);
+            txtPontuacao.Location = new Point(91, 249);
             txtPontuacao.Margin = new Padding(4);
             txtPontuacao.Multiline = false;
             txtPontuacao.Name = "txtPontuacao";
@@ -168,7 +218,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(12, 92, 64);
-            label1.Location = new Point(220, 191);
+            label1.Location = new Point(230, 123);
             label1.Name = "label1";
             label1.Size = new Size(182, 29);
             label1.TabIndex = 2;
@@ -181,7 +231,7 @@
             wilBitPanel2.BorderRadius = 11;
             wilBitPanel2.BorderSize = 0;
             wilBitPanel2.ForeColor = Color.White;
-            wilBitPanel2.Location = new Point(92, 233);
+            wilBitPanel2.Location = new Point(102, 165);
             wilBitPanel2.Name = "wilBitPanel2";
             wilBitPanel2.Size = new Size(462, 30);
             wilBitPanel2.TabIndex = 5;
@@ -193,7 +243,7 @@
             wilBitPanel3.BorderRadius = 11;
             wilBitPanel3.BorderSize = 0;
             wilBitPanel3.ForeColor = Color.White;
-            wilBitPanel3.Location = new Point(92, 327);
+            wilBitPanel3.Location = new Point(102, 259);
             wilBitPanel3.Name = "wilBitPanel3";
             wilBitPanel3.Size = new Size(462, 30);
             wilBitPanel3.TabIndex = 6;
@@ -234,6 +284,7 @@
             Load += DarPontos_Load;
             wilBitPanel1.ResumeLayout(false);
             wilBitPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             PainelResponsivo_DarPontos.ResumeLayout(false);
             ResumeLayout(false);
@@ -252,5 +303,8 @@
         private WiLBiT.WiLBiTPanel wilBitPanel3;
         private Panel PainelResponsivo_DarPontos;
         private Label lblPontodeColeta;
+        private Label lblErro;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Label lblTudoCerto;
     }
 }

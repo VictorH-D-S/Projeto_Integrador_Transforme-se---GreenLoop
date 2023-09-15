@@ -111,5 +111,62 @@ namespace pi_serasa_greenloop
             }
             finally { conexao.Close(); }
         }
+
+        public static void AdicionarPontos(string cpf, int pontos)
+        {
+            try
+            {
+                conexao.Open();
+
+                // Recupere a pontuação atual do CPF no banco de dados
+                int pontuacaoAtual = RecuperarPontuacaoAtual(cpf);
+
+                // Soma os pontos fornecidos aos pontos atuais
+                int novaPontuacao = pontuacaoAtual + pontos;
+
+                // Atualize a pontuação no banco de dados
+                AtualizarPontuacao(cpf, novaPontuacao);
+            }
+            catch (MySqlException erro)
+            {
+                Console.WriteLine("Ocorreu um erro: " + erro.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private static int RecuperarPontuacaoAtual(string cpf)
+        {
+            string query = "SELECT pontos FROM pessoas WHERE CPF = @cpf";
+            using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+            {
+                cmd.Parameters.AddWithValue("@cpf", cpf);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToInt32(result);
+                }
+                else
+                {
+                    // Caso o CPF não exista no banco de dados, você pode lidar com isso aqui
+                    // Por exemplo, lançar uma exceção ou retornar um valor padrão
+                    return 0;
+                }
+            }
+        }
+
+        private static void AtualizarPontuacao(string cpf, int novaPontuacao)
+        {
+            string query = "UPDATE pessoas SET pontos = @novaPontuacao WHERE CPF = @cpf";
+            using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+            {
+                cmd.Parameters.AddWithValue("@novaPontuacao", novaPontuacao);
+                cmd.Parameters.AddWithValue("@cpf", cpf);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }
