@@ -137,7 +137,7 @@ namespace pi_serasa_greenloop
             }
         }
 
-        private static int RecuperarPontuacaoAtual(string cpf)
+        public static int RecuperarPontuacaoAtual(string cpf)
         {
             string query = "SELECT pontos FROM pessoas WHERE CPF = @cpf";
             using (MySqlCommand cmd = new MySqlCommand(query, conexao))
@@ -151,8 +151,6 @@ namespace pi_serasa_greenloop
                 }
                 else
                 {
-                    // Caso o CPF não exista no banco de dados, você pode lidar com isso aqui
-                    // Por exemplo, lançar uma exceção ou retornar um valor padrão
                     return 0;
                 }
             }

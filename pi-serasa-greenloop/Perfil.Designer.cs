@@ -227,6 +227,7 @@
             lblPontos.Size = new Size(23, 25);
             lblPontos.TabIndex = 5;
             lblPontos.Text = "0";
+            lblPontos.Click += lblPontos_Click;
             // 
             // lblTotal_Reciclado
             // 

@@ -90,7 +90,7 @@
             lblTudoCerto.AutoSize = true;
             lblTudoCerto.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblTudoCerto.ForeColor = Color.Green;
-            lblTudoCerto.Location = new Point(33, 395);
+            lblTudoCerto.Location = new Point(32, 395);
             lblTudoCerto.Name = "lblTudoCerto";
             lblTudoCerto.Size = new Size(561, 64);
             lblTudoCerto.TabIndex = 9;
@@ -106,10 +106,10 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
             iconPictureBox1.IconColor = Color.ForestGreen;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 482;
-            iconPictureBox1.Location = new Point(91, -3);
+            iconPictureBox1.IconSize = 476;
+            iconPictureBox1.Location = new Point(91, 3);
             iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(563, 482);
+            iconPictureBox1.Size = new Size(563, 476);
             iconPictureBox1.TabIndex = 9;
             iconPictureBox1.TabStop = false;
             iconPictureBox1.Visible = false;
@@ -131,7 +131,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(230, 3);
+            pictureBox1.Location = new Point(203, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(209, 117);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -183,8 +183,8 @@
             txtCPF.Name = "txtCPF";
             txtCPF.Padding = new Padding(10, 7, 10, 7);
             txtCPF.PasswordChar = false;
-            txtCPF.PlaceholderColor = Color.DarkGray;
-            txtCPF.PlaceholderText = "";
+            txtCPF.PlaceholderColor = Color.DimGray;
+            txtCPF.PlaceholderText = "Exemplo: 12312312312";
             txtCPF.Size = new Size(462, 29);
             txtCPF.TabIndex = 0;
             txtCPF.Texts = "";

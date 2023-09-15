@@ -33,15 +33,13 @@ namespace pi_serasa_greenloop
         void atualizaPerfil()
         {
             lblEmail.Text = Program.pessoa.email;
-
-            // Garante que a primeira letra do nome seja maiúscula e as demais sejam minúsculas
+            lblPontos.Text = Program.pessoa.pontos.ToString();
             string nome = Program.pessoa.nome;
             if (!string.IsNullOrEmpty(nome))
             {
                 nome = char.ToUpper(nome[0]) + nome.Substring(1).ToLower();
             }
             lblNome.Text = nome;
-
             lblNasciemnto.Text = Program.pessoa.idade.ToString();
             lblCpf.Text = FormatarCpf(Program.pessoa.cpf);
         }
@@ -101,6 +99,11 @@ namespace pi_serasa_greenloop
         }
 
         private void lblCpf_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPontos_Click(object sender, EventArgs e)
         {
 
         }

@@ -18,20 +18,21 @@ namespace pi_serasa_greenloop
             InitializeComponent();
         }
 
-
         void adicionarUsuario()
         {
-            string nome = txtCadastroNome.Texts;
-            string senha = txtCadastroSenha.Texts;
-            string cpf = txtCadastroCPF.Texts;
-            string email = txtCadastroEmail.Texts;
+            string nome = txtCadastroNome.Text;
+            string senha = txtCadastroSenha.Text;
+            string cpf = txtCadastroCPF.Text;
+            string email = txtCadastroEmail.Text;
             string idade = dateTimePicker1.Text.ToString();
 
-            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf);
+            // Recupere o valor de pontos da fonte de dados
+            int pontos = Conexao.RecuperarPontuacaoAtual(cpf);
+
+            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, pontos);
 
             pessoas.adicionarUsuario();
         }
-
         void VerificaCamposCadastro()
         {
             bool camposVazios = false;
@@ -70,7 +71,6 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            // Verifica se o email possui no máximo 32 caracteres
             if (email.Length > 45)
             {
                 MessageBox.Show("O email deve conter no máximo 32 caracteres.", "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -91,7 +91,6 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            // Verifica se o nome tem no máximo 32 caracteres
             if (nome.Length > 45)
             {
                 MessageBox.Show("O nome deve conter no máximo 32 caracteres.", "Nome Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -9,21 +9,21 @@ namespace pi_serasa_greenloop
 {
     internal class Pessoas
     {
-        public int Id;
+        public int pontos;
         public string nome;
         public string idade;
         public string email;
         public string senha;
         public string cpf;
 
-        public Pessoas(string nome, string idade, string email, string senha, string cpf) 
+        public Pessoas(string nome, string idade, string email, string senha, string cpf, int pontos) 
         {
-            
             this.nome = nome;
             this.idade = idade;
             this.email = email;
             this.senha = senha;
             this.cpf = cpf; 
+            this.pontos = pontos;
         }
         public Pessoas() 
         {
@@ -63,8 +63,9 @@ namespace pi_serasa_greenloop
             string email = row["email"].ToString();
 			string senha = row["senha"].ToString();
 			string cpf = row["cpf"].ToString();
+            int pontos = Convert.ToInt32(row["pontos"]);
 
-            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf);
+            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, pontos);
             return pessoas;
 		}
 
