@@ -15,8 +15,9 @@ namespace pi_serasa_greenloop
         public string email;
         public string senha;
         public string cpf;
+        public int adm;
 
-        public Pessoas(string nome, string idade, string email, string senha, string cpf, int pontos) 
+        public Pessoas(string nome, string idade, string email, string senha, string cpf, int pontos, int adm) 
         {
             this.nome = nome;
             this.idade = idade;
@@ -24,6 +25,7 @@ namespace pi_serasa_greenloop
             this.senha = senha;
             this.cpf = cpf; 
             this.pontos = pontos;
+            this.adm = adm;
         }
         public Pessoas() 
         {
@@ -44,7 +46,7 @@ namespace pi_serasa_greenloop
 
         public Pessoas login(string email, string senha)
         {
-			string query = $"SELECT * FROM pessoas WHERE email = '{email}' AND senha = '{senha}'";
+            string query = $"SELECT * FROM pessoas WHERE email = '{email}' AND senha = '{senha}'";
 
             DataTable resultados = Conexao.executaQuery(query);
             if(resultados.Rows.Count == 0)
@@ -64,8 +66,9 @@ namespace pi_serasa_greenloop
 			string senha = row["senha"].ToString();
 			string cpf = row["cpf"].ToString();
             int pontos = Convert.ToInt32(row["pontos"]);
+            int adm = Convert.ToInt32(row["adm"]);
 
-            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, pontos);
+            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, pontos, adm);
             return pessoas;
 		}
 

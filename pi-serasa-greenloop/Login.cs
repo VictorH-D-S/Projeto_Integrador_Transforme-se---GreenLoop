@@ -25,26 +25,18 @@ namespace pi_serasa_greenloop
             string cpf = txtCadastroCPF.Texts;
             string email = txtCadastroEmail.Texts;
             string idade = dateTimePicker1.Text.ToString();
-            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, 0);
+            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, 0, 0);
             pessoas.adicionarUsuario();
         }
         void VerificaCamposCadastro()
         {
-            bool camposVazios = false;
-
             string nome = txtCadastroNome.Texts.Trim();
             string senha = txtCadastroSenha.Texts;
             string cpf = txtCadastroCPF.Texts;
             string email = txtCadastroEmail.Texts.Trim();
+            lblVerifiqueNome.Visible = lblVerifiqueSenha.Visible = lblVerifiqueCPF.Visible = lblVerifiqueEmail.Visible = lblVerifiqueData.Visible = false;
 
-            // Verifica se há campos vazios
-            if (string.IsNullOrWhiteSpace(nome) ||
-                string.IsNullOrWhiteSpace(senha) ||
-                string.IsNullOrWhiteSpace(cpf) ||
-                string.IsNullOrWhiteSpace(email))
-            {
-                camposVazios = true;
-            }
+            bool camposVazios = string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(senha) || string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(email);
 
             if (camposVazios)
             {
@@ -52,85 +44,43 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            // Verifica se o CPF contém apenas números
-            if (!cpf.All(char.IsDigit))
+            // ----------------------- Verificações de CPF --------------------------
+            if (!cpf.All(char.IsDigit) || cpf.Length != 11 || Conexao.CPFExisteNaTabela(cpf))
             {
-                MessageBox.Show("O CPF deve conter apenas números.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                lblVerifiqueCPF.Visible = true;
             }
 
-            // Verifica se o CPF tem exatamente 11 dígitos
-            if (cpf.Length != 11)
+            // ----------------------- Verificações de E-mail --------------------------
+            if (!Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", RegexOptions.IgnoreCase) || email.Length > 255 || Conexao.EmailExisteNaTabela(email))
             {
-                MessageBox.Show("O CPF deve conter 11 dígitos.", "CPF Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                lblVerifiqueEmail.Visible = true;
             }
 
-            if (email.Length > 45)
+            // ----------------------- Verificações de Nome --------------------------
+            if (!Regex.IsMatch(nome, @"^[a-zA-Z0-9\s]+$") || nome.Length > 45)
             {
-                MessageBox.Show("O email deve conter no máximo 32 caracteres.", "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                lblVerifiqueNome.Visible = true;
             }
 
-            // Verifica se o email possui caracteres especiais (exceto na senha)
-            if (!string.Equals(email, senha) && !Regex.IsMatch(email, @"^[a-zA-Z0-9._\-+@]+$"))
-            {
-                MessageBox.Show("O email não é válido. Certifique-se de que ele contenha apenas caracteres permitidos.", "Email Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Verifica se o nome contém apenas letras, dígitos e espaços em branco
-            if (!Regex.IsMatch(nome, @"^[a-zA-Z0-9\s]+$"))
-            {
-                MessageBox.Show("O nome não pode conter caracteres especiais.", "Nome Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (nome.Length > 45)
-            {
-                MessageBox.Show("O nome deve conter no máximo 32 caracteres.", "Nome Inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
+            // ----------------------- Verificações de Data --------------------------
             DateTime dataNascimento;
-            if (DateTime.TryParse(dateTimePicker1.Text, out dataNascimento))
+            if (!DateTime.TryParse(dateTimePicker1.Text, out dataNascimento) || dataNascimento > DateTime.Now.AddYears(-16) || dataNascimento < DateTime.Now.AddYears(-99))
             {
-                DateTime dataMinima = DateTime.Now.AddYears(-16); // 16 anos atrás a partir da data atual
-                DateTime dataMaxima = DateTime.Now.AddYears(-99); // 99 anos atrás a partir da data atual
-
-                if (dataNascimento > dataMinima)
-                {
-                    MessageBox.Show("Você deve ter pelo menos 16 anos para se cadastrar.", "Idade Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else if (dataNascimento < dataMaxima)
-                {
-                    MessageBox.Show("Você deve ter no máximo 99 anos para se cadastrar.", "Idade Excedida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Data de nascimento inválida.", "Data de Nascimento Inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblVerifiqueData.Visible = true;
                 return;
             }
 
-
-            if (Conexao.EmailExisteNaTabela(txtCadastroEmail.Texts))
+            // ----------------------- Verificações de Senha --------------------------
+            if (senha.Length < 8 || senha.Length > 16)
             {
-                    MessageBox.Show("E-mail em uso.");
-                    return;
-            }
-
-            if (Conexao.CPFExisteNaTabela(cpf))
-            {
-                MessageBox.Show("CPF em uso.");
+                lblVerifiqueSenha.Visible = true;
                 return;
             }
 
+            // ----------------------- FIM DAS VERIFICAÇÕES --------------------------
 
             adicionarUsuario();
-            MessageBox.Show("Usuário Cadastrado!");
+            MessageBox.Show("Usuário Cadastrado!", "Cadastro Concluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
             login();
             carregaForm(new Login());
         }
@@ -159,48 +109,55 @@ namespace pi_serasa_greenloop
                 return;
             }
 
-            if (camposVazios == false && checkBox1.Checked == false)
+            if (!camposVazios)
             {
                 string email = txtLoginEmail.Texts;
                 string senha = txtLoginSenha.Texts;
 
                 Pessoas pessoas = new Pessoas();
                 pessoas = pessoas.login(email, senha);
+
                 if (pessoas == null)
                 {
                     lblMensagemErro.Visible = true;
                 }
                 else
                 {
-                    MessageBox.Show("Login realizado com sucesso");
-                    Program.pessoa = pessoas;
-                    carregaForm(new Principal());
-                    Form1.Voltar.Enabled = true;
+                    if (pessoas.adm == 1) // Verifique se o usuário tem adm igual a 1
+                    {
+                        MessageBox.Show("Login realizado como Admin");
+                        // Carregue o formulário de Admin aqui
+                        carregaForm(new tela_Admir());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login realizado com sucesso");
+                        Program.pessoa = pessoas;
+                        //carregaForm(new Principal());
+                        Form1.Voltar.Enabled = true;
+                    }
                 }
             }
 
-            if (camposVazios == false && checkBox1.Checked == true)
+            if (!camposVazios && checkBox1.Checked)
             {
                 string email = txtLoginEmail.Texts;
                 string senha = txtLoginSenha.Texts;
 
                 Polos polos = new Polos();
                 polos = polos.logarPolos(email, senha);
+
                 if (polos == null)
                 {
                     lblMensagemErro.Visible = true;
-                    return;
                 }
                 else
                 {
                     MessageBox.Show("Polo encontrado");
                     carregaForm(new DarPontos());
                 }
-
             }
-
         }
-
         void login()
         {
             btnLoginn.BackColor = Color.Lime;

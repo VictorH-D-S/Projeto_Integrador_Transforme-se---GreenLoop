@@ -45,6 +45,10 @@
             wilBitPanel10 = new WiLBiT.WiLBiTPanel();
             pictureBox3 = new PictureBox();
             wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            lblVerifiqueData = new Label();
+            lblVerifiqueEmail = new Label();
+            lblVerifiqueCPF = new Label();
+            lblVerifiqueSenha = new Label();
             dateTimePicker1 = new DateTimePicker();
             btnCadastro_Login = new WiLBiT.WiLBiTButton();
             btnLogin_Cadastro = new WiLBiT.WiLBiTButton();
@@ -65,6 +69,7 @@
             wilBitPanel8 = new WiLBiT.WiLBiTPanel();
             wilBitPanel9 = new WiLBiT.WiLBiTPanel();
             wilBitPanel11 = new WiLBiT.WiLBiTPanel();
+            lblVerifiqueNome = new Label();
             wilBitPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             wilBitPanel2.SuspendLayout();
@@ -312,6 +317,10 @@
             wilBitPanel2.BorderColor = Color.PaleVioletRed;
             wilBitPanel2.BorderRadius = 20;
             wilBitPanel2.BorderSize = 0;
+            wilBitPanel2.Controls.Add(lblVerifiqueData);
+            wilBitPanel2.Controls.Add(lblVerifiqueEmail);
+            wilBitPanel2.Controls.Add(lblVerifiqueCPF);
+            wilBitPanel2.Controls.Add(lblVerifiqueSenha);
             wilBitPanel2.Controls.Add(dateTimePicker1);
             wilBitPanel2.Controls.Add(btnCadastro_Login);
             wilBitPanel2.Controls.Add(btnLogin_Cadastro);
@@ -332,6 +341,7 @@
             wilBitPanel2.Controls.Add(wilBitPanel8);
             wilBitPanel2.Controls.Add(wilBitPanel9);
             wilBitPanel2.Controls.Add(wilBitPanel11);
+            wilBitPanel2.Controls.Add(lblVerifiqueNome);
             wilBitPanel2.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             wilBitPanel2.ForeColor = Color.White;
             wilBitPanel2.Location = new Point(825, 179);
@@ -340,9 +350,57 @@
             wilBitPanel2.TabIndex = 1;
             wilBitPanel2.Paint += wilBitPanel2_Paint_1;
             // 
+            // lblVerifiqueData
+            // 
+            lblVerifiqueData.AutoSize = true;
+            lblVerifiqueData.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVerifiqueData.ForeColor = Color.Navy;
+            lblVerifiqueData.Location = new Point(100, 204);
+            lblVerifiqueData.Name = "lblVerifiqueData";
+            lblVerifiqueData.Size = new Size(393, 40);
+            lblVerifiqueData.TabIndex = 20;
+            lblVerifiqueData.Text = "*Verifique sua Data de Nascimento e tente novamente.\r\n  Você precisa ter entre 16 e 99 anos para se cadastrar.";
+            lblVerifiqueData.Visible = false;
+            // 
+            // lblVerifiqueEmail
+            // 
+            lblVerifiqueEmail.AutoSize = true;
+            lblVerifiqueEmail.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVerifiqueEmail.ForeColor = Color.Navy;
+            lblVerifiqueEmail.Location = new Point(100, 305);
+            lblVerifiqueEmail.Name = "lblVerifiqueEmail";
+            lblVerifiqueEmail.Size = new Size(220, 21);
+            lblVerifiqueEmail.TabIndex = 19;
+            lblVerifiqueEmail.Text = "*E-mail em uso ou inválido.";
+            lblVerifiqueEmail.Visible = false;
+            // 
+            // lblVerifiqueCPF
+            // 
+            lblVerifiqueCPF.AutoSize = true;
+            lblVerifiqueCPF.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVerifiqueCPF.ForeColor = Color.Navy;
+            lblVerifiqueCPF.Location = new Point(100, 392);
+            lblVerifiqueCPF.Name = "lblVerifiqueCPF";
+            lblVerifiqueCPF.Size = new Size(199, 21);
+            lblVerifiqueCPF.TabIndex = 18;
+            lblVerifiqueCPF.Text = "*CPF em uso ou inválido.";
+            lblVerifiqueCPF.Visible = false;
+            // 
+            // lblVerifiqueSenha
+            // 
+            lblVerifiqueSenha.AutoSize = true;
+            lblVerifiqueSenha.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVerifiqueSenha.ForeColor = Color.Navy;
+            lblVerifiqueSenha.Location = new Point(106, 481);
+            lblVerifiqueSenha.Name = "lblVerifiqueSenha";
+            lblVerifiqueSenha.Size = new Size(333, 21);
+            lblVerifiqueSenha.TabIndex = 17;
+            lblVerifiqueSenha.Text = "*Verifique a sua Senha e tente novamente.";
+            lblVerifiqueSenha.Visible = false;
+            // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(106, 166);
+            dateTimePicker1.Location = new Point(106, 175);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(342, 26);
             dateTimePicker1.TabIndex = 17;
@@ -413,7 +471,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(106, 140);
+            label7.Location = new Point(106, 149);
             label7.Name = "label7";
             label7.Size = new Size(150, 20);
             label7.TabIndex = 13;
@@ -428,7 +486,7 @@
             txtCadastroEmail.BorderSize = 2;
             txtCadastroEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtCadastroEmail.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroEmail.Location = new Point(100, 238);
+            txtCadastroEmail.Location = new Point(100, 264);
             txtCadastroEmail.Margin = new Padding(4);
             txtCadastroEmail.Multiline = false;
             txtCadastroEmail.Name = "txtCadastroEmail";
@@ -446,7 +504,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(106, 212);
+            label6.Location = new Point(106, 243);
             label6.Name = "label6";
             label6.Size = new Size(47, 20);
             label6.TabIndex = 9;
@@ -461,7 +519,7 @@
             txtCadastroCPF.BorderSize = 2;
             txtCadastroCPF.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtCadastroCPF.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroCPF.Location = new Point(100, 304);
+            txtCadastroCPF.Location = new Point(100, 350);
             txtCadastroCPF.Margin = new Padding(4);
             txtCadastroCPF.Multiline = false;
             txtCadastroCPF.Name = "txtCadastroCPF";
@@ -479,7 +537,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(106, 280);
+            label5.Location = new Point(106, 326);
             label5.Name = "label5";
             label5.Size = new Size(36, 20);
             label5.TabIndex = 11;
@@ -495,7 +553,7 @@
             wilBitButton1.FlatStyle = FlatStyle.Flat;
             wilBitButton1.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point);
             wilBitButton1.ForeColor = Color.Black;
-            wilBitButton1.Location = new Point(172, 494);
+            wilBitButton1.Location = new Point(172, 504);
             wilBitButton1.Name = "wilBitButton1";
             wilBitButton1.Size = new Size(185, 53);
             wilBitButton1.TabIndex = 9;
@@ -512,7 +570,7 @@
             txtCadastroNome.BorderSize = 2;
             txtCadastroNome.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtCadastroNome.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroNome.Location = new Point(100, 98);
+            txtCadastroNome.Location = new Point(100, 94);
             txtCadastroNome.Margin = new Padding(4);
             txtCadastroNome.Multiline = false;
             txtCadastroNome.Name = "txtCadastroNome";
@@ -531,7 +589,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(106, 74);
+            label3.Location = new Point(106, 70);
             label3.Name = "label3";
             label3.Size = new Size(49, 20);
             label3.TabIndex = 8;
@@ -546,14 +604,14 @@
             txtCadastroSenha.BorderSize = 2;
             txtCadastroSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtCadastroSenha.ForeColor = Color.FromArgb(64, 64, 64);
-            txtCadastroSenha.Location = new Point(100, 379);
+            txtCadastroSenha.Location = new Point(100, 438);
             txtCadastroSenha.Margin = new Padding(4);
             txtCadastroSenha.Multiline = false;
             txtCadastroSenha.Name = "txtCadastroSenha";
             txtCadastroSenha.Padding = new Padding(10, 7, 10, 7);
             txtCadastroSenha.PasswordChar = true;
-            txtCadastroSenha.PlaceholderColor = Color.DarkGray;
-            txtCadastroSenha.PlaceholderText = "";
+            txtCadastroSenha.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtCadastroSenha.PlaceholderText = "Sua Senha precisa ter entre 8 e 16 caracteres.";
             txtCadastroSenha.Size = new Size(348, 29);
             txtCadastroSenha.TabIndex = 6;
             txtCadastroSenha.Texts = "";
@@ -565,7 +623,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(106, 355);
+            label4.Location = new Point(106, 414);
             label4.Name = "label4";
             label4.Size = new Size(52, 20);
             label4.TabIndex = 7;
@@ -578,7 +636,7 @@
             wilBitPanel5.BorderRadius = 11;
             wilBitPanel5.BorderSize = 0;
             wilBitPanel5.ForeColor = Color.White;
-            wilBitPanel5.Location = new Point(106, 108);
+            wilBitPanel5.Location = new Point(106, 104);
             wilBitPanel5.Name = "wilBitPanel5";
             wilBitPanel5.Size = new Size(348, 28);
             wilBitPanel5.TabIndex = 8;
@@ -590,7 +648,7 @@
             wilBitPanel7.BorderRadius = 11;
             wilBitPanel7.BorderSize = 0;
             wilBitPanel7.ForeColor = Color.White;
-            wilBitPanel7.Location = new Point(106, 249);
+            wilBitPanel7.Location = new Point(106, 275);
             wilBitPanel7.Name = "wilBitPanel7";
             wilBitPanel7.Size = new Size(348, 28);
             wilBitPanel7.TabIndex = 10;
@@ -602,7 +660,7 @@
             wilBitPanel8.BorderRadius = 11;
             wilBitPanel8.BorderSize = 0;
             wilBitPanel8.ForeColor = Color.White;
-            wilBitPanel8.Location = new Point(106, 315);
+            wilBitPanel8.Location = new Point(106, 361);
             wilBitPanel8.Name = "wilBitPanel8";
             wilBitPanel8.Size = new Size(348, 28);
             wilBitPanel8.TabIndex = 11;
@@ -614,7 +672,7 @@
             wilBitPanel9.BorderRadius = 11;
             wilBitPanel9.BorderSize = 0;
             wilBitPanel9.ForeColor = Color.White;
-            wilBitPanel9.Location = new Point(106, 391);
+            wilBitPanel9.Location = new Point(106, 450);
             wilBitPanel9.Name = "wilBitPanel9";
             wilBitPanel9.Size = new Size(348, 28);
             wilBitPanel9.TabIndex = 12;
@@ -626,10 +684,22 @@
             wilBitPanel11.BorderRadius = 11;
             wilBitPanel11.BorderSize = 0;
             wilBitPanel11.ForeColor = Color.White;
-            wilBitPanel11.Location = new Point(177, 504);
+            wilBitPanel11.Location = new Point(177, 514);
             wilBitPanel11.Name = "wilBitPanel11";
             wilBitPanel11.Size = new Size(185, 53);
             wilBitPanel11.TabIndex = 9;
+            // 
+            // lblVerifiqueNome
+            // 
+            lblVerifiqueNome.AutoSize = true;
+            lblVerifiqueNome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblVerifiqueNome.ForeColor = Color.Navy;
+            lblVerifiqueNome.Location = new Point(106, 130);
+            lblVerifiqueNome.Name = "lblVerifiqueNome";
+            lblVerifiqueNome.Size = new Size(320, 21);
+            lblVerifiqueNome.TabIndex = 21;
+            lblVerifiqueNome.Text = "*Verifique seu Nome e tente novamente.";
+            lblVerifiqueNome.Visible = false;
             // 
             // Login
             // 
@@ -691,5 +761,10 @@
         private WiLBiT.WiLBiTButton btnCadastro_Login;
         private WiLBiT.WiLBiTButton btnLogin_Cadastro;
         private DateTimePicker dateTimePicker1;
+        private Label lblVerifiqueCPF;
+        private Label lblVerifiqueSenha;
+        private Label lblVerifiqueData;
+        private Label lblVerifiqueEmail;
+        private Label lblVerifiqueNome;
     }
 }
