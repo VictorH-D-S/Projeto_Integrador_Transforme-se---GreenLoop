@@ -149,11 +149,11 @@
 
         #endregion
 
-        public FontAwesome.Sharp.IconPictureBox btnEncerrarADM;
-        public Label label2;
-        public WiLBiT.WiLBiTRoundedPictureBox2 btnVoltarADM;
-        public WiLBiT.WiLBiTRoundedPictureBox2 Voltar;
-        public Panel painel;
-        public Panel panel1;
+        public static FontAwesome.Sharp.IconPictureBox btnEncerrarADM;
+        public static Label label2;
+        public static WiLBiT.WiLBiTRoundedPictureBox2 btnVoltarADM;
+        public static WiLBiT.WiLBiTRoundedPictureBox2 Voltar;
+        public static Panel painel;
+        public static Panel panel1;
     }
 }

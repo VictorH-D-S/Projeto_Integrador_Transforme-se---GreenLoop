@@ -48,18 +48,24 @@ namespace pi_serasa_greenloop
             if (!cpf.All(char.IsDigit) || cpf.Length != 11 || Conexao.CPFExisteNaTabela(cpf))
             {
                 lblVerifiqueCPF.Visible = true;
+                txtCadastroCPF.BorderColor = Color.Blue;
+                return;
             }
 
             // ----------------------- Verificações de E-mail --------------------------
             if (!Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", RegexOptions.IgnoreCase) || email.Length > 255 || Conexao.EmailExisteNaTabela(email))
             {
                 lblVerifiqueEmail.Visible = true;
+                txtCadastroEmail.BorderColor = Color.Blue;
+                return;
             }
 
             // ----------------------- Verificações de Nome --------------------------
-            if (!Regex.IsMatch(nome, @"^[a-zA-Z0-9\s]+$") || nome.Length > 45)
+            if (!Regex.IsMatch(nome, @"^[a-zA-Z0-9\s]+$") || nome.Length > 45 || nome.Length < 3)
             {
                 lblVerifiqueNome.Visible = true;
+                txtCadastroNome.BorderColor = Color.Blue;
+                return;
             }
 
             // ----------------------- Verificações de Data --------------------------
@@ -74,11 +80,16 @@ namespace pi_serasa_greenloop
             if (senha.Length < 8 || senha.Length > 16)
             {
                 lblVerifiqueSenha.Visible = true;
+                txtCadastroSenha.BorderColor = Color.Blue;
                 return;
             }
 
             // ----------------------- FIM DAS VERIFICAÇÕES --------------------------
 
+            txtCadastroSenha.BorderColor = Color.Green;
+            txtCadastroEmail.BorderColor = Color.Green;
+            txtCadastroCPF.BorderColor = Color.Green;
+            txtCadastroNome.BorderColor = Color.Green;
             adicionarUsuario();
             MessageBox.Show("Usuário Cadastrado!", "Cadastro Concluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
             login();
@@ -239,6 +250,11 @@ namespace pi_serasa_greenloop
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             Form1.Voltar.Enabled = false;
+            txtCadastroNome.TabIndex = 0;
+            dateTimePicker1.TabIndex = 1;
+            txtCadastroEmail.TabIndex = 2;
+            txtCadastroCPF.TabIndex = 3;
+            txtCadastroSenha.TabIndex = 4;
             login();
         }
 
@@ -299,6 +315,34 @@ namespace pi_serasa_greenloop
         private void txtCadastroNome__TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVisualizarSenha_Click(object sender, EventArgs e)
+        {
+            txtCadastroSenha.PasswordChar = false;
+            btnEsconderSenhaCadastro.Visible = true;
+            btnVisualizarSenha.Visible = false;
+        }
+
+        private void btnEsconderSenhaCadastro_Click(object sender, EventArgs e)
+        {
+            txtCadastroSenha.PasswordChar = true;
+            btnVisualizarSenha.Visible = true;
+            btnEsconderSenhaCadastro.Visible = false;
+        }
+
+        private void btnVisualizarSenhaLogin_Click(object sender, EventArgs e)
+        {
+            txtLoginSenha.PasswordChar = false;
+            btnEsconderSenhaLogin.Visible = true;
+            btnVisualizarSenhaLogin.Visible = false;
+        }
+
+        private void btnEsconderSenhaLogin_Click(object sender, EventArgs e)
+        {
+            txtLoginSenha.PasswordChar = true;
+            btnVisualizarSenhaLogin.Visible = true;
+            btnEsconderSenhaLogin.Visible = false;
         }
     }
 }

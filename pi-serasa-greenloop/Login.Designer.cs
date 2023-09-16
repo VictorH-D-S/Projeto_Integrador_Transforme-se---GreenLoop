@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            btnEsconderSenhaLogin = new FontAwesome.Sharp.IconPictureBox();
+            btnVisualizarSenhaLogin = new FontAwesome.Sharp.IconPictureBox();
             btnLogin = new WiLBiT.WiLBiTButton();
             lblMensagemErro = new Label();
             btnLoginn = new WiLBiT.WiLBiTButton();
@@ -45,6 +47,7 @@
             wilBitPanel10 = new WiLBiT.WiLBiTPanel();
             pictureBox3 = new PictureBox();
             wilBitPanel2 = new WiLBiT.WiLBiTPanel();
+            btnVisualizarSenha = new FontAwesome.Sharp.IconPictureBox();
             lblVerifiqueData = new Label();
             lblVerifiqueEmail = new Label();
             lblVerifiqueCPF = new Label();
@@ -70,10 +73,15 @@
             wilBitPanel9 = new WiLBiT.WiLBiTPanel();
             wilBitPanel11 = new WiLBiT.WiLBiTPanel();
             lblVerifiqueNome = new Label();
+            btnEsconderSenhaCadastro = new FontAwesome.Sharp.IconPictureBox();
             wilBitPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaLogin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnVisualizarSenhaLogin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             wilBitPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnVisualizarSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaCadastro).BeginInit();
             SuspendLayout();
             // 
             // wilBitPanel1
@@ -83,6 +91,7 @@
             wilBitPanel1.BorderColor = Color.PaleVioletRed;
             wilBitPanel1.BorderRadius = 20;
             wilBitPanel1.BorderSize = 0;
+            wilBitPanel1.Controls.Add(btnVisualizarSenhaLogin);
             wilBitPanel1.Controls.Add(btnLogin);
             wilBitPanel1.Controls.Add(lblMensagemErro);
             wilBitPanel1.Controls.Add(btnLoginn);
@@ -97,12 +106,40 @@
             wilBitPanel1.Controls.Add(wilBitPanel4);
             wilBitPanel1.Controls.Add(wilBitPanel10);
             wilBitPanel1.Controls.Add(pictureBox3);
+            wilBitPanel1.Controls.Add(btnEsconderSenhaLogin);
             wilBitPanel1.ForeColor = Color.White;
             wilBitPanel1.Location = new Point(196, 179);
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(533, 568);
             wilBitPanel1.TabIndex = 0;
             wilBitPanel1.Paint += wilBitPanel1_Paint_1;
+            // 
+            // btnEsconderSenhaLogin
+            // 
+            btnEsconderSenhaLogin.BackColor = Color.FromArgb(192, 64, 0);
+            btnEsconderSenhaLogin.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            btnEsconderSenhaLogin.IconColor = Color.White;
+            btnEsconderSenhaLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEsconderSenhaLogin.Location = new Point(449, 335);
+            btnEsconderSenhaLogin.Name = "btnEsconderSenhaLogin";
+            btnEsconderSenhaLogin.Size = new Size(32, 32);
+            btnEsconderSenhaLogin.TabIndex = 24;
+            btnEsconderSenhaLogin.TabStop = false;
+            btnEsconderSenhaLogin.Visible = false;
+            btnEsconderSenhaLogin.Click += btnEsconderSenhaLogin_Click;
+            // 
+            // btnVisualizarSenhaLogin
+            // 
+            btnVisualizarSenhaLogin.BackColor = Color.FromArgb(192, 64, 0);
+            btnVisualizarSenhaLogin.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            btnVisualizarSenhaLogin.IconColor = Color.White;
+            btnVisualizarSenhaLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnVisualizarSenhaLogin.Location = new Point(449, 335);
+            btnVisualizarSenhaLogin.Name = "btnVisualizarSenhaLogin";
+            btnVisualizarSenhaLogin.Size = new Size(32, 32);
+            btnVisualizarSenhaLogin.TabIndex = 24;
+            btnVisualizarSenhaLogin.TabStop = false;
+            btnVisualizarSenhaLogin.Click += btnVisualizarSenhaLogin_Click;
             // 
             // btnLogin
             // 
@@ -317,6 +354,7 @@
             wilBitPanel2.BorderColor = Color.PaleVioletRed;
             wilBitPanel2.BorderRadius = 20;
             wilBitPanel2.BorderSize = 0;
+            wilBitPanel2.Controls.Add(btnVisualizarSenha);
             wilBitPanel2.Controls.Add(lblVerifiqueData);
             wilBitPanel2.Controls.Add(lblVerifiqueEmail);
             wilBitPanel2.Controls.Add(lblVerifiqueCPF);
@@ -342,6 +380,7 @@
             wilBitPanel2.Controls.Add(wilBitPanel9);
             wilBitPanel2.Controls.Add(wilBitPanel11);
             wilBitPanel2.Controls.Add(lblVerifiqueNome);
+            wilBitPanel2.Controls.Add(btnEsconderSenhaCadastro);
             wilBitPanel2.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             wilBitPanel2.ForeColor = Color.White;
             wilBitPanel2.Location = new Point(825, 179);
@@ -349,6 +388,19 @@
             wilBitPanel2.Size = new Size(533, 568);
             wilBitPanel2.TabIndex = 1;
             wilBitPanel2.Paint += wilBitPanel2_Paint_1;
+            // 
+            // btnVisualizarSenha
+            // 
+            btnVisualizarSenha.BackColor = Color.FromArgb(192, 64, 0);
+            btnVisualizarSenha.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            btnVisualizarSenha.IconColor = Color.White;
+            btnVisualizarSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnVisualizarSenha.Location = new Point(461, 446);
+            btnVisualizarSenha.Name = "btnVisualizarSenha";
+            btnVisualizarSenha.Size = new Size(32, 32);
+            btnVisualizarSenha.TabIndex = 22;
+            btnVisualizarSenha.TabStop = false;
+            btnVisualizarSenha.Click += btnVisualizarSenha_Click;
             // 
             // lblVerifiqueData
             // 
@@ -701,6 +753,20 @@
             lblVerifiqueNome.Text = "*Verifique seu Nome e tente novamente.";
             lblVerifiqueNome.Visible = false;
             // 
+            // btnEsconderSenhaCadastro
+            // 
+            btnEsconderSenhaCadastro.BackColor = Color.FromArgb(192, 64, 0);
+            btnEsconderSenhaCadastro.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            btnEsconderSenhaCadastro.IconColor = Color.White;
+            btnEsconderSenhaCadastro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEsconderSenhaCadastro.Location = new Point(461, 446);
+            btnEsconderSenhaCadastro.Name = "btnEsconderSenhaCadastro";
+            btnEsconderSenhaCadastro.Size = new Size(32, 32);
+            btnEsconderSenhaCadastro.TabIndex = 23;
+            btnEsconderSenhaCadastro.TabStop = false;
+            btnEsconderSenhaCadastro.Visible = false;
+            btnEsconderSenhaCadastro.Click += btnEsconderSenhaCadastro_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -716,10 +782,14 @@
             Load += Login_Load_2;
             wilBitPanel1.ResumeLayout(false);
             wilBitPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaLogin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnVisualizarSenhaLogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             wilBitPanel2.ResumeLayout(false);
             wilBitPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnVisualizarSenha).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaCadastro).EndInit();
             ResumeLayout(false);
         }
 
@@ -766,5 +836,9 @@
         private Label lblVerifiqueData;
         private Label lblVerifiqueEmail;
         private Label lblVerifiqueNome;
+        private FontAwesome.Sharp.IconPictureBox btnVisualizarSenha;
+        private FontAwesome.Sharp.IconPictureBox btnEsconderSenhaCadastro;
+        private FontAwesome.Sharp.IconPictureBox btnEsconderSenhaLogin;
+        private FontAwesome.Sharp.IconPictureBox btnVisualizarSenhaLogin;
     }
 }

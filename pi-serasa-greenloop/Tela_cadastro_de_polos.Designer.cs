@@ -102,7 +102,7 @@
             txtSenha.Multiline = false;
             txtSenha.Name = "txtSenha";
             txtSenha.Padding = new Padding(10, 7, 10, 7);
-            txtSenha.PasswordChar = false;
+            txtSenha.PasswordChar = true;
             txtSenha.PlaceholderColor = Color.DarkGray;
             txtSenha.PlaceholderText = "";
             txtSenha.Size = new Size(581, 29);
@@ -125,8 +125,8 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Padding = new Padding(10, 7, 10, 7);
             txtEmail.PasswordChar = false;
-            txtEmail.PlaceholderColor = Color.DarkGray;
-            txtEmail.PlaceholderText = "";
+            txtEmail.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtEmail.PlaceholderText = "Exemplo: lospollos@mexico.com";
             txtEmail.Size = new Size(581, 29);
             txtEmail.TabIndex = 17;
             txtEmail.Texts = "";
@@ -147,8 +147,8 @@
             txtEndereco.Name = "txtEndereco";
             txtEndereco.Padding = new Padding(10, 7, 10, 7);
             txtEndereco.PasswordChar = false;
-            txtEndereco.PlaceholderColor = Color.DarkGray;
-            txtEndereco.PlaceholderText = "";
+            txtEndereco.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtEndereco.PlaceholderText = "Exemplo: ";
             txtEndereco.Size = new Size(581, 29);
             txtEndereco.TabIndex = 16;
             txtEndereco.Texts = "";
@@ -169,8 +169,8 @@
             txtNome.Name = "txtNome";
             txtNome.Padding = new Padding(10, 7, 10, 7);
             txtNome.PasswordChar = false;
-            txtNome.PlaceholderColor = Color.DarkGray;
-            txtNome.PlaceholderText = "";
+            txtNome.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtNome.PlaceholderText = "Exemplo: Los Pollos Reciclagens";
             txtNome.Size = new Size(580, 29);
             txtNome.TabIndex = 15;
             txtNome.Texts = "";
