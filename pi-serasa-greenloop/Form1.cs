@@ -11,76 +11,65 @@ using Microsoft.Web.WebView2.Core;
 
 namespace pi_serasa_greenloop
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
-		}
-		/*private void painel_SizeChanged(object sender, EventArgs e)
+    public partial class Form1 : Form
+    {
+        public Form1()
         {
-            // Centraliza o formulário dentro do painel
+            InitializeComponent();
+        }
+        public void responsivo()
+        {
+            //Centraliazdor de painel do governo do amor
+            int formLARGURA = this.Width, formALTURA = this.Height, panelLARGURA = panel1.Width, panelALTURA = panel1.Height;
+            int centralizaPainel = (formLARGURA - panel1.Width) / 2;
+            panel1.Location = new Point(centralizaPainel, 0);
+
+            //Centralizador de label termine minha vida
+            int labelLargura = (panel1.Width - label2.Width) / 2;
+            int LabelAltura = (panel1.Height - label2.Height) / 2;
+            label2.Location = new Point(labelLargura, LabelAltura);
+
+            //Centralizador de painéis do shadow o ouriço(este aqui deixa os painéis responsivos quando carregamos no form1 HAHAHAHAHAHA)
             int formX = (painel.Width - this.Width) / 2;
             int formY = (painel.Height - this.Height) / 2;
+            this.Location = new Point(formX, formY);
 
-            this.Location = new System.Drawing.Point(formX, formY);
+            WindowState = FormWindowState.Maximized;
+            panel1.Dock = DockStyle.Top;
+            Voltar.Anchor = AnchorStyles.Left;
+            label2.Anchor = AnchorStyles.None;
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            Voltar.Visible = true;
+
         }
-        */
-		public void responsivo()
-		{
-			//Centraliazdor de painel do governo do amor
-			int formLARGURA = this.Width, formALTURA = this.Height, panelLARGURA = panel1.Width, panelALTURA = panel1.Height;
-			int centralizaPainel = (formLARGURA - panel1.Width) / 2;
-			panel1.Location = new Point(centralizaPainel, 0);
 
-			//Centralizador de label termine minha vida
-			int labelLargura = (panel1.Width - label2.Width) / 2;
-			int LabelAltura = (panel1.Height - label2.Height) / 2;
-			label2.Location = new Point(labelLargura, LabelAltura);
+        public void carregaForm(Form form)
+        {
+            form.TopLevel = false;
+            painel.Controls.Clear();
+            painel.Controls.Add(form);
+            form.Size = painel.Size;
+            form.Location = new Point(painel.Width - form.Width, painel.Height - form.Height);
+            form.Show();
 
-			//Centralizador de painéis do shadow o ouriço(este aqui deixa os painéis responsivos quando carregamos no form1 HAHAHAHAHAHA)
-			int formX = (painel.Width - this.Width) / 2;
-			int formY = (painel.Height - this.Height) / 2;
-			this.Location = new Point(formX, formY);
+        }
 
-			WindowState = FormWindowState.Maximized;
-			panel1.Dock = DockStyle.Top;
-			Voltar.Anchor = AnchorStyles.Left;
-			label2.Anchor = AnchorStyles.None;
-			label2.TextAlign = ContentAlignment.MiddleCenter;
-			Voltar.Visible = true;
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            responsivo();
+            carregaForm(new Login());
+        }
 
-		}
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            carregaForm(new Principal());
+        }
 
-		public void carregaForm(Form form)
-		{
-			form.TopLevel = false;
-			painel.Controls.Clear();
-			painel.Controls.Add(form);
-			form.Size = painel.Size;
-			form.Location = new Point(painel.Width - form.Width, painel.Height - form.Height);
-			form.Show();
-
-		}
-
-		private void btnVoltar_Click(object sender, EventArgs e)
-		{
-			painel.Controls.Clear();
-
-			carregaForm(new Principal());
-		}
-
-		private void Form1_Load_1(object sender, EventArgs e)
-		{
-			responsivo();
-			carregaForm(new Login());
-		}
-
-		private void Voltar_Click(object sender, EventArgs e)
-		{
-			carregaForm(new Principal());
-		}
-	}
+        private void btnVoltarADM_Click(object sender, EventArgs e)
+        {
+            carregaForm(new tela_Admir());
+        }
+    }
 }
 
 /*

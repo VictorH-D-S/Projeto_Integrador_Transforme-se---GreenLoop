@@ -123,17 +123,16 @@ namespace pi_serasa_greenloop
                 }
                 else
                 {
-                    if (pessoas.adm == 1) // Verifique se o usuário tem adm igual a 1
+                    if (pessoas.adm == 1)
                     {
                         MessageBox.Show("Login realizado como Admin");
-                        // Carregue o formulário de Admin aqui
                         carregaForm(new tela_Admir());
                     }
                     else
                     {
                         MessageBox.Show("Login realizado com sucesso");
                         Program.pessoa = pessoas;
-                        //carregaForm(new Principal());
+                        carregaForm(new Principal());
                         Form1.Voltar.Enabled = true;
                     }
                 }
@@ -201,53 +200,12 @@ namespace pi_serasa_greenloop
 
         }
 
-        private void wilBitPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void wilBitPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Login_Load(object sender, EventArgs e)
         {
             int centerX = (this.ClientSize.Width - wilBitPanel1.Width - wilBitPanel2.Width) / 2;
             int centerY = (this.ClientSize.Height - wilBitPanel1.Height) / 2;
             wilBitPanel1.Location = new Point(centerX, centerY);
             wilBitPanel2.Location = new Point(centerX + wilBitPanel1.Width, centerY);
-        }
-
-        private void txtCadastroNome__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load_1(object sender, EventArgs e)
-        {
-            int centerX = (this.ClientSize.Width - wilBitPanel1.Width - wilBitPanel2.Width) / 2;
-            int centerY = (this.ClientSize.Height - wilBitPanel1.Height) / 2;
-            wilBitPanel1.Location = new Point(centerX, centerY);
-            wilBitPanel2.Location = new Point(centerX + wilBitPanel1.Width, centerY);
-
-            login();
-        }
-
-        private void wilBitButton1_Click_1(object sender, EventArgs e)
-        {
-            VerificaCamposCadastro();
-            carregaForm(new Principal());
-        }
-
-        private void btnLoginn_Click(object sender, EventArgs e)
-        {
-            login();
-        }
-
-        private void btnCadastroo_Click(object sender, EventArgs e)
-        {
-            cadastro();
         }
 
         private void txtCadastroSenha__TextChanged(object sender, EventArgs e)
@@ -304,11 +262,6 @@ namespace pi_serasa_greenloop
         private void btnCadastro_Login_Click(object sender, EventArgs e)
         {
             cadastro();
-        }
-
-        private void wilBitDateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
