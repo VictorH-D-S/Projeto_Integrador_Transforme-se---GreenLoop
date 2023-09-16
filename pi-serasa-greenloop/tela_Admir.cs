@@ -59,6 +59,7 @@ namespace pi_serasa_greenloop
             pnlResponsivo_TelaAdemir.Location = new Point((this.ClientSize.Width - pnlResponsivo_TelaAdemir.Width) / 2, (this.ClientSize.Height - pnlResponsivo_TelaAdemir.Height - 100) / 2);
             this.WindowState = FormWindowState.Maximized;
             Form1.btnVoltarADM.Visible = true;
+            Form1.btnEncerrarADM.Visible = true;
         }
     }
 }

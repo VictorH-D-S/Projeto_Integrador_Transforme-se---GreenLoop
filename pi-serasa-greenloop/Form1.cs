@@ -58,6 +58,8 @@ namespace pi_serasa_greenloop
         {
             responsivo();
             carregaForm(new Login());
+            btnEncerrarADM.Visible = false;
+            btnVoltarADM.Visible = false;
         }
 
         private void Voltar_Click(object sender, EventArgs e)
@@ -68,6 +70,22 @@ namespace pi_serasa_greenloop
         private void btnVoltarADM_Click(object sender, EventArgs e)
         {
             carregaForm(new tela_Admir());
+        }
+
+        private void btnEncerrarADM_Click(object sender, EventArgs e)
+        {
+            Pessoas pessoas = new Pessoas();
+            DialogResult result = MessageBox.Show("Deseja sair?", "Encerrar Atividades", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                carregaForm(new Login());
+                btnVoltarADM.Visible = false;
+                btnEncerrarADM.Visible = false;
+            }
+            else
+            {
+            }
         }
     }
 }

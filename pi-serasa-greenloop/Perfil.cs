@@ -87,7 +87,7 @@ namespace pi_serasa_greenloop
         private void btnExcluirConta_Usuário_Click_1(object sender, EventArgs e)
         {
             Pessoas pessoas = new Pessoas();
-            DialogResult result = MessageBox.Show("Deseja sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Deseja sair?", "Sair de sua Conta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
