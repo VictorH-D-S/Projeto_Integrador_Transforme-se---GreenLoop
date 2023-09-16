@@ -63,12 +63,6 @@ namespace pi_serasa_greenloop
 
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
-		{
-			//responsivo();
-			//carregaForm(new Login());
-		}
-
 		private void btnVoltar_Click(object sender, EventArgs e)
 		{
 			painel.Controls.Clear();
@@ -76,20 +70,10 @@ namespace pi_serasa_greenloop
 			carregaForm(new Principal());
 		}
 
-		private void painel_Paint(object sender, PaintEventArgs e)
-		{
-
-		}
-
-		private void label2_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void Form1_Load_1(object sender, EventArgs e)
 		{
 			responsivo();
-			carregaForm(new Principal());
+			carregaForm(new Login());
 		}
 
 		private void Voltar_Click(object sender, EventArgs e)

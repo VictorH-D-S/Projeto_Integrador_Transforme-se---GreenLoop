@@ -20,17 +20,12 @@ namespace pi_serasa_greenloop
 
         void adicionarUsuario()
         {
-            string nome = txtCadastroNome.Text;
-            string senha = txtCadastroSenha.Text;
-            string cpf = txtCadastroCPF.Text;
-            string email = txtCadastroEmail.Text;
+            string nome = txtCadastroNome.Texts;
+            string senha = txtCadastroSenha.Texts;
+            string cpf = txtCadastroCPF.Texts;
+            string email = txtCadastroEmail.Texts;
             string idade = dateTimePicker1.Text.ToString();
-
-            // Recupere o valor de pontos da fonte de dados
-            int pontos = Conexao.RecuperarPontuacaoAtual(cpf);
-
-            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, pontos);
-
+            Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, 0);
             pessoas.adicionarUsuario();
         }
         void VerificaCamposCadastro()

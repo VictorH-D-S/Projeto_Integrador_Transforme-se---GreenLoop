@@ -39,10 +39,8 @@
             label1 = new Label();
             panel1 = new Panel();
             ptbPerfilAvatar = new WiLBiT.WiLBiTRoundedPictureBox();
-            label3 = new Label();
             label4 = new Label();
             lblPontos = new Label();
-            lblTotal_Reciclado = new Label();
             lblNome = new Label();
             pnlPerfil.SuspendLayout();
             panel1.SuspendLayout();
@@ -164,10 +162,8 @@
             // 
             panel1.BackColor = Color.MidnightBlue;
             panel1.Controls.Add(ptbPerfilAvatar);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(lblPontos);
-            panel1.Controls.Add(lblTotal_Reciclado);
             panel1.Controls.Add(lblNome);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -192,24 +188,12 @@
             ptbPerfilAvatar.TabIndex = 8;
             ptbPerfilAvatar.TabStop = false;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(220, 122);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(157, 25);
-            label3.TabIndex = 3;
-            label3.Text = "Total Reciclado -";
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(220, 183);
+            label4.Location = new Point(220, 103);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(92, 25);
@@ -221,7 +205,7 @@
             lblPontos.AutoSize = true;
             lblPontos.BackColor = Color.Transparent;
             lblPontos.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPontos.Location = new Point(307, 183);
+            lblPontos.Location = new Point(307, 103);
             lblPontos.Margin = new Padding(2, 0, 2, 0);
             lblPontos.Name = "lblPontos";
             lblPontos.Size = new Size(23, 25);
@@ -229,24 +213,12 @@
             lblPontos.Text = "0";
             lblPontos.Click += lblPontos_Click;
             // 
-            // lblTotal_Reciclado
-            // 
-            lblTotal_Reciclado.AutoSize = true;
-            lblTotal_Reciclado.BackColor = Color.Transparent;
-            lblTotal_Reciclado.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTotal_Reciclado.Location = new Point(371, 122);
-            lblTotal_Reciclado.Margin = new Padding(2, 0, 2, 0);
-            lblTotal_Reciclado.Name = "lblTotal_Reciclado";
-            lblTotal_Reciclado.Size = new Size(23, 25);
-            lblTotal_Reciclado.TabIndex = 2;
-            lblTotal_Reciclado.Text = "0";
-            // 
             // lblNome
             // 
             lblNome.AutoSize = true;
             lblNome.BackColor = Color.Transparent;
             lblNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNome.Location = new Point(220, 59);
+            lblNome.Location = new Point(220, 58);
             lblNome.Margin = new Padding(2, 0, 2, 0);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(184, 25);
@@ -288,9 +260,7 @@
         private WiLBiT.WiLBiTButton btnExcluirConta_Usuário;
         private Panel panel1;
         private WiLBiT.WiLBiTRoundedPictureBox ptbPerfilAvatar;
-        private Label label3;
         private Label label4;
         private Label lblPontos;
-        private Label lblTotal_Reciclado;
     }
 }

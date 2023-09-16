@@ -23,8 +23,7 @@ namespace pi_serasa_greenloop
             txtEndereco.Texts = "";
             txtNome.Texts = "";
             txtSenha.Texts = "";
-            txt_ponto_de_coleta.Texts = "";
-            txt_ponto_de_coleta.Focus();
+            txtNome.Focus();
         }
 
         void iniciar()

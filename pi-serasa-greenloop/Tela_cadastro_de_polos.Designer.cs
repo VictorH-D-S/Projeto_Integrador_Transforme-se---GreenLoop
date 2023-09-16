@@ -38,8 +38,6 @@
             label6 = new Label();
             label5 = new Label();
             label2 = new Label();
-            label1 = new Label();
-            txt_ponto_de_coleta = new WiLBiT.WiLBiTTextBox();
             btnRemover = new WiLBiT.WiLBiTButton();
             btnAdicionar = new WiLBiT.WiLBiTButton();
             label3 = new Label();
@@ -63,8 +61,6 @@
             wilBitPanel1.Controls.Add(label6);
             wilBitPanel1.Controls.Add(label5);
             wilBitPanel1.Controls.Add(label2);
-            wilBitPanel1.Controls.Add(label1);
-            wilBitPanel1.Controls.Add(txt_ponto_de_coleta);
             wilBitPanel1.Controls.Add(btnRemover);
             wilBitPanel1.Controls.Add(btnAdicionar);
             wilBitPanel1.ForeColor = Color.White;
@@ -101,7 +97,7 @@
             txtSenha.BorderSize = 2;
             txtSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtSenha.ForeColor = Color.FromArgb(64, 64, 64);
-            txtSenha.Location = new Point(17, 301);
+            txtSenha.Location = new Point(18, 226);
             txtSenha.Margin = new Padding(4);
             txtSenha.Multiline = false;
             txtSenha.Name = "txtSenha";
@@ -123,7 +119,7 @@
             txtEmail.BorderSize = 2;
             txtEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.ForeColor = Color.FromArgb(64, 64, 64);
-            txtEmail.Location = new Point(17, 239);
+            txtEmail.Location = new Point(18, 164);
             txtEmail.Margin = new Padding(4);
             txtEmail.Multiline = false;
             txtEmail.Name = "txtEmail";
@@ -145,7 +141,7 @@
             txtEndereco.BorderSize = 2;
             txtEndereco.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtEndereco.ForeColor = Color.FromArgb(64, 64, 64);
-            txtEndereco.Location = new Point(17, 177);
+            txtEndereco.Location = new Point(18, 102);
             txtEndereco.Margin = new Padding(4);
             txtEndereco.Multiline = false;
             txtEndereco.Name = "txtEndereco";
@@ -167,7 +163,7 @@
             txtNome.BorderSize = 2;
             txtNome.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtNome.ForeColor = Color.FromArgb(64, 64, 64);
-            txtNome.Location = new Point(18, 115);
+            txtNome.Location = new Point(19, 40);
             txtNome.Margin = new Padding(4);
             txtNome.Multiline = false;
             txtNome.Name = "txtNome";
@@ -185,7 +181,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(17, 86);
+            label7.Location = new Point(18, 11);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(66, 25);
@@ -197,7 +193,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(17, 148);
+            label6.Location = new Point(18, 73);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(95, 25);
@@ -209,7 +205,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(17, 210);
+            label5.Location = new Point(18, 135);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(67, 25);
@@ -222,46 +218,11 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(18, 272);
+            label2.Location = new Point(19, 197);
             label2.Name = "label2";
             label2.Size = new Size(66, 25);
             label2.TabIndex = 8;
             label2.Text = "Senha";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(18, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(206, 25);
-            label1.TabIndex = 7;
-            label1.Text = "ID do ponto de coleta";
-            // 
-            // txt_ponto_de_coleta
-            // 
-            txt_ponto_de_coleta.BackColor = SystemColors.Window;
-            txt_ponto_de_coleta.BorderColor = Color.Black;
-            txt_ponto_de_coleta.BorderFocusColor = Color.DeepSkyBlue;
-            txt_ponto_de_coleta.BorderRadius = 15;
-            txt_ponto_de_coleta.BorderSize = 2;
-            txt_ponto_de_coleta.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_ponto_de_coleta.ForeColor = Color.FromArgb(64, 64, 64);
-            txt_ponto_de_coleta.Location = new Point(18, 53);
-            txt_ponto_de_coleta.Margin = new Padding(4);
-            txt_ponto_de_coleta.Multiline = false;
-            txt_ponto_de_coleta.Name = "txt_ponto_de_coleta";
-            txt_ponto_de_coleta.Padding = new Padding(10, 7, 10, 7);
-            txt_ponto_de_coleta.PasswordChar = false;
-            txt_ponto_de_coleta.PlaceholderColor = Color.DarkGray;
-            txt_ponto_de_coleta.PlaceholderText = "";
-            txt_ponto_de_coleta.Size = new Size(580, 29);
-            txt_ponto_de_coleta.TabIndex = 6;
-            txt_ponto_de_coleta.Texts = "";
-            txt_ponto_de_coleta.UnderlinedStyle = false;
-            txt_ponto_de_coleta._TextChanged += txt_ponto_de_coleta__TextChanged;
             // 
             // btnRemover
             // 
@@ -346,8 +307,6 @@
         private WiLBiT.WiLBiTButton btnRemover;
         private WiLBiT.WiLBiTButton btnAdicionar;
         private Label label2;
-        private Label label1;
-        private WiLBiT.WiLBiTTextBox txt_ponto_de_coleta;
         private Label label3;
         private WiLBiT.WiLBiTButton btnConfirmar;
         private Label label7;
