@@ -30,14 +30,14 @@
         {
             painel = new Panel();
             panel1 = new Panel();
+            btnEncerrarADM = new FontAwesome.Sharp.IconPictureBox();
             Voltar = new WiLBiT.WiLBiTRoundedPictureBox2();
             label2 = new Label();
             btnVoltarADM = new WiLBiT.WiLBiTRoundedPictureBox2();
-            btnEncerrarADM = new FontAwesome.Sharp.IconPictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEncerrarADM).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Voltar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltarADM).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnEncerrarADM).BeginInit();
             SuspendLayout();
             // 
             // painel
@@ -61,6 +61,23 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1444, 89);
             panel1.TabIndex = 2;
+            // 
+            // btnEncerrarADM
+            // 
+            btnEncerrarADM.Anchor = AnchorStyles.Right;
+            btnEncerrarADM.BackColor = Color.LimeGreen;
+            btnEncerrarADM.ForeColor = Color.Red;
+            btnEncerrarADM.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            btnEncerrarADM.IconColor = Color.Red;
+            btnEncerrarADM.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEncerrarADM.IconSize = 88;
+            btnEncerrarADM.Location = new Point(1353, 0);
+            btnEncerrarADM.Name = "btnEncerrarADM";
+            btnEncerrarADM.Size = new Size(88, 88);
+            btnEncerrarADM.TabIndex = 3;
+            btnEncerrarADM.TabStop = false;
+            btnEncerrarADM.Visible = false;
+            btnEncerrarADM.Click += btnEncerrarADM_Click;
             // 
             // Voltar
             // 
@@ -111,22 +128,6 @@
             btnVoltarADM.Visible = false;
             btnVoltarADM.Click += btnVoltarADM_Click;
             // 
-            // btnEncerrarADM
-            // 
-            btnEncerrarADM.BackColor = Color.LimeGreen;
-            btnEncerrarADM.ForeColor = Color.Red;
-            btnEncerrarADM.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            btnEncerrarADM.IconColor = Color.Red;
-            btnEncerrarADM.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEncerrarADM.IconSize = 88;
-            btnEncerrarADM.Location = new Point(1353, 0);
-            btnEncerrarADM.Name = "btnEncerrarADM";
-            btnEncerrarADM.Size = new Size(88, 88);
-            btnEncerrarADM.TabIndex = 3;
-            btnEncerrarADM.TabStop = false;
-            btnEncerrarADM.Visible = false;
-            btnEncerrarADM.Click += btnEncerrarADM_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -140,19 +141,19 @@
             Load += Form1_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEncerrarADM).EndInit();
             ((System.ComponentModel.ISupportInitialize)Voltar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnVoltarADM).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnEncerrarADM).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        public static FontAwesome.Sharp.IconPictureBox btnEncerrarADM;
-        public static Label label2;
-        public static WiLBiT.WiLBiTRoundedPictureBox2 btnVoltarADM;
-        public static WiLBiT.WiLBiTRoundedPictureBox2 Voltar;
-        public static Panel painel;
-        public static Panel panel1;
+        public FontAwesome.Sharp.IconPictureBox btnEncerrarADM;
+        public Label label2;
+        public WiLBiT.WiLBiTRoundedPictureBox2 btnVoltarADM;
+        public WiLBiT.WiLBiTRoundedPictureBox2 Voltar;
+        public Panel painel;
+        public Panel panel1;
     }
 }
