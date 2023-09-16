@@ -34,7 +34,7 @@ namespace pi_serasa_greenloop
             string senha = txtCadastroSenha.Texts;
             string cpf = txtCadastroCPF.Texts;
             string email = txtCadastroEmail.Texts.Trim();
-            lblVerifiqueNome.Visible = lblVerifiqueSenha.Visible = lblVerifiqueCPF.Visible = lblVerifiqueEmail.Visible = lblVerifiqueData.Visible = false;
+            lblVerifiqueNome.Visible = lblVerifiqueSenha.Visible = lblVerifiqueCPF.Visible = lblVerifiqueEmail.Visible = lblVerifiqueData.Visible = lblMensagemErro.Visible = false; ;
 
             bool camposVazios = string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(senha) || string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(email);
 
@@ -125,11 +125,13 @@ namespace pi_serasa_greenloop
                 {
                     if (pessoas.adm == 1)
                     {
+                        lblMensagemErro.Visible = false;
                         MessageBox.Show("Login realizado como Admin");
                         carregaForm(new tela_Admir());
                     }
                     else
                     {
+                        lblMensagemErro.Visible = false;
                         MessageBox.Show("Login realizado com sucesso");
                         Program.pessoa = pessoas;
                         carregaForm(new Principal());
@@ -149,10 +151,12 @@ namespace pi_serasa_greenloop
                 if (polos == null)
                 {
                     lblMensagemErro.Visible = true;
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Polo encontrado");
+                    lblMensagemErro.Visible = false;
+                    MessageBox.Show("Login realizado como Polo de Reciclagem");
                     carregaForm(new DarPontos());
                 }
             }
