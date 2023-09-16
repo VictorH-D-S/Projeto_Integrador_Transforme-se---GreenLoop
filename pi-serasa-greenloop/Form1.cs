@@ -89,7 +89,7 @@ namespace pi_serasa_greenloop
 		private void Form1_Load_1(object sender, EventArgs e)
 		{
 			responsivo();
-			carregaForm(new Login());
+			carregaForm(new tela_Admir());
 		}
 
 		private void Voltar_Click(object sender, EventArgs e)

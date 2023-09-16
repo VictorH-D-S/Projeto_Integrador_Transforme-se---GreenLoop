@@ -63,6 +63,16 @@ namespace pi_serasa_greenloop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2666513 {
+            get {
+                object obj = ResourceManager.GetObject("2666513", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _535137 {
             get {
                 object obj = ResourceManager.GetObject("535137", resourceCulture);
