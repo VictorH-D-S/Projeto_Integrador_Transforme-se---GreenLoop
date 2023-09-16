@@ -71,11 +71,5 @@ namespace pi_serasa_greenloop
             Pessoas pessoas = new Pessoas(nome, idade, email, senha, cpf, pontos, adm);
             return pessoas;
 		}
-
-        public void deletarPerfil()
-        {
-            string query = $"DELETE FROM pessoas WHERE email = '{email}';";
-            Conexao.executaQuery(query);
-        }
     }
 }

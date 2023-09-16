@@ -18,16 +18,21 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
+        public void carregaForm(Form form)
+        {
+            form.TopLevel = false;
+            Form1.painel.Controls.Clear();
+            Form1.painel.Controls.Add(form);
+            form.Size = Form1.painel.Size;
+            form.Location = new Point(Form1.painel.Width - form.Width, Form1.painel.Height - form.Height);
+            form.Show();
+
+        }
 
         void atualizaInterface()
         {
-            // Calcula a posição vertical para centralizar o painel
             int newY = (this.ClientSize.Height - pnlPerfil.Height - 100) / 2;
-
-            // Mantém a largura do painel inalterada
             pnlPerfil.Location = new Point(pnlPerfil.Location.X, newY);
-
-            // Define o estado da janela como maximizado (opcional)
             this.WindowState = FormWindowState.Maximized;
         }
         void atualizaPerfil()
@@ -58,36 +63,7 @@ namespace pi_serasa_greenloop
             return $"{parte1.Substring(0, 3)}.{parte1.Substring(3, 3)}.{parte1.Substring(6, 3)}-{parte2}";
         }
 
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Perfil_Load(object sender, EventArgs e)
-        {
-            atualizaPerfil();
-            atualizaInterface();
-        }
-
-        private void pnlResponsivo_Perfil_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnExcluirConta_Usuário_Click(object sender, EventArgs e)
-        {
-            Pessoas pessoas = new Pessoas();
-            pessoas.deletarPerfil();
-            MessageBox.Show("Conta deletada com sucesso!");
-        }
-
         private void lblNome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlResponsivo_Perfil_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
@@ -106,6 +82,20 @@ namespace pi_serasa_greenloop
         private void lblPontos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExcluirConta_Usuário_Click_1(object sender, EventArgs e)
+        {
+            Pessoas pessoas = new Pessoas();
+            DialogResult result = MessageBox.Show("Deseja sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                carregaForm(new Login());
+            }
+            else
+            {
+            }
         }
     }
 }

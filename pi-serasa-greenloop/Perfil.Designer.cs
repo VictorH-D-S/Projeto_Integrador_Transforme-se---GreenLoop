@@ -71,19 +71,20 @@
             // 
             // btnExcluirConta_Usuário
             // 
-            btnExcluirConta_Usuário.BackColor = Color.FromArgb(72, 116, 245);
+            btnExcluirConta_Usuário.BackColor = Color.Red;
             btnExcluirConta_Usuário.BorderColor = Color.FromArgb(72, 116, 245);
             btnExcluirConta_Usuário.BorderRadius = 6;
             btnExcluirConta_Usuário.BorderSize = 0;
             btnExcluirConta_Usuário.FlatAppearance.BorderSize = 0;
             btnExcluirConta_Usuário.FlatStyle = FlatStyle.Flat;
             btnExcluirConta_Usuário.ForeColor = Color.White;
-            btnExcluirConta_Usuário.Location = new Point(397, 498);
+            btnExcluirConta_Usuário.Location = new Point(397, 501);
             btnExcluirConta_Usuário.Name = "btnExcluirConta_Usuário";
             btnExcluirConta_Usuário.Size = new Size(94, 22);
             btnExcluirConta_Usuário.TabIndex = 15;
-            btnExcluirConta_Usuário.Text = "Excluir Conta";
+            btnExcluirConta_Usuário.Text = "Sair da Conta";
             btnExcluirConta_Usuário.UseVisualStyleBackColor = false;
+            btnExcluirConta_Usuário.Click += btnExcluirConta_Usuário_Click_1;
             // 
             // lblCpf
             // 
