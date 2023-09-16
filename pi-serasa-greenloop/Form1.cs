@@ -17,7 +17,15 @@ namespace pi_serasa_greenloop
 		{
 			InitializeComponent();
 		}
+		/*private void painel_SizeChanged(object sender, EventArgs e)
+        {
+            // Centraliza o formulário dentro do painel
+            int formX = (painel.Width - this.Width) / 2;
+            int formY = (painel.Height - this.Height) / 2;
 
+            this.Location = new System.Drawing.Point(formX, formY);
+        }
+        */
 		public void responsivo()
 		{
 			//Centraliazdor de painel do governo do amor
@@ -81,26 +89,14 @@ namespace pi_serasa_greenloop
 		private void Form1_Load_1(object sender, EventArgs e)
 		{
 			responsivo();
-			carregaForm(new Principal());
+			carregaForm(new Login());
 		}
 
 		private void Voltar_Click(object sender, EventArgs e)
 		{
 			carregaForm(new Principal());
 		}
-
-        private void Voltar_Click_1(object sender, EventArgs e)
-        {
-            carregaForm(new Principal());
-
-        }
-
-        private void Form1_Load_2(object sender, EventArgs e)
-        {
-            responsivo();
-            carregaForm(new Principal());
-        }
-    }
+	}
 }
 
 /*

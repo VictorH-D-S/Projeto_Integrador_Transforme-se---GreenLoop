@@ -32,7 +32,7 @@ namespace pi_serasa_greenloop
 
         public void adicionarUsuario()
         {
-            string query = $"INSERT INTO pessoas(nome, idade, email, senha, cpf) VALUES ('{nome}', '{idade}', '{email}', '{senha}', {cpf});";
+            string query = $"INSERT INTO pessoas(nome, idade, email, senha, cpf) VALUES ('{nome}', '{idade}', '{email}', '{senha}', {cpf})";
             Conexao.executaQuery(query);
         }
 
