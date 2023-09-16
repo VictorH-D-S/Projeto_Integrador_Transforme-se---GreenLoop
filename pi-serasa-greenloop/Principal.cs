@@ -238,5 +238,10 @@ namespace pi_serasa_greenloop
 		{
 			carregaForm(new Site());
 		}
+
+		private void pictureBox3_Click_1(object sender, EventArgs e)
+		{
+			carregaForm(new Site());
+		}
 	}
 }

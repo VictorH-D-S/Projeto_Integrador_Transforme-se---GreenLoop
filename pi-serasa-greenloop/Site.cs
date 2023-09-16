@@ -27,7 +27,7 @@ namespace pi_serasa_greenloop
 			if (webView.CoreWebView2 != null)
 			{
 				// Defina a URL do site que você deseja exibir
-				string url = "https://youtu.be/Whz4s5uOwUM";
+				string url = "https://friendly-crepe-259d37.netlify.app";
 
 				// Carregue a página da web no controle WebView2
 				webView.CoreWebView2.Navigate(url);
@@ -39,6 +39,10 @@ namespace pi_serasa_greenloop
 			}
 		}
 
+		private void webView_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 
 }
