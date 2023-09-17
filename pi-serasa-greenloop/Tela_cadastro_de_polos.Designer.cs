@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            btnMostraSenha = new FontAwesome.Sharp.IconPictureBox();
+            btnEscondeSenha = new FontAwesome.Sharp.IconPictureBox();
             btnConfirmar = new WiLBiT.WiLBiTButton();
             txtSenha = new WiLBiT.WiLBiTTextBox();
             txtEmail = new WiLBiT.WiLBiTTextBox();
@@ -43,6 +45,8 @@
             label3 = new Label();
             pnlResponsivo_CadastroPollos = new Panel();
             wilBitPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnMostraSenha).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnEscondeSenha).BeginInit();
             pnlResponsivo_CadastroPollos.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,6 +56,8 @@
             wilBitPanel1.BorderColor = Color.PaleVioletRed;
             wilBitPanel1.BorderRadius = 11;
             wilBitPanel1.BorderSize = 0;
+            wilBitPanel1.Controls.Add(btnMostraSenha);
+            wilBitPanel1.Controls.Add(btnEscondeSenha);
             wilBitPanel1.Controls.Add(btnConfirmar);
             wilBitPanel1.Controls.Add(txtSenha);
             wilBitPanel1.Controls.Add(txtEmail);
@@ -68,6 +74,33 @@
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(924, 415);
             wilBitPanel1.TabIndex = 2;
+            // 
+            // btnMostraSenha
+            // 
+            btnMostraSenha.BackColor = Color.FromArgb(65, 41, 160);
+            btnMostraSenha.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            btnMostraSenha.IconColor = Color.White;
+            btnMostraSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnMostraSenha.Location = new Point(606, 226);
+            btnMostraSenha.Name = "btnMostraSenha";
+            btnMostraSenha.Size = new Size(32, 32);
+            btnMostraSenha.TabIndex = 25;
+            btnMostraSenha.TabStop = false;
+            btnMostraSenha.Click += btnMostraSenha_Click;
+            // 
+            // btnEscondeSenha
+            // 
+            btnEscondeSenha.BackColor = Color.FromArgb(65, 41, 160);
+            btnEscondeSenha.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            btnEscondeSenha.IconColor = Color.White;
+            btnEscondeSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEscondeSenha.Location = new Point(606, 226);
+            btnEscondeSenha.Name = "btnEscondeSenha";
+            btnEscondeSenha.Size = new Size(32, 32);
+            btnEscondeSenha.TabIndex = 26;
+            btnEscondeSenha.TabStop = false;
+            btnEscondeSenha.Visible = false;
+            btnEscondeSenha.Click += btnEscondeSenha_Click;
             // 
             // btnConfirmar
             // 
@@ -148,7 +181,7 @@
             txtEndereco.Padding = new Padding(10, 7, 10, 7);
             txtEndereco.PasswordChar = false;
             txtEndereco.PlaceholderColor = Color.FromArgb(64, 64, 64);
-            txtEndereco.PlaceholderText = "Exemplo: ";
+            txtEndereco.PlaceholderText = "Exemplo: Endereço: R. Mal. Deodoro, 3183 - Centro, São Carlos - SP, 13560-201";
             txtEndereco.Size = new Size(581, 29);
             txtEndereco.TabIndex = 16;
             txtEndereco.Texts = "";
@@ -297,6 +330,8 @@
             Load += Tela_cadastro_de_polos_Load_1;
             wilBitPanel1.ResumeLayout(false);
             wilBitPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnMostraSenha).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnEscondeSenha).EndInit();
             pnlResponsivo_CadastroPollos.ResumeLayout(false);
             pnlResponsivo_CadastroPollos.PerformLayout();
             ResumeLayout(false);
@@ -317,5 +352,7 @@
         private WiLBiT.WiLBiTTextBox txtEndereco;
         private WiLBiT.WiLBiTTextBox txtNome;
         private Panel pnlResponsivo_CadastroPollos;
+        private FontAwesome.Sharp.IconPictureBox btnMostraSenha;
+        private FontAwesome.Sharp.IconPictureBox btnEscondeSenha;
     }
 }

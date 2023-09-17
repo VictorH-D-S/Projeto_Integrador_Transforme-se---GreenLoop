@@ -164,5 +164,19 @@ namespace pi_serasa_greenloop
         {
 
         }
+
+        private void btnMostraSenha_Click(object sender, EventArgs e)
+        {
+            txtSenha.PasswordChar = false;
+            btnEscondeSenha.Visible = true;
+            btnMostraSenha.Visible = false;
+        }
+
+        private void btnEscondeSenha_Click(object sender, EventArgs e)
+        {
+            txtSenha.PasswordChar = true;
+            btnEscondeSenha.Visible = false;
+            btnMostraSenha.Visible = true;
+        }
     }
 }

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
-            btnEsconderSenhaLogin = new FontAwesome.Sharp.IconPictureBox();
             btnVisualizarSenhaLogin = new FontAwesome.Sharp.IconPictureBox();
             btnLogin = new WiLBiT.WiLBiTButton();
             lblMensagemErro = new Label();
@@ -46,6 +45,7 @@
             wilBitPanel4 = new WiLBiT.WiLBiTPanel();
             wilBitPanel10 = new WiLBiT.WiLBiTPanel();
             pictureBox3 = new PictureBox();
+            btnEsconderSenhaLogin = new FontAwesome.Sharp.IconPictureBox();
             wilBitPanel2 = new WiLBiT.WiLBiTPanel();
             btnVisualizarSenha = new FontAwesome.Sharp.IconPictureBox();
             lblVerifiqueData = new Label();
@@ -75,9 +75,9 @@
             lblVerifiqueNome = new Label();
             btnEsconderSenhaCadastro = new FontAwesome.Sharp.IconPictureBox();
             wilBitPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaLogin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnVisualizarSenhaLogin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaLogin).BeginInit();
             wilBitPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnVisualizarSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -113,20 +113,6 @@
             wilBitPanel1.Size = new Size(533, 568);
             wilBitPanel1.TabIndex = 0;
             wilBitPanel1.Paint += wilBitPanel1_Paint_1;
-            // 
-            // btnEsconderSenhaLogin
-            // 
-            btnEsconderSenhaLogin.BackColor = Color.FromArgb(192, 64, 0);
-            btnEsconderSenhaLogin.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
-            btnEsconderSenhaLogin.IconColor = Color.White;
-            btnEsconderSenhaLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEsconderSenhaLogin.Location = new Point(449, 335);
-            btnEsconderSenhaLogin.Name = "btnEsconderSenhaLogin";
-            btnEsconderSenhaLogin.Size = new Size(32, 32);
-            btnEsconderSenhaLogin.TabIndex = 24;
-            btnEsconderSenhaLogin.TabStop = false;
-            btnEsconderSenhaLogin.Visible = false;
-            btnEsconderSenhaLogin.Click += btnEsconderSenhaLogin_Click;
             // 
             // btnVisualizarSenhaLogin
             // 
@@ -346,6 +332,20 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 15;
             pictureBox3.TabStop = false;
+            // 
+            // btnEsconderSenhaLogin
+            // 
+            btnEsconderSenhaLogin.BackColor = Color.FromArgb(192, 64, 0);
+            btnEsconderSenhaLogin.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            btnEsconderSenhaLogin.IconColor = Color.White;
+            btnEsconderSenhaLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEsconderSenhaLogin.Location = new Point(449, 335);
+            btnEsconderSenhaLogin.Name = "btnEsconderSenhaLogin";
+            btnEsconderSenhaLogin.Size = new Size(32, 32);
+            btnEsconderSenhaLogin.TabIndex = 24;
+            btnEsconderSenhaLogin.TabStop = false;
+            btnEsconderSenhaLogin.Visible = false;
+            btnEsconderSenhaLogin.Click += btnEsconderSenhaLogin_Click;
             // 
             // wilBitPanel2
             // 
@@ -782,9 +782,9 @@
             Load += Login_Load_2;
             wilBitPanel1.ResumeLayout(false);
             wilBitPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaLogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnVisualizarSenhaLogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnEsconderSenhaLogin).EndInit();
             wilBitPanel2.ResumeLayout(false);
             wilBitPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnVisualizarSenha).EndInit();

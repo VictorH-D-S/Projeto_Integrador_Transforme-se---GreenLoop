@@ -42,9 +42,12 @@
             label4 = new Label();
             lblPontos = new Label();
             lblNome = new Label();
+            panel2 = new Panel();
+            lblRecompensa = new Label();
             pnlPerfil.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // pnlPerfil
@@ -54,6 +57,7 @@
             pnlPerfil.BorderColor = Color.OldLace;
             pnlPerfil.BorderRadius = 11;
             pnlPerfil.BorderSize = 0;
+            pnlPerfil.Controls.Add(panel2);
             pnlPerfil.Controls.Add(btnExcluirConta_Usuário);
             pnlPerfil.Controls.Add(lblCpf);
             pnlPerfil.Controls.Add(label8);
@@ -66,7 +70,7 @@
             pnlPerfil.Location = new Point(138, 81);
             pnlPerfil.Margin = new Padding(2);
             pnlPerfil.Name = "pnlPerfil";
-            pnlPerfil.Size = new Size(494, 526);
+            pnlPerfil.Size = new Size(895, 526);
             pnlPerfil.TabIndex = 0;
             // 
             // btnExcluirConta_Usuário
@@ -78,7 +82,7 @@
             btnExcluirConta_Usuário.FlatAppearance.BorderSize = 0;
             btnExcluirConta_Usuário.FlatStyle = FlatStyle.Flat;
             btnExcluirConta_Usuário.ForeColor = Color.White;
-            btnExcluirConta_Usuário.Location = new Point(397, 501);
+            btnExcluirConta_Usuário.Location = new Point(11, 490);
             btnExcluirConta_Usuário.Name = "btnExcluirConta_Usuário";
             btnExcluirConta_Usuário.Size = new Size(94, 22);
             btnExcluirConta_Usuário.TabIndex = 15;
@@ -227,6 +231,25 @@
             lblNome.Text = "\"Nome de Usuário\"";
             lblNome.Click += lblNome_Click;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Firebrick;
+            panel2.Controls.Add(lblRecompensa);
+            panel2.Location = new Point(491, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(404, 526);
+            panel2.TabIndex = 17;
+            // 
+            // lblRecompensa
+            // 
+            lblRecompensa.AutoSize = true;
+            lblRecompensa.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblRecompensa.Location = new Point(0, 0);
+            lblRecompensa.Name = "lblRecompensa";
+            lblRecompensa.Size = new Size(235, 32);
+            lblRecompensa.TabIndex = 0;
+            lblRecompensa.Text = "Suas Recompensas:";
+            // 
             // Perfil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -245,6 +268,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -263,5 +288,7 @@
         private WiLBiT.WiLBiTRoundedPictureBox ptbPerfilAvatar;
         private Label label4;
         private Label lblPontos;
+        private Panel panel2;
+        private Label lblRecompensa;
     }
 }
