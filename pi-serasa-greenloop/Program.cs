@@ -15,7 +15,7 @@ namespace pi_serasa_greenloop
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Cadastrar_Premios());
+            Application.Run(new recompensas());
 
 
 

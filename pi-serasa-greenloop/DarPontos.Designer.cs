@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DarPontos));
             label3 = new Label();
             wilBitPanel1 = new WiLBiT.WiLBiTPanel();
+            lblTudoCerto = new Label();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             lblErro = new Label();
             pictureBox1 = new PictureBox();
             btnDepositar = new WiLBiT.WiLBiTButton();
@@ -40,13 +42,11 @@
             label1 = new Label();
             wilBitPanel2 = new WiLBiT.WiLBiTPanel();
             wilBitPanel3 = new WiLBiT.WiLBiTPanel();
-            lblTudoCerto = new Label();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             PainelResponsivo_DarPontos = new Panel();
             lblPontodeColeta = new Label();
             wilBitPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             PainelResponsivo_DarPontos.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,6 +84,37 @@
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(626, 482);
             wilBitPanel1.TabIndex = 6;
+            // 
+            // lblTudoCerto
+            // 
+            lblTudoCerto.AutoSize = true;
+            lblTudoCerto.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTudoCerto.ForeColor = Color.Green;
+            lblTudoCerto.Location = new Point(46, 405);
+            lblTudoCerto.Name = "lblTudoCerto";
+            lblTudoCerto.Size = new Size(561, 64);
+            lblTudoCerto.TabIndex = 9;
+            lblTudoCerto.Text = "Tudo Certo!\r\nClique na Tela Para Fazer Uma Nova Operação ;)";
+            lblTudoCerto.Visible = false;
+            lblTudoCerto.Click += lblTudoCerto_Click;
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.BackColor = Color.FromArgb(128, 255, 128);
+            iconPictureBox1.Enabled = false;
+            iconPictureBox1.ForeColor = Color.ForestGreen;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            iconPictureBox1.IconColor = Color.ForestGreen;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 461;
+            iconPictureBox1.Location = new Point(46, -23);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(563, 461);
+            iconPictureBox1.TabIndex = 9;
+            iconPictureBox1.TabStop = false;
+            iconPictureBox1.Visible = false;
+            iconPictureBox1.WaitOnLoad = true;
+            iconPictureBox1.Click += iconPictureBox1_Click;
             // 
             // lblErro
             // 
@@ -217,37 +248,6 @@
             wilBitPanel3.Size = new Size(462, 30);
             wilBitPanel3.TabIndex = 6;
             // 
-            // lblTudoCerto
-            // 
-            lblTudoCerto.AutoSize = true;
-            lblTudoCerto.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTudoCerto.ForeColor = Color.Green;
-            lblTudoCerto.Location = new Point(46, 405);
-            lblTudoCerto.Name = "lblTudoCerto";
-            lblTudoCerto.Size = new Size(561, 64);
-            lblTudoCerto.TabIndex = 9;
-            lblTudoCerto.Text = "Tudo Certo!\r\nClique na Tela Para Fazer Uma Nova Operação ;)";
-            lblTudoCerto.Visible = false;
-            lblTudoCerto.Click += lblTudoCerto_Click;
-            // 
-            // iconPictureBox1
-            // 
-            iconPictureBox1.BackColor = Color.FromArgb(128, 255, 128);
-            iconPictureBox1.Enabled = false;
-            iconPictureBox1.ForeColor = Color.ForestGreen;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            iconPictureBox1.IconColor = Color.ForestGreen;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 476;
-            iconPictureBox1.Location = new Point(46, -38);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(563, 476);
-            iconPictureBox1.TabIndex = 9;
-            iconPictureBox1.TabStop = false;
-            iconPictureBox1.Visible = false;
-            iconPictureBox1.WaitOnLoad = true;
-            iconPictureBox1.Click += iconPictureBox1_Click;
-            // 
             // PainelResponsivo_DarPontos
             // 
             PainelResponsivo_DarPontos.Anchor = AnchorStyles.None;
@@ -284,8 +284,8 @@
             Load += DarPontos_Load;
             wilBitPanel1.ResumeLayout(false);
             wilBitPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             PainelResponsivo_DarPontos.ResumeLayout(false);
             ResumeLayout(false);
         }

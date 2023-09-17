@@ -17,14 +17,67 @@ namespace pi_serasa_greenloop
             InitializeComponent();
         }
 
+        private void PreencherPaineisDePremios()
+        {
+            // Consulta SQL para recuperar os prêmios da tabela premios
+            string query = "SELECT codigo, nome, descricao, valor FROM premios";
+
+            DataTable premios = Conexao.executaQuery(query);
+
+            if (premios != null && premios.Rows.Count > 0)
+            {
+                foreach (DataRow row in premios.Rows)
+                {
+                    // Recupere os dados do prêmio a partir da linha atual
+                    string premio = row["codigo"].ToString();
+                    string nome = row["nome"].ToString();
+                    string descricao = row["descricao"].ToString();
+                    int valor = Convert.ToInt32(row["valor"]);
+
+                    // Crie um novo painel para o prêmio
+                    Panel painelPremio = new Panel();
+                    painelPremio.BorderStyle = BorderStyle.FixedSingle;
+                    painelPremio.Size = new Size(200, 150); // Ajuste o tamanho conforme necessário
+                    painelPremio.BackColor = Color.LightGray; // Escolha uma cor de fundo adequada
+
+                    // Crie rótulos para exibir os detalhes do prêmio dentro do painel
+                    Label lblPremio = new Label();
+                    lblPremio.Text = premio;
+                    lblPremio.Location = new Point(10, 10);
+
+                    Label lblNome = new Label();
+                    lblNome.Text = nome;
+                    lblNome.Location = new Point(10, 30);
+
+                    Label lblDescricao = new Label();
+                    lblDescricao.Text = descricao;
+                    lblDescricao.Location = new Point(10, 50);
+
+                    Label lblValor = new Label();
+                    lblValor.Text = $"Valor: {valor}";
+                    lblValor.Location = new Point(10, 70);
+
+                    // Adicione os rótulos ao painel
+                    painelPremio.Controls.Add(lblPremio);
+                    painelPremio.Controls.Add(lblNome);
+                    painelPremio.Controls.Add(lblDescricao);
+                    painelPremio.Controls.Add(lblValor);
+
+                    // Adicione o painel de prêmio ao painel de conteúdo
+                    painelConteudo.Controls.Add(painelPremio);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não foram encontrados prêmios cadastrados.");
+            }
+        }
+
         private void recompensas_Load(object sender, EventArgs e)
         {
             painelConteudo.Location = new Point((this.ClientSize.Width - painelConteudo.Width) / 2, (this.ClientSize.Height - painelConteudo.Height + 140) / 2);
             this.WindowState = FormWindowState.Maximized;
-
-
             pnlMenuCima.Location = new Point(0, 0);
-
         }
 
         private void wilBitProgressBar21_Load(object sender, EventArgs e)
@@ -44,9 +97,8 @@ namespace pi_serasa_greenloop
 
         private void recompensas_Load_1(object sender, EventArgs e)
         {
+            PreencherPaineisDePremios();
             AtualizarPosicionamento();
-
-            // Registre o evento SizeChanged para ajustar o layout quando o tamanho da janela for alterado.
             this.SizeChanged += new EventHandler(recompensas_SizeChanged);
         }
 
