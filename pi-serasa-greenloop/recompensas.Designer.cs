@@ -73,6 +73,7 @@
             lblSeusPontos.Size = new Size(31, 35);
             lblSeusPontos.TabIndex = 2;
             lblSeusPontos.Text = "0";
+            lblSeusPontos.Click += lblSeusPontos_Click;
             // 
             // label11
             // 

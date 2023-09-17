@@ -34,12 +34,12 @@ namespace pi_serasa_greenloop
                 return;
             }
 
+            MessageBox.Show("Prêmio Cadastrado!");
             textBoxPremios.Texts = "";
             txtNomeRecompensa.Texts = "";
             txtDescricaoRecompensa.Texts = "";
             txtValorRecompensa.Texts = "";
             textBoxPremios.Focus();
-            iconeTaCerto.Visible = lblTudoCerto.Visible = true;
             Premios premios = new Premios(premio, nome, descricao, valor);
             premios.adicionarPremios();
         }
@@ -56,17 +56,6 @@ namespace pi_serasa_greenloop
             txtNomeRecompensa.TabIndex = 1;
             txtDescricaoRecompensa.TabIndex = 2;
             txtValorRecompensa.TabIndex = 3;
-            iconeTaCerto.Visible = lblTudoCerto.Visible = false;
-        }
-
-        private void iconeTaCerto_Click(object sender, EventArgs e)
-        {
-            iconeTaCerto.Visible = lblTudoCerto.Visible = false;
-        }
-
-        private void lblTudoCerto_Click(object sender, EventArgs e)
-        {
-            lblTudoCerto.Visible = iconeTaCerto.Visible = false;
         }
     }
 }

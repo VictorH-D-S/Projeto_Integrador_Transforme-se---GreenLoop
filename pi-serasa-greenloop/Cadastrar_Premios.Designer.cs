@@ -41,11 +41,8 @@
             txtDescricaoRecompensa = new WiLBiT.WiLBiTTextBox();
             label5 = new Label();
             txtValorRecompensa = new WiLBiT.WiLBiTTextBox();
-            lblTudoCerto = new Label();
-            iconeTaCerto = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconeTaCerto).BeginInit();
             SuspendLayout();
             // 
             // textBoxPremios
@@ -229,46 +226,12 @@
             txtValorRecompensa.Texts = "";
             txtValorRecompensa.UnderlinedStyle = false;
             // 
-            // lblTudoCerto
-            // 
-            lblTudoCerto.AutoSize = true;
-            lblTudoCerto.BackColor = Color.FromArgb(128, 255, 128);
-            lblTudoCerto.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTudoCerto.ForeColor = Color.Green;
-            lblTudoCerto.Location = new Point(510, 236);
-            lblTudoCerto.Name = "lblTudoCerto";
-            lblTudoCerto.Size = new Size(811, 94);
-            lblTudoCerto.TabIndex = 12;
-            lblTudoCerto.Text = "Tudo Certo!\r\nClique na Tela Para Fazer Uma Nova Operação ;)";
-            lblTudoCerto.Visible = false;
-            lblTudoCerto.Click += lblTudoCerto_Click;
-            // 
-            // iconeTaCerto
-            // 
-            iconeTaCerto.BackColor = Color.FromArgb(128, 255, 128);
-            iconeTaCerto.Enabled = false;
-            iconeTaCerto.ForeColor = Color.ForestGreen;
-            iconeTaCerto.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            iconeTaCerto.IconColor = Color.ForestGreen;
-            iconeTaCerto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconeTaCerto.IconSize = 569;
-            iconeTaCerto.Location = new Point(-12, -1);
-            iconeTaCerto.Name = "iconeTaCerto";
-            iconeTaCerto.Size = new Size(1358, 569);
-            iconeTaCerto.TabIndex = 13;
-            iconeTaCerto.TabStop = false;
-            iconeTaCerto.Visible = false;
-            iconeTaCerto.WaitOnLoad = true;
-            iconeTaCerto.Click += iconeTaCerto_Click;
-            // 
             // Cadastrar_Premios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(39, 2, 40);
             ClientSize = new Size(1345, 569);
-            Controls.Add(lblTudoCerto);
-            Controls.Add(iconeTaCerto);
             Controls.Add(label5);
             Controls.Add(txtValorRecompensa);
             Controls.Add(label4);
@@ -287,7 +250,6 @@
             Load += Cadastrar_Premios_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconeTaCerto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -306,7 +268,5 @@
         private WiLBiT.WiLBiTTextBox txtDescricaoRecompensa;
         private Label label5;
         private WiLBiT.WiLBiTTextBox txtValorRecompensa;
-        private Label lblTudoCerto;
-        private FontAwesome.Sharp.IconPictureBox iconeTaCerto;
     }
 }

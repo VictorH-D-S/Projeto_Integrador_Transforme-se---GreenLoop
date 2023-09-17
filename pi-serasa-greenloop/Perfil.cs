@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.Globalization;
 
 namespace pi_serasa_greenloop
 {
@@ -28,6 +30,86 @@ namespace pi_serasa_greenloop
             form.Show();
 
         }
+        private void CarregarPremiosResgatados()
+        {
+            // Suponha que você tenha o CPF do usuário logado
+            string cpfDoUsuario = Program.pessoa.cpf;
+
+            // Consulta SQL para recuperar as recompensas resgatadas pelo usuário com base no CPF
+            string queryPremiosResgatados = $"SELECT p.codigo, p.nome, p.descricao, p.valor, h.DataResgate " +
+                                             $"FROM premios p " +
+                                             $"INNER JOIN historico_resgates h ON p.codigo = h.PremioID " +
+                                             $"WHERE h.UsuarioID = '{cpfDoUsuario}'";
+
+            DataTable premiosResgatados = Conexao.executaQuery(queryPremiosResgatados);
+
+            if (premiosResgatados != null && premiosResgatados.Rows.Count > 0)
+            {
+                int paineisPorLinha = 2; // Quantidade de painéis por linha
+                int paineisNaLinhaAtual = 0; // Contador de painéis na linha atual
+
+                foreach (DataRow row in premiosResgatados.Rows)
+                {
+                    string codigoPremio = row["codigo"].ToString();
+                    string nomePremio = row["nome"].ToString();
+                    string descricaoPremio = row["descricao"].ToString();
+                    int valorPremio = Convert.ToInt32(row["valor"]);
+                    DateTime dataResgate = Convert.ToDateTime(row["DataResgate"]);
+
+                    // Crie um painel para exibir os detalhes do prêmio
+                    Panel painelPremio = new Panel();
+                    painelPremio.BorderStyle = BorderStyle.None;
+                    painelPremio.Size = new Size(300, 220); // Aumente a altura para acomodar a data de resgate
+                    painelPremio.BackColor = Color.Green; // Altere a cor de fundo para os prêmios resgatados
+                    painelPremio.Padding = new Padding(10);
+
+                    // Crie rótulos para exibir os detalhes do prêmio
+                    Label lblCodigo = new Label();
+                    lblCodigo.Text = $"Código: {codigoPremio}";
+                    lblCodigo.Location = new Point(10, 10);
+                    lblCodigo.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+                    lblCodigo.ForeColor = Color.White; // Cor do texto para destacar
+                    lblCodigo.AutoSize = true; // Ajuste automático ao tamanho do texto
+
+                    Label lblNome = new Label();
+                    lblNome.Text = nomePremio;
+                    lblNome.Location = new Point(10, 40);
+                    lblNome.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+                    lblNome.ForeColor = Color.White;
+                    lblNome.AutoSize = true; // Ajuste automático ao tamanho do texto
+
+                    Label lblDescricao = new Label();
+                    lblDescricao.Text = descricaoPremio;
+                    lblDescricao.Location = new Point(10, 70);
+                    lblDescricao.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+                    lblDescricao.ForeColor = Color.White;
+                    lblDescricao.AutoSize = true; // Ajuste automático ao tamanho do texto
+
+                    // Adicione os rótulos ao painel
+                    painelPremio.Controls.Add(lblCodigo);
+                    painelPremio.Controls.Add(lblNome);
+                    painelPremio.Controls.Add(lblDescricao);
+
+                    // Determine a posição do painel na linha atual
+                    int xPosition = (paineisNaLinhaAtual % paineisPorLinha) * (painelPremio.Width + 20);
+                    int yPosition = (paineisNaLinhaAtual / paineisPorLinha) * (painelPremio.Height + 20);
+
+                    // Defina a posição do painel
+                    painelPremio.Location = new Point(xPosition, yPosition);
+
+                    // Adicione o painel de prêmio ao painel pnlMeusPremios
+                    pnlMeusPremios.Controls.Add(painelPremio);
+                    lblNadaAinda.Visible = false;
+
+                    // Atualize o contador de painéis na linha atual
+                    paineisNaLinhaAtual++;
+                }
+            }
+            else
+            {
+                lblNadaAinda.Visible = true;
+            }
+        }
 
         void atualizaInterface()
         {
@@ -39,16 +121,19 @@ namespace pi_serasa_greenloop
         {
             lblEmail.Text = Program.pessoa.email;
             lblPontos.Text = Program.pessoa.pontos.ToString();
+
+            // Converter o nome para o formato de título
             string nome = Program.pessoa.nome;
             if (!string.IsNullOrEmpty(nome))
             {
-                nome = char.ToUpper(nome[0]) + nome.Substring(1).ToLower();
+                TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+                nome = textInfo.ToTitleCase(nome.ToLower());
             }
+
             lblNome.Text = nome;
             lblNasciemnto.Text = Program.pessoa.idade.ToString();
             lblCpf.Text = FormatarCpf(Program.pessoa.cpf);
         }
-
 
         string FormatarCpf(string cpf)
         {
@@ -70,6 +155,7 @@ namespace pi_serasa_greenloop
 
         private void Perfil_Load_1(object sender, EventArgs e)
         {
+            CarregarPremiosResgatados();
             atualizaPerfil();
             atualizaInterface();
         }
@@ -96,6 +182,11 @@ namespace pi_serasa_greenloop
             else
             {
             }
+        }
+
+        private void pnlMeusPremios_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

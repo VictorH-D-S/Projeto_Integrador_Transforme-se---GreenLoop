@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             pnlPerfil = new WiLBiT.WiLBiTPanel();
+            label2 = new Label();
+            pnlMeusPremios = new Panel();
+            lblNadaAinda = new Label();
             btnExcluirConta_Usuário = new WiLBiT.WiLBiTButton();
             lblCpf = new Label();
             label8 = new Label();
@@ -42,12 +45,10 @@
             label4 = new Label();
             lblPontos = new Label();
             lblNome = new Label();
-            panel2 = new Panel();
-            lblRecompensa = new Label();
             pnlPerfil.SuspendLayout();
+            pnlMeusPremios.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // pnlPerfil
@@ -57,7 +58,8 @@
             pnlPerfil.BorderColor = Color.OldLace;
             pnlPerfil.BorderRadius = 11;
             pnlPerfil.BorderSize = 0;
-            pnlPerfil.Controls.Add(panel2);
+            pnlPerfil.Controls.Add(label2);
+            pnlPerfil.Controls.Add(pnlMeusPremios);
             pnlPerfil.Controls.Add(btnExcluirConta_Usuário);
             pnlPerfil.Controls.Add(lblCpf);
             pnlPerfil.Controls.Add(label8);
@@ -70,19 +72,51 @@
             pnlPerfil.Location = new Point(138, 81);
             pnlPerfil.Margin = new Padding(2);
             pnlPerfil.Name = "pnlPerfil";
-            pnlPerfil.Size = new Size(895, 526);
+            pnlPerfil.Size = new Size(1120, 526);
             pnlPerfil.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(762, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(151, 30);
+            label2.TabIndex = 1;
+            label2.Text = "Meus Prêmios";
+            // 
+            // pnlMeusPremios
+            // 
+            pnlMeusPremios.AutoScroll = true;
+            pnlMeusPremios.BackColor = Color.FromArgb(66, 11, 62);
+            pnlMeusPremios.Controls.Add(lblNadaAinda);
+            pnlMeusPremios.Location = new Point(480, 58);
+            pnlMeusPremios.Name = "pnlMeusPremios";
+            pnlMeusPremios.Size = new Size(637, 468);
+            pnlMeusPremios.TabIndex = 17;
+            pnlMeusPremios.Paint += pnlMeusPremios_Paint;
+            // 
+            // lblNadaAinda
+            // 
+            lblNadaAinda.AutoSize = true;
+            lblNadaAinda.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNadaAinda.Location = new Point(127, 190);
+            lblNadaAinda.Name = "lblNadaAinda";
+            lblNadaAinda.Size = new Size(424, 75);
+            lblNadaAinda.TabIndex = 0;
+            lblNadaAinda.Text = "Poxa! Você ainda não tem prêmios! :(\r\nPara resolver isso, leve seu lixo reciclável até o \r\nPolo de Reciclagem mais próximo de você!\r\n";
+            lblNadaAinda.Visible = false;
             // 
             // btnExcluirConta_Usuário
             // 
-            btnExcluirConta_Usuário.BackColor = Color.Red;
+            btnExcluirConta_Usuário.BackColor = Color.Blue;
             btnExcluirConta_Usuário.BorderColor = Color.FromArgb(72, 116, 245);
             btnExcluirConta_Usuário.BorderRadius = 6;
             btnExcluirConta_Usuário.BorderSize = 0;
             btnExcluirConta_Usuário.FlatAppearance.BorderSize = 0;
             btnExcluirConta_Usuário.FlatStyle = FlatStyle.Flat;
             btnExcluirConta_Usuário.ForeColor = Color.White;
-            btnExcluirConta_Usuário.Location = new Point(11, 490);
+            btnExcluirConta_Usuário.Location = new Point(380, 501);
             btnExcluirConta_Usuário.Name = "btnExcluirConta_Usuário";
             btnExcluirConta_Usuário.Size = new Size(94, 22);
             btnExcluirConta_Usuário.TabIndex = 15;
@@ -172,7 +206,7 @@
             panel1.Controls.Add(lblNome);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(494, 260);
+            panel1.Size = new Size(474, 260);
             panel1.TabIndex = 16;
             // 
             // ptbPerfilAvatar
@@ -231,25 +265,6 @@
             lblNome.Text = "\"Nome de Usuário\"";
             lblNome.Click += lblNome_Click;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Firebrick;
-            panel2.Controls.Add(lblRecompensa);
-            panel2.Location = new Point(491, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(404, 526);
-            panel2.TabIndex = 17;
-            // 
-            // lblRecompensa
-            // 
-            lblRecompensa.AutoSize = true;
-            lblRecompensa.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRecompensa.Location = new Point(0, 0);
-            lblRecompensa.Name = "lblRecompensa";
-            lblRecompensa.Size = new Size(235, 32);
-            lblRecompensa.TabIndex = 0;
-            lblRecompensa.Text = "Suas Recompensas:";
-            // 
             // Perfil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -265,11 +280,11 @@
             Load += Perfil_Load_1;
             pnlPerfil.ResumeLayout(false);
             pnlPerfil.PerformLayout();
+            pnlMeusPremios.ResumeLayout(false);
+            pnlMeusPremios.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -288,7 +303,8 @@
         private WiLBiT.WiLBiTRoundedPictureBox ptbPerfilAvatar;
         private Label label4;
         private Label lblPontos;
-        private Panel panel2;
-        private Label lblRecompensa;
+        private Panel pnlMeusPremios;
+        private Label lblNadaAinda;
+        private Label label2;
     }
 }
