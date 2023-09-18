@@ -96,6 +96,13 @@ namespace pi_serasa_greenloop
                     painelPolo.Controls.Add(lblEndereco);
                     painelPolo.Controls.Add(lblEmail);
 
+                    // Adicione um evento de clique ao painel
+                    painelPolo.Click += (sender, e) =>
+                    {
+                        // Abra uma pesquisa no Google Maps com o endereço do polo
+                        AbrirPesquisaGoogleMaps(endereco);
+                    };
+
                     // Adicione o painel do polo ao pnlCarregaPolos
                     pnlCarregaPolos.Controls.Add(painelPolo);
 
@@ -117,6 +124,27 @@ namespace pi_serasa_greenloop
                 MessageBox.Show("Não foram encontrados polos registrados.");
             }
         }
+        private void AbrirPesquisaGoogleMaps(string endereco)
+        {
+            try
+            {
+                // Use a URL do Google Maps para pesquisar o endereço
+                string url = $"https://www.google.com/maps/search/?api=1&query={Uri.EscapeDataString(endereco)}";
+
+                // Abra o navegador padrão do usuário com a URL
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Não foi possível abrir o Google Maps. Erro: {ex.Message}");
+            }
+        }
+
+
         private void wilBitPanel1_Paint(object sender, PaintEventArgs e)
         {
 
