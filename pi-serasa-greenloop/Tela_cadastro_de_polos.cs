@@ -23,7 +23,6 @@ namespace pi_serasa_greenloop
             txtEndereco.Texts = "";
             txtNome.Texts = "";
             txtSenha.Texts = "";
-            txtEnderecoGoogleMaps.Texts = "";
             txtNome.Focus();
         }
 
@@ -41,9 +40,8 @@ namespace pi_serasa_greenloop
             string endereco = txtEndereco.Texts;
             string email = txtEmail.Texts;
             string senha = txtSenha.Texts;
-            string googlemaps = txtEnderecoGoogleMaps.Texts;
 
-            Polos polos = new Polos(nome, email, senha, endereco, googlemaps);
+            Polos polos = new Polos(nome, email, senha, endereco);
 
             if (btnAdicionar.BackColor == Color.Blue)
             {
