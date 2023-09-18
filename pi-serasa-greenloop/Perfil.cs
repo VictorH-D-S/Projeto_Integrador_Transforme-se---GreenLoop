@@ -40,16 +40,22 @@ namespace pi_serasa_greenloop
             form.Location = new Point(Form1.painel.Width - form.Width, Form1.painel.Height - form.Height);
             form.Show();
         }
+
+        private List<string> premiosJaAdicionados = new List<string>(); // Lista para controlar os prêmios já adicionados
+
         private void CarregarPremiosResgatados()
         {
+            // Limpe os painéis existentes em pnlMeusPremios antes de adicionar os novos
+            pnlMeusPremios.Controls.Clear();
+
             // Suponha que você tenha o CPF do usuário logado
             string cpfDoUsuario = Program.pessoa.cpf;
 
-            // Consulta SQL para recuperar as recompensas resgatadas pelo usuário com base no CPF
-            string queryPremiosResgatados = $"SELECT p.codigo, p.nome, p.descricao, p.valor, h.DataResgate " +
+            // Consulta SQL para recuperar os prêmios resgatados pelo usuário com estado "resgatado" igual a 1
+            string queryPremiosResgatados = $"SELECT p.codigo, p.nome, p.descricao, p.valor " +
                                              $"FROM premios p " +
                                              $"INNER JOIN historico_resgates h ON p.codigo = h.PremioID " +
-                                             $"WHERE h.UsuarioID = '{cpfDoUsuario}'";
+                                             $"WHERE h.UsuarioID = '{cpfDoUsuario}' AND p.resgatado = 1";
 
             DataTable premiosResgatados = Conexao.executaQuery(queryPremiosResgatados);
 
@@ -61,61 +67,67 @@ namespace pi_serasa_greenloop
                 foreach (DataRow row in premiosResgatados.Rows)
                 {
                     string codigoPremio = row["codigo"].ToString();
-                    string nomePremio = row["nome"].ToString();
-                    string descricaoPremio = row["descricao"].ToString();
-                    int valorPremio = Convert.ToInt32(row["valor"]);
-                    DateTime dataResgate = Convert.ToDateTime(row["DataResgate"]);
 
-                    // Crie um painel para exibir os detalhes do prêmio
-                    Panel painelPremio = new Panel();
-                    painelPremio.BorderStyle = BorderStyle.None;
-                    painelPremio.Size = new Size(300, 220); // Aumente a altura para acomodar a data de resgate
-                    painelPremio.BackColor = Color.Green; // Altere a cor de fundo para os prêmios resgatados
-                    painelPremio.Padding = new Padding(10);
+                    // Verifique se o prêmio já foi adicionado
+                    if (!premiosJaAdicionados.Contains(codigoPremio))
+                    {
+                        premiosJaAdicionados.Add(codigoPremio); // Adicione o código do prêmio à lista de prêmios adicionados
 
-                    // Adicione bordas arredondadas ao painel
-                    painelPremio.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, painelPremio.Width, painelPremio.Height, 10, 10));
+                        string nomePremio = row["nome"].ToString();
+                        string descricaoPremio = row["descricao"].ToString();
+                        int valorPremio = Convert.ToInt32(row["valor"]);
 
-                    // Crie rótulos para exibir os detalhes do prêmio
-                    Label lblCodigo = new Label();
-                    lblCodigo.Text = $"Código: {codigoPremio}";
-                    lblCodigo.Location = new Point(10, 10);
-                    lblCodigo.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-                    lblCodigo.ForeColor = Color.White; // Cor do texto para destacar
-                    lblCodigo.AutoSize = true; // Ajuste automático ao tamanho do texto
+                        // Crie um painel para exibir os detalhes do prêmio
+                        Panel painelPremio = new Panel();
+                        painelPremio.BorderStyle = BorderStyle.None;
+                        painelPremio.Size = new Size(300, 220); // Aumente a altura para acomodar a data de resgate
+                        painelPremio.BackColor = Color.Green; // Altere a cor de fundo para os prêmios resgatados
+                        painelPremio.Padding = new Padding(10);
 
-                    Label lblNome = new Label();
-                    lblNome.Text = nomePremio;
-                    lblNome.Location = new Point(10, 40);
-                    lblNome.Font = new Font("Segoe UI", 14, FontStyle.Bold);
-                    lblNome.ForeColor = Color.White;
-                    lblNome.AutoSize = true; // Ajuste automático ao tamanho do texto
+                        // Adicione bordas arredondadas ao painel
+                        painelPremio.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, painelPremio.Width, painelPremio.Height, 10, 10));
 
-                    Label lblDescricao = new Label();
-                    lblDescricao.Text = descricaoPremio;
-                    lblDescricao.Location = new Point(10, 70);
-                    lblDescricao.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-                    lblDescricao.ForeColor = Color.White;
-                    lblDescricao.AutoSize = true; // Ajuste automático ao tamanho do texto
+                        // Crie rótulos para exibir os detalhes do prêmio
+                        Label lblCodigo = new Label();
+                        lblCodigo.Text = $"Código: {codigoPremio}";
+                        lblCodigo.Location = new Point(10, 10);
+                        lblCodigo.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+                        lblCodigo.ForeColor = Color.White; // Cor do texto para destacar
+                        lblCodigo.AutoSize = true; // Ajuste automático ao tamanho do texto
 
-                    // Adicione os rótulos ao painel
-                    painelPremio.Controls.Add(lblCodigo);
-                    painelPremio.Controls.Add(lblNome);
-                    painelPremio.Controls.Add(lblDescricao);
+                        Label lblNome = new Label();
+                        lblNome.Text = nomePremio;
+                        lblNome.Location = new Point(10, 40);
+                        lblNome.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+                        lblNome.ForeColor = Color.White;
+                        lblNome.AutoSize = true; // Ajuste automático ao tamanho do texto
 
-                    // Determine a posição do painel na linha atual
-                    int xPosition = (paineisNaLinhaAtual % paineisPorLinha) * (painelPremio.Width + 20);
-                    int yPosition = (paineisNaLinhaAtual / paineisPorLinha) * (painelPremio.Height + 20);
+                        Label lblDescricao = new Label();
+                        lblDescricao.Text = descricaoPremio;
+                        lblDescricao.Location = new Point(10, 70);
+                        lblDescricao.Font = new Font("Segoe UI", 14, FontStyle.Regular);
+                        lblDescricao.ForeColor = Color.White;
+                        lblDescricao.AutoSize = true; // Ajuste automático ao tamanho do texto
 
-                    // Defina a posição do painel
-                    painelPremio.Location = new Point(xPosition, yPosition);
+                        // Adicione os rótulos ao painel
+                        painelPremio.Controls.Add(lblCodigo);
+                        painelPremio.Controls.Add(lblNome);
+                        painelPremio.Controls.Add(lblDescricao);
 
-                    // Adicione o painel de prêmio ao painel pnlMeusPremios
-                    pnlMeusPremios.Controls.Add(painelPremio);
-                    lblNadaAinda.Visible = false;
+                        // Determine a posição do painel na linha atual
+                        int xPosition = (paineisNaLinhaAtual % paineisPorLinha) * (painelPremio.Width + 20);
+                        int yPosition = (paineisNaLinhaAtual / paineisPorLinha) * (painelPremio.Height + 20);
 
-                    // Atualize o contador de painéis na linha atual
-                    paineisNaLinhaAtual++;
+                        // Defina a posição do painel
+                        painelPremio.Location = new Point(xPosition, yPosition);
+
+                        // Adicione o painel de prêmio ao pnlMeusPremios
+                        pnlMeusPremios.Controls.Add(painelPremio);
+                        lblNadaAinda.Visible = false;
+
+                        // Atualize o contador de painéis na linha atual
+                        paineisNaLinhaAtual++;
+                    }
                 }
             }
             else
@@ -123,6 +135,7 @@ namespace pi_serasa_greenloop
                 lblNadaAinda.Visible = true;
             }
         }
+
 
         void atualizaInterface()
         {
@@ -199,7 +212,6 @@ namespace pi_serasa_greenloop
 
         private void pnlMeusPremios_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

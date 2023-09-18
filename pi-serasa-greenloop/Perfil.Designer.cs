@@ -54,6 +54,8 @@
             // pnlPerfil
             // 
             pnlPerfil.Anchor = AnchorStyles.None;
+            pnlPerfil.AutoSize = true;
+            pnlPerfil.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             pnlPerfil.BackColor = Color.DarkViolet;
             pnlPerfil.BorderColor = Color.OldLace;
             pnlPerfil.BorderRadius = 11;
@@ -72,7 +74,7 @@
             pnlPerfil.Location = new Point(138, 81);
             pnlPerfil.Margin = new Padding(2);
             pnlPerfil.Name = "pnlPerfil";
-            pnlPerfil.Size = new Size(1120, 526);
+            pnlPerfil.Size = new Size(1120, 529);
             pnlPerfil.TabIndex = 0;
             // 
             // label2
@@ -100,7 +102,7 @@
             // 
             lblNadaAinda.AutoSize = true;
             lblNadaAinda.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNadaAinda.Location = new Point(127, 190);
+            lblNadaAinda.Location = new Point(150, 192);
             lblNadaAinda.Name = "lblNadaAinda";
             lblNadaAinda.Size = new Size(424, 75);
             lblNadaAinda.TabIndex = 0;
@@ -116,7 +118,7 @@
             btnExcluirConta_Usuário.FlatAppearance.BorderSize = 0;
             btnExcluirConta_Usuário.FlatStyle = FlatStyle.Flat;
             btnExcluirConta_Usuário.ForeColor = Color.White;
-            btnExcluirConta_Usuário.Location = new Point(380, 501);
+            btnExcluirConta_Usuário.Location = new Point(377, 504);
             btnExcluirConta_Usuário.Name = "btnExcluirConta_Usuário";
             btnExcluirConta_Usuário.Size = new Size(94, 22);
             btnExcluirConta_Usuário.TabIndex = 15;
@@ -286,6 +288,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbPerfilAvatar).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

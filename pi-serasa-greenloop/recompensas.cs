@@ -21,10 +21,15 @@ namespace pi_serasa_greenloop
 
             if (premios != null && premios.Rows.Count > 0)
             {
-                int colunaAtual = 0; // Rastreia a coluna atual
-                int maxPaineisPorColuna = 3; // Máximo de painéis por coluna
                 int espacamentoHorizontal = 20; // Espaçamento horizontal entre os painéis
                 int espacamentoVertical = 20; // Espaçamento vertical entre os painéis
+
+                // Use um FlowLayoutPanel para organizar automaticamente os painéis
+                FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+                flowLayoutPanel.FlowDirection = FlowDirection.LeftToRight; // Alinhe os painéis da esquerda para a direita
+                flowLayoutPanel.WrapContents = false; // Não quebre os painéis em várias linhas
+                flowLayoutPanel.AutoScroll = true; // Adicione uma barra de rolagem vertical, se necessário
+                flowLayoutPanel.Dock = DockStyle.Fill; // Preencha todo o espaço disponível
 
                 foreach (DataRow row in premios.Rows)
                 {
@@ -44,7 +49,7 @@ namespace pi_serasa_greenloop
                         painelPremio.BorderStyle = BorderStyle.None; // Remova a borda padrão
                         painelPremio.Size = new Size(300, 180); // Aumente a altura para acomodar o texto
                         painelPremio.BackColor = Color.WhiteSmoke; // Cor de fundo
-                        painelPremio.Padding = new Padding(10); // Margem interna
+                        painelPremio.Margin = new Padding(espacamentoHorizontal, espacamentoVertical, espacamentoHorizontal, espacamentoVertical); // Margem entre os painéis
 
                         // Adicione bordas arredondadas ao painel
                         painelPremio.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, painelPremio.Width, painelPremio.Height, 10, 10));
@@ -89,21 +94,17 @@ namespace pi_serasa_greenloop
                         painelPremio.Controls.Add(lblValor);
                         painelPremio.Controls.Add(btnResgatar);
 
-                        // Adicione o painel de prêmio ao painel de conteúdo
-                        painelConteudo.Controls.Add(painelPremio);
-
-                        // Adicione um evento de passar o mouse para fornecer feedback visual
-                        painelPremio.MouseEnter += (sender, e) => painelPremio.BackColor = Color.LightGray;
-                        painelPremio.MouseLeave += (sender, e) => painelPremio.BackColor = Color.WhiteSmoke;
-
-                        // Atualize a coluna atual ou vá para a próxima coluna
-                        colunaAtual = (colunaAtual + 1) % maxPaineisPorColuna;
+                        // Adicione o painel de prêmio ao FlowLayoutPanel
+                        flowLayoutPanel.Controls.Add(painelPremio);
                     }
                 }
+
+                // Adicione o FlowLayoutPanel ao painel de conteúdo
+                painelConteudo.Controls.Add(flowLayoutPanel);
             }
             else
             {
-                MessageBox.Show("Não foram encontrados prêmios cadastrados.");
+                lblNadaAinda.Visible = true;
             }
         }
 
@@ -191,12 +192,7 @@ namespace pi_serasa_greenloop
                 int nHeightEllipse
             );
 
-        private void recompensas_Load(object sender, EventArgs e)
-        {
-            painelConteudo.Location = new Point((this.ClientSize.Width - painelConteudo.Width) / 2, (this.ClientSize.Height - painelConteudo.Height + 140) / 2);
-            this.WindowState = FormWindowState.Maximized;
-            pnlMenuCima.Location = new Point(0, 0);
-        }
+
         private void Centralizas()
         {
             // Calcule a posição horizontal para centralizar o pnlCarregaPolos
@@ -207,6 +203,7 @@ namespace pi_serasa_greenloop
         }
         private void recompensas_Load_1(object sender, EventArgs e)
         {
+            lblNadaAinda.Visible = false;
             Centralizas();
             lblSeusPontos.Text = Program.pessoa.pontos.ToString();
             PreencherPaineisDePremios();

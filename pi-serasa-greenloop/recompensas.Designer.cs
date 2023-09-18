@@ -38,6 +38,8 @@
             label17 = new Label();
             label18 = new Label();
             wilBitButton5 = new WiLBiT.WiLBiTButton();
+            lblNadaAinda = new Label();
+            painelConteudo.SuspendLayout();
             pnlMenuCima.SuspendLayout();
             wilBitPanel6.SuspendLayout();
             SuspendLayout();
@@ -47,9 +49,10 @@
             painelConteudo.Anchor = AnchorStyles.None;
             painelConteudo.AutoScroll = true;
             painelConteudo.BackColor = Color.FromArgb(66, 11, 62);
+            painelConteudo.Controls.Add(lblNadaAinda);
             painelConteudo.Location = new Point(132, 131);
             painelConteudo.Name = "painelConteudo";
-            painelConteudo.Size = new Size(963, 598);
+            painelConteudo.Size = new Size(963, 355);
             painelConteudo.TabIndex = 0;
             // 
             // label12
@@ -163,6 +166,18 @@
             wilBitButton5.Text = "Resgatar";
             wilBitButton5.UseVisualStyleBackColor = false;
             // 
+            // lblNadaAinda
+            // 
+            lblNadaAinda.AutoSize = true;
+            lblNadaAinda.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNadaAinda.ForeColor = Color.White;
+            lblNadaAinda.Location = new Point(246, 133);
+            lblNadaAinda.Name = "lblNadaAinda";
+            lblNadaAinda.Size = new Size(534, 75);
+            lblNadaAinda.TabIndex = 1;
+            lblNadaAinda.Text = "Ocorreu um erro inesperado \r\nque impediu o carregamento apropriado de Recompensas.\r\nDesculpe pelo transtorno :(\r\n";
+            lblNadaAinda.Visible = false;
+            // 
             // recompensas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -177,6 +192,8 @@
             Name = "recompensas";
             Text = "recompensas";
             Load += recompensas_Load_1;
+            painelConteudo.ResumeLayout(false);
+            painelConteudo.PerformLayout();
             pnlMenuCima.ResumeLayout(false);
             pnlMenuCima.PerformLayout();
             wilBitPanel6.ResumeLayout(false);
@@ -196,5 +213,6 @@
         private Label label17;
         private Label label18;
         private WiLBiT.WiLBiTButton wilBitButton5;
+        private Label lblNadaAinda;
     }
 }
