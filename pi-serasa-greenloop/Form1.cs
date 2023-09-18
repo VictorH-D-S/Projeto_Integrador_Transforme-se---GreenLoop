@@ -57,7 +57,7 @@ namespace pi_serasa_greenloop
         private void Form1_Load_1(object sender, EventArgs e)
         {
             responsivo();
-            carregaForm(new Login());
+            carregaForm(new Tela_cadastro_de_polos());
             btnEncerrarADM.Visible = false;
             btnVoltarADM.Visible = false;
         }

@@ -23,6 +23,7 @@ namespace pi_serasa_greenloop
             txtEndereco.Texts = "";
             txtNome.Texts = "";
             txtSenha.Texts = "";
+            txtEnderecoGoogleMaps.Texts = "";
             txtNome.Focus();
         }
 
@@ -40,8 +41,9 @@ namespace pi_serasa_greenloop
             string endereco = txtEndereco.Texts;
             string email = txtEmail.Texts;
             string senha = txtSenha.Texts;
+            string googlemaps = txtEnderecoGoogleMaps.Texts;
 
-            Polos polos = new Polos(nome, email, senha, endereco);
+            Polos polos = new Polos(nome, email, senha, endereco, googlemaps);
 
             if (btnAdicionar.BackColor == Color.Blue)
             {
@@ -121,7 +123,6 @@ namespace pi_serasa_greenloop
             limpaCampo();
             return;
         }
-
 
         private void Tela_cadastro_de_polos_Load(object sender, EventArgs e)
         {

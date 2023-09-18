@@ -197,9 +197,17 @@ namespace pi_serasa_greenloop
             this.WindowState = FormWindowState.Maximized;
             pnlMenuCima.Location = new Point(0, 0);
         }
+        private void Centralizas()
+        {
+            // Calcule a posição horizontal para centralizar o pnlCarregaPolos
+            int xPosition = (this.ClientSize.Width - painelConteudo.Width) / 2;
 
+            // Defina a posição do pnlCarregaPolos
+            painelConteudo.Location = new Point(xPosition, painelConteudo.Location.Y);
+        }
         private void recompensas_Load_1(object sender, EventArgs e)
         {
+            Centralizas();
             lblSeusPontos.Text = Program.pessoa.pontos.ToString();
             PreencherPaineisDePremios();
             AtualizarPosicionamento();

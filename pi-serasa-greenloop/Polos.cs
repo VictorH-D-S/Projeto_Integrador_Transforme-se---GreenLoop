@@ -10,11 +10,11 @@ namespace pi_serasa_greenloop
 {
     internal class Polos
     {
-        string nome, email, senha, endereco;
+        string nome, email, senha, endereco, googlemaps;
 
-        public Polos(string nome, string email, string senha, string endereco)
+        public Polos(string nome, string email, string senha, string endereco, string googlemaps)
         {
-            this.nome = nome; this.email = email; this.senha = senha; this.endereco = endereco;
+            this.nome = nome; this.email = email; this.senha = senha; this.endereco = endereco; this.googlemaps = googlemaps;
         }
 
         public Polos() 
@@ -29,7 +29,7 @@ namespace pi_serasa_greenloop
             string senha = row["senha"].ToString();
             string endereco = row["endereco"].ToString();
 
-            Polos polos = new Polos(nome, email, senha, endereco);
+            Polos polos = new Polos(nome, email, senha, endereco, googlemaps);
             return polos;
         }
 
@@ -49,7 +49,7 @@ namespace pi_serasa_greenloop
 
         public void inserePolo()
         {
-            string query = $"INSERT INTO polos(nome, email, senha, endereco) VALUES ('{nome}', '{email}', '{senha}', '{endereco}');";
+            string query = $"INSERT INTO `polos`(`nome`, `email`, `senha`, `endereco`, `googlemaps`) VALUES ('{nome}','{email}','{senha}','{endereco}','{googlemaps}');";
             Conexao.executaQuery(query);
         }
 

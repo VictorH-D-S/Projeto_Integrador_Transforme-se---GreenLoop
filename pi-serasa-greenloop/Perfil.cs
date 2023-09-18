@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Globalization;
+using System.Runtime.InteropServices;
 
 namespace pi_serasa_greenloop
 {
@@ -20,6 +21,16 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
         }
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+    (
+        int nLeftRect,
+        int nTopRect,
+        int nRightRect,
+        int nBottomRect,
+        int nWidthEllipse,
+        int nHeightEllipse
+    );
         public void carregaForm(Form form)
         {
             form.TopLevel = false;
@@ -28,7 +39,6 @@ namespace pi_serasa_greenloop
             form.Size = Form1.painel.Size;
             form.Location = new Point(Form1.painel.Width - form.Width, Form1.painel.Height - form.Height);
             form.Show();
-
         }
         private void CarregarPremiosResgatados()
         {
@@ -62,6 +72,9 @@ namespace pi_serasa_greenloop
                     painelPremio.Size = new Size(300, 220); // Aumente a altura para acomodar a data de resgate
                     painelPremio.BackColor = Color.Green; // Altere a cor de fundo para os prêmios resgatados
                     painelPremio.Padding = new Padding(10);
+
+                    // Adicione bordas arredondadas ao painel
+                    painelPremio.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, painelPremio.Width, painelPremio.Height, 10, 10));
 
                     // Crie rótulos para exibir os detalhes do prêmio
                     Label lblCodigo = new Label();

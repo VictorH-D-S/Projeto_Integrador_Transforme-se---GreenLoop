@@ -44,6 +44,8 @@
             btnAdicionar = new WiLBiT.WiLBiTButton();
             label3 = new Label();
             pnlResponsivo_CadastroPollos = new Panel();
+            txtEnderecoGoogleMaps = new WiLBiT.WiLBiTTextBox();
+            label1 = new Label();
             wilBitPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMostraSenha).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnEscondeSenha).BeginInit();
@@ -56,6 +58,8 @@
             wilBitPanel1.BorderColor = Color.PaleVioletRed;
             wilBitPanel1.BorderRadius = 11;
             wilBitPanel1.BorderSize = 0;
+            wilBitPanel1.Controls.Add(txtEnderecoGoogleMaps);
+            wilBitPanel1.Controls.Add(label1);
             wilBitPanel1.Controls.Add(btnMostraSenha);
             wilBitPanel1.Controls.Add(btnEscondeSenha);
             wilBitPanel1.Controls.Add(btnConfirmar);
@@ -81,7 +85,7 @@
             btnMostraSenha.IconChar = FontAwesome.Sharp.IconChar.Eye;
             btnMostraSenha.IconColor = Color.White;
             btnMostraSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnMostraSenha.Location = new Point(606, 226);
+            btnMostraSenha.Location = new Point(606, 298);
             btnMostraSenha.Name = "btnMostraSenha";
             btnMostraSenha.Size = new Size(32, 32);
             btnMostraSenha.TabIndex = 25;
@@ -94,7 +98,7 @@
             btnEscondeSenha.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             btnEscondeSenha.IconColor = Color.White;
             btnEscondeSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEscondeSenha.Location = new Point(606, 226);
+            btnEscondeSenha.Location = new Point(606, 298);
             btnEscondeSenha.Name = "btnEscondeSenha";
             btnEscondeSenha.Size = new Size(32, 32);
             btnEscondeSenha.TabIndex = 26;
@@ -130,7 +134,7 @@
             txtSenha.BorderSize = 2;
             txtSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtSenha.ForeColor = Color.FromArgb(64, 64, 64);
-            txtSenha.Location = new Point(18, 226);
+            txtSenha.Location = new Point(18, 301);
             txtSenha.Margin = new Padding(4);
             txtSenha.Multiline = false;
             txtSenha.Name = "txtSenha";
@@ -152,7 +156,7 @@
             txtEmail.BorderSize = 2;
             txtEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.ForeColor = Color.FromArgb(64, 64, 64);
-            txtEmail.Location = new Point(18, 164);
+            txtEmail.Location = new Point(18, 239);
             txtEmail.Margin = new Padding(4);
             txtEmail.Multiline = false;
             txtEmail.Name = "txtEmail";
@@ -229,16 +233,16 @@
             label6.Location = new Point(18, 73);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(95, 25);
+            label6.Size = new Size(120, 25);
             label6.TabIndex = 13;
-            label6.Text = "Endereço";
+            label6.Text = "Logradouro";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(18, 135);
+            label5.Location = new Point(18, 210);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(67, 25);
@@ -251,7 +255,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(19, 197);
+            label2.Location = new Point(19, 272);
             label2.Name = "label2";
             label2.Size = new Size(66, 25);
             label2.TabIndex = 8;
@@ -317,6 +321,40 @@
             pnlResponsivo_CadastroPollos.Size = new Size(1007, 483);
             pnlResponsivo_CadastroPollos.TabIndex = 5;
             // 
+            // txtEnderecoGoogleMaps
+            // 
+            txtEnderecoGoogleMaps.BackColor = SystemColors.Window;
+            txtEnderecoGoogleMaps.BorderColor = Color.Black;
+            txtEnderecoGoogleMaps.BorderFocusColor = Color.DeepSkyBlue;
+            txtEnderecoGoogleMaps.BorderRadius = 15;
+            txtEnderecoGoogleMaps.BorderSize = 2;
+            txtEnderecoGoogleMaps.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEnderecoGoogleMaps.ForeColor = Color.FromArgb(64, 64, 64);
+            txtEnderecoGoogleMaps.Location = new Point(19, 169);
+            txtEnderecoGoogleMaps.Margin = new Padding(4);
+            txtEnderecoGoogleMaps.Multiline = false;
+            txtEnderecoGoogleMaps.Name = "txtEnderecoGoogleMaps";
+            txtEnderecoGoogleMaps.Padding = new Padding(10, 7, 10, 7);
+            txtEnderecoGoogleMaps.PasswordChar = false;
+            txtEnderecoGoogleMaps.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtEnderecoGoogleMaps.PlaceholderText = "Exemplo: Endereço: R. Mal. Deodoro, 3183 - Centro, São Carlos - SP, 13560-201";
+            txtEnderecoGoogleMaps.Size = new Size(581, 29);
+            txtEnderecoGoogleMaps.TabIndex = 28;
+            txtEnderecoGoogleMaps.Texts = "";
+            txtEnderecoGoogleMaps.UnderlinedStyle = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(19, 140);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(95, 25);
+            label1.TabIndex = 27;
+            label1.Text = "Endereço";
+            // 
             // Tela_cadastro_de_polos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -354,5 +392,7 @@
         private Panel pnlResponsivo_CadastroPollos;
         private FontAwesome.Sharp.IconPictureBox btnMostraSenha;
         private FontAwesome.Sharp.IconPictureBox btnEscondeSenha;
+        private WiLBiT.WiLBiTTextBox txtEnderecoGoogleMaps;
+        private Label label1;
     }
 }
