@@ -35745,4 +35745,20 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Tabela de Valores
+          1 KG
+Papelão = 5 pontos
+PET = 8 pontos
+PEAD = 6 pontos
+PVC  = 4 pontos
+PP = 5 pontos
+Vidro = 1 pontos
+Alumínio = 10 pontos
+Aço = 8 pontos
+Cobre = 20 pontos
+Ferro = 5 pontos
+Tetrapak = 2 pontos
+</value>
+  </data>
 </root>
