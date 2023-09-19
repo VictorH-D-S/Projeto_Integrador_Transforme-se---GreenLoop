@@ -74,6 +74,7 @@
             wilBitPanel1.Name = "wilBitPanel1";
             wilBitPanel1.Size = new Size(924, 415);
             wilBitPanel1.TabIndex = 2;
+            wilBitPanel1.Paint += wilBitPanel1_Paint;
             // 
             // btnMostraSenha
             // 
@@ -81,7 +82,7 @@
             btnMostraSenha.IconChar = FontAwesome.Sharp.IconChar.Eye;
             btnMostraSenha.IconColor = Color.White;
             btnMostraSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnMostraSenha.Location = new Point(607, 241);
+            btnMostraSenha.Location = new Point(604, 236);
             btnMostraSenha.Name = "btnMostraSenha";
             btnMostraSenha.Size = new Size(32, 32);
             btnMostraSenha.TabIndex = 25;
@@ -94,7 +95,7 @@
             btnEscondeSenha.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             btnEscondeSenha.IconColor = Color.White;
             btnEscondeSenha.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEscondeSenha.Location = new Point(607, 241);
+            btnEscondeSenha.Location = new Point(604, 236);
             btnEscondeSenha.Name = "btnEscondeSenha";
             btnEscondeSenha.Size = new Size(32, 32);
             btnEscondeSenha.TabIndex = 26;
@@ -130,7 +131,7 @@
             txtSenha.BorderSize = 2;
             txtSenha.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtSenha.ForeColor = Color.FromArgb(64, 64, 64);
-            txtSenha.Location = new Point(19, 241);
+            txtSenha.Location = new Point(16, 236);
             txtSenha.Margin = new Padding(4);
             txtSenha.Multiline = false;
             txtSenha.Name = "txtSenha";
@@ -152,7 +153,7 @@
             txtEmail.BorderSize = 2;
             txtEmail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtEmail.ForeColor = Color.FromArgb(64, 64, 64);
-            txtEmail.Location = new Point(19, 179);
+            txtEmail.Location = new Point(17, 168);
             txtEmail.Margin = new Padding(4);
             txtEmail.Multiline = false;
             txtEmail.Name = "txtEmail";
@@ -229,16 +230,16 @@
             label6.Location = new Point(18, 73);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(120, 25);
+            label6.Size = new Size(95, 25);
             label6.TabIndex = 13;
-            label6.Text = "Logradouro";
+            label6.Text = "Endereço";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(19, 150);
+            label5.Location = new Point(17, 139);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(67, 25);
@@ -251,7 +252,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(20, 215);
+            label2.Location = new Point(17, 210);
             label2.Name = "label2";
             label2.Size = new Size(66, 25);
             label2.TabIndex = 8;

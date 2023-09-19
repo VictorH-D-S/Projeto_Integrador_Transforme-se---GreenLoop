@@ -61,5 +61,10 @@ namespace pi_serasa_greenloop
             Form1.btnVoltarADM.Visible = true;
             Form1.btnEncerrarADM.Visible = true;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            carregaForm(new Cadastrar_Premios());
+        }
     }
 }

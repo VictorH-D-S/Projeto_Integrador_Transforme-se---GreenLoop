@@ -61,6 +61,7 @@ namespace pi_serasa_greenloop
             if (premiosResgatados != null && premiosResgatados.Rows.Count > 0)
             {
                 int paineisPorLinha = 2; // Quantidade de painéis por linha
+                lblNadaAinda.Visible = false;
                 int paineisNaLinhaAtual = 0; // Contador de painéis na linha atual
 
                 foreach (DataRow row in premiosResgatados.Rows)
@@ -122,16 +123,11 @@ namespace pi_serasa_greenloop
 
                         // Adicione o painel de prêmio ao pnlMeusPremios
                         pnlMeusPremios.Controls.Add(painelPremio);
-                        lblNadaAinda.Visible = false;
 
                         // Atualize o contador de painéis na linha atual
                         paineisNaLinhaAtual++;
                     }
                 }
-            }
-            else
-            {
-                lblNadaAinda.Visible = true;
             }
         }
 

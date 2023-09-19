@@ -159,6 +159,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // label3
             // 

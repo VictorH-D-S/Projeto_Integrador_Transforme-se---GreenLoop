@@ -60,8 +60,8 @@
             textBoxPremios.Name = "textBoxPremios";
             textBoxPremios.Padding = new Padding(10, 7, 10, 7);
             textBoxPremios.PasswordChar = false;
-            textBoxPremios.PlaceholderColor = Color.DarkGray;
-            textBoxPremios.PlaceholderText = "";
+            textBoxPremios.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            textBoxPremios.PlaceholderText = "Exemplo: AAA123";
             textBoxPremios.Size = new Size(593, 29);
             textBoxPremios.TabIndex = 0;
             textBoxPremios.Texts = "";
@@ -153,8 +153,8 @@
             txtNomeRecompensa.Name = "txtNomeRecompensa";
             txtNomeRecompensa.Padding = new Padding(10, 7, 10, 7);
             txtNomeRecompensa.PasswordChar = false;
-            txtNomeRecompensa.PlaceholderColor = Color.DarkGray;
-            txtNomeRecompensa.PlaceholderText = "";
+            txtNomeRecompensa.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtNomeRecompensa.PlaceholderText = "Exemplo: Cupom de Desconto";
             txtNomeRecompensa.Size = new Size(593, 29);
             txtNomeRecompensa.TabIndex = 6;
             txtNomeRecompensa.Texts = "";
@@ -186,8 +186,8 @@
             txtDescricaoRecompensa.Name = "txtDescricaoRecompensa";
             txtDescricaoRecompensa.Padding = new Padding(10, 7, 10, 7);
             txtDescricaoRecompensa.PasswordChar = false;
-            txtDescricaoRecompensa.PlaceholderColor = Color.DarkGray;
-            txtDescricaoRecompensa.PlaceholderText = "";
+            txtDescricaoRecompensa.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtDescricaoRecompensa.PlaceholderText = "Exemplo: 5% de Desconto em LuizaMaganize";
             txtDescricaoRecompensa.Size = new Size(593, 29);
             txtDescricaoRecompensa.TabIndex = 8;
             txtDescricaoRecompensa.Texts = "";
@@ -219,8 +219,8 @@
             txtValorRecompensa.Name = "txtValorRecompensa";
             txtValorRecompensa.Padding = new Padding(10, 7, 10, 7);
             txtValorRecompensa.PasswordChar = false;
-            txtValorRecompensa.PlaceholderColor = Color.DarkGray;
-            txtValorRecompensa.PlaceholderText = "";
+            txtValorRecompensa.PlaceholderColor = Color.FromArgb(64, 64, 64);
+            txtValorRecompensa.PlaceholderText = "Exemplo: 50";
             txtValorRecompensa.Size = new Size(593, 29);
             txtValorRecompensa.TabIndex = 10;
             txtValorRecompensa.Texts = "";

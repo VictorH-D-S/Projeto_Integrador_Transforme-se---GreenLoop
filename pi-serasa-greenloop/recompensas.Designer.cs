@@ -52,7 +52,7 @@
             painelConteudo.Controls.Add(lblNadaAinda);
             painelConteudo.Location = new Point(132, 131);
             painelConteudo.Name = "painelConteudo";
-            painelConteudo.Size = new Size(963, 277);
+            painelConteudo.Size = new Size(963, 254);
             painelConteudo.TabIndex = 0;
             // 
             // lblNadaAinda

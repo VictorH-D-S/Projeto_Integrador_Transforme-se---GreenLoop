@@ -107,7 +107,6 @@
             lblNadaAinda.Size = new Size(424, 75);
             lblNadaAinda.TabIndex = 0;
             lblNadaAinda.Text = "Poxa! Você ainda não tem prêmios! :(\r\nPara resolver isso, leve seu lixo reciclável até o \r\nPolo de Reciclagem mais próximo de você!\r\n";
-            lblNadaAinda.Visible = false;
             // 
             // btnExcluirConta_Usuário
             // 

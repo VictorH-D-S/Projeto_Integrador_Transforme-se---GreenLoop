@@ -177,5 +177,10 @@ namespace pi_serasa_greenloop
             btnEscondeSenha.Visible = false;
             btnMostraSenha.Visible = true;
         }
+
+        private void wilBitPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
