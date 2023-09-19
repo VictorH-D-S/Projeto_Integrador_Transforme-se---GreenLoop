@@ -47,13 +47,13 @@ namespace pi_serasa_greenloop
             {
                 int espacamentoHorizontal = 20; // Espaçamento horizontal entre os painéis
                 int espacamentoVertical = 20; // Espaçamento vertical entre os painéis
-                int larguraPainel = 500; // Largura dos painéis
+                int larguraPainel = 600; // Largura dos painéis
                 int alturaPainel = 180; // Altura dos painéis
                 int maxPaineisPorLinha = 2; // Máximo de painéis por linha
 
                 int colunaAtual = 0; // Rastreia a coluna atual
-                int xPosition = 0; // Posição horizontal do próximo painel
-                int yPosition = 0; // Posição vertical do próximo painel
+                int xPosition = 20; // Posição horizontal do próximo painel
+                int yPosition = 10; // Posição vertical do próximo painel
 
                 foreach (DataRow row in polos.Rows)
                 {
@@ -76,19 +76,19 @@ namespace pi_serasa_greenloop
                     Label lblNome = new Label();
                     lblNome.Text = nome;
                     lblNome.Location = new Point(10, 10);
-                    lblNome.Font = new Font("Segoe UI", 12, FontStyle.Bold); // Defina a fonte e o tamanho
+                    lblNome.Font = new Font("Segoe UI", 16, FontStyle.Bold); // Defina a fonte e o tamanho
                     lblNome.AutoSize = true; // Ajuste automático ao tamanho do texto
 
                     Label lblEndereco = new Label();
                     lblEndereco.Text = endereco;
                     lblEndereco.Location = new Point(10, 40);
-                    lblEndereco.Font = new Font("Segoe UI", 10); // Defina a fonte e o tamanho
+                    lblEndereco.Font = new Font("Segoe UI", 13); // Defina a fonte e o tamanho
                     lblEndereco.AutoSize = true; // Ajuste automático ao tamanho do texto
 
                     Label lblEmail = new Label();
-                    lblEmail.Text = $"E-mail: {email}";
-                    lblEmail.Location = new Point(10, 70);
-                    lblEmail.Font = new Font("Segoe UI", 10); // Defina a fonte e o tamanho
+                    lblEmail.Text = $"Contao: {email}";
+                    lblEmail.Location = new Point(13, 70);
+                    lblEmail.Font = new Font("Segoe UI", 13); // Defina a fonte e o tamanho
                     lblEmail.AutoSize = true; // Ajuste automático ao tamanho do texto
 
                     // Adicione os rótulos ao painel
@@ -114,7 +114,7 @@ namespace pi_serasa_greenloop
                     if (colunaAtual >= maxPaineisPorLinha)
                     {
                         colunaAtual = 0;
-                        xPosition = 0;
+                        xPosition = 20;
                         yPosition += alturaPainel + espacamentoVertical; // Mova para a próxima linha
                     }
                 }

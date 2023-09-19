@@ -38,14 +38,14 @@
             // 
             pnlCarregaPolos.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             pnlCarregaPolos.AutoScroll = true;
-            pnlCarregaPolos.BackColor = Color.FromArgb(255, 128, 0);
+            pnlCarregaPolos.BackColor = Color.FromArgb(192, 64, 0);
             pnlCarregaPolos.BorderColor = Color.Peru;
             pnlCarregaPolos.BorderRadius = 6;
             pnlCarregaPolos.BorderSize = 0;
             pnlCarregaPolos.ForeColor = Color.White;
             pnlCarregaPolos.Location = new Point(69, 164);
             pnlCarregaPolos.Name = "pnlCarregaPolos";
-            pnlCarregaPolos.Size = new Size(1005, 290);
+            pnlCarregaPolos.Size = new Size(1240, 290);
             pnlCarregaPolos.TabIndex = 0;
             pnlCarregaPolos.Paint += wilBitPanel1_Paint;
             // 
