@@ -34,6 +34,13 @@ namespace pi_serasa_greenloop
                 return;
             }
 
+            // Verifique se o código do prêmio já existe na tabela premios
+            if (Conexao.CodigoExisteNaTabelaPremios(premio))
+            {
+                MessageBox.Show("O código do prêmio já está em uso. Escolha outro código.");
+                return;
+            }
+
             MessageBox.Show("Prêmio Cadastrado!");
             textBoxPremios.Texts = "";
             txtNomeRecompensa.Texts = "";

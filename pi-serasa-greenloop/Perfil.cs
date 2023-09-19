@@ -79,7 +79,7 @@ namespace pi_serasa_greenloop
                         // Crie um painel para exibir os detalhes do prêmio
                         Panel painelPremio = new Panel();
                         painelPremio.BorderStyle = BorderStyle.None;
-                        painelPremio.Size = new Size(300, 220); // Aumente a altura para acomodar a data de resgate
+                        painelPremio.Size = new Size(500, 180); // Aumente a altura para acomodar a data de resgate
                         painelPremio.BackColor = Color.Green; // Altere a cor de fundo para os prêmios resgatados
                         painelPremio.Padding = new Padding(10);
 

@@ -166,5 +166,31 @@ namespace pi_serasa_greenloop
                 cmd.ExecuteNonQuery();
             }
         }
+        public static bool CodigoExisteNaTabelaPremios(string codigo)
+        {
+            try
+            {
+                conexao.Open();
+
+                string query = "SELECT COUNT(*) FROM premios WHERE codigo = @codigo";
+                using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@codigo", codigo);
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    return count > 0;
+                }
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine("Ocorreu um erro: " + erro.Message);
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }
