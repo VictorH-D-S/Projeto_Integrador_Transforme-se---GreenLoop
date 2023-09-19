@@ -47,7 +47,7 @@ namespace pi_serasa_greenloop
                         // Crie um novo painel para o prêmio
                         Panel painelPremio = new Panel();
                         painelPremio.BorderStyle = BorderStyle.None; // Remova a borda padrão
-                        painelPremio.Size = new Size(300, 180); // Aumente a altura para acomodar o texto
+                        painelPremio.Size = new Size(350, 180); // Aumente a altura para acomodar o texto
                         painelPremio.BackColor = Color.WhiteSmoke; // Cor de fundo
                         painelPremio.Margin = new Padding(espacamentoHorizontal, espacamentoVertical, espacamentoHorizontal, espacamentoVertical); // Margem entre os painéis
 
@@ -60,18 +60,26 @@ namespace pi_serasa_greenloop
                         lblNome.Location = new Point(10, 40);
                         lblNome.Font = new Font("Segoe UI", 12, FontStyle.Bold); // Defina a fonte e o tamanho
                         lblNome.AutoSize = true; // Ajuste automático ao tamanho do texto
-
                         Label lblDescricao = new Label();
-                        lblDescricao.Text = descricao;
                         lblDescricao.Location = new Point(10, 70);
                         lblDescricao.Font = new Font("Segoe UI", 10); // Defina a fonte e o tamanho
+
+                        if (descricao.Length > 20)
+                        {
+                            // Insira uma quebra de linha após os primeiros 20 caracteres
+                            descricao = descricao.Insert(20, "\n");
+                        }
+
+                        lblDescricao.Text = descricao;
                         lblDescricao.AutoSize = true; // Ajuste automático ao tamanho do texto
 
+                        // Ajuste vertical do lblValor com base na altura do lblDescricao
                         Label lblValor = new Label();
                         lblValor.Text = $"Valor: {valor}";
-                        lblValor.Location = new Point(10, 100);
-                        lblValor.Font = new Font("Segoe UI", 10); // Defina a fonte e o tamanho
+                        lblValor.Font = new Font("Segoe UI", 10, FontStyle.Bold); // Defina a fonte e o tamanho
                         lblValor.AutoSize = true; // Ajuste automático ao tamanho do texto
+                        lblValor.Location = new Point(10, lblDescricao.Bottom + 15); // Defina a posição vertical abaixo do lblDescricao
+
 
                         // Crie um botão "Resgatar" estilizado
                         Button btnResgatar = new Button();

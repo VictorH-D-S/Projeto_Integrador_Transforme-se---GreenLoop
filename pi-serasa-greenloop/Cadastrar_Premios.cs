@@ -28,6 +28,12 @@ namespace pi_serasa_greenloop
                 return;
             }
 
+            if (premio.Length > 10)
+            {
+                MessageBox.Show("O código do prêmio deve ter no máximo 10 caracteres.");
+                return;
+            }
+
             if (!int.TryParse(txtValorRecompensa.Texts, out int valor))
             {
                 MessageBox.Show("O valor inserido não é válido.");
