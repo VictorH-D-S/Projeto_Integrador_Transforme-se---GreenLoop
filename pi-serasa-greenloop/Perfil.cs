@@ -48,14 +48,13 @@ namespace pi_serasa_greenloop
             // Limpe os painéis existentes em pnlMeusPremios antes de adicionar os novos
             pnlMeusPremios.Controls.Clear();
 
-            // Suponha que você tenha o CPF do usuário logado
-            string cpfDoUsuario = Program.pessoa.cpf;
+            // Suponha que você tenha o Usuarioid do usuário logado
+            string usuarioId = Program.pessoa.cpf;
 
-            // Consulta SQL para recuperar os prêmios resgatados pelo usuário com estado "resgatado" igual a 1
             string queryPremiosResgatados = $"SELECT p.codigo, p.nome, p.descricao, p.valor " +
                                              $"FROM premios p " +
                                              $"INNER JOIN historico_resgates h ON p.codigo = h.PremioID " +
-                                             $"WHERE h.UsuarioID = '{cpfDoUsuario}' AND p.resgatado = 1";
+                                             $"WHERE h.UsuarioID = '{usuarioId}' AND p.resgatado = 1";
 
             DataTable premiosResgatados = Conexao.executaQuery(queryPremiosResgatados);
 
@@ -135,7 +134,6 @@ namespace pi_serasa_greenloop
                 lblNadaAinda.Visible = true;
             }
         }
-
 
         void atualizaInterface()
         {

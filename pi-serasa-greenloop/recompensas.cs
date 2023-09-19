@@ -121,10 +121,10 @@ namespace pi_serasa_greenloop
 
                 if (!foiResgatado)
                 {
-                    // Consulta SQL para recuperar o saldo atual de pontos do usuário
-                    string cpfDoUsuario = Program.pessoa.cpf; // Supondo que você tenha armazenado o CPF do usuário
+                    // Suponha que você tenha o Usuarioid do usuário logado
+                    string cpfDoUsuario = Program.pessoa.cpf;
 
-                    // Consulta SQL para obter o saldo de pontos do usuário com base no CPF
+                    // Consulta SQL para obter o saldo atual de pontos do usuário com base no CPF
                     string querySaldoPontos = $"SELECT pontos FROM pessoas WHERE cpf = '{cpfDoUsuario}'";
                     DataTable saldoPontos = Conexao.executaQuery(querySaldoPontos);
 
@@ -149,7 +149,7 @@ namespace pi_serasa_greenloop
                                 Conexao.executaQuery(queryAtualizarPontos);
 
                                 // Insira um registro na tabela historico_resgates
-                                string queryInserirHistorico = $"INSERT INTO historico_resgates (UsuarioID, PremioID, DataResgate) VALUES ('{cpfDoUsuario}', '{premio}', NOW())";
+                                string queryInserirHistorico = $"INSERT INTO historico_resgates (UsuarioID, DataResgate, PremioID) VALUES ('{cpfDoUsuario}', NOW(), '{premio}')";
                                 Conexao.executaQuery(queryInserirHistorico);
 
                                 // Atualize os pontos do usuário na aplicação
@@ -180,6 +180,7 @@ namespace pi_serasa_greenloop
                 MessageBox.Show("Não foi possível encontrar o valor do prêmio.", "Erro ao Recuperar Valor do Prêmio", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
