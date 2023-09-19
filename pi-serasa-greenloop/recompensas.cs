@@ -60,6 +60,7 @@ namespace pi_serasa_greenloop
                         lblNome.Location = new Point(10, 40);
                         lblNome.Font = new Font("Segoe UI", 12, FontStyle.Bold); // Defina a fonte e o tamanho
                         lblNome.AutoSize = true; // Ajuste automático ao tamanho do texto
+
                         Label lblDescricao = new Label();
                         lblDescricao.Location = new Point(10, 70);
                         lblDescricao.Font = new Font("Segoe UI", 10); // Defina a fonte e o tamanho

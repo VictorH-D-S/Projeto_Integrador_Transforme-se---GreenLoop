@@ -103,10 +103,16 @@ namespace pi_serasa_greenloop
                         lblNome.AutoSize = true; // Ajuste automático ao tamanho do texto
 
                         Label lblDescricao = new Label();
-                        lblDescricao.Text = descricaoPremio;
                         lblDescricao.Location = new Point(10, 70);
-                        lblDescricao.Font = new Font("Segoe UI", 14, FontStyle.Regular);
-                        lblDescricao.ForeColor = Color.White;
+                        lblDescricao.Font = new Font("Segoe UI", 10); // Defina a fonte e o tamanho
+
+                        if (descricaoPremio.Length > 45)
+                        {
+                            // Insira uma quebra de linha após os primeiros 20 caracteres
+                            descricaoPremio = descricaoPremio.Insert(45, "\n");
+                        }
+
+                        lblDescricao.Text = descricaoPremio;
                         lblDescricao.AutoSize = true; // Ajuste automático ao tamanho do texto
 
                         // Adicione os rótulos ao painel
