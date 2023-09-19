@@ -68,6 +68,7 @@ namespace pi_serasa_greenloop
                     painelPolo.Location = new Point(xPosition, yPosition); // Define a posição
                     painelPolo.BackColor = Color.Orange; // Cor de fundo laranja
                     painelPolo.Padding = new Padding(10); // Margem interna
+                    Cursor.Current = Cursors.Hand;
 
                     // Adicione bordas arredondadas ao painel
                     painelPolo.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, painelPolo.Width, painelPolo.Height, 10, 10));
@@ -86,7 +87,7 @@ namespace pi_serasa_greenloop
                     lblEndereco.AutoSize = true; // Ajuste automático ao tamanho do texto
 
                     Label lblEmail = new Label();
-                    lblEmail.Text = $"Contao: {email}";
+                    lblEmail.Text = $"Contato: {email}";
                     lblEmail.Location = new Point(13, 70);
                     lblEmail.Font = new Font("Segoe UI", 13); // Defina a fonte e o tamanho
                     lblEmail.AutoSize = true; // Ajuste automático ao tamanho do texto
@@ -96,11 +97,73 @@ namespace pi_serasa_greenloop
                     painelPolo.Controls.Add(lblEndereco);
                     painelPolo.Controls.Add(lblEmail);
 
+                    painelPolo.MouseEnter += (sender, e) =>
+                    {
+                        // Altere o cursor para a mão quando o mouse entrar no painel
+                        Cursor = Cursors.Hand;
+                    };
+                    painelPolo.MouseLeave += (sender, e) =>
+                    {
+                        // Restaure o cursor padrão quando o mouse sair do painel
+                        Cursor = Cursors.Default;
+                    };
+
                     // Adicione um evento de clique ao painel
                     painelPolo.Click += (sender, e) =>
                     {
                         // Abra uma pesquisa no Google Maps com o endereço do polo
                         AbrirPesquisaGoogleMaps(endereco);
+                    };
+
+                    lblEndereco.Click += (sender, e) =>
+                    {
+                        // Abra uma pesquisa no Google Maps com o endereço do polo
+                        AbrirPesquisaGoogleMaps(endereco);
+                    };
+
+                    lblEmail.Click += (sender, e) =>
+                    {
+                        // Abra uma pesquisa no Google Maps com o endereço do polo
+                        AbrirPesquisaGoogleMaps(endereco);
+                    };
+
+                    lblNome.Click += (sender, e) =>
+                    {
+                        // Abra uma pesquisa no Google Maps com o endereço do polo
+                        AbrirPesquisaGoogleMaps(endereco);
+                    };
+
+                    lblNome.MouseEnter += (sender, e) =>
+                    {
+                        // Altere o cursor para a mão quando o mouse entrar no painel
+                        Cursor = Cursors.Hand;
+                    };
+                    lblNome.MouseLeave += (sender, e) =>
+                    {
+                        // Restaure o cursor padrão quando o mouse sair do painel
+                        Cursor = Cursors.Default;
+                    };
+
+                    lblEndereco.MouseEnter += (sender, e) =>
+                    {
+                        // Altere o cursor para a mão quando o mouse entrar no painel
+                        Cursor = Cursors.Hand;
+                    };
+                    lblEndereco.MouseLeave += (sender, e) =>
+                    {
+                        // Restaure o cursor padrão quando o mouse sair do painel
+                        Cursor = Cursors.Default;
+                    };
+
+                    lblEmail.MouseEnter += (sender, e) =>
+                    {
+                        // Altere o cursor para a mão quando o mouse entrar no painel
+                        Cursor = Cursors.Hand;
+                    };
+                    lblEmail.MouseLeave += (sender, e) =>
+                    {
+                        // Restaure o cursor padrão quando o mouse sair do painel
+                        Cursor = Cursors.Default;
                     };
 
                     // Adicione o painel do polo ao pnlCarregaPolos
@@ -152,6 +215,7 @@ namespace pi_serasa_greenloop
 
         private void Local_Load(object sender, EventArgs e)
         {
+            Cursor = Cursors.Default;
             CentralizarPnlCarregaPolos();
             PreencherPaineisDePolos();
         }

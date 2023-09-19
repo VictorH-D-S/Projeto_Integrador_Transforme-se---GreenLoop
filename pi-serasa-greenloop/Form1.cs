@@ -64,16 +64,49 @@ namespace pi_serasa_greenloop
 
         private void Voltar_Click(object sender, EventArgs e)
         {
+            Voltar.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            Voltar.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+
             carregaForm(new Principal());
         }
 
         private void btnVoltarADM_Click(object sender, EventArgs e)
         {
+            btnVoltarADM.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            btnVoltarADM.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+
             carregaForm(new tela_Admir());
         }
 
         private void btnEncerrarADM_Click(object sender, EventArgs e)
         {
+            btnEncerrarADM.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            btnEncerrarADM.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+
             Pessoas pessoas = new Pessoas();
             DialogResult result = MessageBox.Show("Deseja sair?", "Encerrar Atividades", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 

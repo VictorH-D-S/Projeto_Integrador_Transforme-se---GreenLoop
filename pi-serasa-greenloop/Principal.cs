@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WiLBiT;
 
 namespace pi_serasa_greenloop
 {
@@ -195,17 +196,47 @@ namespace pi_serasa_greenloop
 		private void btnPontos_Click_1(object sender, EventArgs e)
 		{
 			carregaForm(new Local());
-		}
+            btnPontos.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            btnPontos.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+        }
 
 		private void pictureBox2_Click_1(object sender, EventArgs e)
 		{
 			carregaForm(new Local());
-		}
+            pictureBox2.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            pictureBox2.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+        }
 
 		private void btnRecompensas_Click_2(object sender, EventArgs e)
 		{
 			carregaForm(new recompensas());
-		}
+            btnRecompensas.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            btnRecompensas.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+        }
 
 		private void label4_Click_2(object sender, EventArgs e)
 		{
@@ -215,17 +246,47 @@ namespace pi_serasa_greenloop
 		private void btnPerfil_Click_2(object sender, EventArgs e)
 		{
 			carregaForm(new Perfil());
-		}
+            btnPerfil.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            btnPerfil.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+        }
 
 		private void wilBitRoundedPictureBox22_Click_1(object sender, EventArgs e)
 		{
 			carregaForm(new Perfil());
-
-		}
+            wilBitRoundedPictureBox22.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            wilBitRoundedPictureBox22.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+        }
 
 		private void wilBitRoundedPictureBox21_Click_1(object sender, EventArgs e)
 		{
-			carregaForm(new recompensas());
+            wilBitRoundedPictureBox21.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            wilBitRoundedPictureBox21.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+
+            carregaForm(new recompensas());
 		}
 
 		private void Principal_Load_1(object sender, EventArgs e)
@@ -236,12 +297,32 @@ namespace pi_serasa_greenloop
 
 		private void btnReciclagem_Click_1(object sender, EventArgs e)
 		{
-			carregaForm(new Site());
+            btnReciclagem.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            btnReciclagem.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+            carregaForm(new Site());
 		}
 
 		private void pictureBox3_Click_1(object sender, EventArgs e)
 		{
-			carregaForm(new Site());
+            pictureBox3.MouseEnter += (sender, e) =>
+            {
+                // Altere o cursor para a mão quando o mouse entrar no painel
+                Cursor = Cursors.Hand;
+            };
+            pictureBox3.MouseLeave += (sender, e) =>
+            {
+                // Restaure o cursor padrão quando o mouse sair do painel
+                Cursor = Cursors.Default;
+            };
+            carregaForm(new Site());
 		}
 	}
 }
