@@ -18,7 +18,6 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
             this.Text = "Green Loop";
-            this.Icon = this.Icon = new Icon("D:\\Users\\victor.hsantos45\\source\\repos\\pi-serasa-greenloop\\pi-serasa-greenloop\\Resources\\icone.ico");
         }
         public void responsivo()
         {
@@ -63,10 +62,6 @@ namespace pi_serasa_greenloop
             carregaForm(new Login());
             btnEncerrarADM.Visible = false;
             btnVoltarADM.Visible = false;
-        }
-
-        private void Voltar_Click(object sender, EventArgs e)
-        {
             Voltar.MouseEnter += (sender, e) =>
             {
                 // Altere o cursor para a mão quando o mouse entrar no painel
@@ -77,12 +72,6 @@ namespace pi_serasa_greenloop
                 // Restaure o cursor padrão quando o mouse sair do painel
                 Cursor = Cursors.Default;
             };
-
-            carregaForm(new Principal());
-        }
-
-        private void btnVoltarADM_Click(object sender, EventArgs e)
-        {
             btnVoltarADM.MouseEnter += (sender, e) =>
             {
                 // Altere o cursor para a mão quando o mouse entrar no painel
@@ -93,12 +82,6 @@ namespace pi_serasa_greenloop
                 // Restaure o cursor padrão quando o mouse sair do painel
                 Cursor = Cursors.Default;
             };
-
-            carregaForm(new tela_Admir());
-        }
-
-        private void btnEncerrarADM_Click(object sender, EventArgs e)
-        {
             btnEncerrarADM.MouseEnter += (sender, e) =>
             {
                 // Altere o cursor para a mão quando o mouse entrar no painel
@@ -109,6 +92,22 @@ namespace pi_serasa_greenloop
                 // Restaure o cursor padrão quando o mouse sair do painel
                 Cursor = Cursors.Default;
             };
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+
+            carregaForm(new Principal());
+        }
+
+        private void btnVoltarADM_Click(object sender, EventArgs e)
+        {
+
+            carregaForm(new tela_Admir());
+        }
+
+        private void btnEncerrarADM_Click(object sender, EventArgs e)
+        {
 
             Pessoas pessoas = new Pessoas();
             DialogResult result = MessageBox.Show("Deseja sair?", "Encerrar Atividades", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
