@@ -5,6 +5,11 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pi-serasa-greenloop", "pi-serasa-greenloop\pi-serasa-greenloop.csproj", "{CD13BA99-B978-4DAA-82BC-CA9BA9CD5A9D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{3CB222E3-DAE8-4A56-983A-5B54F35CB26F}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Users\victor.hsantos45\Downloads\logo_greenloop.ico = D:\Users\victor.hsantos45\Downloads\logo_greenloop.ico
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

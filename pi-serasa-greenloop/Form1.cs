@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
+using pi_serasa_greenloop.Properties;
 
 namespace pi_serasa_greenloop
 {
@@ -16,6 +17,8 @@ namespace pi_serasa_greenloop
         public Form1()
         {
             InitializeComponent();
+            this.Text = "Green Loop";
+            this.Icon = this.Icon = new Icon("D:\\Users\\victor.hsantos45\\source\\repos\\pi-serasa-greenloop\\pi-serasa-greenloop\\Resources\\icone.ico");
         }
         public void responsivo()
         {

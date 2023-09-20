@@ -7,7 +7,14 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>logo_greenloop.ico</ApplicationIcon>
+    <Title>Green Loop</Title>
+    <AssemblyName>Green Loop</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="logo_greenloop.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
