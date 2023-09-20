@@ -202,9 +202,9 @@
             // 
             panel1.BackColor = Color.MidnightBlue;
             panel1.Controls.Add(ptbPerfilAvatar);
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(lblPontos);
             panel1.Controls.Add(lblNome);
+            panel1.Controls.Add(label4);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(474, 260);
@@ -236,16 +236,16 @@
             label4.Location = new Point(220, 103);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(92, 25);
+            label4.Size = new Size(132, 25);
             label4.TabIndex = 4;
-            label4.Text = "Pontos - ";
+            label4.Text = "Meus Pontos:";
             // 
             // lblPontos
             // 
             lblPontos.AutoSize = true;
             lblPontos.BackColor = Color.Transparent;
             lblPontos.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPontos.Location = new Point(307, 103);
+            lblPontos.Location = new Point(355, 103);
             lblPontos.Margin = new Padding(2, 0, 2, 0);
             lblPontos.Name = "lblPontos";
             lblPontos.Size = new Size(23, 25);

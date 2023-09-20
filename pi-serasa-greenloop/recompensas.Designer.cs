@@ -95,11 +95,11 @@
             label11.AutoSize = true;
             label11.Font = new Font("Trebuchet MS", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(3, 59);
+            label11.Location = new Point(6, 59);
             label11.Name = "label11";
-            label11.Size = new Size(183, 35);
+            label11.Size = new Size(181, 35);
             label11.TabIndex = 1;
-            label11.Text = "Seus Pontos -";
+            label11.Text = "Meus Pontos:";
             // 
             // pnlMenuCima
             // 

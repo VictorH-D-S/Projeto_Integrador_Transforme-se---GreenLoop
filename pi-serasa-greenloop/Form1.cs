@@ -18,6 +18,7 @@ namespace pi_serasa_greenloop
         {
             InitializeComponent();
             this.Text = "Green Loop";
+            this.Icon = Properties.Resources.icone;
         }
         public void responsivo()
         {
